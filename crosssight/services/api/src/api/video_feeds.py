@@ -140,10 +140,35 @@ def runner_alive(directory: Path | None = None) -> bool:
     return True
 
 
+def _pid_command(pid: int) -> str | None:
+    """Command line of ``pid`` (``/proc`` on Linux, ``ps`` elsewhere), or None if unknown."""
+    proc = Path("/proc") / str(pid) / "cmdline"
+    try:
+        if proc.parent.is_dir():
+            return proc.read_bytes().replace(b"\0", b" ").decode("utf-8", "replace")
+        out = subprocess.run(
+            ["ps", "-p", str(pid), "-o", "command="],
+            capture_output=True,
+            text=True,
+            timeout=5,
+            check=False,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    return out.stdout.strip() or None
+
+
+def _is_runner(pid: int) -> bool:
+    """True only if ``pid`` is still our ``ocr_engine.cli video-city`` process."""
+    command = _pid_command(pid)
+    return command is not None and "ocr_engine.cli" in command and "video-city" in command
+
+
 def stop_runner(directory: Path | None = None) -> None:
     pid = _read_pid(directory)
     path = _pid_path(directory)
-    if pid is not None:
+    # A stale pid file may name a recycled pid that now belongs to an unrelated process group.
+    if pid is not None and _is_runner(pid):
         try:
             os.killpg(pid, signal.SIGTERM)
         except OSError:

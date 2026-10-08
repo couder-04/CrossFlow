@@ -24,22 +24,25 @@ export async function POST(request: Request) {
 
   try {
     const result = await api.login(username, password);
-    const modeRes = await upstreamFetch(
-      `${API_BASE}/sources/mode`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${result.access_token}`,
-          "Content-Type": "application/json",
+    // Only admins and operators may start/stop the video runner; analysts just pick a view.
+    if (result.role === "admin" || result.role === "operator") {
+      const modeRes = await upstreamFetch(
+        `${API_BASE}/sources/mode`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${result.access_token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ mode: source }),
         },
-        body: JSON.stringify({ mode: source }),
-      },
-      20_000,
-    );
-    if (!modeRes.ok) {
-      const modeBody = (await modeRes.json().catch(() => ({}))) as { detail?: string; error?: string };
-      const detail = modeBody.detail ?? modeBody.error ?? "Could not start that mode";
-      return NextResponse.json({ error: detail }, { status: modeRes.status });
+        20_000,
+      );
+      if (!modeRes.ok) {
+        const modeBody = (await modeRes.json().catch(() => ({}))) as { detail?: string; error?: string };
+        const detail = modeBody.detail ?? modeBody.error ?? "Could not start that mode";
+        return NextResponse.json({ error: detail }, { status: modeRes.status });
+      }
     }
 
     const response = NextResponse.json({

@@ -10,7 +10,7 @@ from geoalchemy2 import WKTElement
 from pydantic import BaseModel
 
 from api.db import Camera
-from api.deps import SessionDep, UserDep
+from api.deps import OperatorUserDep, SessionDep, UserDep
 from api.video_feeds import (
     camera_records,
     discover_videos,
@@ -65,7 +65,7 @@ async def source_mode(_user: UserDep) -> dict[str, object]:
     return {
         "running": runner_alive(),
         "video_count": len(videos),
-        "feeds_dir": str(feeds_dir()),
+        "feeds_dir": feeds_dir().name,  # basename only: never leak server paths
     }
 
 
@@ -73,7 +73,7 @@ async def source_mode(_user: UserDep) -> dict[str, object]:
 async def set_source_mode(
     body: SourceModeBody,
     session: SessionDep,
-    _user: UserDep,
+    _user: OperatorUserDep,
 ) -> dict[str, object]:
     if body.mode == "sim":
         stop_runner()
