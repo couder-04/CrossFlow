@@ -1,0 +1,320 @@
+{
+  "rows": [
+    {
+      "kind": "demand_mult",
+      "mult": 0.5,
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1332378094558267,
+      "mean_waiting_s": 28.19148936170213
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 0.5,
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1431390767456774,
+      "mean_waiting_s": 27.654753395282345
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 0.75,
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.14325535981717244,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 0.5,
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.11677548038184646,
+      "mean_waiting_s": 17.98936170212766
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 0.5,
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1309645950811718,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 0.75,
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1309645950811718,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 0.75,
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1379938681527001,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.0,
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.13962373390567034,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 0.75,
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12582827008045933,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.0,
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.14132551193279075,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.0,
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12828411566549222,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.25,
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.14922284309989636,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.0,
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1308740779743712,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.25,
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1460236656739335,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.25,
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.13494780542831156,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.5,
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1543060154507785,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.25,
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.13437074071863928,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.5,
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1494578002127547,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 0,
+      "mix": {
+        "two_wheeler": 0.4781368498658292,
+        "car": 0.2852831813082284,
+        "auto_rickshaw": 0.05343037734179477,
+        "bus": 0.0891543651239004,
+        "truck": 0.09399522636024729
+      },
+      "controller": "fixed",
+      "fuel_per_vehicle_L": 0.13219709330255897
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 1,
+      "mix": {
+        "two_wheeler": 0.43001426825990885,
+        "car": 0.22058092322959474,
+        "auto_rickshaw": 0.10117243746534813,
+        "bus": 0.05344342889914786,
+        "truck": 0.19478894214600034
+      },
+      "controller": "fixed",
+      "fuel_per_vehicle_L": 0.1536607414343959
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.5,
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.14011297511064535,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 0,
+      "mix": {
+        "two_wheeler": 0.4781368498658292,
+        "car": 0.2852831813082284,
+        "auto_rickshaw": 0.05343037734179477,
+        "bus": 0.0891543651239004,
+        "truck": 0.09399522636024729
+      },
+      "controller": "XtraFlow",
+      "fuel_per_vehicle_L": 0.1222391635078359
+    },
+    {
+      "kind": "demand_mult",
+      "mult": 1.5,
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.13641815618119082,
+      "mean_waiting_s": 0.0
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 2,
+      "mix": {
+        "two_wheeler": 0.34523308444266276,
+        "car": 0.3434712053465223,
+        "auto_rickshaw": 0.13789141737919453,
+        "bus": 0.04463736783379652,
+        "truck": 0.1287669249978238
+      },
+      "controller": "fixed",
+      "fuel_per_vehicle_L": 0.13657207013078718
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 1,
+      "mix": {
+        "two_wheeler": 0.43001426825990885,
+        "car": 0.22058092322959474,
+        "auto_rickshaw": 0.10117243746534813,
+        "bus": 0.05344342889914786,
+        "truck": 0.19478894214600034
+      },
+      "controller": "XtraFlow",
+      "fuel_per_vehicle_L": 0.1453824802350091
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 3,
+      "mix": {
+        "two_wheeler": 0.34857648035722594,
+        "car": 0.1953307523216949,
+        "auto_rickshaw": 0.213994012927545,
+        "bus": 0.023799247396646423,
+        "truck": 0.21829950699688783
+      },
+      "controller": "fixed",
+      "fuel_per_vehicle_L": 0.15950607406851708
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 2,
+      "mix": {
+        "two_wheeler": 0.34523308444266276,
+        "car": 0.3434712053465223,
+        "auto_rickshaw": 0.13789141737919453,
+        "bus": 0.04463736783379652,
+        "truck": 0.1287669249978238
+      },
+      "controller": "XtraFlow",
+      "fuel_per_vehicle_L": 0.1234405664113021
+    },
+    {
+      "kind": "mix_lhs",
+      "mix_id": 3,
+      "mix": {
+        "two_wheeler": 0.34857648035722594,
+        "car": 0.1953307523216949,
+        "auto_rickshaw": 0.213994012927545,
+        "bus": 0.023799247396646423,
+        "truck": 0.21829950699688783
+      },
+      "controller": "XtraFlow",
+      "fuel_per_vehicle_L": 0.14570883097862194
+    }
+  ],
+  "gains": [
+    {
+      "demand_mult": 0.5,
+      "dos_proxy": 0.5,
+      "pct_fuel_reduction": 10.361507118799725
+    },
+    {
+      "demand_mult": 0.75,
+      "dos_proxy": 0.75,
+      "pct_fuel_reduction": 8.695619534593405
+    },
+    {
+      "demand_mult": 1.0,
+      "dos_proxy": 1.0,
+      "pct_fuel_reduction": 7.756223774000444
+    },
+    {
+      "demand_mult": 1.25,
+      "dos_proxy": 1.25,
+      "pct_fuel_reduction": 8.781801598453729
+    },
+    {
+      "demand_mult": 1.5,
+      "dos_proxy": 1.5,
+      "pct_fuel_reduction": 8.965085032333658
+    }
+  ],
+  "mix_ranges_assumed": {
+    "two_wheeler": [
+      0.25,
+      0.55
+    ],
+    "car": [
+      0.15,
+      0.4
+    ],
+    "auto_rickshaw": [
+      0.05,
+      0.2
+    ],
+    "bus": [
+      0.02,
+      0.1
+    ],
+    "truck": [
+      0.05,
+      0.25
+    ]
+  },
+  "label": "assumed",
+  "wait_metric_stale": true,
+  "wait_metric_note": "Many mean_waiting_s values are invalid (0.0 beside normal fuel; mix_lhs rows omitted the key). Cause: parallel workers clobbered shared tripinfo tags; mix task dropped wait. Code fixed 2026-10-07 in experiments/sensitivity.py and sim/run_sim.py unique tags. Re-run make sensitivity before quoting wait. Fuel columns may still be usable."
+}

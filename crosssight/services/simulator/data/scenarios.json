@@ -1,0 +1,113 @@
+{
+  "watchlist_plates": [
+    "CG830555",
+    "MH307970",
+    "KA729904",
+    "UP45US6221",
+    "MH8P0439",
+    "19BH5148LU",
+    "DL91F9932",
+    "WB1SL0037",
+    "MH96EM9397",
+    "TS8FS5077"
+  ],
+  "cloned_pairs": [
+    {
+      "plate_norm": "GJ116601",
+      "camera_a": "cam-049",
+      "camera_b": "cam-052",
+      "camera_c": "cam-049",
+      "camera_d": "cam-052",
+      "distance_m": 7000.823067686677,
+      "gap_seconds": 70.0,
+      "description": "Same plate at distant cameras within impossible time"
+    },
+    {
+      "plate_norm": "MH39J5753",
+      "camera_a": "cam-034",
+      "camera_b": "cam-058",
+      "camera_c": "cam-034",
+      "camera_d": "cam-058",
+      "distance_m": 6958.719166145898,
+      "gap_seconds": 69.6,
+      "description": "Same plate at distant cameras within impossible time"
+    }
+  ],
+  "convoy": {
+    "lead_plate": "RJ97R9567",
+    "plates": [
+      "RJ97R9567",
+      "MH15CJ9678",
+      "WB50CR5330"
+    ],
+    "cameras": [
+      "cam-001",
+      "cam-002",
+      "cam-003",
+      "cam-004",
+      "cam-005",
+      "cam-006",
+      "cam-007",
+      "cam-008"
+    ],
+    "max_gap_seconds": 15,
+    "min_cameras": 4
+  },
+  "loiterer": {
+    "plate_norm": "JH14NG1454",
+    "zone_id": "sensitive-1",
+    "camera_ids": [
+      "cam-002",
+      "cam-013",
+      "cam-005"
+    ],
+    "passes": 6,
+    "window_minutes": 45
+  },
+  "wrong_way": {
+    "plate_norm": "UK53771",
+    "camera_id": "cam-021",
+    "allowed_direction": "S",
+    "reported_direction": "N"
+  },
+  "restricted_zone": {
+    "plate_norm": "UP88KE2394",
+    "zone_id": "restricted-1",
+    "active_hours": {
+      "start": "22:00",
+      "end": "06:00"
+    },
+    "entry_hour_local": 23
+  },
+  "expected_alerts": {
+    "watchlist": [
+      "CG830555",
+      "MH307970",
+      "KA729904",
+      "UP45US6221",
+      "MH8P0439",
+      "19BH5148LU",
+      "DL91F9932",
+      "WB1SL0037",
+      "MH96EM9397",
+      "TS8FS5077"
+    ],
+    "cloned_plate": [
+      "GJ116601",
+      "MH39J5753"
+    ],
+    "convoy": [
+      "RJ97R9567"
+    ],
+    "loitering": [
+      "JH14NG1454"
+    ],
+    "wrong_way": [
+      "UK53771"
+    ],
+    "geofence": [
+      "UP88KE2394"
+    ]
+  },
+  "generated_at": "2026-09-30T11:40:42.283208+00:00"
+}

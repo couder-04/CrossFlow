@@ -1,0 +1,53 @@
+name: crosssight
+
+on:
+  push:
+    paths: ["crosssight/**", ".github/workflows/crosssight.yml"]
+  pull_request:
+    paths: ["crosssight/**", ".github/workflows/crosssight.yml"]
+
+defaults:
+  run:
+    working-directory: crosssight
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - run: uv sync --frozen --all-packages
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+
+  types:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - run: uv sync --frozen --all-packages
+      - run: uv run mypy packages services --ignore-missing-imports --python-version 3.11
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - run: uv sync --frozen --all-packages
+      - run: uv run pytest -q
+
+  dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - working-directory: crosssight/apps/dashboard
+        run: npx pnpm@9 install --frozen-lockfile && npx pnpm@9 typecheck && npx pnpm@9 build

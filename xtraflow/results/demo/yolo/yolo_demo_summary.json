@@ -1,0 +1,5694 @@
+{
+  "label": "Input feasibility \u2014 not a fuel-saving result",
+  "source": "Mixed research CCTV \u2014 straight / one-way corridors",
+  "attribution": "Zenodo DOI 10.5281/zenodo.3986141 (CC BY 4.0); Seattle I-5 trafficdb (WSDOT / Chan\u2013Vasconcelos)",
+  "note": "Four independent corridor cameras mapped to N/E/S/W for a mosaic. Not synchronized approaches of one intersection. S is true southbound one-way highway; N/E/W are Zenodo arterial cams.",
+  "cameras": [
+    {
+      "approach": "N",
+      "file": "data/video/cam_N_hwy.mp4",
+      "title": "Straight multi-lane (Zenodo cam_10) / Bellevue Eastgate",
+      "kind": "hwy"
+    },
+    {
+      "approach": "E",
+      "file": "data/video/cam_E_hwy.mp4",
+      "title": "Straight street (Zenodo cam_16) / Bellevue Newport",
+      "kind": "hwy"
+    },
+    {
+      "approach": "S",
+      "file": "data/video/cam_S_hwy.mp4",
+      "title": "I-5 S @ 188th St (WSDOT) / Bellevue SE 38th",
+      "kind": "hwy"
+    },
+    {
+      "approach": "W",
+      "file": "data/video/cam_W_hwy.mp4",
+      "title": "Divided arterial (Zenodo cam_11) / Bellevue NE 8th",
+      "kind": "hwy"
+    }
+  ],
+  "outputs": {
+    "overlays": [
+      "results/demo/yolo/overlay_N.mp4",
+      "results/demo/yolo/overlay_E.mp4",
+      "results/demo/yolo/overlay_S.mp4",
+      "results/demo/yolo/overlay_W.mp4"
+    ],
+    "counts": [
+      "results/demo/yolo/counts_N.json",
+      "results/demo/yolo/counts_E.json",
+      "results/demo/yolo/counts_S.json",
+      "results/demo/yolo/counts_W.json"
+    ],
+    "mosaic": "results/demo/yolo/yolo_mosaic.mp4",
+    "primary_overlay": "results/demo/yolo_overlay.mp4",
+    "story": "results/demo/yolo/yolo_story.mp4",
+    "story_plan": "results/demo/yolo/yolo_story_plan.json"
+  },
+  "per_camera": {
+    "N": {
+      "title": "Straight multi-lane (Zenodo cam_10) / Bellevue Eastgate",
+      "kind": "hwy",
+      "source_video": "data/video/cam_N_hwy.mp4",
+      "overlay": "results/demo/yolo/overlay_N.mp4",
+      "counts": "results/demo/yolo/counts_N.json",
+      "n_samples": 40,
+      "peak_vehicles": 7,
+      "mean_vehicles": 3.3,
+      "mean_weighted_pressure": 3.52,
+      "last": {
+        "frame": 117,
+        "vehicles": 4,
+        "weighted_pressure": 4.0,
+        "car": 4,
+        "two_wheeler": 0,
+        "bus": 0,
+        "truck": 0,
+        "auto_rickshaw": 0
+      },
+      "totals_series": [
+        {
+          "frame": 0,
+          "vehicles": 7,
+          "weighted_pressure": 7.0,
+          "car": 7,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 3,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 6,
+          "vehicles": 5,
+          "weighted_pressure": 8.54611811546118,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 2,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 9,
+          "vehicles": 6,
+          "weighted_pressure": 7.77305905773059,
+          "car": 5,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 12,
+          "vehicles": 5,
+          "weighted_pressure": 6.77305905773059,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 15,
+          "vehicles": 5,
+          "weighted_pressure": 6.77305905773059,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 18,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 21,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 24,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 27,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 30,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 33,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 36,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 39,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 42,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 45,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 48,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 51,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 54,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 57,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 60,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 63,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 66,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 69,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 72,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 75,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 78,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 81,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 84,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 87,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 90,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 93,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 96,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 99,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 102,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 105,
+          "vehicles": 5,
+          "weighted_pressure": 5.0,
+          "car": 5,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 108,
+          "vehicles": 5,
+          "weighted_pressure": 5.0,
+          "car": 5,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 111,
+          "vehicles": 5,
+          "weighted_pressure": 5.0,
+          "car": 5,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 114,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 117,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        }
+      ],
+      "decisions": [
+        {
+          "frame": 0,
+          "t_s": 0.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 7,
+          "pressures": {
+            "NS_TL": 1.8,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.8,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 3,
+          "t_s": 1.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 6,
+          "t_s": 2.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 1.2,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.2,
+          "xtra_idle_mg_s": 2321.7,
+          "fixed_idle_mg_s": 4833.3,
+          "count_idle_mg_s": 2321.7,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 9,
+          "t_s": 3.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 6,
+          "pressures": {
+            "NS_TL": 1.5,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.5,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 5670.6,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 4833.3
+        },
+        {
+          "frame": 12,
+          "t_s": 4.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 1.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.9,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 15,
+          "t_s": 5.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 1.5,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.5,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 18,
+          "t_s": 6.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 21,
+          "t_s": 7.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 1674.4
+        },
+        {
+          "frame": 24,
+          "t_s": 8.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 27,
+          "t_s": 9.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 30,
+          "t_s": 10.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 1674.4
+        },
+        {
+          "frame": 33,
+          "t_s": 11.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 1674.4
+        },
+        {
+          "frame": 36,
+          "t_s": 12.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 39,
+          "t_s": 13.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 42,
+          "t_s": 14.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 45,
+          "t_s": 15.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 48,
+          "t_s": 16.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 51,
+          "t_s": 17.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 54,
+          "t_s": 18.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 57,
+          "t_s": 19.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 60,
+          "t_s": 20.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 63,
+          "t_s": 21.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 66,
+          "t_s": 22.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 69,
+          "t_s": 23.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 72,
+          "t_s": 24.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 75,
+          "t_s": 25.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 78,
+          "t_s": 26.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 81,
+          "t_s": 27.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 84,
+          "t_s": 28.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 87,
+          "t_s": 29.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 90,
+          "t_s": 30.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 93,
+          "t_s": 31.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 1674.4
+        },
+        {
+          "frame": 96,
+          "t_s": 32.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 99,
+          "t_s": 33.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 102,
+          "t_s": 34.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 105,
+          "t_s": 35.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 1.2,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.2,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 3348.9,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 108,
+          "t_s": 36.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 1.2,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.2,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 111,
+          "t_s": 37.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 1.2,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.2,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 114,
+          "t_s": 38.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.9,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 117,
+          "t_s": 39.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.9,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        }
+      ],
+      "decision_summary": {
+        "n_samples": 40,
+        "phase_share": {
+          "NS_TL": 1.0
+        },
+        "dominant_phase": "NS_TL",
+        "mean_served_pressure": 0.787,
+        "cum_idle_xtra_mg": 9983.1,
+        "cum_idle_fixed_mg": 18012.9,
+        "cum_idle_saved_mg": 8029.8,
+        "idle_fuel_saved_L_proxy": 0.01085,
+        "pct_idle_cut_vs_fixed": 44.58,
+        "note": "Idle-fuel proxy from detector counts + measured idle mg/s weights. Illustrative for this clip \u2014 not the published SUMO fuel result."
+      }
+    },
+    "E": {
+      "title": "Straight street (Zenodo cam_16) / Bellevue Newport",
+      "kind": "hwy",
+      "source_video": "data/video/cam_E_hwy.mp4",
+      "overlay": "results/demo/yolo/overlay_E.mp4",
+      "counts": "results/demo/yolo/counts_E.json",
+      "n_samples": 40,
+      "peak_vehicles": 11,
+      "mean_vehicles": 8.57,
+      "mean_weighted_pressure": 8.75,
+      "last": {
+        "frame": 117,
+        "vehicles": 8,
+        "weighted_pressure": 8.0,
+        "car": 8,
+        "two_wheeler": 0,
+        "bus": 0,
+        "truck": 0,
+        "auto_rickshaw": 0
+      },
+      "totals_series": [
+        {
+          "frame": 0,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 3,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 6,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 9,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 12,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 15,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 18,
+          "vehicles": 10,
+          "weighted_pressure": 10.0,
+          "car": 10,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 21,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 24,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 27,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 30,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 33,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 36,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 39,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 42,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 45,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 48,
+          "vehicles": 10,
+          "weighted_pressure": 10.0,
+          "car": 10,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 51,
+          "vehicles": 11,
+          "weighted_pressure": 11.0,
+          "car": 11,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 54,
+          "vehicles": 10,
+          "weighted_pressure": 11.77305905773059,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 57,
+          "vehicles": 10,
+          "weighted_pressure": 10.0,
+          "car": 10,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 60,
+          "vehicles": 10,
+          "weighted_pressure": 10.0,
+          "car": 10,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 63,
+          "vehicles": 8,
+          "weighted_pressure": 9.77305905773059,
+          "car": 7,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 66,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 69,
+          "vehicles": 8,
+          "weighted_pressure": 9.77305905773059,
+          "car": 7,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 72,
+          "vehicles": 7,
+          "weighted_pressure": 7.0,
+          "car": 7,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 75,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 78,
+          "vehicles": 9,
+          "weighted_pressure": 10.77305905773059,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 81,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 84,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 87,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 90,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 93,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 96,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 99,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 102,
+          "vehicles": 9,
+          "weighted_pressure": 9.0,
+          "car": 9,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 105,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 108,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 111,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 114,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 117,
+          "vehicles": 8,
+          "weighted_pressure": 8.0,
+          "car": 8,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        }
+      ],
+      "decisions": [
+        {
+          "frame": 0,
+          "t_s": 0.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 1.8,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.8,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 3,
+          "t_s": 1.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 1.8,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.8,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 6,
+          "t_s": 2.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 1.8,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.8,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 5023.3,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 3348.9
+        },
+        {
+          "frame": 9,
+          "t_s": 3.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 1.8,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.8,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 5023.3,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 3348.9
+        },
+        {
+          "frame": 12,
+          "t_s": 4.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 6.0,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.0,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 15,
+          "t_s": 5.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 6.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 18,
+          "t_s": 6.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 10,
+          "pressures": {
+            "NS_TL": 6.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 5023.3,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 3348.9
+        },
+        {
+          "frame": 21,
+          "t_s": 7.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 5.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 24,
+          "t_s": 8.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 4.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 4.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 27,
+          "t_s": 9.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 5.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 30,
+          "t_s": 10.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 5.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 33,
+          "t_s": 11.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 5.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 36,
+          "t_s": 12.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 5.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 39,
+          "t_s": 13.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 6.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 42,
+          "t_s": 14.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 6.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 5023.3,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 3348.9
+        },
+        {
+          "frame": 45,
+          "t_s": 15.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 5.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 48,
+          "t_s": 16.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 10,
+          "pressures": {
+            "NS_TL": 6.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 51,
+          "t_s": 17.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 11,
+          "pressures": {
+            "NS_TL": 6.9,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.9,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 54,
+          "t_s": 18.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 10,
+          "pressures": {
+            "NS_TL": 5.9,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.9,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 5023.3,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 3348.9
+        },
+        {
+          "frame": 57,
+          "t_s": 19.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 10,
+          "pressures": {
+            "NS_TL": 6.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 5023.3,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 3348.9
+        },
+        {
+          "frame": 60,
+          "t_s": 20.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 10,
+          "pressures": {
+            "NS_TL": 6.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 63,
+          "t_s": 21.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 5.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 66,
+          "t_s": 22.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 6.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 6.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 5023.3,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 3348.9
+        },
+        {
+          "frame": 69,
+          "t_s": 23.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 5.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 72,
+          "t_s": 24.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 7,
+          "pressures": {
+            "NS_TL": 4.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 4.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 75,
+          "t_s": 25.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 5.3,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 78,
+          "t_s": 26.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 5.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 81,
+          "t_s": 27.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 4.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 4.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 3348.9,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 1674.4
+        },
+        {
+          "frame": 84,
+          "t_s": 28.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 4.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 4.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 87,
+          "t_s": 29.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 5.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 90,
+          "t_s": 30.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 5.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 93,
+          "t_s": 31.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 5.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 5.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 4186.1,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 2511.7
+        },
+        {
+          "frame": 96,
+          "t_s": 32.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 4.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 4.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 99,
+          "t_s": 33.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 4.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 4.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 102,
+          "t_s": 34.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 9,
+          "pressures": {
+            "NS_TL": 4.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 4.6,
+          "xtra_idle_mg_s": 2511.7,
+          "fixed_idle_mg_s": 3348.9,
+          "count_idle_mg_s": 2511.7,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 105,
+          "t_s": 35.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 3.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 3.6,
+          "xtra_idle_mg_s": 2511.7,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 2511.7,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 108,
+          "t_s": 36.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 3.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 3.6,
+          "xtra_idle_mg_s": 2511.7,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 2511.7,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 111,
+          "t_s": 37.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 3.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 3.6,
+          "xtra_idle_mg_s": 2511.7,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 2511.7,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 114,
+          "t_s": 38.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 3.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 3.6,
+          "xtra_idle_mg_s": 2511.7,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 2511.7,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 117,
+          "t_s": 39.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 8,
+          "pressures": {
+            "NS_TL": 3.6,
+            "NS_R": 0.0,
+            "EW_TL": 2.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 3.6,
+          "xtra_idle_mg_s": 2511.7,
+          "fixed_idle_mg_s": 2511.7,
+          "count_idle_mg_s": 2511.7,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        }
+      ],
+      "decision_summary": {
+        "n_samples": 40,
+        "phase_share": {
+          "NS_TL": 1.0
+        },
+        "dominant_phase": "NS_TL",
+        "mean_served_pressure": 4.955,
+        "cum_idle_xtra_mg": 23999.9,
+        "cum_idle_fixed_mg": 39349.1,
+        "cum_idle_saved_mg": 15349.2,
+        "idle_fuel_saved_L_proxy": 0.02074,
+        "pct_idle_cut_vs_fixed": 39.01,
+        "note": "Idle-fuel proxy from detector counts + measured idle mg/s weights. Illustrative for this clip \u2014 not the published SUMO fuel result."
+      }
+    },
+    "S": {
+      "title": "I-5 S @ 188th St (WSDOT) / Bellevue SE 38th",
+      "kind": "hwy",
+      "source_video": "data/video/cam_S_hwy.mp4",
+      "overlay": "results/demo/yolo/overlay_S.mp4",
+      "counts": "results/demo/yolo/counts_S.json",
+      "n_samples": 40,
+      "peak_vehicles": 1,
+      "mean_vehicles": 0.03,
+      "mean_weighted_pressure": 0.07,
+      "last": {
+        "frame": 117,
+        "vehicles": 0,
+        "weighted_pressure": 0.0,
+        "car": 0,
+        "two_wheeler": 0,
+        "bus": 0,
+        "truck": 0,
+        "auto_rickshaw": 0
+      },
+      "totals_series": [
+        {
+          "frame": 0,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 3,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 6,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 9,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 12,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 15,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 18,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 21,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 24,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 27,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 30,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 33,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 36,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 39,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 42,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 45,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 48,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 51,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 54,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 57,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 60,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 63,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 66,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 69,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 72,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 75,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 78,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 81,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 84,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 87,
+          "vehicles": 1,
+          "weighted_pressure": 2.77305905773059,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 90,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 93,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 96,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 99,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 102,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 105,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 108,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 111,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 114,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 117,
+          "vehicles": 0,
+          "weighted_pressure": 0.0,
+          "car": 0,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        }
+      ],
+      "decisions": [
+        {
+          "frame": 0,
+          "t_s": 0.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 3,
+          "t_s": 1.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 6,
+          "t_s": 2.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 9,
+          "t_s": 3.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 12,
+          "t_s": 4.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 15,
+          "t_s": 5.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 18,
+          "t_s": 6.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 21,
+          "t_s": 7.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 24,
+          "t_s": 8.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 27,
+          "t_s": 9.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 30,
+          "t_s": 10.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 33,
+          "t_s": 11.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 36,
+          "t_s": 12.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 39,
+          "t_s": 13.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 42,
+          "t_s": 14.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 45,
+          "t_s": 15.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 48,
+          "t_s": 16.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 51,
+          "t_s": 17.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 54,
+          "t_s": 18.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 57,
+          "t_s": 19.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 60,
+          "t_s": 20.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 63,
+          "t_s": 21.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 66,
+          "t_s": 22.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 69,
+          "t_s": 23.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 72,
+          "t_s": 24.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 75,
+          "t_s": 25.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 78,
+          "t_s": 26.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 81,
+          "t_s": 27.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 84,
+          "t_s": 28.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 87,
+          "t_s": 29.0,
+          "next_phase": "EW_TL",
+          "count_phase": "EW_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 1,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 2321.7,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 2321.7
+        },
+        {
+          "frame": 90,
+          "t_s": 30.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 93,
+          "t_s": 31.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 96,
+          "t_s": 32.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 99,
+          "t_s": 33.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 102,
+          "t_s": 34.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 105,
+          "t_s": 35.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 108,
+          "t_s": 36.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 111,
+          "t_s": 37.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 114,
+          "t_s": 38.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 117,
+          "t_s": 39.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 0,
+          "pressures": {
+            "NS_TL": 0.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.0,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        }
+      ],
+      "decision_summary": {
+        "n_samples": 40,
+        "phase_share": {
+          "NS_TL": 0.975,
+          "EW_TL": 0.025
+        },
+        "dominant_phase": "NS_TL",
+        "mean_served_pressure": 0.007,
+        "cum_idle_xtra_mg": 0.0,
+        "cum_idle_fixed_mg": 773.9,
+        "cum_idle_saved_mg": 773.9,
+        "idle_fuel_saved_L_proxy": 0.00105,
+        "pct_idle_cut_vs_fixed": 100.0,
+        "note": "Idle-fuel proxy from detector counts + measured idle mg/s weights. Illustrative for this clip \u2014 not the published SUMO fuel result."
+      }
+    },
+    "W": {
+      "title": "Divided arterial (Zenodo cam_11) / Bellevue NE 8th",
+      "kind": "hwy",
+      "source_video": "data/video/cam_W_hwy.mp4",
+      "overlay": "results/demo/yolo/overlay_W.mp4",
+      "counts": "results/demo/yolo/counts_W.json",
+      "n_samples": 40,
+      "peak_vehicles": 5,
+      "mean_vehicles": 2.92,
+      "mean_weighted_pressure": 3.15,
+      "last": {
+        "frame": 117,
+        "vehicles": 2,
+        "weighted_pressure": 2.0,
+        "car": 2,
+        "two_wheeler": 0,
+        "bus": 0,
+        "truck": 0,
+        "auto_rickshaw": 0
+      },
+      "totals_series": [
+        {
+          "frame": 0,
+          "vehicles": 3,
+          "weighted_pressure": 2.5351692103516923,
+          "car": 2,
+          "two_wheeler": 1,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 3,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 6,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 9,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 12,
+          "vehicles": 5,
+          "weighted_pressure": 5.0,
+          "car": 5,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 15,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 18,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 21,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 24,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 27,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 30,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 33,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 36,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 39,
+          "vehicles": 5,
+          "weighted_pressure": 5.0,
+          "car": 5,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 42,
+          "vehicles": 4,
+          "weighted_pressure": 5.77305905773059,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 45,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 48,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 51,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 54,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 57,
+          "vehicles": 4,
+          "weighted_pressure": 4.0,
+          "car": 4,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 60,
+          "vehicles": 4,
+          "weighted_pressure": 5.77305905773059,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 63,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 66,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 69,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 72,
+          "vehicles": 2,
+          "weighted_pressure": 2.996018579960185,
+          "car": 1,
+          "two_wheeler": 0,
+          "bus": 1,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 75,
+          "vehicles": 3,
+          "weighted_pressure": 3.996018579960185,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 1,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 78,
+          "vehicles": 2,
+          "weighted_pressure": 2.996018579960185,
+          "car": 1,
+          "two_wheeler": 0,
+          "bus": 1,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 81,
+          "vehicles": 2,
+          "weighted_pressure": 2.996018579960185,
+          "car": 1,
+          "two_wheeler": 0,
+          "bus": 1,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 84,
+          "vehicles": 2,
+          "weighted_pressure": 3.77305905773059,
+          "car": 1,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 1,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 87,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 90,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 93,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 96,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 99,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 102,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 105,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 108,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 111,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 114,
+          "vehicles": 3,
+          "weighted_pressure": 3.0,
+          "car": 3,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        },
+        {
+          "frame": 117,
+          "vehicles": 2,
+          "weighted_pressure": 2.0,
+          "car": 2,
+          "two_wheeler": 0,
+          "bus": 0,
+          "truck": 0,
+          "auto_rickshaw": 0
+        }
+      ],
+      "decisions": [
+        {
+          "frame": 0,
+          "t_s": 0.0,
+          "next_phase": "EW_TL",
+          "count_phase": "EW_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 1285.3,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 448.1
+        },
+        {
+          "frame": 3,
+          "t_s": 1.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 0.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 6,
+          "t_s": 2.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 9,
+          "t_s": 3.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 12,
+          "t_s": 4.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 0.9,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.9,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 15,
+          "t_s": 5.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 0.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 0.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 18,
+          "t_s": 6.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 21,
+          "t_s": 7.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 24,
+          "t_s": 8.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 27,
+          "t_s": 9.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 30,
+          "t_s": 10.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": -837.2
+        },
+        {
+          "frame": 33,
+          "t_s": 11.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 36,
+          "t_s": 12.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.6,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 39,
+          "t_s": 13.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 5,
+          "pressures": {
+            "NS_TL": 1.6,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.6,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 42,
+          "t_s": 14.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 3158.9,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 3158.9,
+          "idle_saved_vs_fixed_mg_s": -2321.7
+        },
+        {
+          "frame": 45,
+          "t_s": 15.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": -837.2
+        },
+        {
+          "frame": 48,
+          "t_s": 16.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 51,
+          "t_s": 17.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 1674.4,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 54,
+          "t_s": 18.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": -837.2
+        },
+        {
+          "frame": 57,
+          "t_s": 19.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 1674.4,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 1674.4,
+          "idle_saved_vs_fixed_mg_s": -837.2
+        },
+        {
+          "frame": 60,
+          "t_s": 20.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 4,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.6,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 3158.9,
+          "fixed_idle_mg_s": 3158.9,
+          "count_idle_mg_s": 3158.9,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 63,
+          "t_s": 21.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 66,
+          "t_s": 22.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 69,
+          "t_s": 23.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 72,
+          "t_s": 24.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 75,
+          "t_s": 25.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 78,
+          "t_s": 26.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 81,
+          "t_s": 27.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 837.2
+        },
+        {
+          "frame": 84,
+          "t_s": 28.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.0,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 0.0,
+          "fixed_idle_mg_s": 0.0,
+          "count_idle_mg_s": 0.0,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 87,
+          "t_s": 29.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 90,
+          "t_s": 30.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 93,
+          "t_s": 31.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 96,
+          "t_s": 32.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 99,
+          "t_s": 33.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 102,
+          "t_s": 34.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 105,
+          "t_s": 35.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 108,
+          "t_s": 36.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_TL",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 111,
+          "t_s": 37.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "NS_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 114,
+          "t_s": 38.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_TL",
+          "n_vehicles": 3,
+          "pressures": {
+            "NS_TL": 1.3,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.3,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        },
+        {
+          "frame": 117,
+          "t_s": 39.0,
+          "next_phase": "NS_TL",
+          "count_phase": "NS_TL",
+          "fixed_phase": "EW_R",
+          "n_vehicles": 2,
+          "pressures": {
+            "NS_TL": 1.0,
+            "NS_R": 0.0,
+            "EW_TL": 0.3,
+            "EW_R": 0.0
+          },
+          "served_pressure": 1.0,
+          "xtra_idle_mg_s": 837.2,
+          "fixed_idle_mg_s": 837.2,
+          "count_idle_mg_s": 837.2,
+          "idle_saved_vs_fixed_mg_s": 0.0
+        }
+      ],
+      "decision_summary": {
+        "n_samples": 40,
+        "phase_share": {
+          "EW_TL": 0.025,
+          "NS_TL": 0.975
+        },
+        "dominant_phase": "NS_TL",
+        "mean_served_pressure": 1.135,
+        "cum_idle_xtra_mg": 13547.7,
+        "cum_idle_fixed_mg": 13202.2,
+        "cum_idle_saved_mg": -345.5,
+        "idle_fuel_saved_L_proxy": -0.00047,
+        "pct_idle_cut_vs_fixed": -2.62,
+        "note": "Idle-fuel proxy from detector counts + measured idle mg/s weights. Illustrative for this clip \u2014 not the published SUMO fuel result."
+      }
+    }
+  },
+  "clubbed": {
+    "peak_vehicles": 24,
+    "mean_vehicles": 14.82,
+    "mean_weighted_pressure": 15.49,
+    "n_cameras": 4,
+    "decisions": [
+      {
+        "frame": 0,
+        "t_s": 0.0,
+        "next_phase": "NS_TL",
+        "count_phase": "NS_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 9,
+        "pressures": {
+          "NS_TL": 1.5,
+          "NS_R": 0.0,
+          "EW_TL": 1.2,
+          "EW_R": 0.0
+        },
+        "served_pressure": 1.5,
+        "xtra_idle_mg_s": 2959.7,
+        "fixed_idle_mg_s": 2959.7,
+        "count_idle_mg_s": 2959.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 3,
+        "t_s": 0.31,
+        "next_phase": "NS_TL",
+        "count_phase": "NS_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 0.9,
+          "EW_R": 0.0
+        },
+        "served_pressure": 0.9,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 6,
+        "t_s": 0.62,
+        "next_phase": "NS_TL",
+        "count_phase": "NS_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 7,
+        "pressures": {
+          "NS_TL": 1.2,
+          "NS_R": 0.0,
+          "EW_TL": 0.9,
+          "EW_R": 0.0
+        },
+        "served_pressure": 1.2,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 4833.3,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 2321.7
+      },
+      {
+        "frame": 9,
+        "t_s": 0.92,
+        "next_phase": "NS_TL",
+        "count_phase": "NS_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 8,
+        "pressures": {
+          "NS_TL": 1.5,
+          "NS_R": 0.0,
+          "EW_TL": 0.9,
+          "EW_R": 0.0
+        },
+        "served_pressure": 1.5,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 5670.6,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 3158.9
+      },
+      {
+        "frame": 12,
+        "t_s": 1.23,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 8,
+        "pressures": {
+          "NS_TL": 1.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 3348.9,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 2511.7
+      },
+      {
+        "frame": 15,
+        "t_s": 1.54,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 8,
+        "pressures": {
+          "NS_TL": 1.5,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 5670.6,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 5670.6,
+        "idle_saved_vs_fixed_mg_s": -3158.9
+      },
+      {
+        "frame": 18,
+        "t_s": 1.85,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 21,
+        "t_s": 2.15,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 24,
+        "t_s": 2.46,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 27,
+        "t_s": 2.77,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 30,
+        "t_s": 3.08,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 7,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 33,
+        "t_s": 3.38,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 2511.7,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 2511.7,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 36,
+        "t_s": 3.69,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 837.2
+      },
+      {
+        "frame": 39,
+        "t_s": 4.0,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 3348.9,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 1674.4
+      },
+      {
+        "frame": 42,
+        "t_s": 4.31,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 1674.4,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 45,
+        "t_s": 4.62,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 1674.4,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 48,
+        "t_s": 4.92,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 3348.9,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 2511.7
+      },
+      {
+        "frame": 51,
+        "t_s": 5.23,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 3348.9,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 2511.7
+      },
+      {
+        "frame": 54,
+        "t_s": 5.54,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 837.2,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 57,
+        "t_s": 5.85,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 837.2,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 60,
+        "t_s": 6.15,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 2.6,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.6,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 4833.3,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 3996.1
+      },
+      {
+        "frame": 63,
+        "t_s": 6.46,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 4,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 1674.4
+      },
+      {
+        "frame": 66,
+        "t_s": 6.77,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 4,
+        "pressures": {
+          "NS_TL": 0.0,
+          "NS_R": 0.0,
+          "EW_TL": 3.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 3.3,
+        "xtra_idle_mg_s": 0.0,
+        "fixed_idle_mg_s": 0.0,
+        "count_idle_mg_s": 0.0,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 69,
+        "t_s": 7.08,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 3,
+        "pressures": {
+          "NS_TL": 0.0,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 0.0,
+        "fixed_idle_mg_s": 0.0,
+        "count_idle_mg_s": 0.0,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 72,
+        "t_s": 7.38,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 3.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 3.3,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 1674.4
+      },
+      {
+        "frame": 75,
+        "t_s": 7.69,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 837.2
+      },
+      {
+        "frame": 78,
+        "t_s": 8.0,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 3.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 3.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 1674.4,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 81,
+        "t_s": 8.31,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 3.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 3.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 1674.4,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 84,
+        "t_s": 8.62,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.3,
+          "NS_R": 0.0,
+          "EW_TL": 3.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 3.3,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 1674.4
+      },
+      {
+        "frame": 87,
+        "t_s": 8.92,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 6,
+        "pressures": {
+          "NS_TL": 0.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 3996.1,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 3996.1,
+        "idle_saved_vs_fixed_mg_s": -1484.4
+      },
+      {
+        "frame": 90,
+        "t_s": 9.23,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 3,
+        "pressures": {
+          "NS_TL": 0.0,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 0.0,
+        "fixed_idle_mg_s": 0.0,
+        "count_idle_mg_s": 0.0,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 93,
+        "t_s": 9.54,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 1674.4,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 96,
+        "t_s": 9.85,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 837.2
+      },
+      {
+        "frame": 99,
+        "t_s": 10.15,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 837.2
+      },
+      {
+        "frame": 102,
+        "t_s": 10.46,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 5,
+        "pressures": {
+          "NS_TL": 0.6,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 1674.4,
+        "fixed_idle_mg_s": 1674.4,
+        "count_idle_mg_s": 1674.4,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 105,
+        "t_s": 10.77,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 7,
+        "pressures": {
+          "NS_TL": 1.2,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 3348.9,
+        "fixed_idle_mg_s": 3348.9,
+        "count_idle_mg_s": 3348.9,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 108,
+        "t_s": 11.08,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_TL",
+        "n_vehicles": 7,
+        "pressures": {
+          "NS_TL": 1.2,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 3348.9,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 3348.9,
+        "idle_saved_vs_fixed_mg_s": -837.2
+      },
+      {
+        "frame": 111,
+        "t_s": 11.38,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "NS_R",
+        "n_vehicles": 7,
+        "pressures": {
+          "NS_TL": 1.2,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 3348.9,
+        "fixed_idle_mg_s": 2511.7,
+        "count_idle_mg_s": 3348.9,
+        "idle_saved_vs_fixed_mg_s": -837.2
+      },
+      {
+        "frame": 114,
+        "t_s": 11.69,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_TL",
+        "n_vehicles": 7,
+        "pressures": {
+          "NS_TL": 1.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 837.2,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      },
+      {
+        "frame": 117,
+        "t_s": 12.0,
+        "next_phase": "EW_TL",
+        "count_phase": "EW_TL",
+        "fixed_phase": "EW_R",
+        "n_vehicles": 7,
+        "pressures": {
+          "NS_TL": 1.9,
+          "NS_R": 0.0,
+          "EW_TL": 2.3,
+          "EW_R": 0.0
+        },
+        "served_pressure": 2.3,
+        "xtra_idle_mg_s": 837.2,
+        "fixed_idle_mg_s": 837.2,
+        "count_idle_mg_s": 837.2,
+        "idle_saved_vs_fixed_mg_s": 0.0
+      }
+    ],
+    "decision_summary": {
+      "n_samples": 40,
+      "phase_share": {
+        "NS_TL": 0.1,
+        "EW_TL": 0.9
+      },
+      "dominant_phase": "EW_TL",
+      "mean_served_pressure": 2.397,
+      "cum_idle_xtra_mg": 24302.0,
+      "cum_idle_fixed_mg": 31215.7,
+      "cum_idle_saved_mg": 6913.7,
+      "idle_fuel_saved_L_proxy": 0.00934,
+      "pct_idle_cut_vs_fixed": 22.15,
+      "note": "Idle-fuel proxy from detector counts + measured idle mg/s weights. Illustrative for this clip \u2014 not the published SUMO fuel result."
+    }
+  },
+  "last_frame": {
+    "N": {
+      "vehicles": 4,
+      "weighted_pressure": 4.0,
+      "car": 4,
+      "truck": 0,
+      "bus": 0,
+      "two_wheeler": 0
+    },
+    "E": {
+      "vehicles": 8,
+      "weighted_pressure": 8.0,
+      "car": 8,
+      "truck": 0,
+      "bus": 0,
+      "two_wheeler": 0
+    },
+    "S": {
+      "vehicles": 0,
+      "weighted_pressure": 0.0,
+      "car": 0,
+      "truck": 0,
+      "bus": 0,
+      "two_wheeler": 0
+    },
+    "W": {
+      "vehicles": 2,
+      "weighted_pressure": 2.0,
+      "car": 2,
+      "truck": 0,
+      "bus": 0,
+      "two_wheeler": 0
+    }
+  },
+  "published_fuel_savings": [
+    {
+      "scenario": "balanced",
+      "vs_best_baseline_%": 0.3,
+      "vs_fixed_legacy_%": 7.94,
+      "best_baseline": "maxpressure"
+    },
+    {
+      "scenario": "dynamic",
+      "vs_best_baseline_%": 1.09,
+      "vs_fixed_legacy_%": 13.24,
+      "best_baseline": "maxpressure"
+    },
+    {
+      "scenario": "low_demand",
+      "vs_best_baseline_%": 1.91,
+      "vs_fixed_legacy_%": 14.15,
+      "best_baseline": "maxpressure"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "vs_best_baseline_%": 0.69,
+      "vs_fixed_legacy_%": 17.52,
+      "best_baseline": "maxpressure"
+    }
+  ],
+  "decision_label": "XtraFlow serves the highest fuel-weighted phase pressure; idle-fuel proxy compares that choice to fixed round-robin on the same counts."
+}

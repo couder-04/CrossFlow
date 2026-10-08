@@ -1,0 +1,25 @@
+# Pinned for reproducibility (Python 3.12, Linux and macOS)
+eclipse-sumo==1.21.0
+traci==1.21.0
+sumolib==1.21.0
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+statsmodels==0.14.4
+matplotlib==3.9.2
+seaborn==0.13.2
+PyYAML==6.0.2
+tqdm==4.67.0
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+torch==2.5.1
+python-pptx==1.0.2
+ultralytics==8.3.28
+lapx>=0.5.2
+opencv-python-headless==4.10.0.84
+imageio==2.36.0
+imageio-ffmpeg==0.5.1
+pytest==8.3.3
+streamlit==1.39.0
+Pillow==10.4.0
+tabulate==0.9.0

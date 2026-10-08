@@ -1,0 +1,6 @@
+Watchlist probes for this run: ['LT14PZ1000', 'LT15PZ1001', 'LT16PZ1002', 'LT17PZ1003', 'LT18PZ1004', 'LT19PZ1005', 'LT20PZ1006', 'LT21PZ1007', 'LT22PZ1008', 'LT23PZ1009']
+Publishing: cameras=60 rate/cam=0.5/s duration=40.0s ≈30 rps aggregate
+Published 1260 in 41.97s (30.0/s) — draining 30.0s…
+ingest p95=1.2739s recovery=100.0% cams=60/60 | alert p95=0s n=0 | fairness_cv=0.000
+Overall: FAIL
+Wrote /Users/par_04/code_playground/sih/reports/city_load.md

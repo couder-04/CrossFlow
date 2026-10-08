@@ -1,0 +1,50 @@
+[
+  {
+    "scenario": "balanced",
+    "best_baseline": "maxpressure",
+    "pct_fuel_reduction_vs_best": 0.2951650496302161,
+    "ci_lo": -0.38092403298438027,
+    "ci_hi": 1.0130954819270985,
+    "sanity_flag": "OK",
+    "pct_fuel_reduction_vs_fixed_legacy": 7.938186165820214,
+    "legacy_ci_lo": 6.673608923157647,
+    "legacy_ci_hi": 9.085392125700043,
+    "pct_fuel_reduction_vs_fixed": 0.2951650496302161
+  },
+  {
+    "scenario": "dynamic",
+    "best_baseline": "maxpressure",
+    "pct_fuel_reduction_vs_best": 1.0923724353855664,
+    "ci_lo": 0.6470476899295328,
+    "ci_hi": 1.7023919007595487,
+    "sanity_flag": "OK",
+    "pct_fuel_reduction_vs_fixed_legacy": 13.239532784070914,
+    "legacy_ci_lo": 12.330311656051153,
+    "legacy_ci_hi": 14.287449216789009,
+    "pct_fuel_reduction_vs_fixed": 1.0923724353855664
+  },
+  {
+    "scenario": "low_demand",
+    "best_baseline": "maxpressure",
+    "pct_fuel_reduction_vs_best": 1.9139263041177383,
+    "ci_lo": 0.5098301000129395,
+    "ci_hi": 3.038929872296646,
+    "sanity_flag": "OK",
+    "pct_fuel_reduction_vs_fixed_legacy": 14.14780841575537,
+    "legacy_ci_lo": 12.714960907703809,
+    "legacy_ci_hi": 15.397397029250888,
+    "pct_fuel_reduction_vs_fixed": 1.9139263041177383
+  },
+  {
+    "scenario": "peak_unbalanced",
+    "best_baseline": "maxpressure",
+    "pct_fuel_reduction_vs_best": 0.6890117820891538,
+    "ci_lo": -0.35435680525508617,
+    "ci_hi": 1.765136059133654,
+    "sanity_flag": "OK",
+    "pct_fuel_reduction_vs_fixed_legacy": 17.51624226623785,
+    "legacy_ci_lo": 14.428222782931192,
+    "legacy_ci_hi": 20.12790049096153,
+    "pct_fuel_reduction_vs_fixed": 0.6890117820891538
+  }
+]

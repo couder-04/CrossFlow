@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-06 19:39:25 by Eclipse SUMO sumo Version 1.21.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/Users/par_04/code_playground/XtraFlow/results/networks/intersection.net.xml"/>
+        <route-files value="/Users/par_04/code_playground/XtraFlow/results/demand/dynamic_seed1.rou.xml"/>
+        <additional-files value="/Users/par_04/code_playground/XtraFlow/results/networks/vtypes.add.xml,/Users/par_04/code_playground/XtraFlow/results/networks/tls.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="/Users/par_04/code_playground/XtraFlow/results/demo/demo_fixed_seed1.tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="240"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <no-warnings value="true"/>
+        <duration-log.disable value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <emissions>
+        <device.emissions.probability value="1.0"/>
+    </emissions>
+
+    <ssm_device>
+        <device.ssm.probability value="1"/>
+        <device.ssm.measures value="TTC"/>
+        <device.ssm.thresholds value="1.5"/>
+        <device.ssm.file value="/Users/par_04/code_playground/XtraFlow/results/demo/demo_fixed_seed1.ssm.xml"/>
+    </ssm_device>
+
+    <traci_server>
+        <remote-port value="52300"/>
+    </traci_server>
+
+</sumoConfiguration>
+-->
+
+<SSMLog>
+    <conflict begin="12.00" end="46.00" ego="v223" foe="v226">
+        <minTTC time="33.00" position="298.40,283.40" type="3" value="0.92" speed="0.00"/>
+    </conflict>
+    <conflict begin="12.00" end="46.00" ego="v226" foe="v223">
+        <minTTC time="33.00" position="298.40,283.40" type="2" value="0.92" speed="3.83"/>
+    </conflict>
+    <conflict begin="13.00" end="65.00" ego="v226" foe="v227">
+        <minTTC time="35.00" position="298.40,269.81" type="3" value="1.38" speed="1.22"/>
+    </conflict>
+    <conflict begin="13.00" end="65.00" ego="v227" foe="v226">
+        <minTTC time="35.00" position="298.40,269.81" type="2" value="1.38" speed="9.44"/>
+    </conflict>
+    <conflict begin="45.00" end="110.00" ego="v231" foe="v228">
+        <minTTC time="48.00" position="292.00,278.90" type="2" value="1.00" speed="8.38"/>
+    </conflict>
+    <conflict begin="80.00" end="112.00" ego="v505" foe="v508">
+        <minTTC time="83.00" position="280.90,301.60" type="3" value="0.88" speed="0.00"/>
+    </conflict>
+    <conflict begin="80.00" end="112.00" ego="v508" foe="v505">
+        <minTTC time="83.00" position="280.90,301.60" type="2" value="0.88" speed="8.05"/>
+    </conflict>
+    <conflict begin="43.00" end="113.00" ego="v10" foe="v8">
+        <minTTC time="65.00" position="308.00,328.83" type="2" value="0.76" speed="4.02"/>
+    </conflict>
+    <conflict begin="58.00" end="114.00" ego="v14" foe="v12">
+        <minTTC time="78.00" position="304.80,342.22" type="2" value="0.87" speed="4.31"/>
+    </conflict>
+    <conflict begin="57.00" end="115.00" ego="v4" foe="v7">
+        <minTTC time="61.00" position="304.80,316.60" type="3" value="0.75" speed="0.00"/>
+    </conflict>
+    <conflict begin="66.00" end="116.00" ego="v11" foe="v10">
+        <minTTC time="70.00" position="308.00,333.30" type="2" value="0.92" speed="6.86"/>
+    </conflict>
+    <conflict begin="89.00" end="117.00" ego="v16" foe="v15">
+        <minTTC time="93.00" position="304.80,353.61" type="2" value="0.68" speed="5.79"/>
+    </conflict>
+    <conflict begin="66.00" end="118.00" ego="v10" foe="v11">
+        <minTTC time="70.00" position="308.00,333.30" type="3" value="0.92" speed="0.00"/>
+    </conflict>
+    <conflict begin="43.00" end="119.00" ego="v8" foe="v10">
+        <minTTC time="65.00" position="308.00,328.83" type="3" value="0.76" speed="0.03"/>
+    </conflict>
+    <conflict begin="68.00" end="113.00" ego="v237" foe="v235">
+        <minTTC time="75.00" position="295.20,255.86" type="2" value="1.00" speed="7.93"/>
+    </conflict>
+    <conflict begin="74.00" end="118.00" ego="v14" foe="v11">
+        <minTTC time="83.00" position="308.00,337.81" type="2" value="1.31" speed="2.34"/>
+    </conflict>
+    <conflict begin="80.00" end="116.00" ego="v239" foe="v235">
+        <minTTC time="84.00" position="292.00,262.89" type="2" value="0.91" speed="6.57"/>
+    </conflict>
+    <conflict begin="83.00" end="120.00" ego="v244" foe="v243">
+        <minTTC time="105.00" position="295.20,241.14" type="2" value="1.02" speed="4.74"/>
+    </conflict>
+    <conflict begin="45.00" end="120.00" ego="v232" foe="v233">
+        <minTTC time="69.00" position="295.20,271.49" type="3" value="1.24" speed="0.75"/>
+    </conflict>
+    <conflict begin="45.00" end="120.00" ego="v233" foe="v232">
+        <minTTC time="69.00" position="295.20,271.49" type="2" value="1.24" speed="5.82"/>
+    </conflict>
+    <conflict begin="53.00" end="113.00" ego="v233" foe="v235">
+        <minTTC time="72.00" position="295.20,260.33" type="3" value="0.95" speed="0.36"/>
+    </conflict>
+    <conflict begin="101.00" end="119.00" ego="v244" foe="v239">
+        <minTTC time="108.00" position="292.00,251.68" type="2" value="0.93" speed="5.54"/>
+    </conflict>
+    <conflict begin="83.00" end="119.00" ego="v243" foe="v244">
+        <minTTC time="105.00" position="295.20,241.14" type="3" value="1.02" speed="0.16"/>
+    </conflict>
+    <conflict begin="74.00" end="122.00" ego="v11" foe="v14">
+        <minTTC time="83.00" position="308.00,337.81" type="3" value="1.31" speed="0.00"/>
+    </conflict>
+    <conflict begin="34.00" end="124.00" ego="v224" foe="v229">
+        <minTTC time="38.00" position="295.20,283.40" type="3" value="1.00" speed="0.00"/>
+    </conflict>
+    <conflict begin="64.00" end="114.00" ego="v224" foe="v232">
+        <minTTC time="67.00" position="295.20,283.40" type="3" value="1.42" speed="0.00"/>
+    </conflict>
+    <conflict begin="34.00" end="124.00" ego="v229" foe="v224">
+        <minTTC time="38.00" position="295.20,283.40" type="2" value="1.00" speed="6.71"/>
+    </conflict>
+    <conflict begin="85.00" end="124.00" ego="v20" foe="v18">
+        <minTTC time="106.00" position="308.00,356.62" type="2" value="1.18" speed="6.57"/>
+    </conflict>
+    <conflict begin="101.00" end="125.00" ego="v239" foe="v244">
+        <minTTC time="108.00" position="292.00,251.68" type="3" value="0.93" speed="0.29"/>
+    </conflict>
+    <conflict begin="31.00" end="127.00" ego="v225" foe="v228">
+        <minTTC time="35.00" position="292.00,283.40" type="3" value="0.87" speed="0.00"/>
+    </conflict>
+    <conflict begin="31.00" end="127.00" ego="v228" foe="v225">
+        <minTTC time="35.00" position="292.00,283.40" type="2" value="0.87" speed="5.91"/>
+    </conflict>
+    <conflict begin="45.00" end="115.00" ego="v228" foe="v231">
+        <minTTC time="48.00" position="292.00,278.90" type="3" value="1.00" speed="0.00"/>
+    </conflict>
+    <conflict begin="85.00" end="129.00" ego="v18" foe="v20">
+        <minTTC time="106.00" position="308.00,356.62" type="3" value="1.18" speed="0.59"/>
+    </conflict>
+    <conflict begin="100.00" end="121.00" ego="v18" foe="v16">
+        <minTTC time="104.00" position="308.00,349.31" type="2" value="0.90" speed="4.77"/>
+    </conflict>
+    <conflict begin="64.00" end="133.00" ego="v229" foe="v232">
+        <minTTC time="68.00" position="295.20,278.90" type="3" value="0.87" speed="0.00"/>
+    </conflict>
+    <conflict begin="68.00" end="133.00" ego="v231" foe="v234">
+        <minTTC time="73.00" position="292.00,274.40" type="3" value="0.87" speed="0.00"/>
+    </conflict>
+    <conflict begin="55.00" end="134.00" ego="v2" foe="v6">
+        <minTTC time="59.00" position="308.00,317.30" type="3" value="1.01" speed="0.00"/>
+    </conflict>
+    <conflict begin="59.00" end="134.00" ego="v2" foe="v8">
+        <minTTC time="61.00" position="308.00,317.30" type="3" value="1.44" speed="0.00"/>
+    </conflict>
+    <conflict begin="51.00" end="134.00" ego="v6" foe="v8">
+        <minTTC time="62.00" position="308.00,321.87" type="3" value="0.73" speed="0.13"/>
+    </conflict>
+    <conflict begin="55.00" end="134.00" ego="v6" foe="v2">
+        <minTTC time="59.00" position="308.00,317.30" type="2" value="1.01" speed="6.21"/>
+    </conflict>
+    <conflict begin="42.00" end="134.00" ego="v7" foe="v9">
+        <minTTC time="63.00" position="304.80,328.13" type="3" value="0.95" speed="0.06"/>
+    </conflict>
+    <conflict begin="57.00" end="115.00" ego="v7" foe="v4">
+        <minTTC time="61.00" position="304.80,316.60" type="2" value="0.75" speed="3.66"/>
+    </conflict>
+    <conflict begin="51.00" end="134.00" ego="v8" foe="v6">
+        <minTTC time="62.00" position="308.00,321.87" type="2" value="0.73" speed="5.64"/>
+    </conflict>
+    <conflict begin="59.00" end="134.00" ego="v8" foe="v2">
+        <minTTC time="61.00" position="308.00,317.30" type="2" value="1.44" speed="9.88"/>
+    </conflict>
+    <conflict begin="42.00" end="134.00" ego="v9" foe="v7">
+        <minTTC time="63.00" position="304.80,328.13" type="2" value="0.95" speed="4.57"/>
+    </conflict>
+    <conflict begin="64.00" end="114.00" ego="v232" foe="v224">
+        <minTTC time="67.00" position="295.20,283.40" type="2" value="1.42" speed="8.70"/>
+    </conflict>
+    <conflict begin="64.00" end="133.00" ego="v232" foe="v229">
+        <minTTC time="68.00" position="295.20,278.90" type="2" value="0.87" speed="4.20"/>
+    </conflict>
+    <conflict begin="51.00" end="135.00" ego="v234" foe="v235">
+        <minTTC time="78.00" position="292.00,267.40" type="3" value="1.07" speed="0.00"/>
+    </conflict>
+    <conflict begin="68.00" end="133.00" ego="v234" foe="v231">
+        <minTTC time="73.00" position="292.00,274.40" type="2" value="0.87" speed="4.21"/>
+    </conflict>
+    <conflict begin="51.00" end="135.00" ego="v235" foe="v234">
+        <minTTC time="78.00" position="292.00,267.40" type="2" value="1.07" speed="3.86"/>
+    </conflict>
+    <conflict begin="53.00" end="113.00" ego="v235" foe="v233">
+        <minTTC time="72.00" position="295.20,260.33" type="2" value="0.95" speed="6.93"/>
+    </conflict>
+    <conflict begin="68.00" end="136.00" ego="v235" foe="v237">
+        <minTTC time="75.00" position="295.20,255.86" type="3" value="1.00" speed="0.05"/>
+    </conflict>
+    <conflict begin="80.00" end="119.00" ego="v235" foe="v239">
+        <minTTC time="84.00" position="292.00,262.89" type="3" value="0.91" speed="0.00"/>
+    </conflict>
+    <conflict begin="72.00" end="137.00" ego="v9" foe="v12">
+        <minTTC time="76.00" position="304.80,335.10" type="3" value="0.80" speed="0.00"/>
+    </conflict>
+    <conflict begin="72.00" end="139.00" ego="v233" foe="v237">
+        <minTTC time="77.00" position="295.20,260.40" type="3" value="1.06" speed="0.00"/>
+    </conflict>
+    <conflict begin="58.00" end="139.00" ego="v12" foe="v14">
+        <minTTC time="78.00" position="304.80,342.22" type="3" value="0.87" speed="0.67"/>
+    </conflict>
+    <conflict begin="72.00" end="137.00" ego="v12" foe="v9">
+        <minTTC time="76.00" position="304.80,335.10" type="2" value="0.80" speed="6.00"/>
+    </conflict>
+    <conflict begin="80.00" end="139.00" ego="v12" foe="v15">
+        <minTTC time="84.00" position="304.80,342.10" type="3" value="0.90" speed="0.00"/>
+    </conflict>
+    <conflict begin="72.00" end="139.00" ego="v237" foe="v233">
+        <minTTC time="77.00" position="295.20,260.40" type="2" value="1.06" speed="3.83"/>
+    </conflict>
+    <conflict begin="80.00" end="139.00" ego="v237" foe="v238">
+        <minTTC time="84.00" position="295.20,253.39" type="3" value="0.96" speed="0.00"/>
+    </conflict>
+    <conflict begin="90.00" end="139.00" ego="v14" foe="v16">
+        <minTTC time="97.00" position="308.00,342.31" type="3" value="0.96" speed="0.00"/>
+    </conflict>
+    <conflict begin="80.00" end="139.00" ego="v238" foe="v237">
+        <minTTC time="84.00" position="295.20,253.39" type="2" value="0.96" speed="4.10"/>
+    </conflict>
+    <conflict begin="80.00" end="139.00" ego="v15" foe="v12">
+        <minTTC time="84.00" position="304.80,342.10" type="2" value="0.90" speed="5.22"/>
+    </conflict>
+    <conflict begin="89.00" end="118.00" ego="v15" foe="v16">
+        <minTTC time="93.00" position="304.80,353.61" type="3" value="0.68" speed="0.00"/>
+    </conflict>
+    <conflict begin="90.00" end="139.00" ego="v16" foe="v14">
+        <minTTC time="97.00" position="308.00,342.31" type="2" value="0.96" speed="2.71"/>
+    </conflict>
+    <conflict begin="100.00" end="124.00" ego="v16" foe="v18">
+        <minTTC time="104.00" position="308.00,349.31" type="3" value="0.90" speed="0.00"/>
+    </conflict>
+    <conflict begin="101.00" end="141.00" ego="v15" foe="v19">
+        <minTTC time="106.00" position="304.80,353.61" type="3" value="0.84" speed="0.00"/>
+    </conflict>
+    <conflict begin="99.00" end="142.00" ego="v238" foe="v243">
+        <minTTC time="102.00" position="295.20,248.19" type="3" value="1.08" speed="0.00"/>
+    </conflict>
+    <conflict begin="99.00" end="142.00" ego="v243" foe="v238">
+        <minTTC time="102.00" position="295.20,248.19" type="2" value="1.08" speed="9.17"/>
+    </conflict>
+    <conflict begin="105.00" end="144.00" ego="v21" foe="v19">
+        <minTTC time="109.00" position="304.80,358.20" type="2" value="0.89" speed="8.07"/>
+    </conflict>
+    <conflict begin="101.00" end="141.00" ego="v19" foe="v15">
+        <minTTC time="106.00" position="304.80,353.61" type="2" value="0.84" speed="3.25"/>
+    </conflict>
+    <conflict begin="105.00" end="144.00" ego="v19" foe="v21">
+        <minTTC time="109.00" position="304.80,358.20" type="3" value="0.89" speed="0.52"/>
+    </conflict>
+    <conflict begin="95.00" end="151.00" ego="v236" foe="v240">
+        <minTTC time="99.00" position="298.40,283.40" type="3" value="0.82" speed="0.00"/>
+    </conflict>
+    <conflict begin="74.00" end="160.00" ego="v510" foe="v509">
+        <minTTC time="95.00" position="276.36,308.00" type="2" value="0.89" speed="4.34"/>
+    </conflict>
+    <conflict begin="74.00" end="165.00" ego="v509" foe="v510">
+        <minTTC time="95.00" position="276.36,308.00" type="3" value="0.89" speed="0.04"/>
+    </conflict>
+    <conflict begin="96.00" end="167.00" ego="v13" foe="v17">
+        <minTTC time="100.00" position="301.60,323.60" type="3" value="0.83" speed="0.00"/>
+    </conflict>
+    <conflict begin="96.00" end="167.00" ego="v17" foe="v13">
+        <minTTC time="100.00" position="301.60,323.60" type="2" value="0.83" speed="3.44"/>
+    </conflict>
+    <conflict begin="79.00" end="169.00" ego="v240" foe="v241">
+        <minTTC time="101.00" position="298.40,271.88" type="3" value="0.93" speed="0.08"/>
+    </conflict>
+    <conflict begin="95.00" end="151.00" ego="v240" foe="v236">
+        <minTTC time="99.00" position="298.40,283.40" type="2" value="0.82" speed="5.07"/>
+    </conflict>
+    <conflict begin="99.00" end="169.00" ego="v240" foe="v242">
+        <minTTC time="102.00" position="298.40,271.89" type="3" value="1.37" speed="0.01"/>
+    </conflict>
+    <conflict begin="79.00" end="169.00" ego="v241" foe="v240">
+        <minTTC time="101.00" position="298.40,271.88" type="2" value="0.93" speed="3.25"/>
+    </conflict>
+    <conflict begin="113.00" end="170.00" ego="v17" foe="v24">
+        <minTTC time="117.00" position="301.60,335.10" type="3" value="0.86" speed="0.00"/>
+    </conflict>
+    <conflict begin="113.00" end="170.00" ego="v24" foe="v17">
+        <minTTC time="117.00" position="301.60,335.10" type="2" value="0.86" speed="5.99"/>
+    </conflict>
+    <conflict begin="82.00" end="171.00" ego="v241" foe="v242">
+        <minTTC time="103.00" position="298.40,267.37" type="3" value="0.78" speed="0.15"/>
+    </conflict>
+    <conflict begin="82.00" end="171.00" ego="v242" foe="v241">
+        <minTTC time="103.00" position="298.40,267.37" type="2" value="0.78" speed="4.34"/>
+    </conflict>
+    <conflict begin="99.00" end="169.00" ego="v242" foe="v240">
+        <minTTC time="102.00" position="298.40,271.89" type="2" value="1.37" speed="8.84"/>
+    </conflict>
+    <conflict begin="145.00" end="211.00" ego="v252" foe="v251">
+        <minTTC time="149.00" position="292.00,283.40" type="2" value="0.87" speed="3.75"/>
+    </conflict>
+    <conflict begin="149.00" end="214.00" ego="v257" foe="v256">
+        <minTTC time="170.00" position="295.20,268.89" type="2" value="0.72" speed="5.98"/>
+    </conflict>
+    <conflict begin="166.00" end="209.00" ego="v257" foe="v254">
+        <minTTC time="170.00" position="295.20,273.40" type="2" value="1.47" speed="5.98"/>
+    </conflict>
+    <conflict begin="145.00" end="214.00" ego="v251" foe="v252">
+        <minTTC time="149.00" position="292.00,283.40" type="3" value="0.87" speed="0.00"/>
+    </conflict>
+    <conflict begin="162.00" end="216.00" ego="v260" foe="v259">
+        <minTTC time="183.00" position="295.20,264.40" type="2" value="0.81" speed="3.95"/>
+    </conflict>
+    <conflict begin="167.00" end="216.00" ego="v36" foe="v35">
+        <minTTC time="186.00" position="304.80,341.62" type="2" value="0.77" speed="7.78"/>
+    </conflict>
+    <conflict begin="167.00" end="214.00" ego="v257" foe="v252">
+        <minTTC time="174.00" position="292.00,276.40" type="2" value="0.79" speed="4.24"/>
+    </conflict>
+    <conflict begin="162.00" end="218.00" ego="v259" foe="v260">
+        <minTTC time="183.00" position="295.20,264.40" type="3" value="0.81" speed="0.14"/>
+    </conflict>
+    <conflict begin="170.00" end="218.00" ego="v36" foe="v37">
+        <minTTC time="189.00" position="304.80,344.39" type="3" value="1.07" speed="0.69"/>
+    </conflict>
+    <conflict begin="149.00" end="214.00" ego="v256" foe="v257">
+        <minTTC time="170.00" position="295.20,268.89" type="3" value="0.72" speed="0.00"/>
+    </conflict>
+    <conflict begin="170.00" end="219.00" ego="v37" foe="v36">
+        <minTTC time="189.00" position="304.80,344.39" type="2" value="1.07" speed="8.22"/>
+    </conflict>
+    <conflict begin="167.00" end="219.00" ego="v252" foe="v257">
+        <minTTC time="174.00" position="292.00,276.40" type="3" value="0.79" speed="0.00"/>
+    </conflict>
+    <conflict begin="169.00" end="214.00" ego="v32" foe="v31">
+        <minTTC time="173.00" position="304.80,332.60" type="2" value="0.78" speed="3.51"/>
+    </conflict>
+    <conflict begin="179.00" end="220.00" ego="v262" foe="v263">
+        <minTTC time="201.00" position="295.20,259.82" type="3" value="0.80" speed="0.10"/>
+    </conflict>
+    <conflict begin="160.00" end="221.00" ego="v31" foe="v30">
+        <minTTC time="164.00" position="304.80,321.10" type="2" value="0.83" speed="4.27"/>
+    </conflict>
+    <conflict begin="182.00" end="217.00" ego="v261" foe="v257">
+        <minTTC time="186.00" position="292.00,271.90" type="2" value="0.83" speed="4.07"/>
+    </conflict>
+    <conflict begin="199.00" end="219.00" ego="v41" foe="v35">
+        <minTTC time="202.00" position="308.00,335.10" type="2" value="1.33" speed="8.22"/>
+    </conflict>
+    <conflict begin="199.00" end="221.00" ego="v41" foe="v37">
+        <minTTC time="203.00" position="308.00,339.60" type="2" value="0.73" speed="3.72"/>
+    </conflict>
+    <conflict begin="169.00" end="214.00" ego="v31" foe="v32">
+        <minTTC time="173.00" position="304.80,332.60" type="3" value="0.78" speed="0.00"/>
+    </conflict>
+    <conflict begin="182.00" end="233.00" ego="v252" foe="v261">
+        <minTTC time="185.00" position="292.00,276.40" type="3" value="1.41" speed="0.00"/>
+    </conflict>
+    <conflict begin="152.00" end="233.00" ego="v30" foe="v29">
+        <minTTC time="156.00" position="304.80,316.60" type="2" value="0.74" speed="4.01"/>
+    </conflict>
+    <conflict begin="160.00" end="221.00" ego="v30" foe="v31">
+        <minTTC time="164.00" position="304.80,321.10" type="3" value="0.83" speed="0.00"/>
+    </conflict>
+    <conflict begin="152.00" end="233.00" ego="v29" foe="v30">
+        <minTTC time="156.00" position="304.80,316.60" type="3" value="0.74" speed="0.00"/>
+    </conflict>
+    <conflict begin="182.00" end="233.00" ego="v261" foe="v252">
+        <minTTC time="185.00" position="292.00,276.40" type="2" value="1.41" speed="8.47"/>
+    </conflict>
+    <conflict begin="169.00" end="237.00" ego="v28" foe="v32">
+        <minTTC time="176.00" position="308.00,323.60" type="3" value="0.96" speed="0.00"/>
+    </conflict>
+    <conflict begin="163.00" end="237.00" ego="v254" foe="v256">
+        <minTTC time="168.00" position="295.20,273.40" type="3" value="0.95" speed="0.00"/>
+    </conflict>
+    <conflict begin="166.00" end="237.00" ego="v254" foe="v257">
+        <minTTC time="170.00" position="295.20,273.40" type="3" value="1.47" speed="0.00"/>
+    </conflict>
+    <conflict begin="182.00" end="218.00" ego="v257" foe="v261">
+        <minTTC time="186.00" position="292.00,271.90" type="3" value="0.83" speed="0.00"/>
+    </conflict>
+    <conflict begin="163.00" end="237.00" ego="v256" foe="v254">
+        <minTTC time="168.00" position="295.20,273.40" type="2" value="0.95" speed="2.67"/>
+    </conflict>
+    <conflict begin="169.00" end="237.00" ego="v32" foe="v28">
+        <minTTC time="176.00" position="308.00,323.60" type="2" value="0.96" speed="4.52"/>
+    </conflict>
+    <conflict begin="161.00" end="239.00" ego="v253" foe="v255">
+        <minTTC time="166.00" position="298.40,280.90" type="3" value="0.86" speed="0.00"/>
+    </conflict>
+    <conflict begin="161.00" end="239.00" ego="v255" foe="v253">
+        <minTTC time="166.00" position="298.40,280.90" type="2" value="0.86" speed="2.93"/>
+    </conflict>
+    <conflict begin="171.00" end="239.00" ego="v255" foe="v258">
+        <minTTC time="175.00" position="298.40,269.40" type="3" value="1.01" speed="0.00"/>
+    </conflict>
+    <conflict begin="177.00" end="239.00" ego="v256" foe="v259">
+        <minTTC time="181.00" position="295.20,268.90" type="3" value="0.71" speed="0.00"/>
+    </conflict>
+    <conflict begin="171.00" end="239.00" ego="v258" foe="v255">
+        <minTTC time="175.00" position="298.40,269.40" type="2" value="1.01" speed="6.12"/>
+    </conflict>
+    <conflict begin="208.00" end="239.00" ego="v258" foe="v264">
+        <minTTC time="212.00" position="298.40,264.90" type="3" value="0.81" speed="0.00"/>
+    </conflict>
+    <conflict begin="177.00" end="239.00" ego="v259" foe="v256">
+        <minTTC time="181.00" position="295.20,268.90" type="2" value="0.71" speed="4.51"/>
+    </conflict>
+    <conflict begin="195.00" end="239.00" ego="v259" foe="v262">
+        <minTTC time="199.00" position="295.20,264.40" type="3" value="0.78" speed="0.00"/>
+    </conflict>
+    <conflict begin="195.00" end="239.00" ego="v262" foe="v259">
+        <minTTC time="199.00" position="295.20,264.40" type="2" value="0.78" speed="3.87"/>
+    </conflict>
+    <conflict begin="179.00" end="239.00" ego="v263" foe="v262">
+        <minTTC time="201.00" position="295.20,259.82" type="2" value="0.80" speed="3.89"/>
+    </conflict>
+    <conflict begin="208.00" end="239.00" ego="v264" foe="v258">
+        <minTTC time="212.00" position="298.40,264.90" type="2" value="0.81" speed="3.86"/>
+    </conflict>
+    <conflict begin="216.00" end="239.00" ego="v264" foe="v265">
+        <minTTC time="220.00" position="298.40,253.40" type="3" value="0.83" speed="0.00"/>
+    </conflict>
+    <conflict begin="216.00" end="239.00" ego="v265" foe="v264">
+        <minTTC time="220.00" position="298.40,253.40" type="2" value="0.83" speed="5.28"/>
+    </conflict>
+    <conflict begin="176.00" end="239.00" ego="v31" foe="v34">
+        <minTTC time="179.00" position="304.80,332.60" type="3" value="0.74" speed="0.00"/>
+    </conflict>
+    <conflict begin="180.00" end="239.00" ego="v32" foe="v35">
+        <minTTC time="189.00" position="308.00,330.60" type="3" value="1.21" speed="0.00"/>
+    </conflict>
+    <conflict begin="189.00" end="239.00" ego="v33" foe="v38">
+        <minTTC time="193.00" position="301.60,316.60" type="3" value="0.88" speed="0.00"/>
+    </conflict>
+    <conflict begin="176.00" end="239.00" ego="v34" foe="v31">
+        <minTTC time="179.00" position="304.80,332.60" type="2" value="0.74" speed="7.40"/>
+    </conflict>
+    <conflict begin="180.00" end="216.00" ego="v34" foe="v35">
+        <minTTC time="184.00" position="304.80,337.10" type="3" value="0.91" speed="0.00"/>
+    </conflict>
+    <conflict begin="183.00" end="239.00" ego="v34" foe="v36">
+        <minTTC time="188.00" position="304.80,337.10" type="3" value="0.94" speed="0.00"/>
+    </conflict>
+    <conflict begin="167.00" end="239.00" ego="v35" foe="v36">
+        <minTTC time="186.00" position="304.80,341.62" type="3" value="0.77" speed="0.09"/>
+    </conflict>
+    <conflict begin="180.00" end="239.00" ego="v35" foe="v32">
+        <minTTC time="189.00" position="308.00,330.60" type="2" value="1.21" speed="2.94"/>
+    </conflict>
+    <conflict begin="180.00" end="217.00" ego="v35" foe="v34">
+        <minTTC time="184.00" position="304.80,337.10" type="2" value="0.91" speed="4.85"/>
+    </conflict>
+    <conflict begin="186.00" end="239.00" ego="v35" foe="v37">
+        <minTTC time="193.00" position="308.00,335.10" type="3" value="0.66" speed="0.00"/>
+    </conflict>
+    <conflict begin="199.00" end="223.00" ego="v35" foe="v41">
+        <minTTC time="202.00" position="308.00,335.10" type="3" value="1.33" speed="0.00"/>
+    </conflict>
+    <conflict begin="183.00" end="239.00" ego="v36" foe="v34">
+        <minTTC time="188.00" position="304.80,337.10" type="2" value="0.94" speed="3.72"/>
+    </conflict>
+    <conflict begin="196.00" end="239.00" ego="v36" foe="v40">
+        <minTTC time="200.00" position="304.80,344.11" type="3" value="0.80" speed="0.00"/>
+    </conflict>
+    <conflict begin="186.00" end="239.00" ego="v37" foe="v35">
+        <minTTC time="193.00" position="308.00,335.10" type="2" value="0.66" speed="4.87"/>
+    </conflict>
+    <conflict begin="199.00" end="223.00" ego="v37" foe="v41">
+        <minTTC time="203.00" position="308.00,339.60" type="3" value="0.73" speed="0.00"/>
+    </conflict>
+    <conflict begin="189.00" end="239.00" ego="v38" foe="v33">
+        <minTTC time="193.00" position="301.60,316.60" type="2" value="0.88" speed="3.67"/>
+    </conflict>
+    <conflict begin="199.00" end="239.00" ego="v38" foe="v39">
+        <minTTC time="204.00" position="301.60,323.60" type="3" value="0.98" speed="0.00"/>
+    </conflict>
+    <conflict begin="220.00" end="239.00" ego="v38" foe="v49">
+        <minTTC time="223.00" position="301.60,323.60" type="3" value="1.47" speed="0.00"/>
+    </conflict>
+    <conflict begin="199.00" end="239.00" ego="v39" foe="v38">
+        <minTTC time="204.00" position="301.60,323.60" type="2" value="0.98" speed="3.85"/>
+    </conflict>
+    <conflict begin="220.00" end="239.00" ego="v39" foe="v49">
+        <minTTC time="223.00" position="301.60,328.80" type="3" value="0.75" speed="0.00"/>
+    </conflict>
+    <conflict begin="196.00" end="239.00" ego="v40" foe="v36">
+        <minTTC time="200.00" position="304.80,344.11" type="2" value="0.80" speed="4.13"/>
+    </conflict>
+    <conflict begin="205.00" end="239.00" ego="v41" foe="v42">
+        <minTTC time="208.00" position="308.00,344.11" type="3" value="1.03" speed="0.00"/>
+    </conflict>
+    <conflict begin="205.00" end="239.00" ego="v42" foe="v41">
+        <minTTC time="208.00" position="308.00,344.11" type="2" value="1.03" speed="8.43"/>
+    </conflict>
+    <conflict begin="211.00" end="239.00" ego="v42" foe="v43">
+        <minTTC time="215.00" position="308.00,343.96" type="3" value="1.43" speed="1.94"/>
+    </conflict>
+    <conflict begin="211.00" end="239.00" ego="v43" foe="v42">
+        <minTTC time="215.00" position="308.00,343.96" type="2" value="1.43" speed="7.61"/>
+    </conflict>
+    <conflict begin="223.00" end="239.00" ego="v450" foe="v452">
+        <minTTC time="226.00" position="319.10,292.00" type="3" value="0.82" speed="0.00"/>
+    </conflict>
+    <conflict begin="223.00" end="239.00" ego="v452" foe="v450">
+        <minTTC time="226.00" position="319.10,292.00" type="2" value="0.82" speed="7.91"/>
+    </conflict>
+    <conflict begin="220.00" end="239.00" ego="v49" foe="v38">
+        <minTTC time="223.00" position="301.60,323.60" type="2" value="1.47" speed="7.24"/>
+    </conflict>
+    <conflict begin="220.00" end="239.00" ego="v49" foe="v39">
+        <minTTC time="223.00" position="301.60,328.80" type="2" value="0.75" speed="7.24"/>
+    </conflict>
+    <conflict begin="225.00" end="239.00" ego="v514" foe="v516">
+        <minTTC time="229.00" position="283.40,308.00" type="3" value="0.69" speed="0.00"/>
+    </conflict>
+    <conflict begin="225.00" end="239.00" ego="v516" foe="v514">
+        <minTTC time="229.00" position="283.40,308.00" type="2" value="0.69" speed="4.45"/>
+    </conflict>
+</SSMLog>

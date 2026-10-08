@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-09-30T08:32:58.100613+00:00",
+  "notes": [
+    "Measured only; no fabricated metrics.",
+    "India default stack: india-v1 + plate_format=india, TTA and bbox pad OFF (row in_crops_india_v1_no_tta). TTA gained +1.0 pt (within the +/-2.2 pt 95% margin at n=1684) for ~7x OCR latency; the *_tta / *_tta_pad rows are kept for reference.",
+    "OpenALPR >90% claim uses cct-s-v2-global-model, plate_format=none.",
+    "HF README-only corpora (indian_anpr_corpus, indian_synth_sample) skipped — no images.",
+    "in_synth_kaggle_* removed: it scored india-v1 on the abtexp synthetic set it was trained on. All 273 plates of <=10 chars were training images (271 read correctly); all 127 plates of 11 chars cannot be emitted by the 10-slot model (0 correct). The number and the per-state table measured the share of 11-char plates per state, not accuracy. in_crops is the valid held-out Indian test set."
+  ],
+  "results": [
+    {
+      "tag": "openalpr_eu_global",
+      "n": 108,
+      "found": 1.0,
+      "exact": 0.9259259259259259,
+      "exact_o0": 0.9907407407407407,
+      "char_acc": 0.988031914893617,
+      "extra": 10,
+      "ms_med": 249.85733348876238,
+      "ms_p95": 327.99279200844467,
+      "failure_count": 8
+    },
+    {
+      "tag": "openalpr_br_global",
+      "n": 114,
+      "found": 1.0,
+      "exact": 0.9824561403508771,
+      "exact_o0": 0.9824561403508771,
+      "char_acc": 0.9962406015037594,
+      "extra": 18,
+      "ms_med": 263.19397951010615,
+      "ms_p95": 368.76166611909866,
+      "failure_count": 2
+    },
+    {
+      "tag": "openalpr_us_global",
+      "n": 222,
+      "found": 1.0,
+      "exact": 0.8783783783783784,
+      "exact_o0": 0.9054054054054054,
+      "char_acc": 0.9699510831586303,
+      "extra": 12,
+      "ms_med": 243.15802159253508,
+      "ms_p95": 296.20074992999434,
+      "failure_count": 27
+    },
+    {
+      "tag": "openalpr_eu_br_us_global",
+      "n": 444,
+      "found": 1.0,
+      "exact": 0.9166666666666666,
+      "exact_o0": 0.9459459459459459,
+      "char_acc": 0.9810991347773765,
+      "ms_med": 249.85733348876238,
+      "extra": 40
+    },
+    {
+      "tag": "in_crops_india_v1_no_tta",
+      "n": 1684,
+      "found": 1.0,
+      "exact": 0.7298099762470309,
+      "exact_o0": 0.7309976247030879,
+      "char_acc": 0.9285275319567355,
+      "extra": 0,
+      "ms_med": 33.279458060860634,
+      "ms_p95": 40.488624945282936,
+      "failure_count": 455
+    },
+    {
+      "tag": "in_crops_india_v1_tta",
+      "n": 1684,
+      "found": 1.0,
+      "exact": 0.7399049881235155,
+      "exact_o0": 0.7416864608076009,
+      "char_acc": 0.9325221238938053,
+      "extra": 0,
+      "ms_med": 227.45129151735455,
+      "ms_p95": 272.1172079909593,
+      "failure_count": 438
+    },
+    {
+      "tag": "in_crops_global",
+      "n": 1684,
+      "found": 1.0,
+      "exact": 0.31116389548693585,
+      "exact_o0": 0.37173396674584325,
+      "char_acc": 0.7732915437561455,
+      "extra": 0,
+      "ms_med": 23.4253330854699,
+      "ms_p95": 27.959832921624184,
+      "failure_count": 1160
+    },
+    {
+      "tag": "in_full_india_v1_tta_pad",
+      "n": 25,
+      "found": 0.96,
+      "exact": 0.6,
+      "exact_o0": 0.6,
+      "char_acc": 0.7705627705627706,
+      "extra": 0,
+      "ms_med": 768.0234999861568,
+      "ms_p95": 2930.2545411046594
+    },
+    {
+      "tag": "openalpr_eu_india_v1_cross",
+      "n": 108,
+      "found": 1.0,
+      "exact": 0.0,
+      "exact_o0": 0.0,
+      "char_acc": 0.5226063829787234,
+      "extra": 15,
+      "ms_med": 250.49877050332725,
+      "ms_p95": 316.7146658524871,
+      "failure_count": 108
+    },
+    {
+      "tag": "openalpr_br_india_v1_cross",
+      "n": 114,
+      "found": 1.0,
+      "exact": 0.0,
+      "exact_o0": 0.0,
+      "char_acc": 0.6541353383458647,
+      "extra": 21,
+      "ms_med": 247.20993742812425,
+      "ms_p95": 312.31229193508625,
+      "failure_count": 114
+    },
+    {
+      "tag": "openalpr_us_india_v1_cross",
+      "n": 222,
+      "found": 1.0,
+      "exact": 0.0,
+      "exact_o0": 0.0,
+      "char_acc": 0.48986722571628233,
+      "extra": 15,
+      "ms_med": 245.42124941945076,
+      "ms_p95": 309.9109579343349,
+      "failure_count": 222
+    }
+  ]
+}

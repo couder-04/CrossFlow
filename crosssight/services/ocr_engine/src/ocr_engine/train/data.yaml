@@ -1,0 +1,19 @@
+# YOLO plate detector dataset template.
+# Replace `path` with your dataset root containing train/val splits.
+#
+# Directory layout:
+#   datasets/plates/
+#     images/train/*.jpg
+#     images/val/*.jpg
+#     labels/train/*.txt   # YOLO format: class cx cy w h  (normalized)
+#     labels/val/*.txt
+#
+# For pose/keypoint models, use Ultralytics pose label format with 4 corner keypoints.
+
+path: datasets/plates
+train: images/train
+val: images/val
+
+nc: 1
+names:
+  0: plate

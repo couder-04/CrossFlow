@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: 222 47% 7%;
+  --surface-raised: 217 33% 11%;
+  --surface-overlay: 215 28% 14%;
+  --border: 215 20% 22%;
+  --muted: 215 16% 57%;
+  --accent: 199 89% 48%;
+  --accent-muted: 199 60% 35%;
+  --danger: 0 84% 60%;
+  --warning: 38 92% 50%;
+  --success: 142 71% 45%;
+  --surface-critical: 0 60% 12%;
+  --surface-warning: 38 40% 12%;
+  --surface-success: 142 40% 10%;
+  --ring-critical: 0 90% 60%;
+  --ring-warning: 38 90% 55%;
+  --input-bg: 215 25% 16%;
+  --row-py: 0.5rem;
+  --card-p: 0.75rem;
+}
+
+html[data-density="compact"] {
+  --row-py: 0.25rem;
+  --card-p: 0.5rem;
+}
+
+html[data-density="comfortable"] {
+  --row-py: 0.5rem;
+  --card-p: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-surface text-slate-100 font-sans antialiased;
+}
+
+.maplibregl-map {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+input,
+select,
+textarea {
+  @apply bg-[hsl(var(--input-bg))] border border-border rounded-md px-3 py-2 text-sm text-slate-100 placeholder:text-muted focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+}
+
+table {
+  @apply w-full text-sm;
+}
+
+th {
+  @apply text-left text-muted font-medium px-3 border-b border-border;
+  padding-top: var(--row-py);
+  padding-bottom: var(--row-py);
+  position: sticky;
+  top: 0;
+  background: hsl(var(--surface-raised));
+  z-index: 1;
+}
+
+td {
+  @apply px-3 border-b border-border/60;
+  padding-top: var(--row-py);
+  padding-bottom: var(--row-py);
+}
+
+@layer components {
+  .card-critical {
+    @apply bg-surface-critical border-danger/40;
+  }
+  .card-warning {
+    @apply bg-surface-warning border-warning/40;
+  }
+  .text-metric {
+    @apply text-2xl font-mono tabular-nums leading-none;
+  }
+  .text-metric-hero {
+    @apply text-4xl font-mono tabular-nums leading-none tracking-tight;
+  }
+  .text-label {
+    @apply text-[10px] uppercase tracking-wider text-muted;
+  }
+  .pulse-critical {
+    box-shadow: 0 0 0 0 hsl(var(--ring-critical) / 0.6);
+    animation: pulse-crit 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse-crit {
+    50% {
+      box-shadow: 0 0 0 10px hsl(var(--ring-critical) / 0);
+    }
+  }
+  .login-bg {
+    background-image: url("/login-bg.jpg");
+  }
+  .print-only {
+    display: none;
+  }
+  [cmdk-item] {
+    @apply rounded px-2 py-1.5 text-sm cursor-pointer flex items-center gap-2;
+  }
+  [cmdk-item]:hover {
+    @apply bg-surface-overlay;
+  }
+  [cmdk-item][data-selected="true"] {
+    @apply bg-accent/20;
+  }
+  [cmdk-group-heading] {
+    @apply text-label px-2 py-1;
+  }
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.55);
+  }
+  [cmdk-input] {
+    @apply w-full border-0 bg-transparent;
+  }
+}
+
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+  aside,
+  header,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  .maplibregl-map {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,8 @@
+2026-09-30 14:26:16.775 Python[67298:29363878] 2026-09-30 14:26:16.774964 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+2026-09-30 14:26:16,875 INFO root: Skipping download of 'yolo-v9-s-608-license-plate-end2end' model, already exists at /Users/par_04/.cache/open-image-models/yolo-v9-s-608-license-plate-end2end
+2026-09-30 14:26:16,990 INFO open_image_models.detection.core.yolo_v9.inference: Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)
+2026-09-30 14:26:16,990 INFO fast_plate_ocr.inference.plate_recognizer: Using custom providers: ['CPUExecutionProvider']
+2026-09-30 14:26:16,990 INFO root: Skipping download of 'cct-s-v2-global-model' model, already exists at /Users/par_04/.cache/fast-plate-ocr/cct-s-v2-global-model
+2026-09-30 14:26:17,436 INFO ocr_engine.plateocr_backend: PlateOCR ready (det=yolo-v9-s-608-license-plate-end2end ocr=cct-s-v2-global-model format=none tta=False pad=False provider=CPUExecutionProvider)
+2026-09-30 14:26:17,437 INFO ocr_engine.pipeline: OCR pipeline backend=plateocr (det=yolo-v9-s-608-license-plate-end2end ocr=cct-s-v2-global-model format=none)
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xb56146a80] stream 1, offset 0x14631bd: partial file

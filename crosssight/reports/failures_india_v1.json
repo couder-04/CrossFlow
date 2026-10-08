@@ -1,0 +1,5656 @@
+[
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0028.jpg",
+    "gt": "KL34A465",
+    "pred": "KL34A4655",
+    "all_reads": [
+      [
+        "KL35H5834",
+        0.995
+      ],
+      [
+        "KL35F4337",
+        0.995
+      ],
+      [
+        "KL099009",
+        0.235
+      ],
+      [
+        "KL34A4655",
+        0.885
+      ]
+    ]
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0028.jpg",
+    "gt": "KL34A465",
+    "pred": null,
+    "all_reads": [
+      [
+        "KL35H5834",
+        0.995
+      ],
+      [
+        "KL35F4337",
+        0.995
+      ],
+      [
+        "KL099009",
+        0.235
+      ],
+      [
+        "KL34A4655",
+        0.885
+      ]
+    ]
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0028.jpg",
+    "gt": "KL34F",
+    "pred": null,
+    "all_reads": [
+      [
+        "KL35H5834",
+        0.995
+      ],
+      [
+        "KL35F4337",
+        0.995
+      ],
+      [
+        "KL099009",
+        0.235
+      ],
+      [
+        "KL34A4655",
+        0.885
+      ]
+    ]
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0028.jpg",
+    "gt": "KL03S6894",
+    "pred": "KL099009",
+    "all_reads": [
+      [
+        "KL35H5834",
+        0.995
+      ],
+      [
+        "KL35F4337",
+        0.995
+      ],
+      [
+        "KL099009",
+        0.235
+      ],
+      [
+        "KL34A4655",
+        0.885
+      ]
+    ]
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0030.jpg",
+    "gt": "GJ01DY6855",
+    "pred": null,
+    "all_reads": []
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0033.jpg",
+    "gt": "MP07L7524",
+    "pred": "MP07L7752",
+    "all_reads": [
+      [
+        "MP07L7752",
+        0.933
+      ]
+    ]
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0037.jpg",
+    "gt": "TN58D5353",
+    "pred": "TN33BX3377",
+    "all_reads": [
+      [
+        "TN33BX3377",
+        0.433
+      ]
+    ]
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0043.jpg",
+    "gt": "RJ11GB8850",
+    "pred": null,
+    "all_reads": []
+  },
+  {
+    "set": "in_full",
+    "sample": "data/indian_datacluster/images/image_0047.jpg",
+    "gt": "KA01AJ7533",
+    "pred": null,
+    "all_reads": [
+      [
+        "GA04L0119",
+        0.325
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH01DE2780_00000_png",
+    "gt": "MH01DE2780",
+    "pred": "MH01DE2700",
+    "all_reads": [
+      [
+        "MH01DE2700",
+        0.973
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH03AR5549_00000_jpg",
+    "gt": "MH03AR5549",
+    "pred": "MH03HR5549",
+    "all_reads": [
+      [
+        "MH03HR5549",
+        0.992
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-ybs-MH47N4570_00000_png",
+    "gt": "MH47N4570",
+    "pred": "JH47N4570",
+    "all_reads": [
+      [
+        "JH47N4570",
+        0.827
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-ybs-MH47N4570_00001_png",
+    "gt": "MH47N4570",
+    "pred": "JH14ZN4570",
+    "all_reads": [
+      [
+        "JH14ZN4570",
+        0.666
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-ybs-MH47N4570_00002_png",
+    "gt": "MH47N4570",
+    "pred": "JH14ZN4570",
+    "all_reads": [
+      [
+        "JH14ZN4570",
+        0.735
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH01DE2780_00000.png",
+    "gt": "MH01DE2780",
+    "pred": "MH01DE2700",
+    "all_reads": [
+      [
+        "MH01DE2700",
+        0.988
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH03AR5549_00000.jpg",
+    "gt": "MH03AR5549",
+    "pred": "MH03HR5549",
+    "all_reads": [
+      [
+        "MH03HR5549",
+        0.992
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-ybs-MH47N4570_00000.png",
+    "gt": "MH47N4570",
+    "pred": "JH47N4550",
+    "all_reads": [
+      [
+        "JH47N4550",
+        0.656
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-ybs-MH47N4570_00001.png",
+    "gt": "MH47N4570",
+    "pred": "JH14AN4570",
+    "all_reads": [
+      [
+        "JH14AN4570",
+        0.608
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-ybs-MH47N4570_00002.png",
+    "gt": "MH47N4570",
+    "pred": "JH14ZN4570",
+    "all_reads": [
+      [
+        "JH14ZN4570",
+        0.679
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video10_1390.jpg",
+    "gt": "MH43AR5466",
+    "pred": "MH41AB6486",
+    "all_reads": [
+      [
+        "MH41AB6486",
+        0.619
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video10_1420.jpg",
+    "gt": "MH43AL8464",
+    "pred": "MN41AL6464",
+    "all_reads": [
+      [
+        "MN41AL6464",
+        0.668
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video10_1700.jpg",
+    "gt": "GJ15D0564",
+    "pred": "GJ16CD0664",
+    "all_reads": [
+      [
+        "GJ16CD0664",
+        0.903
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video10_1710.jpg",
+    "gt": "GJ15D0564",
+    "pred": "GJ15CD0564",
+    "all_reads": [
+      [
+        "GJ15CD0564",
+        0.996
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video10_960.jpg",
+    "gt": "MH01AU0059",
+    "pred": "MH01AU0055",
+    "all_reads": [
+      [
+        "MH01AU0055",
+        0.875
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video10_970.jpg",
+    "gt": "MH01AU0059",
+    "pred": "MH01A0055",
+    "all_reads": [
+      [
+        "MH01A0055",
+        0.924
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video10_990.jpg",
+    "gt": "MH01AU0059",
+    "pred": "MH01AQ0055",
+    "all_reads": [
+      [
+        "MH01AQ0055",
+        0.708
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1440.jpg",
+    "gt": "MH02EZ2599",
+    "pred": "MH022599",
+    "all_reads": [
+      [
+        "MH022599",
+        0.814
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1560.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "MH02BQ8629",
+    "all_reads": [
+      [
+        "MH02BQ8629",
+        0.693
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1570.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "MH02DQ9895",
+    "all_reads": [
+      [
+        "MH02DQ9895",
+        0.724
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1580.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "WB02BQ9629",
+    "all_reads": [
+      [
+        "WB02BQ9629",
+        0.795
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1590.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "JH02BQ9628",
+    "all_reads": [
+      [
+        "JH02BQ9628",
+        0.863
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1600.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "MH02BQ9623",
+    "all_reads": [
+      [
+        "MH02BQ9623",
+        0.851
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1610.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "WB02BO9629",
+    "all_reads": [
+      [
+        "WB02BO9629",
+        0.715
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1620.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "MH02BO9624",
+    "all_reads": [
+      [
+        "MH02BO9624",
+        0.779
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1630.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "JH02BO9624",
+    "all_reads": [
+      [
+        "JH02BO9624",
+        0.788
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1640.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "JH02BO0064",
+    "all_reads": [
+      [
+        "JH02BO0064",
+        0.502
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1650.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "WB02BQ9624",
+    "all_reads": [
+      [
+        "WB02BQ9624",
+        0.67
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1660.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "MH02BQ9625",
+    "all_reads": [
+      [
+        "MH02BQ9625",
+        0.793
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1670.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "NL18LD0964",
+    "all_reads": [
+      [
+        "NL18LD0964",
+        0.423
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1680.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "MH02BO9696",
+    "all_reads": [
+      [
+        "MH02BO9696",
+        0.633
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1690.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "WB09DQ9651",
+    "all_reads": [
+      [
+        "WB09DQ9651",
+        0.574
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1980.jpg",
+    "gt": "MH02DQ0196",
+    "pred": "JH02DQ0196",
+    "all_reads": [
+      [
+        "JH02DQ0196",
+        0.866
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_1990.jpg",
+    "gt": "MH02DQ0196",
+    "pred": "JH02DQ0196",
+    "all_reads": [
+      [
+        "JH02DQ0196",
+        0.679
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_2000.jpg",
+    "gt": "MH02DQ0196",
+    "pred": "JH02DQ0196",
+    "all_reads": [
+      [
+        "JH02DQ0196",
+        0.799
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_2010.jpg",
+    "gt": "MH02DQ0196",
+    "pred": "MH02DQ0096",
+    "all_reads": [
+      [
+        "MH02DQ0096",
+        0.671
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_210.jpg",
+    "gt": "MH43BK9513",
+    "pred": "MH43DK9618",
+    "all_reads": [
+      [
+        "MH43DK9618",
+        0.891
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_220.jpg",
+    "gt": "MH43BK9513",
+    "pred": "MH41BX9513",
+    "all_reads": [
+      [
+        "MH41BX9513",
+        0.816
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_2370.jpg",
+    "gt": "MH47AV6753",
+    "pred": "MH12FT9458",
+    "all_reads": [
+      [
+        "MH12FT9458",
+        0.954
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_2380.jpg",
+    "gt": "MH12FT9458",
+    "pred": "HR22FT9458",
+    "all_reads": [
+      [
+        "HR22FT9458",
+        0.73
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_2810.jpg",
+    "gt": "MH04HM4154",
+    "pred": "WB00BW4114",
+    "all_reads": [
+      [
+        "WB00BW4114",
+        0.464
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_2820.jpg",
+    "gt": "MH04HM4154",
+    "pred": "WB01BW4101",
+    "all_reads": [
+      [
+        "WB01BW4101",
+        0.764
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_2830.jpg",
+    "gt": "MH04HM4154",
+    "pred": "WB01BW4164",
+    "all_reads": [
+      [
+        "WB01BW4164",
+        0.864
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3250.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "MH12BO9986",
+    "all_reads": [
+      [
+        "MH12BO9986",
+        0.366
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3260.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "DN02RQ0069",
+    "all_reads": [
+      [
+        "DN02RQ0069",
+        0.582
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3320.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "JH02BQ9628",
+    "all_reads": [
+      [
+        "JH02BQ9628",
+        0.868
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3330.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "JH02BQ9628",
+    "all_reads": [
+      [
+        "JH02BQ9628",
+        0.87
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3340.jpg",
+    "gt": "MH02BQ9628",
+    "pred": "JH02BQ9668",
+    "all_reads": [
+      [
+        "JH02BQ9668",
+        0.754
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3630.jpg",
+    "gt": "MH03AT3856",
+    "pred": "MH08AT3856",
+    "all_reads": [
+      [
+        "MH08AT3856",
+        0.874
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3700.jpg",
+    "gt": "MH04JM8262",
+    "pred": "JH04JM8262",
+    "all_reads": [
+      [
+        "JH04JM8262",
+        0.825
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3750.jpg",
+    "gt": "MH03AF1911",
+    "pred": "MH34FF1911",
+    "all_reads": [
+      [
+        "MH34FF1911",
+        0.802
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3830.jpg",
+    "gt": "MH01AM9839",
+    "pred": "JH00JL1959",
+    "all_reads": [
+      [
+        "JH00JL1959",
+        0.587
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3840.jpg",
+    "gt": "MH01AM9839",
+    "pred": "JH01AJ1999",
+    "all_reads": [
+      [
+        "JH01AJ1999",
+        0.516
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3870.jpg",
+    "gt": "MH02DZ9898",
+    "pred": "MH99989",
+    "all_reads": [
+      [
+        "MH99989",
+        0.419
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3880.jpg",
+    "gt": "MH02DZ9898",
+    "pred": "GA99989",
+    "all_reads": [
+      [
+        "GA99989",
+        0.495
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3930.jpg",
+    "gt": "MH01DB2561",
+    "pred": "AP11B2561",
+    "all_reads": [
+      [
+        "AP11B2561",
+        0.717
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_3940.jpg",
+    "gt": "MH01BT4302",
+    "pred": "MH01BI4809",
+    "all_reads": [
+      [
+        "MH01BI4809",
+        0.948
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4010.jpg",
+    "gt": "MH01BM4824",
+    "pred": "MN61BN4621",
+    "all_reads": [
+      [
+        "MN61BN4621",
+        0.714
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4020.jpg",
+    "gt": "MH01BM4824",
+    "pred": "MH01BH1681",
+    "all_reads": [
+      [
+        "MH01BH1681",
+        0.697
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4030.jpg",
+    "gt": "MH01BM4824",
+    "pred": "MH01BM1821",
+    "all_reads": [
+      [
+        "MH01BM1821",
+        0.948
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4080.jpg",
+    "gt": "MH03DU5196",
+    "pred": "MH03OU5196",
+    "all_reads": [
+      [
+        "MH03OU5196",
+        0.982
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4090.jpg",
+    "gt": "MH01DK4867",
+    "pred": "MN01DK4867",
+    "all_reads": [
+      [
+        "MN01DK4867",
+        0.959
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_410.jpg",
+    "gt": "MH02CW8226",
+    "pred": "MH11CI4491",
+    "all_reads": [
+      [
+        "MH11CI4491",
+        0.4
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_420.jpg",
+    "gt": "MH02CW8226",
+    "pred": "MH12CW8226",
+    "all_reads": [
+      [
+        "MH12CW8226",
+        0.816
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4600.jpg",
+    "gt": "MH01AM5810",
+    "pred": "JH01LN1540",
+    "all_reads": [
+      [
+        "JH01LN1540",
+        0.509
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4610.jpg",
+    "gt": "MH01AM5810",
+    "pred": "JH11AU5510",
+    "all_reads": [
+      [
+        "JH11AU5510",
+        0.55
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4620.jpg",
+    "gt": "MH01AM5810",
+    "pred": "MH01AU1310",
+    "all_reads": [
+      [
+        "MH01AU1310",
+        0.51
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4710.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH03CR1828",
+    "all_reads": [
+      [
+        "MH03CR1828",
+        0.967
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4720.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH03CP1828",
+    "all_reads": [
+      [
+        "MH03CP1828",
+        0.936
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4730.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH03CP1828",
+    "all_reads": [
+      [
+        "MH03CP1828",
+        0.948
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4740.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH01CP1828",
+    "all_reads": [
+      [
+        "MH01CP1828",
+        0.82
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4750.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH03CP1828",
+    "all_reads": [
+      [
+        "MH03CP1828",
+        0.924
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4770.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH08CP1828",
+    "all_reads": [
+      [
+        "MH08CP1828",
+        0.969
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4780.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH08CP1828",
+    "all_reads": [
+      [
+        "MH08CP1828",
+        0.962
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4790.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH08CP1828",
+    "all_reads": [
+      [
+        "MH08CP1828",
+        0.983
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4800.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH08CP1828",
+    "all_reads": [
+      [
+        "MH08CP1828",
+        0.95
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_4810.jpg",
+    "gt": "MH03CP1328",
+    "pred": "MH08CP1828",
+    "all_reads": [
+      [
+        "MH08CP1828",
+        0.961
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_540.jpg",
+    "gt": "MH02DQ0196",
+    "pred": "MH02DO0196",
+    "all_reads": [
+      [
+        "MH02DO0196",
+        0.935
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video11_550.jpg",
+    "gt": "MH02DQ0196",
+    "pred": "MH02DO0196",
+    "all_reads": [
+      [
+        "MH02DO0196",
+        0.833
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_1490.jpg",
+    "gt": "DL8CN6308",
+    "pred": "DL80N6308",
+    "all_reads": [
+      [
+        "DL80N6308",
+        0.837
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_1510.jpg",
+    "gt": "DL8CN6308",
+    "pred": "DL8CW6308",
+    "all_reads": [
+      [
+        "DL8CW6308",
+        0.895
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_1590.jpg",
+    "gt": "DL8CN6308",
+    "pred": "DL86N6308",
+    "all_reads": [
+      [
+        "DL86N6308",
+        0.795
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_1750.jpg",
+    "gt": "DL8CN6308",
+    "pred": "DL80N6308",
+    "all_reads": [
+      [
+        "DL80N6308",
+        0.835
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_1820.jpg",
+    "gt": "DL8CN6308",
+    "pred": "DL88V6338",
+    "all_reads": [
+      [
+        "DL88V6338",
+        0.615
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_1830.jpg",
+    "gt": "DL8CN6308",
+    "pred": "DL80W6308",
+    "all_reads": [
+      [
+        "DL80W6308",
+        0.948
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_3260.jpg",
+    "gt": "MH02EZ6482",
+    "pred": "MN02EZ8487",
+    "all_reads": [
+      [
+        "MN02EZ8487",
+        0.613
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_3990.jpg",
+    "gt": "MH02AQ2299",
+    "pred": "MH02AO2299",
+    "all_reads": [
+      [
+        "MH02AO2299",
+        0.909
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_4140.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BI6482",
+    "all_reads": [
+      [
+        "MH02BI6482",
+        0.971
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_4190.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BI6482",
+    "all_reads": [
+      [
+        "MH02BI6482",
+        0.986
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_4280.jpg",
+    "gt": "MH04HP6100",
+    "pred": "MH34HP6100",
+    "all_reads": [
+      [
+        "MH34HP6100",
+        0.847
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_430.jpg",
+    "gt": "MH02DN8718",
+    "pred": "JH02DN8718",
+    "all_reads": [
+      [
+        "JH02DN8718",
+        0.947
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_4340.jpg",
+    "gt": "MH01AV8814",
+    "pred": "MH01AT8314",
+    "all_reads": [
+      [
+        "MH01AT8314",
+        0.778
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_4980.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BI6482",
+    "all_reads": [
+      [
+        "MH02BI6482",
+        0.981
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_5270.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BI6482",
+    "all_reads": [
+      [
+        "MH02BI6482",
+        0.964
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_5280.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH12BI6482",
+    "all_reads": [
+      [
+        "MH12BI6482",
+        0.942
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_5290.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BT8482",
+    "all_reads": [
+      [
+        "MH02BT8482",
+        0.94
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video2_820.jpg",
+    "gt": "MH02BR4503",
+    "pred": "MN01BM4503",
+    "all_reads": [
+      [
+        "MN01BM4503",
+        0.919
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1050.jpg",
+    "gt": "ME02EE4077",
+    "pred": "TG224007",
+    "all_reads": [
+      [
+        "TG224007",
+        0.449
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1070.jpg",
+    "gt": "MH02EE8407",
+    "pred": "AN02EE8407",
+    "all_reads": [
+      [
+        "AN02EE8407",
+        0.908
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1100.jpg",
+    "gt": "MH02EE8407",
+    "pred": "KL22C6440",
+    "all_reads": [
+      [
+        "KL22C6440",
+        0.33
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1120.jpg",
+    "gt": "MH02EK4399",
+    "pred": "CH22C4319",
+    "all_reads": [
+      [
+        "CH22C4319",
+        0.612
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1130.jpg",
+    "gt": "MH02EK4399",
+    "pred": "JH02EK4399",
+    "all_reads": [
+      [
+        "JH02EK4399",
+        0.855
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1140.jpg",
+    "gt": "MH02EK4399",
+    "pred": "TR63L4649",
+    "all_reads": [
+      [
+        "TR63L4649",
+        0.36
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1150.jpg",
+    "gt": "MH02EK4399",
+    "pred": "CH55L1445",
+    "all_reads": [
+      [
+        "CH55L1445",
+        0.253
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1180.jpg",
+    "gt": "MH02BT6482",
+    "pred": "WB02VI6412",
+    "all_reads": [
+      [
+        "WB02VI6412",
+        0.648
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1190.jpg",
+    "gt": "MH02BT6482",
+    "pred": "WB02UI6402",
+    "all_reads": [
+      [
+        "WB02UI6402",
+        0.829
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1200.jpg",
+    "gt": "MH02BT6482",
+    "pred": "NL02BT6482",
+    "all_reads": [
+      [
+        "NL02BT6482",
+        0.869
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1360.jpg",
+    "gt": "MH02CL4017",
+    "pred": "MH22LL4017",
+    "all_reads": [
+      [
+        "MH22LL4017",
+        0.748
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1370.jpg",
+    "gt": "MH02CL4017",
+    "pred": "MH31LL4017",
+    "all_reads": [
+      [
+        "MH31LL4017",
+        0.783
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1440.jpg",
+    "gt": "MH14DX9938",
+    "pred": "MH14CX8936",
+    "all_reads": [
+      [
+        "MH14CX8936",
+        0.855
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1500.jpg",
+    "gt": "MH14DX9938",
+    "pred": "MH14OX9938",
+    "all_reads": [
+      [
+        "MH14OX9938",
+        0.949
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1840.jpg",
+    "gt": "MH02EU4077",
+    "pred": "GA22A0077",
+    "all_reads": [
+      [
+        "GA22A0077",
+        0.316
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1850.jpg",
+    "gt": "MH02EU4077",
+    "pred": "CG02ZC4077",
+    "all_reads": [
+      [
+        "CG02ZC4077",
+        0.594
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1860.jpg",
+    "gt": "MH02EU4077",
+    "pred": "ML02DG4077",
+    "all_reads": [
+      [
+        "ML02DG4077",
+        0.757
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1870.jpg",
+    "gt": "MH02EU4077",
+    "pred": "WB02BD4077",
+    "all_reads": [
+      [
+        "WB02BD4077",
+        0.865
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1890.jpg",
+    "gt": "MH02EU4077",
+    "pred": "MH02LU4077",
+    "all_reads": [
+      [
+        "MH02LU4077",
+        0.901
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1900.jpg",
+    "gt": "MH02EU4077",
+    "pred": "MH04ED4077",
+    "all_reads": [
+      [
+        "MH04ED4077",
+        0.773
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1910.jpg",
+    "gt": "MH02EU4077",
+    "pred": "MN00BB4077",
+    "all_reads": [
+      [
+        "MN00BB4077",
+        0.751
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1930.jpg",
+    "gt": "MH01BD2186",
+    "pred": "PB11OT1966",
+    "all_reads": [
+      [
+        "PB11OT1966",
+        0.355
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_1950.jpg",
+    "gt": "MH02ER9194",
+    "pred": "JH02ZP8144",
+    "all_reads": [
+      [
+        "JH02ZP8144",
+        0.581
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_2170.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BI6482",
+    "all_reads": [
+      [
+        "MH02BI6482",
+        0.965
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_2190.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BI6482",
+    "all_reads": [
+      [
+        "MH02BI6482",
+        0.965
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_2230.jpg",
+    "gt": "MH02BT6482",
+    "pred": "MH02BI6482",
+    "all_reads": [
+      [
+        "MH02BI6482",
+        0.953
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_310.jpg",
+    "gt": "MH14FS5229",
+    "pred": "CH14FS5223",
+    "all_reads": [
+      [
+        "CH14FS5223",
+        0.795
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video3_440.jpg",
+    "gt": "MH14FM6930",
+    "pred": "MN14FW6930",
+    "all_reads": [
+      [
+        "MN14FW6930",
+        0.9
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_1100.jpg",
+    "gt": "GJ12FA0735",
+    "pred": "GJ12FA9735",
+    "all_reads": [
+      [
+        "GJ12FA9735",
+        0.769
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2020.jpg",
+    "gt": "MH02DS3099",
+    "pred": "JH12JS3109",
+    "all_reads": [
+      [
+        "JH12JS3109",
+        0.649
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2030.jpg",
+    "gt": "MH02DS3099",
+    "pred": "JH12DS4099",
+    "all_reads": [
+      [
+        "JH12DS4099",
+        0.639
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2210.jpg",
+    "gt": "MH01CT9150",
+    "pred": "CH01GT9119",
+    "all_reads": [
+      [
+        "CH01GT9119",
+        0.737
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2230.jpg",
+    "gt": "MH01CT9150",
+    "pred": "MH81GT9153",
+    "all_reads": [
+      [
+        "MH81GT9153",
+        0.771
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2310.jpg",
+    "gt": "MH01CT9150",
+    "pred": "MH01CT9159",
+    "all_reads": [
+      [
+        "MH01CT9159",
+        0.735
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2640.jpg",
+    "gt": "MH01AV7461",
+    "pred": "MH01AY7461",
+    "all_reads": [
+      [
+        "MH01AY7461",
+        0.784
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2650.jpg",
+    "gt": "MH01AV7461",
+    "pred": "MH90AV7465",
+    "all_reads": [
+      [
+        "MH90AV7465",
+        0.738
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_2970.jpg",
+    "gt": "MH02JA9655",
+    "pred": "MH02UA9655",
+    "all_reads": [
+      [
+        "MH02UA9655",
+        0.953
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3090.jpg",
+    "gt": "MH01JA8939",
+    "pred": "MH01JA6989",
+    "all_reads": [
+      [
+        "MH01JA6989",
+        0.885
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3100.jpg",
+    "gt": "MH01JA8939",
+    "pred": "MH01JA8989",
+    "all_reads": [
+      [
+        "MH01JA8989",
+        0.896
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3130.jpg",
+    "gt": "MH01JA8939",
+    "pred": "WB01JA8939",
+    "all_reads": [
+      [
+        "WB01JA8939",
+        0.862
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3200.jpg",
+    "gt": "MH01AX1113",
+    "pred": "MH01AX1111",
+    "all_reads": [
+      [
+        "MH01AX1111",
+        0.913
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_330.jpg",
+    "gt": "MH04GM7982",
+    "pred": "MH04SM7382",
+    "all_reads": [
+      [
+        "MH04SM7382",
+        0.785
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3310.jpg",
+    "gt": "MH01AL9693",
+    "pred": "MH10AL2009",
+    "all_reads": [
+      [
+        "MH10AL2009",
+        0.499
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3330.jpg",
+    "gt": "MH01AL9693",
+    "pred": "MH10AA1993",
+    "all_reads": [
+      [
+        "MH10AA1993",
+        0.58
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3500.jpg",
+    "gt": "MH02DJ8952",
+    "pred": "JH02D8892",
+    "all_reads": [
+      [
+        "JH02D8892",
+        0.596
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3510.jpg",
+    "gt": "MH02DJ8952",
+    "pred": "KL21A1432",
+    "all_reads": [
+      [
+        "KL21A1432",
+        0.483
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3520.jpg",
+    "gt": "MH02DJ8952",
+    "pred": "JK22D8852",
+    "all_reads": [
+      [
+        "JK22D8852",
+        0.656
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_3720.jpg",
+    "gt": "MH02DJ8952",
+    "pred": "MH02DJ4903",
+    "all_reads": [
+      [
+        "MH02DJ4903",
+        0.992
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video4_50.jpg",
+    "gt": "MH02DN6980",
+    "pred": "MH12DM6980",
+    "all_reads": [
+      [
+        "MH12DM6980",
+        0.891
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video5_430.jpg",
+    "gt": "MH01CY6333",
+    "pred": "MH01CV6333",
+    "all_reads": [
+      [
+        "MH01CV6333",
+        0.87
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video5_470.jpg",
+    "gt": "MH03CS6266",
+    "pred": "MH03CS6268",
+    "all_reads": [
+      [
+        "MH03CS6268",
+        0.987
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video6_1050.jpg",
+    "gt": "MH02DS9365",
+    "pred": "MH02CS9365",
+    "all_reads": [
+      [
+        "MH02CS9365",
+        0.951
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video6_1150.jpg",
+    "gt": "MH02DS9365",
+    "pred": "MH02DS9965",
+    "all_reads": [
+      [
+        "MH02DS9965",
+        0.864
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video6_200.jpg",
+    "gt": "PB11AG0774",
+    "pred": "PB11AG8774",
+    "all_reads": [
+      [
+        "PB11AG8774",
+        0.924
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video6_650.jpg",
+    "gt": "MHD1CV9311",
+    "pred": "NL01CV9311",
+    "all_reads": [
+      [
+        "NL01CV9311",
+        0.809
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video6_710.jpg",
+    "gt": "MHD1CV9311",
+    "pred": "MH01CV9311",
+    "all_reads": [
+      [
+        "MH01CV9311",
+        0.99
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_130.jpg",
+    "gt": "MH12DG7144",
+    "pred": "AP20G6144",
+    "all_reads": [
+      [
+        "AP20G6144",
+        0.506
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1300.jpg",
+    "gt": "MH02CR4364",
+    "pred": "MN55J1444",
+    "all_reads": [
+      [
+        "MN55J1444",
+        0.277
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1310.jpg",
+    "gt": "MH02CR4364",
+    "pred": "AN55E4454",
+    "all_reads": [
+      [
+        "AN55E4454",
+        0.257
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1320.jpg",
+    "gt": "MH02CR4364",
+    "pred": "DL302554",
+    "all_reads": [
+      [
+        "DL302554",
+        0.298
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1410.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.993
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1420.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.988
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1430.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.994
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1440.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.994
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1450.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.994
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1510.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.995
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1520.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.99
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1540.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.993
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1550.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.994
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1570.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.971
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1580.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.986
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1590.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.991
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1600.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5051",
+    "all_reads": [
+      [
+        "MH47Q5051",
+        0.98
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1610.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.995
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_1890.jpg",
+    "gt": "MH02EH1077",
+    "pred": "ML02EH1077",
+    "all_reads": [
+      [
+        "ML02EH1077",
+        0.802
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2090.jpg",
+    "gt": "MH02CR8276",
+    "pred": "MH82CR8276",
+    "all_reads": [
+      [
+        "MH82CR8276",
+        0.824
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2100.jpg",
+    "gt": "MH02CR8276",
+    "pred": "JH02CR8276",
+    "all_reads": [
+      [
+        "JH02CR8276",
+        0.89
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2260.jpg",
+    "gt": "MH01BT9066",
+    "pred": "MN61JT6144",
+    "all_reads": [
+      [
+        "MN61JT6144",
+        0.513
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2270.jpg",
+    "gt": "MH01BT9066",
+    "pred": "NL61VY6444",
+    "all_reads": [
+      [
+        "NL61VY6444",
+        0.503
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2350.jpg",
+    "gt": "MH01BT9066",
+    "pred": "KA01JT9043",
+    "all_reads": [
+      [
+        "KA01JT9043",
+        0.644
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2360.jpg",
+    "gt": "MH01BT9066",
+    "pred": "MZ64DT9143",
+    "all_reads": [
+      [
+        "MZ64DT9143",
+        0.574
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2450.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.992
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2460.jpg",
+    "gt": "MH02FD6534",
+    "pred": "MH02PD6534",
+    "all_reads": [
+      [
+        "MH02PD6534",
+        0.918
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2470.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.991
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_2480.jpg",
+    "gt": "MH4705851",
+    "pred": "MH47Q5851",
+    "all_reads": [
+      [
+        "MH47Q5851",
+        0.992
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_250.jpg",
+    "gt": "MH47AU1306",
+    "pred": "MN47AQ1106",
+    "all_reads": [
+      [
+        "MN47AQ1106",
+        0.806
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_270.jpg",
+    "gt": "MH47AU1306",
+    "pred": "ML47AL5466",
+    "all_reads": [
+      [
+        "ML47AL5466",
+        0.646
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_660.jpg",
+    "gt": "MH010PO323",
+    "pred": "AN01AC1233",
+    "all_reads": [
+      [
+        "AN01AC1233",
+        0.544
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_800.jpg",
+    "gt": "MH12SF3212",
+    "pred": "MZ25SF3212",
+    "all_reads": [
+      [
+        "MZ25SF3212",
+        0.427
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video8_920.jpg",
+    "gt": "MH038C6247",
+    "pred": "MH03BC6247",
+    "all_reads": [
+      [
+        "MH03BC6247",
+        0.925
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video9_300.jpg",
+    "gt": "MH48AW0091",
+    "pred": "MH48AW0001",
+    "all_reads": [
+      [
+        "MH48AW0001",
+        0.883
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video9_360.jpg",
+    "gt": "MH02FN2783",
+    "pred": "MP02FW2733",
+    "all_reads": [
+      [
+        "MP02FW2733",
+        0.744
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video9_370.jpg",
+    "gt": "MH02FN2783",
+    "pred": "MH17T7423",
+    "all_reads": [
+      [
+        "MH17T7423",
+        0.326
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "video9_70.jpg",
+    "gt": "MH01DT1917",
+    "pred": "MH01DT1317",
+    "all_reads": [
+      [
+        "MH01DT1317",
+        0.814
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "0073797c-a755-4972-b76b-8ef2b31d44ab___new_IMG_20160315_071740.jpg.jpeg",
+    "gt": "KA19TR02",
+    "pred": "KA90OM2200",
+    "all_reads": [
+      [
+        "KA90OM2200",
+        0.618
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "11186c4c-5f17-49b1-af37-a138a1e53794___12837944763_e7c6c6381a_z.jpg.jpeg",
+    "gt": "MH20CS1941",
+    "pred": "MH20CS1991",
+    "all_reads": [
+      [
+        "MH20CS1991",
+        0.913
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "11832b13-d514-4f1d-967c-d00e76d21e9b___Yellow-Number-Plate-With-Black-Lettering.jpg.jpeg",
+    "gt": "TN59AQ1515",
+    "pred": "TN54AQ1555",
+    "all_reads": [
+      [
+        "TN54AQ1555",
+        0.679
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "165eaa92-8e90-44e6-b132-8af462bae0c9___scorpio-rear.JPG.jpeg",
+    "gt": "KA01MA6989",
+    "pred": "KA81MA6989",
+    "all_reads": [
+      [
+        "KA81MA6989",
+        0.902
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "18f2e55e-0724-4eee-a28e-5d552a5aa045___20455d0e2dca458f13fbf4da5a2dc118.jpg.jpeg",
+    "gt": "HP896786",
+    "pred": "HP696786",
+    "all_reads": [
+      [
+        "HP696786",
+        0.801
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "1e7151e6-8626-4fb2-b7e8-0fb6a8fde713___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_a19be5870f8f2593c994c465a691477e_555X416_1.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "RJ27TC0330",
+    "all_reads": [
+      [
+        "RJ27TC0330",
+        0.944
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "1f0a7fe8-ac9b-4b54-9d55-e11f34f9f98b___9f6521b2ddb7b8e40ffd510966ffcca3.jpg.jpeg",
+    "gt": "KA42TC131011",
+    "pred": "KA42TC1111",
+    "all_reads": [
+      [
+        "KA42TC1111",
+        0.901
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "21cc678a-b9c5-4bbb-ace0-9e096e799632___unnamed-300x225.jpg - Copy.jpeg",
+    "gt": "DL758Y1790",
+    "pred": "CH84T7770",
+    "all_reads": [
+      [
+        "CH84T7770",
+        0.472
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "21cc678a-b9c5-4bbb-ace0-9e096e799632___unnamed-300x225.jpg.jpeg",
+    "gt": "DL13S0155",
+    "pred": "ML35D1355",
+    "all_reads": [
+      [
+        "ML35D1355",
+        0.502
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "22dc6b5f-ff5d-4bb4-beb2-0f5fd9e75787___i10_Latest_Acrylic_Number_Plate.jpg.jpeg",
+    "gt": "KL09AL9405",
+    "pred": "KL04AL4405",
+    "all_reads": [
+      [
+        "KL04AL4405",
+        0.872
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "2430703d-0fb3-4eb2-9765-4f9301f232cd___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_Terrano-Duster-Rear-Comparison.jpg",
+    "gt": "TERRANO",
+    "pred": "TG8RAN0005",
+    "all_reads": [
+      [
+        "TG8RAN0005",
+        0.531
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "26cfb3dd-3731-4fd0-a6c2-c44e3ce7498a___used_cars_in_keralaused_bikes_in_keralaautomotive_news7.jpg.jpeg",
+    "gt": "KL20K7561",
+    "pred": "KL20K7511",
+    "all_reads": [
+      [
+        "KL20K7511",
+        0.934
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "27a88c24-0bf2-48b0-98a8-fa396e951045___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_7T4G0491-e1376988169395-1024x577.jpg",
+    "gt": "TN21TC611",
+    "pred": "TN21TC1611",
+    "all_reads": [
+      [
+        "TN21TC1611",
+        0.889
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "28574c06-ac11-422e-864f-a51b726bb9ba___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_hqdefault0.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "RJ27TC0330",
+    "all_reads": [
+      [
+        "RJ27TC0330",
+        0.929
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "28fc10e3-681b-4086-9c15-28934ae86f7e___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_nissan-terrano-amt_827x510_71478504527.jpg",
+    "gt": "DL14CTC0153",
+    "pred": "DL14CT0013",
+    "all_reads": [
+      [
+        "DL14CT0013",
+        0.945
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "2fbe224b-e775-4c74-b975-fd66d2397ef6___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_Nissan-Terrano.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "RJ27TC6533",
+    "all_reads": [
+      [
+        "RJ27TC6533",
+        0.882
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "304b14b8-dc3c-41cb-94b6-635864e2e964___number-plate-protector-car-safeplate-250x250.jpg.jpeg",
+    "gt": "GJ07BR1336",
+    "pred": "GJ07BR1133",
+    "all_reads": [
+      [
+        "GJ07BR1133",
+        0.801
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "346a6946-ae0a-4b3f-b094-d971124b2064___banner_3.png",
+    "gt": "DL6CAB123X",
+    "pred": "DL6CAB1231",
+    "all_reads": [
+      [
+        "DL6CAB1231",
+        0.891
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "347c849b-6cfa-4edb-af1f-b29bdad25c4d___new_New-Volkswagen-Polo.jpg.jpeg",
+    "gt": "W0BNP300",
+    "pred": "WB5NP7600",
+    "all_reads": [
+      [
+        "WB5NP7600",
+        0.45
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "351a22eb-bf0a-44d6-8b6d-5ffca753c261___bike-number-plate-500x500.jpg.jpeg",
+    "gt": "MH20EU9991",
+    "pred": "MH20EJ9911",
+    "all_reads": [
+      [
+        "MH20EJ9911",
+        0.716
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "38cee3dd-dead-4ba0-b350-0f82d94836da___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_big_467860_1505633598.jpg",
+    "gt": "HR26TC7303",
+    "pred": "HR26FC1001",
+    "all_reads": [
+      [
+        "HR26FC1001",
+        0.424
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "3bc3f147-2d6b-484a-8481-4a49fd8afe23___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_844581764_1_1080x720_nissan-terrano-xv-d-thp-110-ps-2013-diesel-faridabad.jpg",
+    "gt": "HR51AY9099",
+    "pred": "HR51AV9099",
+    "all_reads": [
+      [
+        "HR51AV9099",
+        0.951
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "3c0a3772-d18d-4ff7-861c-7e50b7974edb___1393874-take-look-number-plate-imageuploadedbyteambhp1437414250.447892.jpg.jpeg",
+    "gt": "GJW115A1138",
+    "pred": "GJ11I5411",
+    "all_reads": [
+      [
+        "GJ11I5411",
+        0.671
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "40204d5c-c847-4437-90db-3e2d05a27761___33.jpg.jpeg",
+    "gt": "WB07D5106",
+    "pred": "WB07D5100",
+    "all_reads": [
+      [
+        "WB07D5100",
+        0.917
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "41209caa-2aa2-4003-b057-e0508c1d5ac9___Volkswagen-Ameo-Exterior-68165.jpg.jpeg",
+    "gt": "MH14TCD204",
+    "pred": "MH14TC0204",
+    "all_reads": [
+      [
+        "MH14TC0204",
+        0.912
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "44ee098a-c33c-47a2-9dcb-717c02d5a240___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_2013-Nissan-Terrano-Front.jpg",
+    "gt": "TN19TC91",
+    "pred": "TN19T6191",
+    "all_reads": [
+      [
+        "TN19T6191",
+        0.866
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "4b669e6d-4eec-4f46-b502-f64ee0175947___new_1.jpg",
+    "gt": "MH14TC206AN",
+    "pred": "MH14TC2014",
+    "all_reads": [
+      [
+        "MH14TC2014",
+        0.903
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "4f86fbad-3a04-4c11-a8fa-e897727fc2c7___Number-plate-1.jpg.jpeg",
+    "gt": "MH14GN9239",
+    "pred": "MH149239",
+    "all_reads": [
+      [
+        "MH149239",
+        0.935
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "504e7c29-e1dc-48c9-ace6-738cf934e368___2017-skoda-octavia-rs-12.jpg.jpeg",
+    "gt": "MH20TC640B",
+    "pred": "MH20TC6438",
+    "all_reads": [
+      [
+        "MH20TC6438",
+        0.945
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "52b45060-9645-47c7-882d-b69a5bf07eff___1006372d1351343820-my-new-maruti-swift-zxi-21102012241.jpg.jpeg",
+    "gt": "KA031351",
+    "pred": "KA031355",
+    "all_reads": [
+      [
+        "KA031355",
+        0.913
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "5345a45f-8d1b-4984-b5ee-a69fc4cbda6a___new__bd7f7862-d727-11e7-ad30-e18a56154311.jpg.jpeg",
+    "gt": "MH15TC554",
+    "pred": "MH15TC5441",
+    "all_reads": [
+      [
+        "MH15TC5441",
+        0.791
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "56b46df3-223c-42c8-a6bf-e95e5bac29cc___9214a754343030395508e104d7948167_large.jpg.jpeg",
+    "gt": "PB08CX2959",
+    "pred": "UP08CX2959",
+    "all_reads": [
+      [
+        "UP08CX2959",
+        0.892
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "57e92915-935a-4a91-91f8-f3ad70040a6e___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_847071203_1_1080x720_nissan-terrano-xv-d-thp-premium-110-ps-2015-diesel-ghaziabad.jpg",
+    "gt": "UP16CT2233",
+    "pred": "UP16CI2233",
+    "all_reads": [
+      [
+        "UP16CI2233",
+        0.941
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "59a40238-6b01-4bb9-9faf-3b595e67bcb3___3d-font-number-plate-500x500.jpg.jpeg",
+    "gt": "MH13BN4348",
+    "pred": "MH134348",
+    "all_reads": [
+      [
+        "MH134348",
+        0.986
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "5a4780bf-d2af-4f19-a36b-65004cd06b3d___maruti-suzuki-wagon-r-rear-left-rim.jpg.jpeg",
+    "gt": "MP09CC1667",
+    "pred": "NL84AC1887",
+    "all_reads": [
+      [
+        "NL84AC1887",
+        0.36
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "62b58053-425c-4924-b129-c4a6580f3562___product-500x5001.jpeg",
+    "gt": "KL01CC50",
+    "pred": "KL01CC5014",
+    "all_reads": [
+      [
+        "KL01CC5014",
+        0.841
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "6767eddd-bf2f-4270-aa1f-6146738895ab___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_Nissan-Terrano-20300.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "RJ27TC0533",
+    "all_reads": [
+      [
+        "RJ27TC0533",
+        0.953
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "684f079f-6085-420c-8e4e-e1aed270fc05___Toyota-Fortuner-Number-Plates-Design.jpg.jpeg",
+    "gt": "KL53E964",
+    "pred": "KL53E9644",
+    "all_reads": [
+      [
+        "KL53E9644",
+        0.885
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "69b56ab9-accd-4c67-aa7a-a884c018e5ab___speedex-number-plates-nandanam-chennai-car-number-plate-dealers-3zh7n2s.jpg.jpeg",
+    "gt": "KL54H369",
+    "pred": "KL54H3699",
+    "all_reads": [
+      [
+        "KL54H3699",
+        0.971
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "6cd15e75-3e26-41f2-a6aa-b1b58dec1c48___volkswagen-polo-exquisite-limited-edition-m1_720x540.jpg.jpeg",
+    "gt": "MH14EY5972",
+    "pred": "ML15EY5722",
+    "all_reads": [
+      [
+        "ML15EY5722",
+        0.574
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "6e772b68-a549-44e5-950e-4c376454c4e9___1557295d1474517501-toyota-innova-crysta-official-review-20160921_173216.jpg.jpeg",
+    "gt": "KL01KLKL01",
+    "pred": "KL01KL6101",
+    "all_reads": [
+      [
+        "KL01KL6101",
+        0.806
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "6ed8b283-5cf5-4727-9969-c79f70f47e80___2-cars-same-numbers.jpg.jpeg",
+    "gt": "RJ27TA1143",
+    "pred": "RJ97TA1118",
+    "all_reads": [
+      [
+        "RJ97TA1118",
+        0.73
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "6f680368-4a15-464a-b314-7f9cd0f3db11___91852d1232463201-high-security-registration-plates-hsrp-india-num1.jpg.jpeg",
+    "gt": "KL01AU585",
+    "pred": "KL01AU5855",
+    "all_reads": [
+      [
+        "KL01AU5855",
+        0.891
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "7070d6ac-5425-4d33-a78e-a48c62d0fac5___Honda-Jazz-Number-Plate-Designs.jpg.jpeg",
+    "gt": "TN42R2697",
+    "pred": "TN42R9697",
+    "all_reads": [
+      [
+        "TN42R9697",
+        0.902
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "730a2f83-cd53-4943-8922-af9d4fcad415___new_2.jpg",
+    "gt": "DL1N4268",
+    "pred": "DL1N4266",
+    "all_reads": [
+      [
+        "DL1N4266",
+        0.948
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "7506a48d-2c70-4b12-b300-463754bc7837___165979d1427773878-new-volkswagen-vento-2016-launched-india-vw-vento-facelift-rear-india-spotted-test.jpg.jpeg",
+    "gt": "MH14TCF459",
+    "pred": "MH14TC5459",
+    "all_reads": [
+      [
+        "MH14TC5459",
+        0.983
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "77d1f81a-bee6-487c-aff2-0efa31a9925c____bd7f7862-d727-11e7-ad30-e18a56154311.jpg.jpeg",
+    "gt": "MH15TC554",
+    "pred": "MH15TC5544",
+    "all_reads": [
+      [
+        "MH15TC5544",
+        0.904
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "78a85f8b-de01-4036-ae91-2a1fa48bcf9f___new_995920d1349421647-cappuccino-beige-czech-tank-here-my-skoda-laura-2-0-elegance-mt-20121005_121433.jpg.jpeg",
+    "gt": "KA29Z999",
+    "pred": "KA29Z9991",
+    "all_reads": [
+      [
+        "KA29Z9991",
+        0.954
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "79094948-25d3-418e-86fc-3c2d62917f62___513039-volkswagen-vento-test-drive-review-06032011612.jpg.jpeg",
+    "gt": "DL12C3536",
+    "pred": "DL12C3538",
+    "all_reads": [
+      [
+        "DL12C3538",
+        0.907
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "84969111-2ec3-4914-b3bb-da5aaac701e7___1.jpg.jpeg",
+    "gt": "MH20TC830C",
+    "pred": "MH21TC8306",
+    "all_reads": [
+      [
+        "MH21TC8306",
+        0.86
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "85bd88a0-ac9a-412e-ba44-2a29d209e212___4336_1466054535_9.jpg.jpeg",
+    "gt": "MH14TCE4",
+    "pred": "MH14TC5444",
+    "all_reads": [
+      [
+        "MH14TC5444",
+        0.768
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "8625b831-13a1-4b7d-9466-826cd6d36c67___1304650d1414861991-number-plates-merchandise-canvas-ink-gurgaon-edit-closed-10471269_1537317779842156_5063668061078329632_n.jpg.jpeg",
+    "gt": "DL7CN5617",
+    "pred": "DL70N5617",
+    "all_reads": [
+      [
+        "DL70N5617",
+        0.966
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "8906af57-0d29-417d-ac46-408425527b57___VW-Vento-TDI-CNG-Spy-Pic-2.jpg.jpeg",
+    "gt": "MH14TCF300",
+    "pred": "MH14TC5300",
+    "all_reads": [
+      [
+        "MH14TC5300",
+        0.846
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "8b5431f9-7d6f-43ed-853d-350ca058ff2a___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_2014-Nissan-Terrano1.jpg",
+    "gt": "TN19TC94",
+    "pred": "TN19T6944",
+    "all_reads": [
+      [
+        "TN19T6944",
+        0.834
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "8da5183c-275f-4294-a5a8-276e10ac5ad0___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_nissan-terrano-amt_827x510_81478504265.jpg",
+    "gt": "DL14CTC0153",
+    "pred": "DL14CT0013",
+    "all_reads": [
+      [
+        "DL14CT0013",
+        0.9
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "8e0b8c6f-850f-4918-983a-7fa110368d32___banner_4.png",
+    "gt": "DL6CAB123X",
+    "pred": "DL6CAB1231",
+    "all_reads": [
+      [
+        "DL6CAB1231",
+        0.891
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "931dfd5a-3d1f-4a08-9234-0453545e27ea___1297127d1412798792-maruti-ciaz-official-review-imag0627.jpg.jpeg",
+    "gt": "PB03AGT8979",
+    "pred": "PB03AG1189",
+    "all_reads": [
+      [
+        "PB03AG1189",
+        0.819
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "967ba4a0-eb8e-4734-aa09-c7143d0404b6___39720161008_150234.jpg.jpeg",
+    "gt": "MH02BM5048",
+    "pred": "JH02BI5048",
+    "all_reads": [
+      [
+        "JH02BI5048",
+        0.874
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "a1928183-9ebe-40f0-9a84-500aecc61474___2014-Skoda-Superb-facelift-spied-in-India.jpg.jpeg",
+    "gt": "MH20TC189B",
+    "pred": "MH20TC1838",
+    "all_reads": [
+      [
+        "MH20TC1838",
+        0.969
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "a34aeb21-ffe8-4357-80d3-8f212c62c816___new_main_cropped.jpg.jpeg",
+    "gt": "UP16TC1366",
+    "pred": "UP16WB8866",
+    "all_reads": [
+      [
+        "UP16WB8866",
+        0.726
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "a9268f51-fbb4-42c2-b88c-f5ef9f8ead42___2266_7T4G0510.JPG.jpeg",
+    "gt": "HR99EX6037",
+    "pred": "HR95IT2013",
+    "all_reads": [
+      [
+        "HR95IT2013",
+        0.626
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "a95a0d9d-5d40-4abb-bd3e-6c6d94bef5b1___IMG_3310.jpg.jpeg",
+    "gt": "DEVANAGRI",
+    "pred": "KA478900",
+    "all_reads": [
+      [
+        "KA478900",
+        0.266
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "af058398-67d6-4d0e-a6d9-afc1cb184e5b___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_hqdefault3.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "RJ41CC0306",
+    "all_reads": [
+      [
+        "RJ41CC0306",
+        0.445
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "b176b317-68a9-4c38-ac39-55e5244c9b9c___60653.jpg.jpeg",
+    "gt": "MH02AJ344",
+    "pred": "MH02AJ3442",
+    "all_reads": [
+      [
+        "MH02AJ3442",
+        0.89
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "b78553c7-977e-49a2-b3d2-42825d83c8b0___1557297d1474517501-toyota-innova-crysta-official-review-20160920_191445.jpg.jpeg",
+    "gt": "KL01KL0KL01",
+    "pred": "KL01KL0111",
+    "all_reads": [
+      [
+        "KL01KL0111",
+        0.821
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "b79f870d-15c7-48e3-8874-7c0e53e29f75___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_754eab882b8290b29a0454dd45580a39_555X416_1 - Copy (3).jpg",
+    "gt": "CRETA",
+    "pred": "CG11111",
+    "all_reads": [
+      [
+        "CG11111",
+        0.465
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "b79f870d-15c7-48e3-8874-7c0e53e29f75___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_754eab882b8290b29a0454dd45580a39_555X416_1 - Copy.jpg",
+    "gt": "DUSTER",
+    "pred": "DN55111",
+    "all_reads": [
+      [
+        "DN55111",
+        0.364
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "b79f870d-15c7-48e3-8874-7c0e53e29f75___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_754eab882b8290b29a0454dd45580a39_555X416_1.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "RJ27TC8333",
+    "all_reads": [
+      [
+        "RJ27TC8333",
+        0.679
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "ba457a81-cf10-4879-8e8f-3a0a8d10689a___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_hqdefault.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "DN34CG0530",
+    "all_reads": [
+      [
+        "DN34CG0530",
+        0.578
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "bb767d81-73b4-4c47-b619-7efde490b199___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_oem-name0 - Copy.jpg",
+    "gt": "RJ27TC0530",
+    "pred": "GJ11G0311",
+    "all_reads": [
+      [
+        "GJ11G0311",
+        0.396
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "bdad5f66-70ad-4241-9a62-bba1123c3486___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_1447945d1449508546t-my-nissan-terrano-85-ps-_img_000000_000000.jpg",
+    "gt": "KA05MQ92",
+    "pred": "KA05AQ9922",
+    "all_reads": [
+      [
+        "KA05AQ9922",
+        0.833
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "be483d11-33f0-4c1f-87b6-9844eea28996___1093346d1370435964-take-look-number-plate-photo.jpg.jpeg",
+    "gt": "KA5122727",
+    "pred": "KA12A7727",
+    "all_reads": [
+      [
+        "KA12A7727",
+        0.44
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "c03a7106-1fb9-471f-bbb0-2e8f4a29759a___38e7b1109eb976088e1df2f14ac4c08c.jpg.jpeg",
+    "gt": "KL57A111",
+    "pred": "KL54A1111",
+    "all_reads": [
+      [
+        "KL54A1111",
+        0.591
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "c06d4d42-591f-429e-92b4-20e701f89c14___2014-VW-Polo-facelift-spied-India-rear.jpg.jpeg",
+    "gt": "MH14TCF460",
+    "pred": "MH14IC5660",
+    "all_reads": [
+      [
+        "MH14IC5660",
+        0.923
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "c2feb2b7-fbb3-4e1e-ad48-cc8112a1ab3f___Maruti_R3_On_Test.jpg.jpeg",
+    "gt": "HR99HA4575",
+    "pred": "HR99AT8145",
+    "all_reads": [
+      [
+        "HR99AT8145",
+        0.756
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "c41652d9-19ae-4a7d-8423-230340ac30bc___Skoda_Laura_DSG_Long_Term_Review-125.jpg.jpeg",
+    "gt": "MH20BN3525",
+    "pred": "JH20BN3525",
+    "all_reads": [
+      [
+        "JH20BN3525",
+        0.781
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "c795950c-766a-4a2e-9636-62d663d6f06b___62bf1edb36141f114521ec4bb4175579.jpg.jpeg",
+    "gt": "GJ7BB766",
+    "pred": "GJ76BT7444",
+    "all_reads": [
+      [
+        "GJ76BT7444",
+        0.753
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "c8a79e91-8c48-42d0-9b80-137fd033493c___automakers-number-plates-nitin-gadkari_827x510_61522653557.jpg.jpeg",
+    "gt": "MH14TC947",
+    "pred": "MH14TC9477",
+    "all_reads": [
+      [
+        "MH14TC9477",
+        0.973
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-GJW115A1138_00000.jpeg",
+    "gt": "GJW115A1138",
+    "pred": "GJ11I5411",
+    "all_reads": [
+      [
+        "GJ11I5411",
+        0.673
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-HR26CB1900_00000.png",
+    "gt": "HR26CB1900",
+    "pred": "HR26CB1940",
+    "all_reads": [
+      [
+        "HR26CB1940",
+        0.954
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-HR51AY9099_00000.jpg",
+    "gt": "HR51AY9099",
+    "pred": "HR51AV9099",
+    "all_reads": [
+      [
+        "HR51AV9099",
+        0.968
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-HR99EX6037_00000.jpeg",
+    "gt": "HR99EX6037",
+    "pred": "HR9EIE2113",
+    "all_reads": [
+      [
+        "HR9EIE2113",
+        0.631
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-KA29Z999_00000.jpeg",
+    "gt": "KA29Z999",
+    "pred": "KA29Z9991",
+    "all_reads": [
+      [
+        "KA29Z9991",
+        0.905
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-KL01CC50_00000.png",
+    "gt": "KL01CC50",
+    "pred": "KL01CC5004",
+    "all_reads": [
+      [
+        "KL01CC5004",
+        0.842
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-KL01KL0KL01_00000.jpeg",
+    "gt": "KL01KL0KL01",
+    "pred": "KL01KL0101",
+    "all_reads": [
+      [
+        "KL01KL0101",
+        0.821
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-KL04AL4405_00000.jpeg",
+    "gt": "KL09AL9405",
+    "pred": "KL04AL4405",
+    "all_reads": [
+      [
+        "KL04AL4405",
+        0.906
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-KL20K7561_00000.jpeg",
+    "gt": "KL20K7561",
+    "pred": "KL20K7511",
+    "all_reads": [
+      [
+        "KL20K7511",
+        0.954
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-KL53E964_00000.jpeg",
+    "gt": "KL53E964",
+    "pred": "KL53E9644",
+    "all_reads": [
+      [
+        "KL53E9644",
+        0.884
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-KL54H369_00000.jpeg",
+    "gt": "KL54H369",
+    "pred": "KL54H3699",
+    "all_reads": [
+      [
+        "KL54H3699",
+        0.88
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH02BM5048_00000.jpeg",
+    "gt": "MH02BM5048",
+    "pred": "MH02BI5048",
+    "all_reads": [
+      [
+        "MH02BI5048",
+        0.871
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH20BN3525_00000.jpeg",
+    "gt": "MH20BN3525",
+    "pred": "JH20BN3527",
+    "all_reads": [
+      [
+        "JH20BN3527",
+        0.846
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH20BQ20_00000.png",
+    "gt": "MH20BQ20",
+    "pred": "MH20B0200",
+    "all_reads": [
+      [
+        "MH20B0200",
+        0.832
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH20CS1941_00001.jpeg",
+    "gt": "MH20CS1941",
+    "pred": "MH20CS1991",
+    "all_reads": [
+      [
+        "MH20CS1991",
+        0.87
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-MH20EE045_00000.jpeg",
+    "gt": "MH20EE045",
+    "pred": "JH10DB6005",
+    "all_reads": [
+      [
+        "JH10DB6005",
+        0.395
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-PB08CX2959_00000.jpeg",
+    "gt": "PB08CX2959",
+    "pred": "UP88CX2259",
+    "all_reads": [
+      [
+        "UP88CX2259",
+        0.705
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-TN09CH7770_00000.jpeg",
+    "gt": "TN09CH7770",
+    "pred": "TN09OH7770",
+    "all_reads": [
+      [
+        "TN09OH7770",
+        0.946
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-TN58AM1_00000.jpeg",
+    "gt": "TN58AM1",
+    "pred": "TN58AM1111",
+    "all_reads": [
+      [
+        "TN58AM1111",
+        0.806
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "car-wbs-UP16CT2233_00000.jpg",
+    "gt": "UP16CT2233",
+    "pred": "UP16CI2233",
+    "all_reads": [
+      [
+        "UP16CI2233",
+        0.963
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "cd506968-8676-4df3-9150-d1c2e618f4c2___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_nissan-note-india-testing_827x510_81508219864.jpg",
+    "gt": "TN21TC31",
+    "pred": "TN21TC3114",
+    "all_reads": [
+      [
+        "TN21TC3114",
+        0.835
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "cf011553-f802-4b11-99ec-6e03d731b646___new_2014-VW-Polo-facelift-spied-India-rear.jpg.jpeg",
+    "gt": "MH14TCF460",
+    "pred": "MH14IC4660",
+    "all_reads": [
+      [
+        "MH14IC4660",
+        0.871
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "d3d2cbaa-f24a-4cb7-a236-53fa514816b4___new_2017-Skoda-Rapid-Diesel-DSG-Review-6.jpg.jpeg",
+    "gt": "MH20EE045",
+    "pred": "JH20LB6005",
+    "all_reads": [
+      [
+        "JH20LB6005",
+        0.385
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "d88b7b9c-a4f4-4af6-af3d-b3017e114e0d___146292-maruti-suzuki-wagon-r-stingray-vxi-ownership-review-dsc_01691.jpg.jpeg",
+    "gt": "ASM1634",
+    "pred": "AS89M1104",
+    "all_reads": [
+      [
+        "AS89M1104",
+        0.737
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "df2f7a76-d701-468f-b54a-c5d63d13b349___CM-Akhilesh-Number-Plate.jpg.jpeg",
+    "gt": "UP65CM21149",
+    "pred": "UP01L1114",
+    "all_reads": [
+      [
+        "UP01L1114",
+        0.444
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "dfafd4ef-5592-41d9-9cbb-fa6a4e03831e___IMG_9082.jpg.jpeg",
+    "gt": "UP80CR00",
+    "pred": "UP80L0001",
+    "all_reads": [
+      [
+        "UP80L0001",
+        0.911
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "dfedf2ad-6596-48d4-a7f6-171e55c8f637___1160575d1383218860-high-security-registration-plates-hsrp-india-wp_20131030_16_01_22_pro.jpg.jpeg",
+    "gt": "GJ051D9443",
+    "pred": "GJ05ID4443",
+    "all_reads": [
+      [
+        "GJ05ID4443",
+        0.798
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "e1d7921f-5e58-46c7-b4f9-9fd4585508f1___IMG_9072.jpg.jpeg",
+    "gt": "GJ1KF1111",
+    "pred": "GJ4KIJ1117",
+    "all_reads": [
+      [
+        "GJ4KIJ1117",
+        0.563
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "e4907f73-1fbc-412c-a766-9c81bb31449c___2016-Chevrolet-TrailBlazer-India-Test-Drive-Review-e1442832290349.jpg.jpeg",
+    "gt": "GJ17TC214",
+    "pred": "GJ17TC2144",
+    "all_reads": [
+      [
+        "GJ17TC2144",
+        0.906
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "e54fb93b-020f-4c55-b4db-86e17ba9b9e0___2014-VW-Polo-facelift-rear-spotted-testing-in-Pune-India.jpg.jpeg",
+    "gt": "MH14TCP237",
+    "pred": "DN11041",
+    "all_reads": [
+      [
+        "DN11041",
+        0.451
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "e663fa35-ce3c-401d-8451-30edd236b3e4___maxresdefault2.jpg.jpeg",
+    "gt": "KL49H5270",
+    "pred": "KL49H5670",
+    "all_reads": [
+      [
+        "KL49H5670",
+        0.901
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "e750b959-1b5a-41bf-bf64-d8099089e909___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_Nissan-Terrano-Duster-launch-dare-pics-price-interiors-images-1.jpg",
+    "gt": "TN19TC91",
+    "pred": "TN19Q6191",
+    "all_reads": [
+      [
+        "TN19Q6191",
+        0.686
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "ed6ee171-691a-4563-a79d-4f47d8ce9f85___Maruti-Suzuki-SCross-Exterior-80675.jpg.jpeg",
+    "gt": "HPSX4000",
+    "pred": "HP6X4000",
+    "all_reads": [
+      [
+        "HP6X4000",
+        0.779
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "f16274c4-0d3d-4c85-9dcc-5ac71734b281___speedex-number-plates-nandanam-chennai-car-number-plate-dealers-1ofla74.jpg.jpeg",
+    "gt": "KL7BZ99",
+    "pred": "KL78299",
+    "all_reads": [
+      [
+        "KL78299",
+        0.766
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "f265077a-611f-4a18-abe5-46518b1756e6___1232700-take-look-number-plate-uploadfromtaptalk1398055489406.jpg.jpeg",
+    "gt": "PY01BL1155",
+    "pred": "KL01G5155",
+    "all_reads": [
+      [
+        "KL01G5155",
+        0.512
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "f59d42f8-dc55-4b60-bb91-c2db3644f2ff___841309873_1_1080x720_mahindra-scorpio-vlx-airbags-bs-iii-2012-diesel-.jpg.jpeg",
+    "gt": "TN58AM1",
+    "pred": "TN58AM1111",
+    "all_reads": [
+      [
+        "TN58AM1111",
+        0.807
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "f5bbb8da-dddd-47ae-a46c-15492f9cf752___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_10187746544_0c0822790e.jpg",
+    "gt": "BLUR",
+    "pred": "KL11444",
+    "all_reads": [
+      [
+        "KL11444",
+        0.15
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "f685e6cf-3a12-42ac-94d7-28cdf129b266___maxresdefault1.jpg.jpeg",
+    "gt": "TN66T5836",
+    "pred": "TN67T9896",
+    "all_reads": [
+      [
+        "TN67T9896",
+        0.444
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "f7ba7a93-e8d7-4253-b327-d87e3f2bb747___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_2013-Nissan-Terrano-Rear.jpg",
+    "gt": "TN19TC94",
+    "pred": "DL60S4319",
+    "all_reads": [
+      [
+        "DL60S4319",
+        0.436
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "f8a992cc-a1cc-4d68-88c1-bec1a46fc148___Honda-City-Number-Plates-Design.jpg.jpeg",
+    "gt": "TN02BL9",
+    "pred": "TN02RD0901",
+    "all_reads": [
+      [
+        "TN02RD0901",
+        0.59
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "fac9f4e6-c4b9-4872-86da-79d58ea2adc5___5273.jpg - Copy.jpeg",
+    "gt": "UP16AB3726",
+    "pred": "AR16AB3728",
+    "all_reads": [
+      [
+        "AR16AB3728",
+        0.699
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "fac9f4e6-c4b9-4872-86da-79d58ea2adc5___5273.jpg.jpeg",
+    "gt": "MH02B16890",
+    "pred": "MH02BI8890",
+    "all_reads": [
+      [
+        "MH02BI8890",
+        0.9
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "fbb2b3ed-4db1-4d4c-8d4d-4b80b02bfd2a___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_01640f5edbbfb564a9ab6486b31d1554_large.jpg",
+    "gt": "RJ09C84382",
+    "pred": "HR84CB4900",
+    "all_reads": [
+      [
+        "HR84CB4900",
+        0.528
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "fbc107b7-13d8-4a2d-b8be-7c96bd7d609c___new_9214a754343030395508e104d7948167_large.jpg.jpeg",
+    "gt": "PB08CX2959",
+    "pred": "UP08CX2959",
+    "all_reads": [
+      [
+        "UP08CX2959",
+        0.861
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "fda5760a-c6ff-43a9-8ce7-61e808f109ea___3e7fd381-0ae5-4421-8a70-279ee0ec1c61_nissan_terrano_ii_nissan_terrano_ii_2_7_tdi_se_4x4_3330085523722771900.jpg",
+    "gt": "HD02NP0",
+    "pred": "LD02N2000",
+    "all_reads": [
+      [
+        "LD02N2000",
+        0.581
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AN10.jpg",
+    "gt": "AN01K9412",
+    "pred": "AN01W9412",
+    "all_reads": [
+      [
+        "AN01W9412",
+        0.886
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AN2.jpg",
+    "gt": "AN01D4163",
+    "pred": "AN01BW1633",
+    "all_reads": [
+      [
+        "AN01BW1633",
+        0.745
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AN4.jpg",
+    "gt": "AN01M4M",
+    "pred": "AN01M4111",
+    "all_reads": [
+      [
+        "AN01M4111",
+        0.753
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP12.jpg",
+    "gt": "AP310U7562",
+    "pred": "AP31OU7562",
+    "all_reads": [
+      [
+        "AP31OU7562",
+        0.936
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP16.jpg",
+    "gt": "AP39GR3492",
+    "pred": "AP39GQ9492",
+    "all_reads": [
+      [
+        "AP39GQ9492",
+        0.91
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP17.jpg",
+    "gt": "AP31TP2282",
+    "pred": "AP31HW2285",
+    "all_reads": [
+      [
+        "AP31HW2285",
+        0.791
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP19.jpg",
+    "gt": "AP04M7627",
+    "pred": "AP04MM7627",
+    "all_reads": [
+      [
+        "AP04MM7627",
+        0.925
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP2.jpg",
+    "gt": "AP07AN3915",
+    "pred": "AP77NW9915",
+    "all_reads": [
+      [
+        "AP77NW9915",
+        0.505
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP20.jpg",
+    "gt": "AP04AS8753",
+    "pred": "AP04AS8763",
+    "all_reads": [
+      [
+        "AP04AS8763",
+        0.957
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP23.jpg",
+    "gt": "AP39DL3537",
+    "pred": "AP39DW3537",
+    "all_reads": [
+      [
+        "AP39DW3537",
+        0.863
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP29.jpg",
+    "gt": "AP31DF2833",
+    "pred": "AP81DF8888",
+    "all_reads": [
+      [
+        "AP81DF8888",
+        0.877
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP3.jpg",
+    "gt": "AP2D4014",
+    "pred": "AP29B1011",
+    "all_reads": [
+      [
+        "AP29B1011",
+        0.502
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP34.jpg",
+    "gt": "AP37EJ2277",
+    "pred": "AR37EU2277",
+    "all_reads": [
+      [
+        "AR37EU2277",
+        0.942
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP4.jpg",
+    "gt": "AP39HZ0087",
+    "pred": "AP30NZ0097",
+    "all_reads": [
+      [
+        "AP30NZ0097",
+        0.944
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP40.jpg",
+    "gt": "AP04BA4464",
+    "pred": "AP04DA4464",
+    "all_reads": [
+      [
+        "AP04DA4464",
+        0.964
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP42.jpg",
+    "gt": "AP31TV6847",
+    "pred": "AP31TY6847",
+    "all_reads": [
+      [
+        "AP31TY6847",
+        0.939
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP44.jpg",
+    "gt": "AP318L4935",
+    "pred": "AP31BL4935",
+    "all_reads": [
+      [
+        "AP31BL4935",
+        0.96
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AP46.jpg",
+    "gt": "AP31CS2511",
+    "pred": "AP81CS9511",
+    "all_reads": [
+      [
+        "AP81CS9511",
+        0.936
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AR10.jpg",
+    "gt": "AR152019",
+    "pred": "AR152819",
+    "all_reads": [
+      [
+        "AR152819",
+        0.845
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AR12.jpg",
+    "gt": "AR118724",
+    "pred": "AR11B7244",
+    "all_reads": [
+      [
+        "AR11B7244",
+        0.834
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AR13.jpg",
+    "gt": "AR200692",
+    "pred": "AR20Q6922",
+    "all_reads": [
+      [
+        "AR20Q6922",
+        0.888
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AR3.jpg",
+    "gt": "AR169723",
+    "pred": "AR659723",
+    "all_reads": [
+      [
+        "AR659723",
+        0.758
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AR8.jpg",
+    "gt": "AR08983",
+    "pred": "AR08963",
+    "all_reads": [
+      [
+        "AR08963",
+        0.783
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AS1.jpg",
+    "gt": "AS23H2866",
+    "pred": "AS23H2286",
+    "all_reads": [
+      [
+        "AS23H2286",
+        0.965
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AS11.jpg",
+    "gt": "AS01DS7523",
+    "pred": "AS91GS7533",
+    "all_reads": [
+      [
+        "AS91GS7533",
+        0.717
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AS14.jpg",
+    "gt": "AS018P2415",
+    "pred": "AS01BP2415",
+    "all_reads": [
+      [
+        "AS01BP2415",
+        0.955
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AS15.jpg",
+    "gt": "AS01BF9673",
+    "pred": "AS01BF9573",
+    "all_reads": [
+      [
+        "AS01BF9573",
+        0.934
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AS20.jpg",
+    "gt": "AS01AT8119",
+    "pred": "AS01LT8119",
+    "all_reads": [
+      [
+        "AS01LT8119",
+        0.938
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "AS21.jpg",
+    "gt": "AS23X5585",
+    "pred": "AS23K5585",
+    "all_reads": [
+      [
+        "AS23K5585",
+        0.969
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "BR12.jpg",
+    "gt": "BR03PA3803",
+    "pred": "BR01FA7661",
+    "all_reads": [
+      [
+        "BR01FA7661",
+        0.707
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "BR14.jpg",
+    "gt": "BR01BL6628",
+    "pred": "BR31BL6628",
+    "all_reads": [
+      [
+        "BR31BL6628",
+        0.848
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "BR17.jpg",
+    "gt": "BF06P00006",
+    "pred": "BR06PD0006",
+    "all_reads": [
+      [
+        "BR06PD0006",
+        0.938
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "BR18.jpg",
+    "gt": "BR01BD5042",
+    "pred": "BR01BD5049",
+    "all_reads": [
+      [
+        "BR01BD5049",
+        0.988
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "BR3.jpg",
+    "gt": "BR01AZ6290",
+    "pred": "BR01WW9960",
+    "all_reads": [
+      [
+        "BR01WW9960",
+        0.552
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "BR6.jpg",
+    "gt": "BR7P3952",
+    "pred": "BR77B9952",
+    "all_reads": [
+      [
+        "BR77B9952",
+        0.572
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "BR7.jpg",
+    "gt": "BR44E1206",
+    "pred": "BR41W1900",
+    "all_reads": [
+      [
+        "BR41W1900",
+        0.691
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CG11.jpg",
+    "gt": "CG04HA4553",
+    "pred": "CG01MA4853",
+    "all_reads": [
+      [
+        "CG01MA4853",
+        0.701
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CG13.jpg",
+    "gt": "CG16B1802",
+    "pred": "CG16B1809",
+    "all_reads": [
+      [
+        "CG16B1809",
+        0.899
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CG14.jpg",
+    "gt": "CG09JA2359",
+    "pred": "CG09JA2389",
+    "all_reads": [
+      [
+        "CG09JA2389",
+        0.915
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CG16.jpg",
+    "gt": "CG07R2684",
+    "pred": "CG07M2663",
+    "all_reads": [
+      [
+        "CG07M2663",
+        0.58
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CG20.jpg",
+    "gt": "CG251612",
+    "pred": "CG251619",
+    "all_reads": [
+      [
+        "CG251619",
+        0.806
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CG21.jpg",
+    "gt": "CG04FJ5834",
+    "pred": "CG04FJ5894",
+    "all_reads": [
+      [
+        "CG04FJ5894",
+        0.985
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CH1.jpg",
+    "gt": "CH01BQ5604",
+    "pred": "MH01Q1582",
+    "all_reads": [
+      [
+        "MH01Q1582",
+        0.448
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "CH8.jpg",
+    "gt": "CH01A09331",
+    "pred": "CH01AD9331",
+    "all_reads": [
+      [
+        "CH01AD9331",
+        0.939
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DL25.jpg",
+    "gt": "DL9C0S1537",
+    "pred": "DL9CQS1537",
+    "all_reads": [
+      [
+        "DL9CQS1537",
+        0.927
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DL28.jpg",
+    "gt": "DL40NA7238",
+    "pred": "DL46NA7237",
+    "all_reads": [
+      [
+        "DL46NA7237",
+        0.844
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DL30.jpg",
+    "gt": "DL10C05520",
+    "pred": "DL10CT5520",
+    "all_reads": [
+      [
+        "DL10CT5520",
+        0.868
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DL31.jpg",
+    "gt": "DL8CNA1596",
+    "pred": "DL86CN1671",
+    "all_reads": [
+      [
+        "DL86CN1671",
+        0.6
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DL34.jpg",
+    "gt": "DL8CNA5085",
+    "pred": "DL8CNA5055",
+    "all_reads": [
+      [
+        "DL8CNA5055",
+        0.929
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DN2.jpg",
+    "gt": "DN09J1548",
+    "pred": "DN01J1548",
+    "all_reads": [
+      [
+        "DN01J1548",
+        0.863
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DN6.jpg",
+    "gt": "DN0901438",
+    "pred": "DN09D1438",
+    "all_reads": [
+      [
+        "DN09D1438",
+        0.986
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "DN7.jpg",
+    "gt": "DN0909704",
+    "pred": "DN09Q9704",
+    "all_reads": [
+      [
+        "DN09Q9704",
+        0.969
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "GA1.jpg",
+    "gt": "GA03R9230",
+    "pred": "GA03R9433",
+    "all_reads": [
+      [
+        "GA03R9433",
+        0.822
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "GA3.jpg",
+    "gt": "GA01S5594",
+    "pred": "GJ01S5551",
+    "all_reads": [
+      [
+        "GJ01S5551",
+        0.523
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "GA6.jpg",
+    "gt": "GA02J2129",
+    "pred": "GA09J2128",
+    "all_reads": [
+      [
+        "GA09J2128",
+        0.82
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "GJ10.jpg",
+    "gt": "GJ01RA8370",
+    "pred": "GJ01RA8376",
+    "all_reads": [
+      [
+        "GJ01RA8376",
+        0.92
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "GJ5.jpg",
+    "gt": "GJ1SCG7928",
+    "pred": "GJ15CG7918",
+    "all_reads": [
+      [
+        "GJ15CG7918",
+        0.93
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HP14.jpg",
+    "gt": "HP3SG1539",
+    "pred": "HP99G1559",
+    "all_reads": [
+      [
+        "HP99G1559",
+        0.749
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HP16.jpg",
+    "gt": "HP302165",
+    "pred": "HP302155",
+    "all_reads": [
+      [
+        "HP302155",
+        0.866
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HP18.jpg",
+    "gt": "HP24C8D32",
+    "pred": "HR24C8033",
+    "all_reads": [
+      [
+        "HR24C8033",
+        0.906
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HP4.jpg",
+    "gt": "HP48B2252",
+    "pred": "HP49B2259",
+    "all_reads": [
+      [
+        "HP49B2259",
+        0.905
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HP6.jpg",
+    "gt": "HP01A7630",
+    "pred": "HP01A7556",
+    "all_reads": [
+      [
+        "HP01A7556",
+        0.842
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HR11.jpg",
+    "gt": "HR01H4731",
+    "pred": "HR01II1751",
+    "all_reads": [
+      [
+        "HR01II1751",
+        0.554
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HR12.jpg",
+    "gt": "HR29R9466",
+    "pred": "HR29R9486",
+    "all_reads": [
+      [
+        "HR29R9486",
+        0.856
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HR16.jpg",
+    "gt": "HR56B2626",
+    "pred": "HR56B2628",
+    "all_reads": [
+      [
+        "HR56B2628",
+        0.942
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HR21.jpg",
+    "gt": "HR4281329",
+    "pred": "HR42B1129",
+    "all_reads": [
+      [
+        "HR42B1129",
+        0.896
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "HR3.jpg",
+    "gt": "HR29W8286",
+    "pred": "HR29IV8286",
+    "all_reads": [
+      [
+        "HR29IV8286",
+        0.849
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JH10.jpg",
+    "gt": "JH02AD2533",
+    "pred": "JH02AD2513",
+    "all_reads": [
+      [
+        "JH02AD2513",
+        0.876
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JH19.jpg",
+    "gt": "JH05Y9636",
+    "pred": "JH05XD0998",
+    "all_reads": [
+      [
+        "JH05XD0998",
+        0.644
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JH9.jpg",
+    "gt": "JH01BU9956",
+    "pred": "JH01BU9936",
+    "all_reads": [
+      [
+        "JH01BU9936",
+        0.973
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK11.jpg",
+    "gt": "JK03D7750",
+    "pred": "KA337750",
+    "all_reads": [
+      [
+        "KA337750",
+        0.539
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK18.jpg",
+    "gt": "JK1182360",
+    "pred": "JK11B2360",
+    "all_reads": [
+      [
+        "JK11B2360",
+        0.989
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK24.jpg",
+    "gt": "JK02BN3088",
+    "pred": "JK02BW3088",
+    "all_reads": [
+      [
+        "JK02BW3088",
+        0.95
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK27.jpg",
+    "gt": "JK01D8354",
+    "pred": "JK01D8355",
+    "all_reads": [
+      [
+        "JK01D8355",
+        0.926
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK28.jpg",
+    "gt": "JK10A5217",
+    "pred": "JK10A5211",
+    "all_reads": [
+      [
+        "JK10A5211",
+        0.987
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK30.jpg",
+    "gt": "JK02ACB876",
+    "pred": "JK01AC8876",
+    "all_reads": [
+      [
+        "JK01AC8876",
+        0.869
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK31.jpg",
+    "gt": "JK03A8042",
+    "pred": "JH01B8048",
+    "all_reads": [
+      [
+        "JH01B8048",
+        0.506
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK32.jpg",
+    "gt": "JK13C4452",
+    "pred": "GJ13GA4452",
+    "all_reads": [
+      [
+        "GJ13GA4452",
+        0.617
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "JK36.jpg",
+    "gt": "JK072483",
+    "pred": "JH072483",
+    "all_reads": [
+      [
+        "JH072483",
+        0.875
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KA18.jpg",
+    "gt": "KA04MK312",
+    "pred": "KA04MK3121",
+    "all_reads": [
+      [
+        "KA04MK3121",
+        0.883
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KA19.jpg",
+    "gt": "KA03MQ6984",
+    "pred": "KA03WQ6984",
+    "all_reads": [
+      [
+        "KA03WQ6984",
+        0.979
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KA23.jpg",
+    "gt": "KA51ML4025",
+    "pred": "KA41NM4025",
+    "all_reads": [
+      [
+        "KA41NM4025",
+        0.736
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KA7.jpg",
+    "gt": "KA51P7755",
+    "pred": "KA51P7155",
+    "all_reads": [
+      [
+        "KA51P7155",
+        0.79
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KA8.jpg",
+    "gt": "KA51D9662",
+    "pred": "KA51D0663",
+    "all_reads": [
+      [
+        "KA51D0663",
+        0.889
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KL11.jpg",
+    "gt": "KL0BBJ5001",
+    "pred": "KL08DW5501",
+    "all_reads": [
+      [
+        "KL08DW5501",
+        0.731
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KL19.jpg",
+    "gt": "KL43D4389",
+    "pred": "KA49D4399",
+    "all_reads": [
+      [
+        "KA49D4399",
+        0.575
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KL5.jpg",
+    "gt": "KL34A7564",
+    "pred": "NL14A7584",
+    "all_reads": [
+      [
+        "NL14A7584",
+        0.797
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "KL7.jpg",
+    "gt": "KL41M93",
+    "pred": "KL41W9333",
+    "all_reads": [
+      [
+        "KL41W9333",
+        0.831
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH1.jpg",
+    "gt": "MH06AB8620",
+    "pred": "MH06A8865",
+    "all_reads": [
+      [
+        "MH06A8865",
+        0.664
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH16.jpg",
+    "gt": "MH12GR862",
+    "pred": "MH12GR8622",
+    "all_reads": [
+      [
+        "MH12GR8622",
+        0.887
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH17.jpg",
+    "gt": "MH01BT7906",
+    "pred": "MH01BZ7906",
+    "all_reads": [
+      [
+        "MH01BZ7906",
+        0.913
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH20.jpg",
+    "gt": "MH12KJ7659",
+    "pred": "MH12KJ7669",
+    "all_reads": [
+      [
+        "MH12KJ7669",
+        0.949
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH22.jpg",
+    "gt": "MH05CH1754",
+    "pred": "MH01CN1794",
+    "all_reads": [
+      [
+        "MH01CN1794",
+        0.619
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH23.jpg",
+    "gt": "MH49AS5099",
+    "pred": "MH39AS5099",
+    "all_reads": [
+      [
+        "MH39AS5099",
+        0.783
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH4.jpg",
+    "gt": "MH12MF6822",
+    "pred": "DD81JD1552",
+    "all_reads": [
+      [
+        "DD81JD1552",
+        0.364
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MH7.jpg",
+    "gt": "MH12KY6921",
+    "pred": "MH12KY0921",
+    "all_reads": [
+      [
+        "MH12KY0921",
+        0.929
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "ML16.jpg",
+    "gt": "ML133317",
+    "pred": "NL132317",
+    "all_reads": [
+      [
+        "NL132317",
+        0.75
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "ML22.jpg",
+    "gt": "ML1032811",
+    "pred": "MN10B2811",
+    "all_reads": [
+      [
+        "MN10B2811",
+        0.958
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "ML24.jpg",
+    "gt": "ML0563550",
+    "pred": "ML05G3550",
+    "all_reads": [
+      [
+        "ML05G3550",
+        0.991
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "ML30.jpg",
+    "gt": "ML05C5389",
+    "pred": "NL05C5310",
+    "all_reads": [
+      [
+        "NL05C5310",
+        0.801
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "ML37.jpg",
+    "gt": "ML08E9223",
+    "pred": "ML83E9223",
+    "all_reads": [
+      [
+        "ML83E9223",
+        0.889
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MP3.jpg",
+    "gt": "MP65C0654",
+    "pred": "HP65C0654",
+    "all_reads": [
+      [
+        "HP65C0654",
+        0.945
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MP6.jpg",
+    "gt": "MP07CA5563",
+    "pred": "HP07CA5563",
+    "all_reads": [
+      [
+        "HP07CA5563",
+        0.964
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "MP9.jpg",
+    "gt": "MP45G0872",
+    "pred": "MP11AG1879",
+    "all_reads": [
+      [
+        "MP11AG1879",
+        0.307
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "NL2.jpg",
+    "gt": "NL01CB433",
+    "pred": "NL01C8433",
+    "all_reads": [
+      [
+        "NL01C8433",
+        0.988
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "NL5.jpg",
+    "gt": "NL07CA7631",
+    "pred": "KL07CA7617",
+    "all_reads": [
+      [
+        "KL07CA7617",
+        0.81
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "NL6.jpg",
+    "gt": "NL02C9593",
+    "pred": "NL01C9383",
+    "all_reads": [
+      [
+        "NL01C9383",
+        0.858
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD11.jpg",
+    "gt": "OR02BV0701",
+    "pred": "OR03EV0701",
+    "all_reads": [
+      [
+        "OR03EV0701",
+        0.825
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD12.jpg",
+    "gt": "OR05AN4494",
+    "pred": "OR05AN4194",
+    "all_reads": [
+      [
+        "OR05AN4194",
+        0.903
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD17.jpg",
+    "gt": "OD14B7432",
+    "pred": "OD14W7492",
+    "all_reads": [
+      [
+        "OD14W7492",
+        0.664
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD18.jpg",
+    "gt": "OD22J9911",
+    "pred": "OD22Y9011",
+    "all_reads": [
+      [
+        "OD22Y9011",
+        0.794
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD20.jpg",
+    "gt": "OD01Q4668",
+    "pred": "OD01Q4664",
+    "all_reads": [
+      [
+        "OD01Q4664",
+        0.815
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD22.jpg",
+    "gt": "OR05AC0422",
+    "pred": "OR05AC0446",
+    "all_reads": [
+      [
+        "OR05AC0446",
+        0.845
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD27.jpg",
+    "gt": "OD25F7400",
+    "pred": "OD23K7400",
+    "all_reads": [
+      [
+        "OD23K7400",
+        0.786
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD3.jpg",
+    "gt": "OD02V0007",
+    "pred": "OD02V0001",
+    "all_reads": [
+      [
+        "OD02V0001",
+        0.856
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "OD6.jpg",
+    "gt": "OR08F1001",
+    "pred": "OR08B1001",
+    "all_reads": [
+      [
+        "OR08B1001",
+        0.947
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PB11.jpg",
+    "gt": "PB08C03690",
+    "pred": "PB08CQ3690",
+    "all_reads": [
+      [
+        "PB08CQ3690",
+        0.988
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PB13.jpg",
+    "gt": "PB08DT7342",
+    "pred": "PB08DY7342",
+    "all_reads": [
+      [
+        "PB08DY7342",
+        0.97
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PB2.jpg",
+    "gt": "PB04S4253",
+    "pred": "PB04S4753",
+    "all_reads": [
+      [
+        "PB04S4753",
+        0.933
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PB23.jpg",
+    "gt": "PB02CC7299",
+    "pred": "PB31CC7493",
+    "all_reads": [
+      [
+        "PB31CC7493",
+        0.643
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PB30.jpg",
+    "gt": "PB08DY4824",
+    "pred": "PB08CV4824",
+    "all_reads": [
+      [
+        "PB08CV4824",
+        0.898
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PB5.jpg",
+    "gt": "PB2313752",
+    "pred": "PB21T1152",
+    "all_reads": [
+      [
+        "PB21T1152",
+        0.638
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PY1.jpg",
+    "gt": "PY01Q7947",
+    "pred": "PY01O7947",
+    "all_reads": [
+      [
+        "PY01O7947",
+        0.974
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PY14.jpg",
+    "gt": "PY01CV2447",
+    "pred": "PY01CV2442",
+    "all_reads": [
+      [
+        "PY01CV2442",
+        0.993
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PY16.jpg",
+    "gt": "PY01BU2406",
+    "pred": "PY01BU2446",
+    "all_reads": [
+      [
+        "PY01BU2446",
+        0.882
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "PY18.jpg",
+    "gt": "PY02L4602",
+    "pred": "TN02L1041",
+    "all_reads": [
+      [
+        "TN02L1041",
+        0.613
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "RJ9.jpg",
+    "gt": "RJ20UB0137",
+    "pred": "RJ20LB0137",
+    "all_reads": [
+      [
+        "RJ20LB0137",
+        0.836
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "SK13.jpg",
+    "gt": "SK05T0338",
+    "pred": "SK05I0338",
+    "all_reads": [
+      [
+        "SK05I0338",
+        0.824
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "SK4.jpg",
+    "gt": "SK01PA4521",
+    "pred": "SK01PA4527",
+    "all_reads": [
+      [
+        "SK01PA4527",
+        0.952
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "TN1.jpg",
+    "gt": "TN63BV7954",
+    "pred": "TN53BV7954",
+    "all_reads": [
+      [
+        "TN53BV7954",
+        0.949
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "TR6.jpg",
+    "gt": "TR01BG0365",
+    "pred": "TR01BG0355",
+    "all_reads": [
+      [
+        "TR01BG0355",
+        0.976
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "TR7.jpg",
+    "gt": "TR03F0375",
+    "pred": "TR03F6373",
+    "all_reads": [
+      [
+        "TR03F6373",
+        0.721
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "TS10.jpg",
+    "gt": "TS11EQ2914",
+    "pred": "TS11EO2914",
+    "all_reads": [
+      [
+        "TS11EO2914",
+        0.951
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "TS16.jpg",
+    "gt": "TS07HM2684",
+    "pred": "TN04KX6644",
+    "all_reads": [
+      [
+        "TN04KX6644",
+        0.367
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "TS2.jpg",
+    "gt": "TS07EL3335",
+    "pred": "TS07EA3335",
+    "all_reads": [
+      [
+        "TS07EA3335",
+        0.892
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "TS6.jpg",
+    "gt": "TS18T3899",
+    "pred": "TS14T3895",
+    "all_reads": [
+      [
+        "TS14T3895",
+        0.759
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "UK6.jpg",
+    "gt": "UK07055789",
+    "pred": "UK07DQ5789",
+    "all_reads": [
+      [
+        "UK07DQ5789",
+        0.764
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "UP23.jpg",
+    "gt": "UP78ED0449",
+    "pred": "UP78CD0449",
+    "all_reads": [
+      [
+        "UP78CD0449",
+        0.717
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "UP26.jpg",
+    "gt": "UP14AX9754",
+    "pred": "UP14AX9764",
+    "all_reads": [
+      [
+        "UP14AX9764",
+        0.961
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "UP29.jpg",
+    "gt": "UP14AF3804",
+    "pred": "UP14AY3804",
+    "all_reads": [
+      [
+        "UP14AY3804",
+        0.916
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "WB13.jpg",
+    "gt": "WB26K2760",
+    "pred": "WB76K2768",
+    "all_reads": [
+      [
+        "WB76K2768",
+        0.774
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "WB21.jpg",
+    "gt": "WB02W9S3S",
+    "pred": "WB02W9535",
+    "all_reads": [
+      [
+        "WB02W9535",
+        0.973
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "WB22.jpg",
+    "gt": "WB20H0271",
+    "pred": "WB90HO2717",
+    "all_reads": [
+      [
+        "WB90HO2717",
+        0.735
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "WB25.jpg",
+    "gt": "WB06H2237",
+    "pred": "WB06M2237",
+    "all_reads": [
+      [
+        "WB06M2237",
+        0.882
+      ]
+    ]
+  },
+  {
+    "set": "in_crops",
+    "sample": "WB26.jpg",
+    "gt": "WB02A03017",
+    "pred": "WB02AD3017",
+    "all_reads": [
+      [
+        "WB02AD3017",
+        0.992
+      ]
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "files": {
+    "config.yaml": "d5d3b0ebf701dc497293bec2e205235da067b58c4d59126f93988d518a288544",
+    "results/tuned_params.json": "d7945dabe87a503ab0fd23e37ce3fef8561aa9da88f906ba592fd591a62794cf",
+    "results/weights.json": "1422792a7f2da5191355c54cfcf4d62c77397ba409fbc7316a891df8c3304f46",
+    "results/fixed_tuned.json": "7fcab2d14b017e46da7a08bbe6fa0c2e80c0cc55641b66653be628e0a8beb6c8",
+    "results/emission_class_map.json": "652b73a0ef396b79986574d50cd121e7b00d5be1056388ec5e77f71219278a33",
+    "results/rl/ppo_best.zip": "277f555ade8cefea0e3ef9519b209ce495907cf9823d1f0e114a9dd1132c4280"
+  },
+  "git_commit": "a38d7daf757e4900cd036553af0441e26f796696",
+  "note": "TEST sweep must match these hashes. Paths are relative to the repo root."
+}

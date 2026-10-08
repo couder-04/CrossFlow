@@ -1,0 +1,7 @@
+{
+  "MH12AB1234": {"vehicle_class": "car", "color": "white", "make": "Maruti"},
+  "MH12XY9999": {"vehicle_class": "truck", "color": "blue", "make": "Tata"},
+  "DL3CAB1234": {"vehicle_class": "car", "color": "silver", "make": "Hyundai"},
+  "KA01MJ4321": {"vehicle_class": "bus", "color": "yellow", "make": "Ashok Leyland"},
+  "GJ116601": {"vehicle_class": "motorcycle", "color": "black", "make": "Hero"}
+}

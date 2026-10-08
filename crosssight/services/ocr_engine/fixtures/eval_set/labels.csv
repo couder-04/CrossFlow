@@ -1,0 +1,9 @@
+image_path,gt_plate,tags
+plate_000.png,MH12AB1234,day|two_row
+plate_001.png,DL3CAB1234,night
+plate_002.png,KA01MN5678,blur
+plate_003.png,TN09BX4321,two_row|two_row
+plate_004.png,BR01XY9876,angle_gt30
+plate_005.png,22BH1234AA,day|two_row
+plate_006.png,21BH5678B,night|two_row
+plate_007.png,19BH9012XY,blur|two_row

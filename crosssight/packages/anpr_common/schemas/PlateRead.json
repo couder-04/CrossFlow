@@ -1,0 +1,190 @@
+{
+  "$defs": {
+    "Direction": {
+      "enum": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "title": "Direction",
+      "type": "string"
+    },
+    "PlateFormat": {
+      "enum": [
+        "standard",
+        "bh",
+        "nonstandard"
+      ],
+      "title": "PlateFormat",
+      "type": "string"
+    },
+    "VehicleClass": {
+      "enum": [
+        "car",
+        "motorcycle",
+        "bus",
+        "truck",
+        "auto",
+        "other"
+      ],
+      "title": "VehicleClass",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "camera_id": "cam-001"
+    }
+  ],
+  "properties": {
+    "event_id": {
+      "format": "uuid",
+      "title": "Event Id",
+      "type": "string"
+    },
+    "camera_id": {
+      "title": "Camera Id",
+      "type": "string"
+    },
+    "ts": {
+      "format": "date-time",
+      "title": "Ts",
+      "type": "string"
+    },
+    "plate_raw": {
+      "title": "Plate Raw",
+      "type": "string"
+    },
+    "plate_norm": {
+      "title": "Plate Norm",
+      "type": "string"
+    },
+    "plate_valid": {
+      "title": "Plate Valid",
+      "type": "boolean"
+    },
+    "plate_format": {
+      "$ref": "#/$defs/PlateFormat"
+    },
+    "confidence": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "char_conf": {
+      "items": {
+        "type": "number"
+      },
+      "title": "Char Conf",
+      "type": "array"
+    },
+    "alternates": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Alternates",
+      "type": "array"
+    },
+    "lane": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Lane"
+    },
+    "direction": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Direction"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "vehicle_class": {
+      "$ref": "#/$defs/VehicleClass",
+      "default": "car"
+    },
+    "color": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Color"
+    },
+    "make": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Make"
+    },
+    "speed_kmh": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Speed Kmh"
+    },
+    "crop_key": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Crop Key"
+    },
+    "source": {
+      "default": "simulator",
+      "enum": [
+        "ocr",
+        "simulator"
+      ],
+      "title": "Source",
+      "type": "string"
+    }
+  },
+  "required": [
+    "camera_id",
+    "ts",
+    "plate_raw",
+    "plate_norm",
+    "plate_valid",
+    "plate_format",
+    "confidence"
+  ],
+  "title": "PlateRead",
+  "type": "object"
+}

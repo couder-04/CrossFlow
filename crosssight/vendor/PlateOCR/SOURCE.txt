@@ -1,0 +1,7 @@
+Vendored from https://github.com/Ajitesh-07/PlateOCR
+Synced: 2026-09-30 (includes india-v1 OCR, plate_format decoding, finetune/)
+Synced: 2026-09-30 india-v1.1 (PlateOCR commit 80eab8b): README, MODEL_CARD, finetune/export_onnx.py,
+  finetune/onnx_matmul.py copied; india-v1.1 registry entry added to infer.py.
+  infer.py and plate_format.py carry CrossSight-local edits and were NOT overwritten.
+Integrated into services/ocr_engine as OCR_BACKEND=plateocr.
+Default for this platform: PLATEOCR_OCR_MODEL=india-v1.1 + plate_format=india.

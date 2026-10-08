@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-09-30T07:25:51.263836+00:00",
+  "device_note": "CPU/auto via onnxruntime (macOS CoreML/CPU)",
+  "runs": [
+    {
+      "name": "openalpr_global",
+      "ocr": "cct-s-v2-global-model",
+      "plate_format": "none",
+      "sets": [
+        "eu",
+        "br",
+        "us"
+      ],
+      "rows": [
+        {
+          "set": "eu",
+          "plates": 108,
+          "found": "100.0%",
+          "exact": "92.6%",
+          "exact_o0": "99.1%",
+          "char_acc": "98.8%",
+          "extra": 10,
+          "ms_med": 147.4,
+          "ms_p95": 227.9
+        },
+        {
+          "set": "br",
+          "plates": 114,
+          "found": "100.0%",
+          "exact": "98.2%",
+          "exact_o0": "98.2%",
+          "char_acc": "99.6%",
+          "extra": 18,
+          "ms_med": 141.8,
+          "ms_p95": 285.3
+        },
+        {
+          "set": "us",
+          "plates": 222,
+          "found": "100.0%",
+          "exact": "87.8%",
+          "exact_o0": "90.5%",
+          "char_acc": "97.3%",
+          "extra": 12,
+          "ms_med": 142.1,
+          "ms_p95": 389.4
+        }
+      ],
+      "stdout": "detector=yolo-v9-s-608-license-plate-end2end  ocr=cct-s-v2-global-model  format=none  device=CPUExecutionProvider\nset        plates   found   exact     O=0   chars  extra  ms_med  ms_p95\neu            108  100.0%   92.6%   99.1%   98.8%     10   147.4   227.9\nbr            114  100.0%   98.2%   98.2%   99.6%     18   141.8   285.3\nus            222  100.0%   87.8%   90.5%   97.3%     12   142.1   389.4\n37 failures -> /Users/par_04/code_playground/sih/reports/failures_openalpr_global.json\nINFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)\n"
+    },
+    {
+      "name": "india_v1_format",
+      "ocr": "india-v1",
+      "plate_format": "india",
+      "sets": [
+        "in_full",
+        "in_crops"
+      ],
+      "rows": [
+        {
+          "set": "in_full",
+          "plates": 25,
+          "found": "80.0%",
+          "exact": "64.0%",
+          "exact_o0": "64.0%",
+          "char_acc": "74.9%",
+          "extra": 3,
+          "ms_med": 98.8,
+          "ms_p95": 156.0
+        },
+        {
+          "set": "in_crops",
+          "plates": 1684,
+          "found": "100.0%",
+          "exact": "72.7%",
+          "exact_o0": "72.8%",
+          "char_acc": "92.7%",
+          "extra": 0,
+          "ms_med": 23.0,
+          "ms_p95": 28.5
+        }
+      ],
+      "stdout": "detector=yolo-v9-s-608-license-plate-end2end  ocr=india-v1  format=india  device=CPUExecutionProvider\nset        plates   found   exact     O=0   chars  extra  ms_med  ms_p95\nin_full        25   80.0%   64.0%   64.0%   74.9%      3    98.8   156.0\nin_crops     1684  100.0%   72.7%   72.8%   92.7%      0    23.0    28.5\n468 failures -> /Users/par_04/code_playground/sih/reports/failures_india_v1.json\nINFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)\n"
+    },
+    {
+      "name": "india_crops_global_baseline",
+      "ocr": "cct-s-v2-global-model",
+      "plate_format": "none",
+      "sets": [
+        "in_crops"
+      ],
+      "rows": [
+        {
+          "set": "in_crops",
+          "plates": 1684,
+          "found": "100.0%",
+          "exact": "31.1%",
+          "exact_o0": "37.2%",
+          "char_acc": "77.3%",
+          "extra": 0,
+          "ms_med": 16.0,
+          "ms_p95": 20.0
+        }
+      ],
+      "stdout": "detector=yolo-v9-s-608-license-plate-end2end  ocr=cct-s-v2-global-model  format=none  device=CPUExecutionProvider\nset        plates   found   exact     O=0   chars  extra  ms_med  ms_p95\nin_crops     1684  100.0%   31.1%   37.2%   77.3%      0    16.0    20.0\n1160 failures -> /Users/par_04/code_playground/sih/reports/failures_india_global.json\nINFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)\n"
+    },
+    {
+      "name": "openalpr_india_v1_cross",
+      "ocr": "india-v1",
+      "plate_format": "india",
+      "sets": [
+        "eu",
+        "br",
+        "us"
+      ],
+      "rows": [
+        {
+          "set": "eu",
+          "plates": 108,
+          "found": "100.0%",
+          "exact": "0.0%",
+          "exact_o0": "0.0%",
+          "char_acc": "53.9%",
+          "extra": 15,
+          "ms_med": 175.3,
+          "ms_p95": 356.2
+        },
+        {
+          "set": "br",
+          "plates": 114,
+          "found": "100.0%",
+          "exact": "0.0%",
+          "exact_o0": "0.0%",
+          "char_acc": "67.7%",
+          "extra": 21,
+          "ms_med": 214.4,
+          "ms_p95": 557.9
+        },
+        {
+          "set": "us",
+          "plates": 222,
+          "found": "100.0%",
+          "exact": "0.0%",
+          "exact_o0": "0.0%",
+          "char_acc": "42.8%",
+          "extra": 15,
+          "ms_med": 170.8,
+          "ms_p95": 306.7
+        }
+      ],
+      "stdout": "detector=yolo-v9-s-608-license-plate-end2end  ocr=india-v1  format=india  device=CPUExecutionProvider\nset        plates   found   exact     O=0   chars  extra  ms_med  ms_p95\neu            108  100.0%    0.0%    0.0%   53.9%     15   175.3   356.2\nbr            114  100.0%    0.0%    0.0%   67.7%     21   214.4   557.9\nus            222  100.0%    0.0%    0.0%   42.8%     15   170.8   306.7\n444 failures -> /Users/par_04/code_playground/sih/reports/failures_openalpr_india_v1.json\nINFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)\n"
+    }
+  ],
+  "note": "in_synth_kaggle_* removed: it scored india-v1 on the abtexp synthetic set it was trained on. All 273 plates of <=10 chars were training images (271 read correctly); all 127 plates of 11 chars cannot be emitted by the 10-slot model (0 correct). The number and the per-state table measured the share of 11-char plates per state, not accuracy. in_crops is the valid held-out Indian test set."
+}

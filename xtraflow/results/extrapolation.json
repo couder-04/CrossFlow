@@ -1,0 +1,42 @@
+{
+  "label": "Simulation-based estimate; assumed traffic mix",
+  "scenario_weights_assumption": {
+    "balanced": 0.25,
+    "peak_unbalanced": 0.25,
+    "dynamic": 0.25,
+    "low_demand": 0.25
+  },
+  "baseline_per_scenario": {
+    "balanced": "maxpressure",
+    "peak_unbalanced": "maxpressure",
+    "dynamic": "maxpressure",
+    "low_demand": "maxpressure"
+  },
+  "measured_saving_L_per_veh": {
+    "mean": 0.0012414041332105704,
+    "p05": 0.0005689789336791061,
+    "p95": 0.001903998664543465
+  },
+  "vehicles_per_peak_hour_assumption": {
+    "low": 800,
+    "base": 1400,
+    "high": 2200
+  },
+  "co2_kg_per_L_from_fuel_split": 2.501871473827247,
+  "annual_litres": {
+    "median": 917831.6670066761,
+    "p05": 251338.50959340282,
+    "p95": 2654039.690850678
+  },
+  "annual_INR_PLACEHOLDER_price": {
+    "median": 91434539.62161177,
+    "p05": 24929251.680866595,
+    "p95": 268704801.39816594
+  },
+  "annual_tonnes_CO2": {
+    "median": 2296.296865459312,
+    "p05": 628.8166474259905,
+    "p95": 6640.066192944597
+  },
+  "fuel_price_note": "INR/L is a user-editable PLACEHOLDER in config.yaml"
+}

@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-09-30T08:29:20.566329+00:00",
+  "config": {
+    "cameras": 60,
+    "duration_s": 20.0,
+    "rate_per_cam": 2.5,
+    "target_aggregate_rps": 150.0,
+    "watchlist_every": 8,
+    "drain_s": 35.0
+  },
+  "publish": {
+    "total": 2999,
+    "elapsed_s": 20.365,
+    "throughput_rps": 147.26,
+    "per_camera_min": 49,
+    "per_camera_max": 50,
+    "per_camera_mean": 49.98,
+    "fairness_cv": 0.0026
+  },
+  "ingest": {
+    "recovered": 2999,
+    "recovery_rate": 1.0,
+    "latency_s": {
+      "n": 2999,
+      "min": 0.1457,
+      "p50": 1.1934,
+      "p95": 3.4771,
+      "p99": 3.9521,
+      "max": 4.408,
+      "mean": 1.5488
+    },
+    "cameras_with_data": 60
+  },
+  "alerts": {
+    "samples": 2,
+    "latency_s": {
+      "n": 2,
+      "min": 42.2868,
+      "p50": 42.2868,
+      "p95": 42.3727,
+      "p99": 42.3727,
+      "max": 42.3727,
+      "mean": 42.3298
+    },
+    "latencies_raw": [
+      42.2868,
+      42.3727
+    ]
+  },
+  "pass_criteria": {
+    "alert_p95_lt_3s": false,
+    "ingest_p95_lt_5s": true,
+    "ingest_recovery_ge_95pct": true,
+    "all_cameras_recovered": true,
+    "camera_fairness_cv_lt_0_35": true
+  },
+  "overall_pass": false
+}

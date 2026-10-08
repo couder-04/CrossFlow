@@ -1,0 +1,33 @@
+# GPU image. CUDA 13 + cuDNN 9 come from pip wheels (onnxruntime-gpu[cuda,cudnn]), so no CUDA
+# base image is needed; the NVIDIA container runtime provides the driver.
+# Host requirement: NVIDIA driver with CUDA 13 support (check "CUDA Version" in nvidia-smi).
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgl1 libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY pyproject.toml uv.lock ./
+COPY packages/anpr_common packages/anpr_common
+COPY services/ocr_engine services/ocr_engine
+
+# The locked env has the CPU onnxruntime (via fast-alpr[onnx]). Both wheels ship the same
+# `onnxruntime` package, so swap it for the GPU build of the same version instead of
+# installing them side by side.
+RUN pip install --no-cache-dir uv && \
+    uv sync --frozen --package anpr-ocr-engine --no-dev && \
+    ORT_VERSION="$(/app/.venv/bin/python -c 'import onnxruntime; print(onnxruntime.__version__)')" && \
+    uv pip uninstall --python /app/.venv/bin/python onnxruntime && \
+    uv pip install --python /app/.venv/bin/python "onnxruntime-gpu[cuda,cudnn]==${ORT_VERSION}"
+
+ENV PATH=/app/.venv/bin:$PATH
+ENV PYTHONPATH=/app/services/ocr_engine/src:/app/packages/anpr_common/src
+ENV PLATE_DET_WEIGHTS=/models/plate_det.pt
+# Detector + OCR weights download into /root/.cache on first start (open-image-models,
+# fast-plate-ocr and plate-ocr all use ~/.cache); mount a volume there to keep them.
+# Fail loudly instead of silently falling back to CPU if the GPU can't be used.
+ENV PLATEOCR_DEVICE=cuda
+
+CMD ["sh", "-c", "if [ -z \"$OCR_SOURCE\" ]; then echo 'OCR_SOURCE is not set (video file path or RTSP URL)' >&2; exit 2; fi; exec ocr-engine run --source \"$OCR_SOURCE\" --camera-id \"${OCR_CAMERA_ID:-cam-demo}\""]

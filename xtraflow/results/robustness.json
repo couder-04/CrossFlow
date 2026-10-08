@@ -1,0 +1,254 @@
+{
+  "scenario": "peak_unbalanced",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "rows": [
+    {
+      "kind": "reference",
+      "controller": "actuated",
+      "miss": 0.0,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.13307671070499769,
+      "mean_waiting_s": 24.200996677740864,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "actuated",
+      "miss": 0.0,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.13817529548316046,
+      "mean_waiting_s": 25.703579418344518,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "fixed_tuned",
+      "miss": 0.0,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.13707631081281635,
+      "mean_waiting_s": 28.5,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "actuated",
+      "miss": 0.0,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.1365786711201391,
+      "mean_waiting_s": 26.546149645002732,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "fixed_tuned",
+      "miss": 0.0,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.13403971220575547,
+      "mean_waiting_s": 27.620972146368103,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "fixed_tuned",
+      "miss": 0.0,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.14303281470490586,
+      "mean_waiting_s": 30.05145413870246,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.0,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12584093505021268,
+      "mean_waiting_s": 17.76510067114094,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.0,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12127596294934477,
+      "mean_waiting_s": 17.775193798449614,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "maxpressure",
+      "miss": 0.0,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12832810601454975,
+      "mean_waiting_s": 18.430648769574944,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "maxpressure",
+      "miss": 0.0,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12411701485796048,
+      "mean_waiting_s": 18.21262458471761,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.0,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.1217852352253264,
+      "mean_waiting_s": 18.508465319497542,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "reference",
+      "controller": "maxpressure",
+      "miss": 0.0,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.12203860165217548,
+      "mean_waiting_s": 17.747132714363737,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.1,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12656920008520828,
+      "mean_waiting_s": 18.187360178970916,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.2,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1254381812054682,
+      "mean_waiting_s": 18.05089485458613,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.1,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1217944166410601,
+      "mean_waiting_s": 18.26799557032115,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.2,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12204059021363967,
+      "mean_waiting_s": 18.341638981173865,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.1,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.1214493813878731,
+      "mean_waiting_s": 18.178590933915892,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.2,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.12336124466172643,
+      "mean_waiting_s": 18.653194975423265,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.3,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1253948474371648,
+      "mean_waiting_s": 18.159395973154364,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.3,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12229606221484901,
+      "mean_waiting_s": 18.08250276854928,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "empirical_noise",
+      "controller": "XtraFlow",
+      "miss": 0.15,
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12710238737294577,
+      "mean_waiting_s": 19.090044742729308,
+      "status": "ok",
+      "n_unfinished": 0,
+      "source": "assumed"
+    },
+    {
+      "kind": "empirical_noise",
+      "controller": "XtraFlow",
+      "miss": 0.15,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.12248929888771971,
+      "mean_waiting_s": 18.66411796832332,
+      "status": "ok",
+      "n_unfinished": 0,
+      "source": "assumed"
+    },
+    {
+      "kind": "XtraFlow",
+      "controller": "XtraFlow",
+      "miss": 0.3,
+      "seed": 3,
+      "fuel_per_vehicle_L": 0.12423576977283632,
+      "mean_waiting_s": 19.60240305843801,
+      "status": "ok",
+      "n_unfinished": 0
+    },
+    {
+      "kind": "empirical_noise",
+      "controller": "XtraFlow",
+      "miss": 0.15,
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12501813543235263,
+      "mean_waiting_s": 19.366555924695458,
+      "status": "ok",
+      "n_unfinished": 0,
+      "source": "assumed"
+    }
+  ],
+  "label": "Simulation-based estimate; assumed traffic mix"
+}

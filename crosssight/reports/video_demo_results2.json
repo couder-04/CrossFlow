@@ -1,0 +1,111 @@
+{
+  "generated": "2026-09-30T09:23:38Z",
+  "video": {
+    "path": "data/sample_videos/multi_car_plates.mp4",
+    "source_note": "Composite of 2 OpenALPR BR end-to-end cars (simultaneous, moving) to stress multi-object tracking",
+    "cars": [
+      {
+        "file": "AYO9034.jpg",
+        "plate_gt": "AYO9034",
+        "side": "left"
+      },
+      {
+        "file": "AZJ6991.jpg",
+        "plate_gt": "AZJ6991",
+        "side": "right"
+      }
+    ],
+    "frames": 75,
+    "fps": 15,
+    "size": [
+      1280,
+      540
+    ]
+  },
+  "annotated_mp4": "reports/video_demo_annotated2.mp4",
+  "tracker": "ByteTracker (BYTE + Kalman + Hungarian)",
+  "model": "cct-s-v2-global-model",
+  "fusion": "per-track_id majority vote (FUSION_MIN_FRAMES=3)",
+  "fused_emits": [
+    {
+      "event_id": "b26a2026-4a2d-4950-b794-4fe3129bd964",
+      "camera_id": "cam-multi-demo",
+      "ts": "2026-09-30T09:23:38.676916Z",
+      "plate_raw": "AZJ6991",
+      "plate_norm": "AZJ6991",
+      "plate_valid": false,
+      "plate_format": "nonstandard",
+      "confidence": 1.0,
+      "char_conf": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alternates": [],
+      "lane": 2,
+      "direction": "SW",
+      "vehicle_class": "car",
+      "color": null,
+      "make": null,
+      "speed_kmh": null,
+      "crop_key": null,
+      "source": "ocr",
+      "track_id": 1
+    },
+    {
+      "event_id": "b462e920-7c74-46c8-acb8-86e78640f52f",
+      "camera_id": "cam-multi-demo",
+      "ts": "2026-09-30T09:23:38.682520Z",
+      "plate_raw": "AYO9034",
+      "plate_norm": "AYO9034",
+      "plate_valid": false,
+      "plate_format": "nonstandard",
+      "confidence": 1.0,
+      "char_conf": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alternates": [],
+      "lane": 1,
+      "direction": "NE",
+      "vehicle_class": "car",
+      "color": null,
+      "make": null,
+      "speed_kmh": null,
+      "crop_key": null,
+      "source": "ocr",
+      "track_id": 2
+    }
+  ],
+  "fused_count": 2,
+  "plates_by_track_id": {
+    "1": [
+      "AZJ6991"
+    ],
+    "2": [
+      "AYO9034"
+    ]
+  },
+  "gt_plates": [
+    "AYO9034",
+    "AZJ6991"
+  ],
+  "gt_matched_in_emits": [
+    "AYO9034",
+    "AZJ6991"
+  ],
+  "elapsed_s": 25.2,
+  "notes": [
+    "Each fused emit is tied to a stable ByteTrack object id so majority voting cannot mix the two cars.",
+    "Annotated video overlays bbox + ID + live OCR text."
+  ]
+}

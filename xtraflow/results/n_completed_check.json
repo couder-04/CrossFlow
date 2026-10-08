@@ -1,0 +1,58 @@
+[
+  {
+    "scenario": "balanced",
+    "n_completed_mean_spread": 0.0,
+    "means": {
+      "XtraFlow": 1932.2,
+      "actuated": 1932.2,
+      "fixed": 1932.2,
+      "fixed_tuned": 1932.2,
+      "maxpressure": 1932.2,
+      "ours_count": 1932.2,
+      "queue_pressure": 1932.2,
+      "webster": 1932.2
+    }
+  },
+  {
+    "scenario": "peak_unbalanced",
+    "n_completed_mean_spread": 0.0,
+    "means": {
+      "XtraFlow": 1801.4,
+      "actuated": 1801.4,
+      "fixed": 1801.4,
+      "fixed_tuned": 1801.4,
+      "maxpressure": 1801.4,
+      "ours_count": 1801.4,
+      "queue_pressure": 1801.4,
+      "webster": 1801.4
+    }
+  },
+  {
+    "scenario": "dynamic",
+    "n_completed_mean_spread": 0.0,
+    "means": {
+      "XtraFlow": 1757.2,
+      "actuated": 1757.2,
+      "fixed": 1757.2,
+      "fixed_tuned": 1757.2,
+      "maxpressure": 1757.2,
+      "ours_count": 1757.2,
+      "queue_pressure": 1757.2,
+      "webster": 1757.2
+    }
+  },
+  {
+    "scenario": "low_demand",
+    "n_completed_mean_spread": 0.0,
+    "means": {
+      "XtraFlow": 602.8,
+      "actuated": 602.8,
+      "fixed": 602.8,
+      "fixed_tuned": 602.8,
+      "maxpressure": 602.8,
+      "ours_count": 602.8,
+      "queue_pressure": 602.8,
+      "webster": 602.8
+    }
+  }
+]

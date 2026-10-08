@@ -1,0 +1,87 @@
+{
+  "selected_on": "VALIDATION seeds only",
+  "green_grid_s": [
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+  ],
+  "min_green_s": 15,
+  "smoke": false,
+  "plans": {
+    "balanced": {
+      "greens": [
+        25,
+        15,
+        20,
+        15
+      ],
+      "cycle_s": 95.0,
+      "mean_fuel_per_vehicle_L": 0.13927810233199744,
+      "selected_on": "VALIDATION",
+      "screen_seeds": [
+        2000,
+        2001,
+        2002
+      ]
+    },
+    "peak_unbalanced": {
+      "greens": [
+        40,
+        15,
+        15,
+        15
+      ],
+      "cycle_s": 105.0,
+      "mean_fuel_per_vehicle_L": 0.13722197747705517,
+      "selected_on": "VALIDATION",
+      "screen_seeds": [
+        2000,
+        2001,
+        2002
+      ],
+      "screen_horizon_s": 900,
+      "confirm_horizon_s": 3600
+    },
+    "dynamic": {
+      "greens": [
+        45,
+        15,
+        20,
+        15
+      ],
+      "cycle_s": 115.0,
+      "mean_fuel_per_vehicle_L": 0.15168210523977438,
+      "selected_on": "VALIDATION",
+      "screen_seeds": [
+        2000,
+        2001,
+        2002
+      ],
+      "screen_horizon_s": 900,
+      "confirm_horizon_s": 3600
+    },
+    "low_demand": {
+      "greens": [
+        20,
+        15,
+        15,
+        15
+      ],
+      "cycle_s": 85.0,
+      "mean_fuel_per_vehicle_L": 0.13089513520264034,
+      "selected_on": "VALIDATION",
+      "screen_seeds": [
+        2000,
+        2001,
+        2002
+      ],
+      "screen_horizon_s": 900,
+      "confirm_horizon_s": 3600
+    }
+  },
+  "label": "Simulation-based estimate; assumed traffic mix"
+}

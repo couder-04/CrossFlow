@@ -1,0 +1,44 @@
+
+=== RUN --sets eu br us --ocr cct-s-v2-global-model --device cpu --failures /Users/par_04/code_playground/sih/reports/failures_openalpr_global.json --plate-format none ===
+detector=yolo-v9-s-608-license-plate-end2end  ocr=cct-s-v2-global-model  format=none  device=CPUExecutionProvider
+set        plates   found   exact     O=0   chars  extra  ms_med  ms_p95
+eu            108  100.0%   92.6%   99.1%   98.8%     10   147.4   227.9
+br            114  100.0%   98.2%   98.2%   99.6%     18   141.8   285.3
+us            222  100.0%   87.8%   90.5%   97.3%     12   142.1   389.4
+37 failures -> /Users/par_04/code_playground/sih/reports/failures_openalpr_global.json
+INFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)
+
+OK in 79.9s
+
+=== RUN --sets in_full in_crops --ocr india-v1 --device cpu --failures /Users/par_04/code_playground/sih/reports/failures_india_v1.json --plate-format india ===
+detector=yolo-v9-s-608-license-plate-end2end  ocr=india-v1  format=india  device=CPUExecutionProvider
+set        plates   found   exact     O=0   chars  extra  ms_med  ms_p95
+in_full        25   80.0%   64.0%   64.0%   74.9%      3    98.8   156.0
+in_crops     1684  100.0%   72.7%   72.8%   92.7%      0    23.0    28.5
+468 failures -> /Users/par_04/code_playground/sih/reports/failures_india_v1.json
+INFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)
+
+OK in 50.5s
+
+=== RUN --sets in_crops --ocr cct-s-v2-global-model --device cpu --failures /Users/par_04/code_playground/sih/reports/failures_india_global.json --plate-format none ===
+detector=yolo-v9-s-608-license-plate-end2end  ocr=cct-s-v2-global-model  format=none  device=CPUExecutionProvider
+set        plates   found   exact     O=0   chars  extra  ms_med  ms_p95
+in_crops     1684  100.0%   31.1%   37.2%   77.3%      0    16.0    20.0
+1160 failures -> /Users/par_04/code_playground/sih/reports/failures_india_global.json
+INFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)
+
+OK in 29.8s
+
+=== RUN --sets eu br us --ocr india-v1 --device cpu --failures /Users/par_04/code_playground/sih/reports/failures_openalpr_india_v1.json --plate-format india ===
+detector=yolo-v9-s-608-license-plate-end2end  ocr=india-v1  format=india  device=CPUExecutionProvider
+set        plates   found   exact     O=0   chars  extra  ms_med  ms_p95
+eu            108  100.0%    0.0%    0.0%   53.9%     15   175.3   356.2
+br            114  100.0%    0.0%    0.0%   67.7%     21   214.4   557.9
+us            222  100.0%    0.0%    0.0%   42.8%     15   170.8   306.7
+444 failures -> /Users/par_04/code_playground/sih/reports/failures_openalpr_india_v1.json
+INFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)
+
+OK in 98.2s
+
+Wrote /Users/par_04/code_playground/sih/reports/ocr_benchmark.md
+Wrote /Users/par_04/code_playground/sih/reports/ocr_benchmark.json

@@ -1,0 +1,466 @@
+[
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/eu2.jpg",
+    "gt": "GWAGEN",
+    "pred": "GWNGEN",
+    "all_reads": [
+      [
+        "GWNGEN",
+        0.875
+      ]
+    ]
+  },
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/eu5.jpg",
+    "gt": "OYO9FEU",
+    "pred": "OY09FEU",
+    "all_reads": [
+      [
+        "OY09FEU",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/test_006.jpg",
+    "gt": "RKO99AN",
+    "pred": "RK099AN",
+    "all_reads": [
+      [
+        "RK099AN",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/test_024.jpg",
+    "gt": "RKO26AJ",
+    "pred": "RK026AJ",
+    "all_reads": [
+      [
+        "RK026AJ",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/test_033.jpg",
+    "gt": "RKO82AL",
+    "pred": "RK082AL",
+    "all_reads": [
+      [
+        "RK082AL",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/test_051.jpg",
+    "gt": "RK6O5AB",
+    "pred": "RK605AB",
+    "all_reads": [
+      [
+        "RK605AB",
+        1.0
+      ],
+      [
+        "361AO",
+        0.955
+      ]
+    ]
+  },
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/test_056.jpg",
+    "gt": "RK3OOAG",
+    "pred": "RK300AG",
+    "all_reads": [
+      [
+        "RK300AG",
+        1.0
+      ],
+      [
+        "FF11446",
+        0.528
+      ]
+    ]
+  },
+  {
+    "set": "eu",
+    "sample": "data/openalpr_benchmarks/endtoend/eu/test_065.jpg",
+    "gt": "4BO4979",
+    "pred": "4B04979",
+    "all_reads": [
+      [
+        "4B04979",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "br",
+    "sample": "data/openalpr_benchmarks/endtoend/br/FZB9581.jpg",
+    "gt": "FZB9581",
+    "pred": "FBZ9581",
+    "all_reads": [
+      [
+        "FBZ9581",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "br",
+    "sample": "data/openalpr_benchmarks/endtoend/br/PJT2905.jpg",
+    "gt": "PJT2905",
+    "pred": "BJT2905",
+    "all_reads": [
+      [
+        "BJT2905",
+        0.935
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/12c6cb72-3ea3-49e7-b381-e0cdfc5e8960.jpg",
+    "gt": "0SG719",
+    "pred": "OSG719",
+    "all_reads": [
+      [
+        "OSG719",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/33fa5185-0286-4e8f-b775-46162eba39d4.jpg",
+    "gt": "R820503",
+    "pred": "R8Z0503",
+    "all_reads": [
+      [
+        "R8Z0503",
+        0.993
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/c9368c55-210d-456c-a5ef-c310e60039ec.jpg",
+    "gt": "UH1F0F",
+    "pred": "UH1FOF",
+    "all_reads": [
+      [
+        "UH1FOF",
+        0.995
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/car18.jpg",
+    "gt": "SB3X6N",
+    "pred": "SB3XGN",
+    "all_reads": [
+      [
+        "SB3XGN",
+        0.946
+      ],
+      [
+        "4D0344",
+        0.475
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/f8fc5e59-9083-466b-ae3f-6b869a0b257b.jpg",
+    "gt": "UH1F0F",
+    "pred": "UH1FOF",
+    "all_reads": [
+      [
+        "UH1FOF",
+        0.972
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000013.jpg",
+    "gt": "DH5X9P",
+    "pred": "D45X9P",
+    "all_reads": [
+      [
+        "D45X9P",
+        0.96
+      ],
+      [
+        "LCL16Z",
+        0.521
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000014.jpg",
+    "gt": "DG2Z6U",
+    "pred": "DG276U",
+    "all_reads": [
+      [
+        "DG276U",
+        0.949
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000018.jpg",
+    "gt": "CG2H2U",
+    "pred": "CS2092",
+    "all_reads": [
+      [
+        "CS2092",
+        0.633
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000050.jpg",
+    "gt": "HB6L0Z",
+    "pred": "HB6LDZ",
+    "all_reads": [
+      [
+        "HB6LDZ",
+        0.949
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000058.jpg",
+    "gt": "CEMENT0",
+    "pred": "CEH5NTV",
+    "all_reads": [
+      [
+        "CEH5NTV",
+        0.826
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000067.jpg",
+    "gt": "8951283",
+    "pred": "B951283",
+    "all_reads": [
+      [
+        "B951283",
+        0.997
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000071.jpg",
+    "gt": "WSG979",
+    "pred": "KSG979",
+    "all_reads": [
+      [
+        "KSG979",
+        0.96
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000072.jpg",
+    "gt": "WTC249",
+    "pred": "MTC249",
+    "all_reads": [
+      [
+        "MTC249",
+        0.98
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000085.jpg",
+    "gt": "5DJ0529",
+    "pred": "BDJ0529",
+    "all_reads": [
+      [
+        "BDJ0529",
+        0.999
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000088.jpg",
+    "gt": "CCV020",
+    "pred": "CVY120",
+    "all_reads": [
+      [
+        "CVY120",
+        0.747
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000094.jpg",
+    "gt": "CJ8P4V",
+    "pred": "CJBP4V",
+    "all_reads": [
+      [
+        "CJBP4V",
+        0.925
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000095.jpg",
+    "gt": "4FCW533",
+    "pred": "AFCW533",
+    "all_reads": [
+      [
+        "AFCW533",
+        0.976
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000096.jpg",
+    "gt": "CJ1P5G",
+    "pred": "CJIP5G",
+    "all_reads": [
+      [
+        "CJIP5G",
+        0.997
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000100.jpg",
+    "gt": "SH0R7X",
+    "pred": "SHQR7X",
+    "all_reads": [
+      [
+        "SHQR7X",
+        0.992
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000101.jpg",
+    "gt": "SH0R7X",
+    "pred": "SHOR7X",
+    "all_reads": [
+      [
+        "SHOR7X",
+        0.953
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000113.jpg",
+    "gt": "AG4V3U",
+    "pred": "IGA3V3U",
+    "all_reads": [
+      [
+        "IGA3V3U",
+        0.757
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000118.jpg",
+    "gt": "853FL",
+    "pred": "B885FL",
+    "all_reads": [
+      [
+        "B885FL",
+        0.678
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000133.jpg",
+    "gt": "5L0D951",
+    "pred": "5LOD951",
+    "all_reads": [
+      [
+        "5LOD951",
+        0.964
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000143.jpg",
+    "gt": "3127K",
+    "pred": "3127KB",
+    "all_reads": [
+      [
+        "3127KB",
+        0.921
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000148.jpg",
+    "gt": "6TIX874",
+    "pred": "6TTX874",
+    "all_reads": [
+      [
+        "6TTX874",
+        0.965
+      ],
+      [
+        "6MTP929",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000159.jpg",
+    "gt": "59E21P1",
+    "pred": "59321P1",
+    "all_reads": [
+      [
+        "59321P1",
+        1.0
+      ]
+    ]
+  },
+  {
+    "set": "us",
+    "sample": "data/openalpr_benchmarks/endtoend/us/wts-lg-000188.jpg",
+    "gt": "UJ3V0J",
+    "pred": "UJ3VOJ",
+    "all_reads": [
+      [
+        "UJ3VOJ",
+        0.959
+      ]
+    ]
+  }
+]

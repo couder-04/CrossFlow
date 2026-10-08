@@ -1,0 +1,125 @@
+{
+  "$defs": {
+    "AlertSeverity": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "title": "AlertSeverity",
+      "type": "string"
+    },
+    "AlertStatus": {
+      "enum": [
+        "new",
+        "acknowledged",
+        "dispatched",
+        "closed",
+        "false_positive"
+      ],
+      "title": "AlertStatus",
+      "type": "string"
+    },
+    "AlertType": {
+      "enum": [
+        "watchlist",
+        "cloned_plate",
+        "convoy",
+        "loitering",
+        "geofence",
+        "wrong_way",
+        "plate_vehicle_mismatch",
+        "route_anomaly"
+      ],
+      "title": "AlertType",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "type": {
+      "$ref": "#/$defs/AlertType"
+    },
+    "severity": {
+      "$ref": "#/$defs/AlertSeverity"
+    },
+    "plate_norm": {
+      "title": "Plate Norm",
+      "type": "string"
+    },
+    "camera_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Camera Ids",
+      "type": "array"
+    },
+    "evidence": {
+      "additionalProperties": true,
+      "title": "Evidence",
+      "type": "object"
+    },
+    "status": {
+      "$ref": "#/$defs/AlertStatus",
+      "default": "new"
+    },
+    "needs_verification": {
+      "default": false,
+      "title": "Needs Verification",
+      "type": "boolean"
+    },
+    "ts": {
+      "format": "date-time",
+      "title": "Ts",
+      "type": "string"
+    },
+    "ack_by": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ack By"
+    },
+    "dispatched_to": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Dispatched To"
+    },
+    "closed_note": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Closed Note"
+    }
+  },
+  "required": [
+    "type",
+    "severity",
+    "plate_norm"
+  ],
+  "title": "Alert",
+  "type": "object"
+}

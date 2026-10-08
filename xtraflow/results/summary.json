@@ -1,0 +1,975 @@
+{
+  "n_rows": 160,
+  "controllers": [
+    "XtraFlow",
+    "actuated",
+    "fixed",
+    "fixed_tuned",
+    "maxpressure",
+    "ours_count",
+    "queue_pressure",
+    "webster"
+  ],
+  "scenarios": [
+    "balanced",
+    "dynamic",
+    "low_demand",
+    "peak_unbalanced"
+  ],
+  "headlines": [
+    {
+      "scenario": "balanced",
+      "best_baseline": "maxpressure",
+      "pct_fuel_reduction_vs_best": 0.2951650496302161,
+      "ci_lo": -0.38092403298438027,
+      "ci_hi": 1.0130954819270985,
+      "sanity_flag": "OK",
+      "pct_fuel_reduction_vs_fixed_legacy": 7.938186165820214,
+      "legacy_ci_lo": 6.673608923157647,
+      "legacy_ci_hi": 9.085392125700043,
+      "pct_fuel_reduction_vs_fixed": 0.2951650496302161
+    },
+    {
+      "scenario": "dynamic",
+      "best_baseline": "maxpressure",
+      "pct_fuel_reduction_vs_best": 1.0923724353855664,
+      "ci_lo": 0.6470476899295328,
+      "ci_hi": 1.7023919007595487,
+      "sanity_flag": "OK",
+      "pct_fuel_reduction_vs_fixed_legacy": 13.239532784070914,
+      "legacy_ci_lo": 12.330311656051153,
+      "legacy_ci_hi": 14.287449216789009,
+      "pct_fuel_reduction_vs_fixed": 1.0923724353855664
+    },
+    {
+      "scenario": "low_demand",
+      "best_baseline": "maxpressure",
+      "pct_fuel_reduction_vs_best": 1.9139263041177383,
+      "ci_lo": 0.5098301000129395,
+      "ci_hi": 3.038929872296646,
+      "sanity_flag": "OK",
+      "pct_fuel_reduction_vs_fixed_legacy": 14.14780841575537,
+      "legacy_ci_lo": 12.714960907703809,
+      "legacy_ci_hi": 15.397397029250888,
+      "pct_fuel_reduction_vs_fixed": 1.9139263041177383
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "best_baseline": "maxpressure",
+      "pct_fuel_reduction_vs_best": 0.6890117820891538,
+      "ci_lo": -0.35435680525508617,
+      "ci_hi": 1.765136059133654,
+      "sanity_flag": "OK",
+      "pct_fuel_reduction_vs_fixed_legacy": 17.51624226623785,
+      "legacy_ci_lo": 14.428222782931192,
+      "legacy_ci_hi": 20.12790049096153,
+      "pct_fuel_reduction_vs_fixed": 0.6890117820891538
+    }
+  ],
+  "comparisons": [
+    {
+      "scenario": "balanced",
+      "baseline": "fixed",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 7.938186165820214,
+      "pct_reduction_ci_lo": 6.710575897943751,
+      "pct_reduction_ci_hi": 9.085392125700043,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -4.651242672006893,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "fixed_tuned",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 7.588565586815081,
+      "pct_reduction_ci_lo": 6.650476983487536,
+      "pct_reduction_ci_hi": 8.425231362552788,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -5.891472902984996,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "webster",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 8.933937320964013,
+      "pct_reduction_ci_lo": 8.434444766804791,
+      "pct_reduction_ci_hi": 9.711673193799868,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -8.730819496327022,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "actuated",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 4.82152865170624,
+      "pct_reduction_ci_lo": 4.295270003862865,
+      "pct_reduction_ci_hi": 5.250473699351895,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -7.805343041094599,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "queue_pressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 0.2951650496302161,
+      "pct_reduction_ci_lo": -0.38092403298438027,
+      "pct_reduction_ci_hi": 1.0130954819270985,
+      "wilcoxon_stat": 5.0,
+      "p_raw": 0.625,
+      "cohens_dz": -0.33297750731860676,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "maxpressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 0.2951650496302161,
+      "pct_reduction_ci_lo": -0.38092403298438027,
+      "pct_reduction_ci_hi": 1.0130954819270985,
+      "wilcoxon_stat": 5.0,
+      "p_raw": 0.625,
+      "cohens_dz": -0.33297750731860676,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "ours_count",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 0.35354347948876763,
+      "pct_reduction_ci_lo": -0.7557876822308411,
+      "pct_reduction_ci_hi": 1.2495802393092386,
+      "wilcoxon_stat": 5.0,
+      "p_raw": 0.625,
+      "cohens_dz": -0.28525194424438827,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "fixed",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 13.239532784070914,
+      "pct_reduction_ci_lo": 12.330311656051153,
+      "pct_reduction_ci_hi": 14.3080148631045,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -10.30055530859776,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "fixed_tuned",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 17.043821456145032,
+      "pct_reduction_ci_lo": 15.095256242869482,
+      "pct_reduction_ci_hi": 18.94256802834797,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -6.352453785970695,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "webster",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 17.28548517517269,
+      "pct_reduction_ci_lo": 15.823456434677794,
+      "pct_reduction_ci_hi": 18.744392123169394,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -7.725931679907973,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "actuated",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 8.482538130555824,
+      "pct_reduction_ci_lo": 7.766166625476258,
+      "pct_reduction_ci_hi": 9.213735118846309,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -8.28822307323674,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "queue_pressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 1.0923724353855664,
+      "pct_reduction_ci_lo": 0.6470476899295328,
+      "pct_reduction_ci_hi": 1.7023919007595487,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -1.616940413923531,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "maxpressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 1.0923724353855664,
+      "pct_reduction_ci_lo": 0.6470476899295328,
+      "pct_reduction_ci_hi": 1.7023919007595487,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -1.616940413923531,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "ours_count",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 0.13278580429540127,
+      "pct_reduction_ci_lo": -0.3596088706698417,
+      "pct_reduction_ci_hi": 0.6251804792606442,
+      "wilcoxon_stat": 6.0,
+      "p_raw": 0.8125,
+      "cohens_dz": -0.21331000268698813,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "fixed",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 14.14780841575537,
+      "pct_reduction_ci_lo": 12.714960907703809,
+      "pct_reduction_ci_hi": 15.487709523840005,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -6.875827494977886,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "fixed_tuned",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 12.09719418245629,
+      "pct_reduction_ci_lo": 11.383632875679616,
+      "pct_reduction_ci_hi": 12.810755489232964,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -12.713225524491037,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "webster",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 11.726431768412716,
+      "pct_reduction_ci_lo": 10.911740784374013,
+      "pct_reduction_ci_hi": 12.730813032317666,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -11.743945766658088,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "actuated",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 10.69468687543997,
+      "pct_reduction_ci_lo": 8.956369837604106,
+      "pct_reduction_ci_hi": 12.433003913275835,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -4.213326385977576,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "queue_pressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 1.9139263041177383,
+      "pct_reduction_ci_lo": 0.5098301000129395,
+      "pct_reduction_ci_hi": 3.038929872296646,
+      "wilcoxon_stat": 1.0,
+      "p_raw": 0.125,
+      "cohens_dz": -1.1430816274651607,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "maxpressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 1.9139263041177383,
+      "pct_reduction_ci_lo": 0.5098301000129395,
+      "pct_reduction_ci_hi": 3.038929872296646,
+      "wilcoxon_stat": 1.0,
+      "p_raw": 0.125,
+      "cohens_dz": -1.1430816274651607,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "ours_count",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 2.033316775089312,
+      "pct_reduction_ci_lo": 0.5098301000129395,
+      "pct_reduction_ci_hi": 3.2737182146977397,
+      "wilcoxon_stat": 1.0,
+      "p_raw": 0.125,
+      "cohens_dz": -1.133125300716781,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "fixed",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 17.51624226623785,
+      "pct_reduction_ci_lo": 14.428222782931192,
+      "pct_reduction_ci_hi": 20.326553409665085,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -3.972277150179899,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "fixed_tuned",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 9.642930052747893,
+      "pct_reduction_ci_lo": 8.038889412761476,
+      "pct_reduction_ci_hi": 11.246970692734312,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -4.372663151231991,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "webster",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 9.921086708694498,
+      "pct_reduction_ci_lo": 8.874158929759473,
+      "pct_reduction_ci_hi": 10.558154011690933,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -9.121753252219229,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "actuated",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 8.501876941875341,
+      "pct_reduction_ci_lo": 6.641442113510406,
+      "pct_reduction_ci_hi": 10.021600071107787,
+      "wilcoxon_stat": 0.0,
+      "p_raw": 0.0625,
+      "cohens_dz": -4.1111061429898,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "queue_pressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 0.6890117820891538,
+      "pct_reduction_ci_lo": -0.35435680525508617,
+      "pct_reduction_ci_hi": 1.765136059133654,
+      "wilcoxon_stat": 3.0,
+      "p_raw": 0.3125,
+      "cohens_dz": -0.4912936187844846,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "maxpressure",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 0.6890117820891538,
+      "pct_reduction_ci_lo": -0.35435680525508617,
+      "pct_reduction_ci_hi": 1.765136059133654,
+      "wilcoxon_stat": 3.0,
+      "p_raw": 0.3125,
+      "cohens_dz": -0.4912936187844846,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "ours_count",
+      "metric": "fuel_per_vehicle_L",
+      "pct_reduction_mean": 0.8507895665832577,
+      "pct_reduction_ci_lo": -0.13364018410036724,
+      "pct_reduction_ci_hi": 1.7726531540315122,
+      "wilcoxon_stat": 3.0,
+      "p_raw": 0.3125,
+      "cohens_dz": -0.6557494769950116,
+      "n_pairs": 5,
+      "p_holm": 1.0
+    }
+  ],
+  "ablation": [
+    {
+      "scenario": "balanced",
+      "pct_reduction_fuel_vs_count_mean": 0.35354347948876763,
+      "ci_lo": -0.7557876822308411,
+      "ci_hi": 1.2495802393092386,
+      "statement": "no_detectable_difference"
+    },
+    {
+      "scenario": "dynamic",
+      "pct_reduction_fuel_vs_count_mean": 0.13278580429540127,
+      "ci_lo": -0.3596088706698417,
+      "ci_hi": 0.6251804792606442,
+      "statement": "no_detectable_difference"
+    },
+    {
+      "scenario": "low_demand",
+      "pct_reduction_fuel_vs_count_mean": 2.033316775089312,
+      "ci_lo": 0.5098301000129395,
+      "ci_hi": 3.2737182146977397,
+      "statement": "fuel_weights_lower_fuel"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "pct_reduction_fuel_vs_count_mean": 0.8507895665832577,
+      "ci_lo": -0.13364018410036724,
+      "ci_hi": 1.7726531540315122,
+      "statement": "no_detectable_difference"
+    }
+  ],
+  "waiting": [
+    {
+      "scenario": "balanced",
+      "baseline": "fixed",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 27.34317740844559,
+      "pct_reduction_ci_lo": 24.737817849468343,
+      "pct_reduction_ci_hi": 29.705871652243626,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "fixed",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 0.18401316992866246,
+      "pct_reduction_ci_lo": -5.368209255533199,
+      "pct_reduction_ci_hi": 6.171940735321017,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "fixed_tuned",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 24.12328577086531,
+      "pct_reduction_ci_lo": 21.967647077848707,
+      "pct_reduction_ci_hi": 25.629454091378193,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "fixed_tuned",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -9.236172080772608,
+      "pct_reduction_ci_lo": -11.044776119402986,
+      "pct_reduction_ci_hi": -7.111501316944688,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "webster",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 24.520293195864006,
+      "pct_reduction_ci_lo": 23.795912888847575,
+      "pct_reduction_ci_hi": 25.421555096672808,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "webster",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -20.35148951172219,
+      "pct_reduction_ci_lo": -22.775956284153004,
+      "pct_reduction_ci_hi": -17.874140666314116,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "actuated",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 16.518837552937505,
+      "pct_reduction_ci_lo": 15.3237403049694,
+      "pct_reduction_ci_hi": 18.321550912725876,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "actuated",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -18.030856269883238,
+      "pct_reduction_ci_lo": -20.403750430191465,
+      "pct_reduction_ci_hi": -15.65796210957501,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "queue_pressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -2.0015273130274176,
+      "pct_reduction_ci_lo": -3.3863794488216405,
+      "pct_reduction_ci_hi": -0.1850704553724901,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "queue_pressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 4.7201644626302155,
+      "pct_reduction_ci_lo": 0.21666370159520848,
+      "pct_reduction_ci_hi": 9.223665223665224,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "maxpressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -2.0015273130274176,
+      "pct_reduction_ci_lo": -3.3863794488216405,
+      "pct_reduction_ci_hi": -0.1850704553724901,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "maxpressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 4.7201644626302155,
+      "pct_reduction_ci_lo": 0.21666370159520848,
+      "pct_reduction_ci_hi": 9.223665223665224,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "ours_count",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -2.135368816189239,
+      "pct_reduction_ci_lo": -4.875382852390489,
+      "pct_reduction_ci_hi": 0.3885349456204061,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "balanced",
+      "baseline": "ours_count",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 5.774179037336932,
+      "pct_reduction_ci_lo": 2.078272604588394,
+      "pct_reduction_ci_hi": 9.47008547008547,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "fixed",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 41.48508664170089,
+      "pct_reduction_ci_lo": 39.378270668956326,
+      "pct_reduction_ci_hi": 43.53894161438102,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "fixed",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 12.837528683559157,
+      "pct_reduction_ci_lo": 6.015823257202567,
+      "pct_reduction_ci_hi": 17.666399358460303,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "fixed_tuned",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 48.86598868579255,
+      "pct_reduction_ci_lo": 46.05231355185829,
+      "pct_reduction_ci_hi": 51.435790379779675,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "fixed_tuned",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 28.408365193926556,
+      "pct_reduction_ci_lo": 25.042599368632516,
+      "pct_reduction_ci_hi": 32.239804337576615,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "webster",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 45.707402810298696,
+      "pct_reduction_ci_lo": 42.96524154147533,
+      "pct_reduction_ci_hi": 48.17240020583856,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "webster",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 14.09878401464162,
+      "pct_reduction_ci_lo": 4.2600695934029265,
+      "pct_reduction_ci_hi": 23.99015573772856,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "actuated",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 27.26968995064786,
+      "pct_reduction_ci_lo": 26.183890812064952,
+      "pct_reduction_ci_hi": 28.5766768686879,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "actuated",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -15.408014571948996,
+      "pct_reduction_ci_lo": -18.50273224043716,
+      "pct_reduction_ci_hi": -12.313296903460836,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "queue_pressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -1.3635536606226326,
+      "pct_reduction_ci_lo": -2.4955375301092837,
+      "pct_reduction_ci_hi": 0.1580504764419266,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "queue_pressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -3.73820872328335,
+      "pct_reduction_ci_lo": -8.431409386633268,
+      "pct_reduction_ci_hi": 1.4871794871794868,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "maxpressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -1.3635536606226326,
+      "pct_reduction_ci_lo": -2.4955375301092837,
+      "pct_reduction_ci_hi": 0.1580504764419266,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "maxpressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -3.73820872328335,
+      "pct_reduction_ci_lo": -8.431409386633268,
+      "pct_reduction_ci_hi": 1.4871794871794868,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "ours_count",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -2.118195558841058,
+      "pct_reduction_ci_lo": -4.322411681497863,
+      "pct_reduction_ci_hi": 0.3635626490953669,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "dynamic",
+      "baseline": "ours_count",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -3.0602546021945978,
+      "pct_reduction_ci_lo": -9.39274536105522,
+      "pct_reduction_ci_hi": 3.272236156666023,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "fixed",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 40.415170420229465,
+      "pct_reduction_ci_lo": 36.374870902707876,
+      "pct_reduction_ci_hi": 44.00970560043818,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "fixed",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 13.887528066952438,
+      "pct_reduction_ci_lo": 11.973572037510655,
+      "pct_reduction_ci_hi": 15.648091447234128,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "fixed_tuned",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 34.03355584236519,
+      "pct_reduction_ci_lo": 32.28888044993852,
+      "pct_reduction_ci_hi": 36.903624463134726,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "fixed_tuned",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 0.977956839862925,
+      "pct_reduction_ci_lo": -0.6779661016949152,
+      "pct_reduction_ci_hi": 2.9508196721311477,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "webster",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 32.629966103181644,
+      "pct_reduction_ci_lo": 29.31937751993966,
+      "pct_reduction_ci_hi": 35.927830756304644,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "webster",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -3.139745916515426,
+      "pct_reduction_ci_lo": -5.245009074410163,
+      "pct_reduction_ci_hi": -1.379310344827586,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "actuated",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 30.194013345872662,
+      "pct_reduction_ci_lo": 28.3162098754936,
+      "pct_reduction_ci_hi": 31.824410366797867,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "actuated",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -5.31328320802005,
+      "pct_reduction_ci_lo": -6.334586466165414,
+      "pct_reduction_ci_hi": -4.285714285714285,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "queue_pressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -6.422419062372796,
+      "pct_reduction_ci_lo": -10.483767343628777,
+      "pct_reduction_ci_hi": -2.1632553129518906,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "queue_pressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -4.4045425944927015,
+      "pct_reduction_ci_lo": -13.686813186813186,
+      "pct_reduction_ci_hi": 5.2760924392784725,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "maxpressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -6.422419062372796,
+      "pct_reduction_ci_lo": -10.483767343628777,
+      "pct_reduction_ci_hi": -2.1632553129518906,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "maxpressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -4.4045425944927015,
+      "pct_reduction_ci_lo": -13.686813186813186,
+      "pct_reduction_ci_hi": 5.2760924392784725,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "ours_count",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -5.57969142562455,
+      "pct_reduction_ci_lo": -9.958428044598204,
+      "pct_reduction_ci_hi": -1.200954806650898,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "low_demand",
+      "baseline": "ours_count",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -3.0805260313457037,
+      "pct_reduction_ci_lo": -13.230769230769232,
+      "pct_reduction_ci_hi": 6.454332552693208,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "fixed",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 49.862719937207935,
+      "pct_reduction_ci_lo": 45.18726028029741,
+      "pct_reduction_ci_hi": 54.10967767900684,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "fixed",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 33.01693692332052,
+      "pct_reduction_ci_lo": 21.899614587381787,
+      "pct_reduction_ci_hi": 44.13425925925926,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "fixed_tuned",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 34.57617942708468,
+      "pct_reduction_ci_lo": 31.1479915304474,
+      "pct_reduction_ci_hi": 38.00436732372198,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "fixed_tuned",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": 8.977594854787837,
+      "pct_reduction_ci_lo": 6.754123069912543,
+      "pct_reduction_ci_hi": 11.569200779727096,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "webster",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 30.47459080467585,
+      "pct_reduction_ci_lo": 28.87879385006367,
+      "pct_reduction_ci_hi": 31.660404073753472,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "webster",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -14.238875878220142,
+      "pct_reduction_ci_lo": -15.857403070517822,
+      "pct_reduction_ci_hi": -12.599531615925057,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "actuated",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": 27.356723176421685,
+      "pct_reduction_ci_lo": 23.672170696917714,
+      "pct_reduction_ci_hi": 30.217314701693397,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "actuated",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -14.976203067160231,
+      "pct_reduction_ci_lo": -16.604970914859862,
+      "pct_reduction_ci_hi": -13.114754098360654,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "queue_pressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -1.5203867667842375,
+      "pct_reduction_ci_lo": -4.908733781807674,
+      "pct_reduction_ci_hi": 1.8679602482392004,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "queue_pressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -3.0199325124698246,
+      "pct_reduction_ci_lo": -10.095238095238095,
+      "pct_reduction_ci_hi": 3.683628191090878,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "maxpressure",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -1.5203867667842375,
+      "pct_reduction_ci_lo": -4.908733781807674,
+      "pct_reduction_ci_hi": 1.8679602482392004,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "maxpressure",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -3.0199325124698246,
+      "pct_reduction_ci_lo": -10.095238095238095,
+      "pct_reduction_ci_hi": 3.683628191090878,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "ours_count",
+      "metric": "mean_waiting_s",
+      "pct_reduction_mean": -0.8145075728157952,
+      "pct_reduction_ci_lo": -3.544168671877182,
+      "pct_reduction_ci_hi": 2.099916793665784,
+      "n_pairs": 5
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "baseline": "ours_count",
+      "metric": "p95_waiting_s",
+      "pct_reduction_mean": -1.0104412155851226,
+      "pct_reduction_ci_lo": -5.80842101356492,
+      "pct_reduction_ci_hi": 2.523474178403756,
+      "n_pairs": 5
+    }
+  ],
+  "excluded_unfinished_or_not_ok": 0,
+  "gridlock_rate": 0.0,
+  "error_rows": 0,
+  "label": "Simulation-based estimate; assumed traffic mix"
+}

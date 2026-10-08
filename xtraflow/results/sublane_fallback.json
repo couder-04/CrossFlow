@@ -1,0 +1,6 @@
+{
+  "used_sublane": true,
+  "lateral_resolution": 0.4,
+  "probe_s": 60,
+  "where": "sumocfg processing/lateral-resolution"
+}

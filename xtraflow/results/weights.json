@@ -1,0 +1,19 @@
+{
+  "idle_fuel_mg_per_s": {
+    "two_wheeler": 448.05555555555554,
+    "auto_rickshaw": 837.2222222222223,
+    "car": 837.2222222222223,
+    "bus": 1671.1111111111109,
+    "truck": 2321.6666666666665
+  },
+  "w_type": {
+    "two_wheeler": 0.5351692103516921,
+    "auto_rickshaw": 1.0,
+    "car": 1.0,
+    "bus": 1.9960185799601853,
+    "truck": 2.77305905773059
+  },
+  "reference": "car",
+  "duration_s": 60.0,
+  "note": "Measured via TraCI getFuelConsumption while stopped. auto-rickshaw uses a passenger-car emission class and two-wheeler uses LDV_G_EU4 when that class loads; these idle-fuel weights inherit those proxies. Simulation-based estimate; assumed traffic mix."
+}

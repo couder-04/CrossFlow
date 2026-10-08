@@ -1,0 +1,717 @@
+{
+  "source": "data/sample_videos/ParkingVideo.mp4",
+  "source_url": "https://github.com/open-edge-platform/edge-ai-resources/raw/main/videos/ParkingVideo.mp4",
+  "video": {
+    "frames": 923,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "duration_s": 30.77
+  },
+  "model": "cct-s-v2-global-model",
+  "plate_format": "none",
+  "tta": false,
+  "scan_stride": 5,
+  "scan_hits": 106,
+  "unique_plates_scanned": {
+    "9MRM624": 91,
+    "9MPM624": 7,
+    "9MPM621": 1,
+    "BMPM621": 1,
+    "2MPM621": 1,
+    "BMF4621": 1,
+    "5MHN47": 1,
+    "2MFN671": 1,
+    "9HH4672": 1,
+    "9HF4624": 1
+  },
+  "top_plates": [
+    [
+      "9MRM624",
+      91
+    ],
+    [
+      "9MPM624",
+      7
+    ],
+    [
+      "9MPM621",
+      1
+    ],
+    [
+      "BMPM621",
+      1
+    ],
+    [
+      "2MPM621",
+      1
+    ],
+    [
+      "BMF4621",
+      1
+    ],
+    [
+      "5MHN47",
+      1
+    ],
+    [
+      "2MFN671",
+      1
+    ],
+    [
+      "9HH4672",
+      1
+    ],
+    [
+      "9HF4624",
+      1
+    ]
+  ],
+  "fused_emits": [
+    {
+      "event_id": "1cbf9d65-cb33-4894-afab-6ef26184ebe0",
+      "camera_id": "cam-parking-demo",
+      "ts": "2026-09-30T09:02:56.870697Z",
+      "plate_raw": "9MRM624",
+      "plate_norm": "9MRM624",
+      "plate_valid": false,
+      "plate_format": "nonstandard",
+      "confidence": 1.0,
+      "char_conf": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "alternates": [],
+      "lane": 2,
+      "direction": "S",
+      "vehicle_class": "car",
+      "color": null,
+      "make": null,
+      "speed_kmh": null,
+      "crop_key": null,
+      "source": "ocr"
+    },
+    {
+      "event_id": "f62fbddc-5742-4899-953f-278ca643eb65",
+      "camera_id": "cam-parking-demo",
+      "ts": "2026-09-30T09:04:45.538697Z",
+      "plate_raw": "9MRM624",
+      "plate_norm": "9MRM624",
+      "plate_valid": false,
+      "plate_format": "nonstandard",
+      "confidence": 0.96,
+      "char_conf": [
+        0.9398746788806177,
+        0.9945907625666331,
+        0.8958301109112936,
+        0.9907658866574287,
+        0.997312749324451,
+        0.9759664586062008,
+        0.9242695275581383
+      ],
+      "alternates": [
+        "9MPM624"
+      ],
+      "lane": 1,
+      "direction": "SE",
+      "vehicle_class": "car",
+      "color": null,
+      "make": null,
+      "speed_kmh": null,
+      "crop_key": null,
+      "source": "ocr"
+    },
+    {
+      "event_id": "841935b4-721e-4745-952e-85093a3e5a03",
+      "camera_id": "cam-parking-demo",
+      "ts": "2026-09-30T09:08:53.563787Z",
+      "plate_raw": "9MRM624",
+      "plate_norm": "9MRM624",
+      "plate_valid": false,
+      "plate_format": "nonstandard",
+      "confidence": 0.963,
+      "char_conf": [
+        0.982626308133234,
+        1.0,
+        0.9146955902088079,
+        0.9579645894423564,
+        0.9794783493623046,
+        0.9642229832708792,
+        0.9410230916784259
+      ],
+      "alternates": [
+        "9MPM624"
+      ],
+      "lane": 1,
+      "direction": "NW",
+      "vehicle_class": "car",
+      "color": null,
+      "make": null,
+      "speed_kmh": null,
+      "crop_key": null,
+      "source": "ocr"
+    },
+    {
+      "event_id": "51aed1e4-44a7-49a3-8f33-385c71808c5b",
+      "camera_id": "cam-parking-demo",
+      "ts": "2026-09-30T09:09:38.820990Z",
+      "plate_raw": "9MRM624",
+      "plate_norm": "9MRM624",
+      "plate_valid": false,
+      "plate_format": "nonstandard",
+      "confidence": 0.956,
+      "char_conf": [
+        0.9870372625602485,
+        0.9340742795853986,
+        0.9138039361586995,
+        0.9307948937296993,
+        0.9923072787540637,
+        0.9677239227833762,
+        0.9645373211176305
+      ],
+      "alternates": [
+        "9MPM624"
+      ],
+      "lane": 2,
+      "direction": "S",
+      "vehicle_class": "car",
+      "color": null,
+      "make": null,
+      "speed_kmh": null,
+      "crop_key": null,
+      "source": "ocr"
+    }
+  ],
+  "fused_count": 4,
+  "timing_s": {
+    "scan": 138.3,
+    "pipeline": 520.6
+  },
+  "sample_frame_hits": [
+    {
+      "frame": 1,
+      "t_s": 0.03,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.6172,
+      "bbox": [
+        967,
+        441,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 6,
+      "t_s": 0.2,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.6112,
+      "bbox": [
+        967,
+        441,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 11,
+      "t_s": 0.37,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.6252,
+      "bbox": [
+        968,
+        440,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 16,
+      "t_s": 0.53,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.6191,
+      "bbox": [
+        968,
+        441,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 21,
+      "t_s": 0.7,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.6138,
+      "bbox": [
+        970,
+        440,
+        1027,
+        474
+      ]
+    },
+    {
+      "frame": 26,
+      "t_s": 0.87,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.6207,
+      "bbox": [
+        971,
+        441,
+        1027,
+        474
+      ]
+    },
+    {
+      "frame": 31,
+      "t_s": 1.03,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.628,
+      "bbox": [
+        971,
+        441,
+        1027,
+        474
+      ]
+    },
+    {
+      "frame": 36,
+      "t_s": 1.2,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.6271,
+      "bbox": [
+        971,
+        441,
+        1027,
+        474
+      ]
+    },
+    {
+      "frame": 41,
+      "t_s": 1.37,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.6095,
+      "bbox": [
+        971,
+        441,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 46,
+      "t_s": 1.53,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.6382,
+      "bbox": [
+        971,
+        442,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 51,
+      "t_s": 1.7,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.6354,
+      "bbox": [
+        971,
+        442,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 56,
+      "t_s": 1.87,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.6324,
+      "bbox": [
+        971,
+        441,
+        1026,
+        474
+      ]
+    },
+    {
+      "frame": 61,
+      "t_s": 2.03,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.6049,
+      "bbox": [
+        962,
+        441,
+        1027,
+        476
+      ]
+    },
+    {
+      "frame": 66,
+      "t_s": 2.2,
+      "text": "9MRM624",
+      "ocr_conf": 0.9993,
+      "det_conf": 0.5942,
+      "bbox": [
+        964,
+        441,
+        1027,
+        476
+      ]
+    },
+    {
+      "frame": 71,
+      "t_s": 2.37,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.5967,
+      "bbox": [
+        963,
+        441,
+        1027,
+        476
+      ]
+    },
+    {
+      "frame": 76,
+      "t_s": 2.53,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.6105,
+      "bbox": [
+        965,
+        441,
+        1027,
+        475
+      ]
+    },
+    {
+      "frame": 81,
+      "t_s": 2.7,
+      "text": "9MRM624",
+      "ocr_conf": 0.9995,
+      "det_conf": 0.6167,
+      "bbox": [
+        965,
+        440,
+        1027,
+        475
+      ]
+    },
+    {
+      "frame": 86,
+      "t_s": 2.87,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.617,
+      "bbox": [
+        965,
+        441,
+        1027,
+        475
+      ]
+    },
+    {
+      "frame": 91,
+      "t_s": 3.03,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.5998,
+      "bbox": [
+        967,
+        441,
+        1028,
+        475
+      ]
+    },
+    {
+      "frame": 96,
+      "t_s": 3.2,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.6133,
+      "bbox": [
+        965,
+        440,
+        1027,
+        475
+      ]
+    },
+    {
+      "frame": 101,
+      "t_s": 3.37,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.6098,
+      "bbox": [
+        965,
+        440,
+        1028,
+        475
+      ]
+    },
+    {
+      "frame": 106,
+      "t_s": 3.53,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.6097,
+      "bbox": [
+        964,
+        440,
+        1027,
+        475
+      ]
+    },
+    {
+      "frame": 111,
+      "t_s": 3.7,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.6217,
+      "bbox": [
+        964,
+        440,
+        1027,
+        475
+      ]
+    },
+    {
+      "frame": 116,
+      "t_s": 3.87,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.7728,
+      "bbox": [
+        957,
+        497,
+        1028,
+        537
+      ]
+    },
+    {
+      "frame": 121,
+      "t_s": 4.03,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.7953,
+      "bbox": [
+        952,
+        505,
+        1021,
+        542
+      ]
+    },
+    {
+      "frame": 126,
+      "t_s": 4.2,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.7809,
+      "bbox": [
+        949,
+        511,
+        1016,
+        547
+      ]
+    },
+    {
+      "frame": 131,
+      "t_s": 4.37,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.8392,
+      "bbox": [
+        942,
+        515,
+        1015,
+        554
+      ]
+    },
+    {
+      "frame": 136,
+      "t_s": 4.53,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.7656,
+      "bbox": [
+        934,
+        524,
+        1010,
+        563
+      ]
+    },
+    {
+      "frame": 141,
+      "t_s": 4.7,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.8459,
+      "bbox": [
+        930,
+        529,
+        1005,
+        568
+      ]
+    },
+    {
+      "frame": 146,
+      "t_s": 4.87,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.8174,
+      "bbox": [
+        922,
+        536,
+        998,
+        576
+      ]
+    },
+    {
+      "frame": 151,
+      "t_s": 5.03,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.8336,
+      "bbox": [
+        910,
+        544,
+        989,
+        585
+      ]
+    },
+    {
+      "frame": 156,
+      "t_s": 5.2,
+      "text": "9MRM624",
+      "ocr_conf": 0.9996,
+      "det_conf": 0.8358,
+      "bbox": [
+        904,
+        548,
+        982,
+        591
+      ]
+    },
+    {
+      "frame": 161,
+      "t_s": 5.37,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.8382,
+      "bbox": [
+        895,
+        554,
+        972,
+        597
+      ]
+    },
+    {
+      "frame": 166,
+      "t_s": 5.53,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.839,
+      "bbox": [
+        882,
+        563,
+        962,
+        608
+      ]
+    },
+    {
+      "frame": 171,
+      "t_s": 5.7,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.8244,
+      "bbox": [
+        874,
+        570,
+        955,
+        615
+      ]
+    },
+    {
+      "frame": 176,
+      "t_s": 5.87,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.8394,
+      "bbox": [
+        863,
+        576,
+        943,
+        622
+      ]
+    },
+    {
+      "frame": 181,
+      "t_s": 6.03,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.8241,
+      "bbox": [
+        846,
+        583,
+        929,
+        631
+      ]
+    },
+    {
+      "frame": 186,
+      "t_s": 6.2,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.8394,
+      "bbox": [
+        839,
+        590,
+        919,
+        638
+      ]
+    },
+    {
+      "frame": 191,
+      "t_s": 6.37,
+      "text": "9MRM624",
+      "ocr_conf": 0.9998,
+      "det_conf": 0.8104,
+      "bbox": [
+        824,
+        597,
+        908,
+        647
+      ]
+    },
+    {
+      "frame": 196,
+      "t_s": 6.53,
+      "text": "9MRM624",
+      "ocr_conf": 0.9997,
+      "det_conf": 0.8416,
+      "bbox": [
+        809,
+        605,
+        892,
+        655
+      ]
+    }
+  ]
+}

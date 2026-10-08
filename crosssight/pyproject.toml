@@ -1,0 +1,111 @@
+[project]
+name = "anpr-platform"
+version = "0.1.0"
+description = "City-wide ANPR Intelligence Platform"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "anpr-common",
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.30",
+  "aiokafka>=0.10",
+  "clickhouse-connect>=0.7",
+  "asyncpg>=0.29",
+  "sqlalchemy[asyncio]>=2.0",
+  "redis>=5.0",
+  "osmnx>=1.9",
+  "networkx>=3.3",
+  "h3>=4.0",
+  "rapidfuzz>=3.9",
+  "ultralytics>=8.2",
+  "torch>=2.3",
+  "opencv-python-headless>=4.10",
+  "albumentations>=1.4",
+  "python-jose[cryptography]>=3.3",
+  "passlib[bcrypt]>=1.7",
+  "python-multipart>=0.0.9",
+  "httpx>=0.27",
+  "minio>=7.2",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "numpy>=1.26",
+  "pillow>=10.3",
+  "orjson>=3.10",
+  "websockets>=12.0",
+  "geoalchemy2>=0.15",
+  "shapely>=2.0",
+  "pyyaml>=6.0",
+  "aiofiles>=25.1.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.2",
+  "pytest-asyncio>=0.23",
+  "ruff>=0.5",
+  "jsonschema>=4.22",
+  "mypy>=1.11",
+]
+
+[project.scripts]
+simulate = "simulator.cli:main"
+ocr-engine = "ocr_engine.cli:main"
+anpr-api = "api.main:run"
+anpr-worker = "workers.cli:main"
+
+[tool.uv.workspace]
+members = [
+  "packages/anpr_common",
+  "services/simulator",
+  "services/workers",
+  "services/api",
+  "services/ocr_engine",
+]
+
+[tool.uv.sources]
+anpr-common = { workspace = true }
+anpr-simulator = { workspace = true }
+anpr-workers = { workspace = true }
+anpr-api = { workspace = true }
+anpr-ocr-engine = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["packages/anpr_common/tests", "services", "tests"]
+pythonpath = [
+  "../crossflow/src",
+  "packages/anpr_common/src",
+  "services/simulator/src",
+  "services/workers/src",
+  "services/api/src",
+  "services/ocr_engine/src",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["vendor", "data"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = [
+  "fastapi.Depends",
+  "fastapi.Query",
+  "fastapi.Path",
+  "fastapi.File",
+  "fastapi.Form",
+  "fastapi.Header",
+  "fastapi.Body",
+  "fastapi.params.Depends",
+  "fastapi.params.Query",
+  "fastapi.params.Path",
+  "fastapi.params.File",
+  "fastapi.params.Form",
+  "fastapi.params.Header",
+  "fastapi.params.Body",
+]

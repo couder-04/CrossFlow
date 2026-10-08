@@ -1,0 +1,48 @@
+[project]
+name = "anpr-api"
+version = "0.1.0"
+description = "FastAPI REST + WebSocket API for ANPR platform"
+requires-python = ">=3.11"
+dependencies = [
+  "anpr-common",
+  "fastapi>=0.111",
+  "uvicorn[standard]>=0.30",
+  "clickhouse-connect>=0.7",
+  "asyncpg>=0.29",
+  "sqlalchemy[asyncio]>=2.0",
+  "redis>=5.0",
+  "python-jose[cryptography]>=3.3",
+  "passlib[bcrypt]>=1.7",
+  "python-multipart>=0.0.9",
+  "minio>=7.2",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "geoalchemy2>=0.15",
+  "shapely>=2.0",
+  "networkx>=3.3",
+  "orjson>=3.10",
+  "websockets>=12.0",
+  # _transfer_helpers streams uploads with aiofiles; the API image installs only this package.
+  "aiofiles>=25.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2", "pytest-asyncio>=0.23", "httpx>=0.27", "ruff>=0.5"]
+
+[project.scripts]
+anpr-api = "api.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/api"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "integration: tests requiring live databases",
+]

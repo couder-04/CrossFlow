@@ -1,0 +1,37 @@
+name: crossflow
+
+# The whole product in ONE environment: Python 3.12, one lock file at the repository root.
+on:
+  push:
+    paths: ["crossflow/**", "crosssight/**", "xtraflow/**", "pyproject.toml", "uv.lock", "scripts/**", ".github/workflows/crossflow.yml"]
+  pull_request:
+    paths: ["crossflow/**", "crosssight/**", "xtraflow/**", "pyproject.toml", "uv.lock", "scripts/**", ".github/workflows/crossflow.yml"]
+
+jobs:
+  unified:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - name: Build SUMO networks
+        working-directory: xtraflow
+        run: |
+          ../.venv/bin/python -m sim.build_network
+          ../.venv/bin/python -m sim.build_grid
+      - name: CrossFlow tests (bridge, city, pipeline statistics, results reader)
+        run: .venv/bin/python -m pytest crossflow/tests -q
+      - name: XtraFlow tests
+        working-directory: xtraflow
+        run: ../.venv/bin/python -m pytest tests -q
+      - name: CrossSight tests (includes the /signals API)
+        working-directory: crosssight
+        run: ../.venv/bin/python -m pytest -q
+      - name: Camera counts to SUMO calibration hand-off
+        run: CROSSFLOW_PY="$PWD/.venv/bin/python" bash scripts/bridge_demo.sh
+      - name: End-to-end pipeline
+        run: .venv/bin/python -m crossflow run --streams 2000 --seeds 1
+      - name: Working tree clean after tests
+        run: git diff --exit-code

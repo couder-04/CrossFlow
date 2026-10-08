@@ -1,0 +1,47 @@
+{
+  "video": "results/demo/synthetic_traffic_smoke.mp4",
+  "noise_model": {
+    "detect_miss_rate": 0.15,
+    "class_confusion": {
+      "two_wheeler": {
+        "two_wheeler": 0.85,
+        "auto_rickshaw": 0.0375,
+        "car": 0.0375,
+        "bus": 0.0375,
+        "truck": 0.0375
+      },
+      "auto_rickshaw": {
+        "two_wheeler": 0.0375,
+        "auto_rickshaw": 0.85,
+        "car": 0.0375,
+        "bus": 0.0375,
+        "truck": 0.0375
+      },
+      "car": {
+        "two_wheeler": 0.0375,
+        "auto_rickshaw": 0.0375,
+        "car": 0.85,
+        "bus": 0.0375,
+        "truck": 0.0375
+      },
+      "bus": {
+        "two_wheeler": 0.0375,
+        "auto_rickshaw": 0.0375,
+        "car": 0.0375,
+        "bus": 0.85,
+        "truck": 0.0375
+      },
+      "truck": {
+        "two_wheeler": 0.0375,
+        "auto_rickshaw": 0.0375,
+        "car": 0.0375,
+        "bus": 0.0375,
+        "truck": 0.85
+      }
+    },
+    "count_jitter_std": 0.5,
+    "source": "assumed",
+    "note": "ASSUMED noise model (no user video/labels). Supply data/video/ and data/video_labels/ to derive empirical noise_model.json. SUMO consumes simulated detections with this noise; YOLO on real video shows the same state is extractable and supplies noise parameters."
+  },
+  "flag": "ASSUMED_NOISE_MODEL_NO_USER_VIDEO"
+}

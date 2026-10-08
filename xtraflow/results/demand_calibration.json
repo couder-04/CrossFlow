@@ -1,0 +1,63 @@
+{
+  "mode": "measured_on_validation",
+  "label": "Simulation-based estimate; assumed traffic mix",
+  "controller": "fixed",
+  "seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+  ],
+  "seed_split": "VALIDATION",
+  "smoke": false,
+  "measured_approach_veh_h": {
+    "balanced": {
+      "N": 475.87863586585235,
+      "S": 459.0075821811806,
+      "E": 463.6937345682272,
+      "W": 467.2256467241747
+    },
+    "peak_unbalanced": {
+      "N": 693.9007064605933,
+      "S": 668.6901118916774,
+      "E": 172.76683027663998,
+      "W": 172.01680441181725
+    },
+    "dynamic": {
+      "N": 491.6918203850275,
+      "S": 494.08284690840145,
+      "E": 337.9177625944442,
+      "W": 349.5415502687191
+    },
+    "low_demand": {
+      "N": 146.21482643527582,
+      "S": 144.65516426108894,
+      "E": 143.87180702916024,
+      "W": 157.77333180234686
+    }
+  },
+  "degree_of_saturation": {
+    "balanced": {
+      "NS_TL": 0.3679835718815208,
+      "EW_TL": 0.36343622992915126
+    },
+    "peak_unbalanced": {
+      "NS_TL": 0.5354248130842781,
+      "EW_TL": 0.13496223072225444
+    },
+    "dynamic": {
+      "NS_TL": 0.3821480986705219,
+      "EW_TL": 0.2717976515865777
+    },
+    "low_demand": {
+      "NS_TL": 0.11198930465804895,
+      "EW_TL": 0.12375602619540453
+    }
+  },
+  "saturation_assumption_veh_h": 3600.0,
+  "geh": {},
+  "geh_target": 5.0,
+  "scales": {},
+  "note": "Approach veh/h are counts of vehicles seen on each incoming edge, scaled to an hour from the simulated duration. Degree of saturation uses an assumed 1800 veh/h/lane and the green fraction served. The config demand table is not copied into measured_approach_veh_h."
+}

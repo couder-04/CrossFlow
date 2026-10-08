@@ -1,0 +1,1 @@
+INFO:open_image_models.detection.core.yolo_v9.inference:Using ONNX Runtime with ['CPUExecutionProvider'] provider(s)

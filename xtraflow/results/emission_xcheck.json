@@ -1,0 +1,393 @@
+{
+  "rows": [
+    {
+      "scenario": "balanced",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.14285854636736603,
+      "total_CO2_kg": 672.904091283447,
+      "status": "ok"
+    },
+    {
+      "scenario": "balanced",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1412961302612632,
+      "total_CO2_kg": 681.2954789553905,
+      "status": "ok"
+    },
+    {
+      "scenario": "balanced",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.13956360729597436,
+      "total_CO2_kg": 657.787402040721,
+      "status": "ok"
+    },
+    {
+      "scenario": "balanced",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1443690427723397,
+      "total_CO2_kg": 695.6346970741059,
+      "status": "ok"
+    },
+    {
+      "scenario": "balanced",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12817029389871035,
+      "total_CO2_kg": 603.9951153626772,
+      "status": "ok"
+    },
+    {
+      "scenario": "balanced",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.13084388105021946,
+      "total_CO2_kg": 630.772101553724,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.14752776671506304,
+      "total_CO2_kg": 664.1844070064259,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1613647366357803,
+      "total_CO2_kg": 721.6444982931495,
+      "status": "ok"
+    },
+    {
+      "scenario": "balanced",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.13128276377077155,
+      "total_CO2_kg": 618.3233944547327,
+      "status": "ok"
+    },
+    {
+      "scenario": "balanced",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.13375113550995427,
+      "total_CO2_kg": 644.3715173275693,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12584093505021268,
+      "total_CO2_kg": 562.7553761596265,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12127596294934477,
+      "total_CO2_kg": 546.0608768903339,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.15093799841188532,
+      "total_CO2_kg": 679.032090464978,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.16444562053425987,
+      "total_CO2_kg": 734.7288158036108,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.14487523776751607,
+      "total_CO2_kg": 625.6118520572074,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.14223147038743683,
+      "total_CO2_kg": 613.3882026784562,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12864752812794067,
+      "total_CO2_kg": 574.9482677040259,
+      "status": "ok"
+    },
+    {
+      "scenario": "peak_unbalanced",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12419478541147852,
+      "total_CO2_kg": 558.8618647191222,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12060960777355809,
+      "total_CO2_kg": 520.3504090474487,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12500979688259428,
+      "total_CO2_kg": 539.1356642732264,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1479104894900931,
+      "total_CO2_kg": 638.2028785546838,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.13770269779552455,
+      "total_CO2_kg": 211.39531932633693,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "primary",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.13851882189307213,
+      "total_CO2_kg": 205.19804007872017,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1456268316970946,
+      "total_CO2_kg": 627.5914470662732,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.14046954333047293,
+      "total_CO2_kg": 215.51185578511095,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "alternate",
+      "controller": "fixed",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.14181316340646913,
+      "total_CO2_kg": 209.98555363954992,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.12376801951954183,
+      "total_CO2_kg": 533.7455479517067,
+      "status": "ok"
+    },
+    {
+      "scenario": "dynamic",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.1280125066885558,
+      "total_CO2_kg": 551.7802950145065,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.1170654291224278,
+      "total_CO2_kg": 172.90379455638896,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "primary",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12200204175410849,
+      "total_CO2_kg": 186.76354854535012,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 1,
+      "fuel_per_vehicle_L": 0.12478991440779068,
+      "total_CO2_kg": 190.93799092112926,
+      "status": "ok"
+    },
+    {
+      "scenario": "low_demand",
+      "emission_model": "alternate",
+      "controller": "XtraFlow",
+      "seed": 2,
+      "fuel_per_vehicle_L": 0.11998366594673722,
+      "total_CO2_kg": 177.14195094098878,
+      "status": "ok"
+    }
+  ],
+  "by_model": {
+    "primary": {
+      "mean": 13.89669546016646,
+      "ci_lo": 10.805155785139204,
+      "ci_hi": 17.176727707998204,
+      "per_scenario": {
+        "balanced": {
+          "mean": 7.780467007684246,
+          "ci_lo": 7.39740656146565,
+          "ci_hi": 8.16352745390284,
+          "n": 2
+        },
+        "peak_unbalanced": {
+          "mean": 19.90454171960809,
+          "ci_lo": 17.794483269323347,
+          "ci_hi": 22.014600169892837,
+          "n": 2
+        },
+        "dynamic": {
+          "mean": 14.456992990960547,
+          "ci_lo": 13.712102351680155,
+          "ci_hi": 15.201883630240937,
+          "n": 2
+        },
+        "low_demand": {
+          "mean": 13.444780122412963,
+          "ci_lo": 11.401850720985905,
+          "ci_hi": 15.48770952384002,
+          "n": 2
+        }
+      }
+    },
+    "alternate": {
+      "mean": 13.745367950712748,
+      "ci_lo": 10.700351210396775,
+      "ci_hi": 16.99973910463684,
+      "per_scenario": {
+        "balanced": {
+          "mean": 7.72883316046862,
+          "ci_lo": 7.354698111512145,
+          "ci_hi": 8.102968209425093,
+          "n": 2
+        },
+        "peak_unbalanced": {
+          "mean": 19.743483387937932,
+          "ci_lo": 17.718012218122112,
+          "ci_hi": 21.76895455775375,
+          "n": 2
+        },
+        "dynamic": {
+          "mean": 14.231436757199297,
+          "ci_lo": 13.452719188567125,
+          "ci_hi": 15.010154325831468,
+          "n": 2
+        },
+        "low_demand": {
+          "mean": 13.277718497245143,
+          "ci_lo": 11.162297926600273,
+          "ci_hi": 15.393139067890015,
+          "n": 2
+        }
+      }
+    }
+  },
+  "pct_reduction_primary": 13.89669546016646,
+  "pct_reduction_alternate": 13.745367950712748,
+  "verdict": "ci_overlap",
+  "emission_map": {
+    "primary": {
+      "two_wheeler": "HBEFA3/LDV_G_EU4",
+      "auto_rickshaw": "HBEFA3/PC_G_EU4",
+      "car": "HBEFA3/PC_G_EU4",
+      "bus": "HBEFA3/Bus",
+      "truck": "HBEFA3/HDV"
+    },
+    "alternate": {
+      "two_wheeler": "HBEFA3/LDV_G_EU3",
+      "auto_rickshaw": "HBEFA3/PC_G_EU3",
+      "car": "PHEMlight/PC_G_EU4",
+      "bus": "HBEFA3/HDV",
+      "truck": "HBEFA3/HDV_D_EU4"
+    },
+    "tested": {
+      "HBEFA3/LDV_G_EU4": true,
+      "HBEFA3/PC_G_EU4": true,
+      "HBEFA3/Bus": true,
+      "HBEFA3/HDV": true,
+      "HBEFA3/LDV_G_EU3": true,
+      "HBEFA3/PC_G_EU3": true,
+      "PHEMlight/PC_G_EU4": true,
+      "HBEFA3/HDV_D_EU4": true
+    },
+    "proxies": {
+      "auto_rickshaw": "passenger-car class (no auto-rickshaw emission class in this SUMO build)",
+      "two_wheeler": "LDV_G_EU4 when available, else the first accepted light/passenger class",
+      "weights": "results/weights.json idle-fuel weights inherit these emission classes"
+    },
+    "note": "Installed SUMO 1.21: HBEFA3/PHEMlight available; HBEFA4 not present in this build. Alternate bus/truck classes stay heavy-duty or bus, not passenger car. Simulation-based estimate; assumed traffic mix."
+  },
+  "note": "Alternate bus and truck classes are heavy-duty or bus, not a passenger car. auto-rickshaw uses a passenger-car proxy. two-wheeler uses LDV_G_EU4 when that class loads. Idle-fuel weights inherit the primary classes. Simulation-based estimate; assumed traffic mix.",
+  "label": "Simulation-based estimate; assumed traffic mix"
+}

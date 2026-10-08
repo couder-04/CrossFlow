@@ -1,0 +1,2 @@
+# Shell scripts are bind-mounted into Linux containers; CRLF breaks them (set: pipefail).
+*.sh text eol=lf

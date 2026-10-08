@@ -1,0 +1,213 @@
+# XtraFlow — master config
+# ASSUMED parameters are labelled. Freeze via results/config.lock before TEST sweep.
+
+project:
+  name: "XtraFlow"
+  label: "assumed mixed-traffic scenario"
+
+seed_protocol:
+  train: [1000, 1049]       # inclusive
+  validation: [2000, 2019]
+  test: [1, 30]
+
+simulation:
+  step_length: 1.0
+  demand_horizon_s: 3600
+  drain_timeout_multiplier: 2.0
+  lateral_resolution: 0.4     # sumocfg only; probe must succeed or the build stops
+  use_sublane: true
+  speed_limit_kmh: 50
+  approach_length_m: 300
+  grid_link_length_m: 200
+  gui: false
+
+signals:
+  min_green_s: 15
+  max_green_s: 90
+  yellow_s: 3
+  all_red_s: 2
+  starvation_s: 120
+  # legacy equal greens (NS_TL, NS_R, EW_TL, EW_R). The tuned plan is results/fixed_tuned.json.
+  fixed_greens_s: [30, 12, 30, 12]
+
+controller:
+  detection_distance_m: 100
+  alpha_moving: 0.3
+  hysteresis: 0.15
+  switch_penalty_rl: 0.05
+  neighbor_pressure_weight: 0.25   # grid coordination
+  # oracle: SUMO ground truth (speed, class, route turn). camera: noise model + class map.
+  info_mode: oracle
+
+# Assumed mixed-traffic scenario (not calibrated unless observed_counts provided)
+vehicle_mix:
+  two_wheeler: 0.40
+  car: 0.30
+  auto_rickshaw: 0.10
+  bus: 0.05
+  truck: 0.15
+
+occupancy_persons:
+  two_wheeler: 1.3
+  car: 2.0
+  auto_rickshaw: 2.0
+  bus: 40.0
+  truck: 1.2
+
+fuel:
+  density_kg_per_L:
+    petrol: 0.74
+    diesel: 0.84
+  type:
+    two_wheeler: petrol
+    car: petrol
+    auto_rickshaw: petrol
+    bus: diesel
+    truck: diesel
+  # PLACEHOLDER — user-editable for extrapolation (INR per litre)
+  price_inr_per_L:
+    low: 90
+    base: 100
+    high: 110
+  co2_kg_per_L:
+    petrol: 2.31
+    diesel: 2.68
+
+vehicle_params:  # assumed unless noted
+  two_wheeler:
+    length: 2.0
+    width: 0.8
+    accel: 2.5
+    decel: 4.5
+    maxSpeed: 13.89   # 50 km/h
+    vClass: motorcycle
+    guiShape: motorcycle
+  auto_rickshaw:
+    length: 2.7
+    width: 1.4
+    accel: 1.2
+    decel: 3.5
+    maxSpeed: 13.89
+    vClass: passenger
+    guiShape: passenger/hatchback
+  car:
+    length: 4.5
+    width: 1.8
+    accel: 2.6
+    decel: 4.5
+    maxSpeed: 13.89
+    vClass: passenger
+    guiShape: passenger
+  bus:
+    length: 12.0
+    width: 2.5
+    accel: 1.0
+    decel: 3.5
+    maxSpeed: 13.89
+    vClass: bus
+    guiShape: bus
+  truck:
+    length: 9.0
+    width: 2.4
+    accel: 1.1
+    decel: 3.5
+    maxSpeed: 13.89
+    vClass: truck
+    guiShape: truck
+
+# Turn ratios per approach (left, through, right) — assumed
+turn_ratios:
+  left: 0.20
+  through: 0.60
+  right: 0.20
+
+# Demand flows (veh/h per approach). Assumed until observed_counts.csv is supplied.
+# Degree of saturation is measured on VALIDATION into results/demand_calibration.json (see DECISIONS D015).
+demand:
+  balanced:
+    N: 480
+    S: 480
+    E: 480
+    W: 480
+  peak_unbalanced:
+    N: 720
+    S: 720
+    E: 180
+    W: 180
+  dynamic:
+    # blocks of 1200 s: NS high -> EW high -> NS high
+    blocks:
+      - {duration: 1200, N: 680, S: 680, E: 200, W: 200}
+      - {duration: 1200, N: 200, S: 200, E: 680, W: 680}
+      - {duration: 1200, N: 680, S: 680, E: 200, W: 200}
+  low_demand:
+    N: 150
+    S: 150
+    E: 150
+    W: 150
+
+emission:
+  # This SUMO 1.21 build provides HBEFA3 and PHEMlight, not HBEFA4.
+  # Runtime probe writes results/emission_class_map.json; primary must match that file.
+  primary: HBEFA3
+  crosscheck: auto   # alternate heavy-duty/bus classes; see emission_class_map.json
+
+perception:
+  detect_miss_rate: 0.0
+  assumed_miss_rate_smoke: 0.15
+  fps: 3
+
+extrapolation:  # low/base/high ranges — simulation-based estimate inputs
+  vehicles_per_peak_hour:
+    low: 800
+    base: 1400
+    high: 2200
+  peak_hours_per_day:
+    low: 3
+    base: 5
+    high: 7
+  days_per_year:
+    low: 250
+    base: 300
+    high: 330
+  n_intersections:
+    low: 50
+    base: 200
+    high: 1000
+  # Explicit assumption: equal weight on each single-intersection scenario.
+  scenario_weights:
+    balanced: 0.25
+    peak_unbalanced: 0.25
+    dynamic: 0.25
+    low_demand: 0.25
+  n_monte_carlo: 10000
+
+rl:
+  total_timesteps: 200000
+  learning_rate: 0.0003
+  n_steps: 1024
+  batch_size: 64
+  gamma: 0.99
+  early_stop_patience: 5
+
+tune:
+  detection_distance_m: [60, 100, 150]
+  alpha_moving: [0.2, 0.3, 0.5]
+  hysteresis: [0.1, 0.15, 0.25]
+
+sensitivity:
+  demand_multipliers: [0.5, 0.75, 1.0, 1.25, 1.5]
+  mix_lhs_samples: 20
+
+robustness:
+  detect_miss_rates: [0.0, 0.1, 0.2, 0.3]
+
+paths:
+  sumo_net: results/networks/intersection.net.xml
+  sumo_grid: results/networks/grid2x2.net.xml
+  demand_dir: results/demand
+  weights: results/weights.json
+  tuned: results/tuned_params.json
+  config_lock: results/config.lock
+  raw_runs: results/raw_runs.csv
+  summary: results/summary.json

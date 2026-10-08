@@ -1,0 +1,79 @@
+{
+  "metric": "conflicts_per_1000_veh",
+  "comparisons": [
+    {
+      "baseline": "actuated",
+      "mean_delta_conflicts_per_1000": -276.3454937876085,
+      "ci_lo": -311.2154512890763,
+      "ci_hi": -241.56314905513582,
+      "wilcoxon_p": 1.9073486328125e-06,
+      "wilcoxon_stat": 0.0,
+      "n_pairs": 20,
+      "verdict": "decrease"
+    },
+    {
+      "baseline": "fixed",
+      "mean_delta_conflicts_per_1000": -354.6822739366572,
+      "ci_lo": -405.8298036084927,
+      "ci_hi": -302.8453684961318,
+      "wilcoxon_p": 1.9073486328125e-06,
+      "wilcoxon_stat": 0.0,
+      "n_pairs": 20,
+      "verdict": "decrease"
+    },
+    {
+      "baseline": "fixed_tuned",
+      "mean_delta_conflicts_per_1000": -309.48003411508546,
+      "ci_lo": -358.9087527428811,
+      "ci_hi": -265.626653157827,
+      "wilcoxon_p": 1.9073486328125e-06,
+      "wilcoxon_stat": 0.0,
+      "n_pairs": 20,
+      "verdict": "decrease"
+    },
+    {
+      "baseline": "maxpressure",
+      "mean_delta_conflicts_per_1000": 10.194160796315904,
+      "ci_lo": -5.257563985837055,
+      "ci_hi": 25.880232323095335,
+      "wilcoxon_p": 0.34881019592285156,
+      "wilcoxon_stat": 79.0,
+      "n_pairs": 20,
+      "verdict": "no detectable change"
+    },
+    {
+      "baseline": "ours_count",
+      "mean_delta_conflicts_per_1000": 20.388518635555897,
+      "ci_lo": 5.567280815793398,
+      "ci_hi": 34.92507528994849,
+      "wilcoxon_p": 0.01531219482421875,
+      "wilcoxon_stat": 41.0,
+      "n_pairs": 20,
+      "verdict": "increase"
+    },
+    {
+      "baseline": "queue_pressure",
+      "mean_delta_conflicts_per_1000": 10.194160796315904,
+      "ci_lo": -5.257563985837055,
+      "ci_hi": 25.880232323095335,
+      "wilcoxon_p": 0.34881019592285156,
+      "wilcoxon_stat": 79.0,
+      "n_pairs": 20,
+      "verdict": "no detectable change"
+    },
+    {
+      "baseline": "webster",
+      "mean_delta_conflicts_per_1000": -404.24428103951504,
+      "ci_lo": -469.9075070935509,
+      "ci_hi": -344.31420989737916,
+      "wilcoxon_p": 1.9073486328125e-06,
+      "wilcoxon_stat": 0.0,
+      "n_pairs": 20,
+      "verdict": "decrease"
+    }
+  ],
+  "verdict": "decrease",
+  "verdict_baseline": "fixed",
+  "note": "SSM minTTC below 1.5 s, per 1000 departed vehicles. Verdict is the sign of the bootstrap CI.",
+  "label": "Simulation-based estimate; assumed traffic mix"
+}

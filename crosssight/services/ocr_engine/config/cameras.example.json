@@ -1,0 +1,11 @@
+{
+  "cameras": [
+    {
+      "id": "cam-file-demo",
+      "source": "vendor/PlateOCR/samples/test_image.png",
+      "heading_deg": 0,
+      "lanes": 2,
+      "enabled": true
+    }
+  ]
+}

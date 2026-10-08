@@ -1,0 +1,9 @@
+{
+  "rows": [],
+  "summary_means": {},
+  "coordination_reduces_fuel": false,
+  "n_error_rows": 10,
+  "smoke": false,
+  "label": "Simulation-based estimate; assumed traffic mix",
+  "note": "2x2 grid not scored in this time-cut run. duarouter path was fixed, but the single-intersection tls.add.xml does not provide programs for the grid TLS ids, so SUMO aborts."
+}

@@ -1,0 +1,389 @@
+{
+  "net": "results/networks/grid2x2.net.xml",
+  "tls_ids": [
+    "J10",
+    "J11",
+    "J00",
+    "J01"
+  ],
+  "link_length_m": 200.0,
+  "lefthand": true,
+  "junctions": {
+    "J10": {
+      "n_links": 16,
+      "groups": {
+        "NS_TL": [
+          0,
+          1,
+          2,
+          8,
+          9,
+          10
+        ],
+        "NS_R": [
+          3,
+          11
+        ],
+        "EW_TL": [
+          4,
+          5,
+          6,
+          12,
+          13,
+          14
+        ],
+        "EW_R": [
+          7,
+          15
+        ]
+      },
+      "approach_edges": {
+        "N": [
+          "V_1_1_s"
+        ],
+        "S": [
+          "S1_in"
+        ],
+        "E": [
+          "E0_in"
+        ],
+        "W": [
+          "H_0_0_e"
+        ]
+      },
+      "downstream_edges": {
+        "NS_TL": [
+          "H_1_0_w",
+          "V_1_0_n",
+          "E0_out",
+          "S1_out"
+        ],
+        "NS_R": [
+          "E0_out",
+          "H_1_0_w"
+        ],
+        "EW_TL": [
+          "S1_out",
+          "H_1_0_w",
+          "V_1_0_n",
+          "E0_out"
+        ],
+        "EW_R": [
+          "V_1_0_n",
+          "S1_out"
+        ]
+      },
+      "turn_lookup": {
+        "E0_in|S1_out": "left",
+        "E0_in|H_1_0_w": "through",
+        "E0_in|V_1_0_n": "right",
+        "H_0_0_e|V_1_0_n": "left",
+        "H_0_0_e|E0_out": "through",
+        "H_0_0_e|S1_out": "right",
+        "S1_in|H_1_0_w": "left",
+        "S1_in|V_1_0_n": "through",
+        "S1_in|E0_out": "right",
+        "V_1_1_s|E0_out": "left",
+        "V_1_1_s|S1_out": "through",
+        "V_1_1_s|H_1_0_w": "right"
+      },
+      "neighbor_ids": [
+        "J11",
+        "J00",
+        "J01"
+      ],
+      "validation": {
+        "ok": [
+          "NS_TL",
+          "NS_R",
+          "EW_TL",
+          "EW_R"
+        ],
+        "conflicts": [],
+        "empty_groups": []
+      }
+    },
+    "J11": {
+      "n_links": 16,
+      "groups": {
+        "NS_TL": [
+          0,
+          1,
+          2,
+          8,
+          9,
+          10
+        ],
+        "NS_R": [
+          3,
+          11
+        ],
+        "EW_TL": [
+          4,
+          5,
+          6,
+          12,
+          13,
+          14
+        ],
+        "EW_R": [
+          7,
+          15
+        ]
+      },
+      "approach_edges": {
+        "N": [
+          "N1_in"
+        ],
+        "S": [
+          "V_1_0_n"
+        ],
+        "E": [
+          "E1_in"
+        ],
+        "W": [
+          "H_0_1_e"
+        ]
+      },
+      "downstream_edges": {
+        "NS_TL": [
+          "E1_out",
+          "V_1_1_s",
+          "H_1_1_w",
+          "N1_out"
+        ],
+        "NS_R": [
+          "H_1_1_w",
+          "E1_out"
+        ],
+        "EW_TL": [
+          "V_1_1_s",
+          "H_1_1_w",
+          "N1_out",
+          "E1_out"
+        ],
+        "EW_R": [
+          "N1_out",
+          "V_1_1_s"
+        ]
+      },
+      "turn_lookup": {
+        "E1_in|V_1_1_s": "left",
+        "E1_in|H_1_1_w": "through",
+        "E1_in|N1_out": "right",
+        "H_0_1_e|N1_out": "left",
+        "H_0_1_e|E1_out": "through",
+        "H_0_1_e|V_1_1_s": "right",
+        "N1_in|E1_out": "left",
+        "N1_in|V_1_1_s": "through",
+        "N1_in|H_1_1_w": "right",
+        "V_1_0_n|H_1_1_w": "left",
+        "V_1_0_n|N1_out": "through",
+        "V_1_0_n|E1_out": "right"
+      },
+      "neighbor_ids": [
+        "J10",
+        "J00",
+        "J01"
+      ],
+      "validation": {
+        "ok": [
+          "NS_TL",
+          "NS_R",
+          "EW_TL",
+          "EW_R"
+        ],
+        "conflicts": [],
+        "empty_groups": []
+      }
+    },
+    "J00": {
+      "n_links": 16,
+      "groups": {
+        "NS_TL": [
+          0,
+          1,
+          2,
+          8,
+          9,
+          10
+        ],
+        "NS_R": [
+          3,
+          11
+        ],
+        "EW_TL": [
+          4,
+          5,
+          6,
+          12,
+          13,
+          14
+        ],
+        "EW_R": [
+          7,
+          15
+        ]
+      },
+      "approach_edges": {
+        "N": [
+          "V_0_1_s"
+        ],
+        "S": [
+          "S0_in"
+        ],
+        "E": [
+          "H_1_0_w"
+        ],
+        "W": [
+          "W0_in"
+        ]
+      },
+      "downstream_edges": {
+        "NS_TL": [
+          "W0_out",
+          "V_0_0_n",
+          "H_0_0_e",
+          "S0_out"
+        ],
+        "NS_R": [
+          "H_0_0_e",
+          "W0_out"
+        ],
+        "EW_TL": [
+          "S0_out",
+          "W0_out",
+          "V_0_0_n",
+          "H_0_0_e"
+        ],
+        "EW_R": [
+          "V_0_0_n",
+          "S0_out"
+        ]
+      },
+      "turn_lookup": {
+        "H_1_0_w|S0_out": "left",
+        "H_1_0_w|W0_out": "through",
+        "H_1_0_w|V_0_0_n": "right",
+        "S0_in|W0_out": "left",
+        "S0_in|V_0_0_n": "through",
+        "S0_in|H_0_0_e": "right",
+        "V_0_1_s|H_0_0_e": "left",
+        "V_0_1_s|S0_out": "through",
+        "V_0_1_s|W0_out": "right",
+        "W0_in|V_0_0_n": "left",
+        "W0_in|H_0_0_e": "through",
+        "W0_in|S0_out": "right"
+      },
+      "neighbor_ids": [
+        "J10",
+        "J11",
+        "J01"
+      ],
+      "validation": {
+        "ok": [
+          "NS_TL",
+          "NS_R",
+          "EW_TL",
+          "EW_R"
+        ],
+        "conflicts": [],
+        "empty_groups": []
+      }
+    },
+    "J01": {
+      "n_links": 16,
+      "groups": {
+        "NS_TL": [
+          0,
+          1,
+          2,
+          8,
+          9,
+          10
+        ],
+        "NS_R": [
+          3,
+          11
+        ],
+        "EW_TL": [
+          4,
+          5,
+          6,
+          12,
+          13,
+          14
+        ],
+        "EW_R": [
+          7,
+          15
+        ]
+      },
+      "approach_edges": {
+        "N": [
+          "N0_in"
+        ],
+        "S": [
+          "V_0_0_n"
+        ],
+        "E": [
+          "H_1_1_w"
+        ],
+        "W": [
+          "W1_in"
+        ]
+      },
+      "downstream_edges": {
+        "NS_TL": [
+          "H_0_1_e",
+          "V_0_1_s",
+          "W1_out",
+          "N0_out"
+        ],
+        "NS_R": [
+          "W1_out",
+          "H_0_1_e"
+        ],
+        "EW_TL": [
+          "V_0_1_s",
+          "W1_out",
+          "N0_out",
+          "H_0_1_e"
+        ],
+        "EW_R": [
+          "N0_out",
+          "V_0_1_s"
+        ]
+      },
+      "turn_lookup": {
+        "H_1_1_w|V_0_1_s": "left",
+        "H_1_1_w|W1_out": "through",
+        "H_1_1_w|N0_out": "right",
+        "N0_in|H_0_1_e": "left",
+        "N0_in|V_0_1_s": "through",
+        "N0_in|W1_out": "right",
+        "V_0_0_n|W1_out": "left",
+        "V_0_0_n|N0_out": "through",
+        "V_0_0_n|H_0_1_e": "right",
+        "W1_in|N0_out": "left",
+        "W1_in|H_0_1_e": "through",
+        "W1_in|V_0_1_s": "right"
+      },
+      "neighbor_ids": [
+        "J10",
+        "J11",
+        "J00"
+      ],
+      "validation": {
+        "ok": [
+          "NS_TL",
+          "NS_R",
+          "EW_TL",
+          "EW_R"
+        ],
+        "conflicts": [],
+        "empty_groups": []
+      }
+    }
+  }
+}

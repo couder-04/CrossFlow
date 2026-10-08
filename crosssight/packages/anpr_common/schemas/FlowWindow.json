@@ -1,0 +1,73 @@
+{
+  "properties": {
+    "camera_id": {
+      "title": "Camera Id",
+      "type": "string"
+    },
+    "window_start": {
+      "format": "date-time",
+      "title": "Window Start",
+      "type": "string"
+    },
+    "window_end": {
+      "format": "date-time",
+      "title": "Window End",
+      "type": "string"
+    },
+    "counts_by_class": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Counts By Class",
+      "type": "object"
+    },
+    "avg_speed_kmh": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Avg Speed Kmh"
+    },
+    "congestion_index": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Congestion Index"
+    },
+    "volume": {
+      "default": 0,
+      "title": "Volume",
+      "type": "integer"
+    },
+    "lane": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Lane"
+    }
+  },
+  "required": [
+    "camera_id",
+    "window_start",
+    "window_end"
+  ],
+  "title": "FlowWindow",
+  "type": "object"
+}

@@ -1,0 +1,2683 @@
+{
+  "generated_at": "2026-09-30T07:31:47.663279+00:00",
+  "assumption": "OCR readings are correct; scenarios.json is ground truth",
+  "aggregate": {
+    "seeds_run": 20,
+    "seeds_passed": 20,
+    "seed_pass_rate": 1.0,
+    "by_type": {
+      "watchlist": {
+        "expected": 200,
+        "hit": 200
+      },
+      "cloned_plate": {
+        "expected": 40,
+        "hit": 40
+      },
+      "convoy": {
+        "ok": 20,
+        "n": 20
+      },
+      "loitering": {
+        "ok": 20,
+        "n": 20
+      },
+      "wrong_way": {
+        "ok": 20,
+        "n": 20
+      },
+      "geofence": {
+        "ok": 20,
+        "n": 20
+      }
+    },
+    "isolated_run": 11,
+    "isolated_passed": 11,
+    "isolated_pass_rate": 1.0,
+    "overall_pass": true
+  },
+  "seeds": [
+    {
+      "seed": 1,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "MH80VV8765",
+          "KA8R7199"
+        ],
+        "hit": [
+          "MH80VV8765",
+          "KA8R7199"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "KA7RUY9636",
+        "plates": [
+          "KA7RUY9636",
+          "DL79N5895",
+          "21BH6734X"
+        ],
+        "fired_plates": [
+          "KA7RUY9636"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "BR276794",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "HR7TLD1457",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "WB4NM0058",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "JH8X3118",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "JH8X3118",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "HR64B0275",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "HR64B0275",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "UP45CG1244",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "UP45CG1244",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "TN5M0198",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN5M0198",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 2,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "CG70J6934",
+          "TS97E9809"
+        ],
+        "hit": [
+          "CG70J6934",
+          "TS97E9809"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "RJ2C8565",
+        "plates": [
+          "RJ2C8565",
+          "TN83P6252",
+          "TS50PE5065"
+        ],
+        "fired_plates": [
+          "RJ2C8565"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "MH98C0420",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "UK90340",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "20BH6119MC",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "KA453348",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KA453348",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH6N2013",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH6N2013",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH66RX4227",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH66RX4227",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "GA38A1872",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "GA38A1872",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 3,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "WB48W1483",
+          "TN28EU1802"
+        ],
+        "hit": [
+          "WB48W1483",
+          "TN28EU1802"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "TS94LE2507",
+        "plates": [
+          "TS94LE2507",
+          "GA85PM9705",
+          "KL5J0848"
+        ],
+        "fired_plates": [
+          "TS94LE2507"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "MH500666",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "PB30SA2136",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "AP3RJ1585",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "MH87A0941",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH87A0941",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "DL7T1136",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "DL7T1136",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "DL66D7378",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "DL66D7378",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "KA65WG9387",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KA65WG9387",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 4,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "UP5GV3761",
+          "HP63C9559"
+        ],
+        "hit": [
+          "UP5GV3761",
+          "HP63C9559"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "GJ1TC1807",
+        "plates": [
+          "GJ1TC1807",
+          "OD4Y0378",
+          "MH780714"
+        ],
+        "fired_plates": [
+          "GJ1TC1807"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "UP580483",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "DL64P7286",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "MH6X5773",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "DL974535",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "DL974535",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "KL6REM3382",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KL6REM3382",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "TN90YX3697",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN90YX3697",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "UK5P7048",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "UK5P7048",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 5,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "PB93XR3994",
+          "UP3T6743"
+        ],
+        "hit": [
+          "PB93XR3994",
+          "UP3T6743"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "DL4RC1622",
+        "plates": [
+          "DL4RC1622",
+          "GJ691940",
+          "KL3CP1710"
+        ],
+        "fired_plates": [
+          "DL4RC1622"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "AP941528",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "PB42R4794",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "KA157919",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "KL639795",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KL639795",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "TN1A1488",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN1A1488",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH999741",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH999741",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "PB63R6766",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "PB63R6766",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 6,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "HP7J9398",
+          "KA844183"
+        ],
+        "hit": [
+          "HP7J9398",
+          "KA844183"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "PB98G5922",
+        "plates": [
+          "PB98G5922",
+          "TN18DT9234",
+          "MP535263"
+        ],
+        "fired_plates": [
+          "PB98G5922"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "UP20BV1291",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "MH99U3096",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "DL87D8281",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "GJ66K9874",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "GJ66K9874",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "WB67KC6175",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "WB67KC6175",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH6V7675",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH6V7675",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH78KM6274",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH78KM6274",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 7,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "GJ116601",
+          "MH39J5753"
+        ],
+        "hit": [
+          "GJ116601",
+          "MH39J5753"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "RJ97R9567",
+        "plates": [
+          "RJ97R9567",
+          "MH15CJ9678",
+          "WB50CR5330"
+        ],
+        "fired_plates": [
+          "RJ97R9567"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "JH14NG1454",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "UK53771",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "UP88KE2394",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "CG830555",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "CG830555",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH307970",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH307970",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "KA729904",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KA729904",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "UP45US6221",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "UP45US6221",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 8,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "MP7SM4590",
+          "MH9J4037"
+        ],
+        "hit": [
+          "MP7SM4590",
+          "MH9J4037"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "MH228472",
+        "plates": [
+          "MH228472",
+          "RJ28M6402",
+          "MH22D3704"
+        ],
+        "fired_plates": [
+          "MH228472"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "AP48GB7821",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "RJ80X1576",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "CG2K6322",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "AS64RW0483",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "AS64RW0483",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "GJ4MY2413",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "GJ4MY2413",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH9UKA2559",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH9UKA2559",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "RJ3MD8154",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "RJ3MD8154",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 9,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "AP8E6122",
+          "UP185925"
+        ],
+        "hit": [
+          "AP8E6122",
+          "UP185925"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "KA140943",
+        "plates": [
+          "KA140943",
+          "MH386025",
+          "RJ8NP0450"
+        ],
+        "fired_plates": [
+          "KA140943"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "UP51RG4068",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "DL79SA3270",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "KA788452",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "KA67RS9152",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KA67RS9152",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "OD9UT4849",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "OD9UT4849",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH29HU9601",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH29HU9601",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "KA32GL7825",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KA32GL7825",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 10,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "TS82TV5602",
+          "AP79K0363"
+        ],
+        "hit": [
+          "TS82TV5602",
+          "AP79K0363"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "MH27W4614",
+        "plates": [
+          "MH27W4614",
+          "GJ42N5450",
+          "KA20RE6838"
+        ],
+        "fired_plates": [
+          "MH27W4614"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "DL525042",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "MP2TB2790",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "DL108343",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "MH518328",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH518328",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "WB514255",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "WB514255",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "HR75X7533",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "HR75X7533",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "UK9T1393",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "UK9T1393",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 11,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "WB9L1914",
+          "KA840892"
+        ],
+        "hit": [
+          "WB9L1914",
+          "KA840892"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "MH1K1272",
+        "plates": [
+          "MH1K1272",
+          "MH2PWT0269",
+          "MH7AG9398"
+        ],
+        "fired_plates": [
+          "MH1K1272"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "PB7F4770",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "UK26KU3143",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "MH5JFD8452",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "DL714855",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "DL714855",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH2TYP8683",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH2TYP8683",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MP37DH7880",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MP37DH7880",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "DL84Y9809",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "DL84Y9809",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 12,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "UP71GW2222",
+          "UK12VT5699"
+        ],
+        "hit": [
+          "UP71GW2222",
+          "UK12VT5699"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "CG94KX6867",
+        "plates": [
+          "CG94KX6867",
+          "TN13UV4669",
+          "TS11Y1545"
+        ],
+        "fired_plates": [
+          "CG94KX6867"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "WB3U0356",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "WB19S7425",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "WB96064",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "JH2DH4827",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "JH2DH4827",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH238581",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH238581",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "21BH5414C",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "21BH5414C",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "TN83T9275",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN83T9275",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 13,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "BR799387",
+          "MH53KK0016"
+        ],
+        "hit": [
+          "BR799387",
+          "MH53KK0016"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "TN227361",
+        "plates": [
+          "TN227361",
+          "RJ9DLD8245",
+          "TN32G8942"
+        ],
+        "fired_plates": [
+          "TN227361"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "HR4BP5529",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "TN10LM0017",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "GJ51TY7373",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "PB941695",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "PB941695",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "RJ1VCY8495",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "RJ1VCY8495",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH29U6876",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH29U6876",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH41L3154",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH41L3154",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 14,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "MH5UC2142",
+          "KA75X9979"
+        ],
+        "hit": [
+          "MH5UC2142",
+          "KA75X9979"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "MH814879",
+        "plates": [
+          "MH814879",
+          "MH8VHA9147",
+          "WB15KJ5722"
+        ],
+        "fired_plates": [
+          "MH814879"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "MH7G4961",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "AP96XL2213",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "21BH3296E",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "GJ35HR1828",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "GJ35HR1828",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "AP55NW7463",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "AP55NW7463",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MP81V5071",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MP81V5071",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MP785585",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MP785585",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 15,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "GJ13L8713",
+          "GJ72DY5149"
+        ],
+        "hit": [
+          "GJ13L8713",
+          "GJ72DY5149"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "MH46B0688",
+        "plates": [
+          "MH46B0688",
+          "DL69JB2105",
+          "KA3FGE4572"
+        ],
+        "fired_plates": [
+          "MH46B0688"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "MP884296",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "DL472052",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "CH61X8330",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "HR214431",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "HR214431",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "AP57LF9759",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "AP57LF9759",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "PB52WA9350",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "PB52WA9350",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH89X9347",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH89X9347",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 16,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "AP7TA8025",
+          "GJ83GD4710"
+        ],
+        "hit": [
+          "AP7TA8025",
+          "GJ83GD4710"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "TN20ML7702",
+        "plates": [
+          "TN20ML7702",
+          "MH5T3526",
+          "MH3WK8607"
+        ],
+        "fired_plates": [
+          "TN20ML7702"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "MH2LD5756",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "WB56VH8941",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "RJ7CBH4105",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "TN5H6215",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN5H6215",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "20BH8746V",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "20BH8746V",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "KL8SD2156",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KL8SD2156",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "AS691635",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "AS691635",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 17,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "DL1K5480",
+          "MH6BF9377"
+        ],
+        "hit": [
+          "DL1K5480",
+          "MH6BF9377"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "GJ18437",
+        "plates": [
+          "GJ18437",
+          "MP985598",
+          "KL20S1948"
+        ],
+        "fired_plates": [
+          "GJ18437"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "MH735136",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "19BH2955HE",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "UP1N0483",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "MH76A2149",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH76A2149",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "TN10BA5853",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN10BA5853",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH26VK0367",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH26VK0367",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "RJ7DD5764",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "RJ7DD5764",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 18,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "GJ48095",
+          "UK94R0943"
+        ],
+        "hit": [
+          "GJ48095",
+          "UK94R0943"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "WB57TM7339",
+        "plates": [
+          "WB57TM7339",
+          "DL73JS9291",
+          "WB16PP6632"
+        ],
+        "fired_plates": [
+          "WB57TM7339"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "MH868451",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "MH1M8685",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "MH9HW9819",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "AP379616",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "AP379616",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MP97LH1224",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MP97LH1224",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "AP69TX4813",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "AP69TX4813",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "WB36376",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "WB36376",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 19,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "DL721672",
+          "MP1BA2793"
+        ],
+        "hit": [
+          "DL721672",
+          "MP1BA2793"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "UP6VG4780",
+        "plates": [
+          "UP6VG4780",
+          "MH46NE8866",
+          "PB9JS8723"
+        ],
+        "fired_plates": [
+          "UP6VG4780"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "RJ60F4465",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "DL81X0104",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "AS741953",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "OD874415",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "OD874415",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "KL31GK9163",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KL31GK9163",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "TN36X7136",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN36X7136",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "TN60J9178",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN60J9178",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    },
+    {
+      "seed": 20,
+      "injections": 46,
+      "alerts_fired": 38,
+      "expected_count": 16,
+      "watchlist": {
+        "expected": 10,
+        "hit": 10,
+        "miss": []
+      },
+      "cloned_plate": {
+        "expected": [
+          "MH5Y9262",
+          "UK6NK3562"
+        ],
+        "hit": [
+          "MH5Y9262",
+          "UK6NK3562"
+        ],
+        "miss": []
+      },
+      "convoy": {
+        "expected_lead": "OD98M2797",
+        "plates": [
+          "OD98M2797",
+          "DL5LB4272",
+          "GJ2JW5326"
+        ],
+        "fired_plates": [
+          "OD98M2797"
+        ],
+        "ok": true
+      },
+      "loitering": {
+        "expected": "TS88729",
+        "ok": true
+      },
+      "wrong_way": {
+        "expected": "UP466021",
+        "ok": true
+      },
+      "geofence": {
+        "expected": "DL88PF3830",
+        "ok": true
+      },
+      "missing_hard": [],
+      "pass": true,
+      "sample_alerts": [
+        {
+          "type": "watchlist",
+          "plate": "TN3M4091",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "TN3M4091",
+          "camera_ids": [
+            "cam-001"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:02:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH93XK5506",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH93XK5506",
+          "camera_ids": [
+            "cam-002"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:03:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "KA6E6158",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "KA6E6158",
+          "camera_ids": [
+            "cam-003"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:04:00+00:00"
+        },
+        {
+          "type": "watchlist",
+          "plate": "MH80B2199",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        },
+        {
+          "type": "geofence",
+          "plate": "MH80B2199",
+          "camera_ids": [
+            "cam-004"
+          ],
+          "severity": "high",
+          "ts": "2026-03-15T10:05:00+00:00"
+        }
+      ],
+      "scenario_summary": {
+        "watchlist_n": 10,
+        "clones": 2,
+        "convoy_cams": 8,
+        "loiter_passes": 6
+      }
+    }
+  ],
+  "isolated": [
+    {
+      "situation": "watchlist_exact",
+      "pass": true,
+      "detail": [
+        "watchlist",
+        "geofence"
+      ]
+    },
+    {
+      "situation": "watchlist_fuzzy_1edit",
+      "pass": true,
+      "detail": [
+        [
+          "watchlist",
+          "medium",
+          true
+        ],
+        [
+          "geofence",
+          "high",
+          false
+        ]
+      ]
+    },
+    {
+      "situation": "cloned_plate_impossible_speed",
+      "pass": true,
+      "detail": [
+        "cloned_plate"
+      ]
+    },
+    {
+      "situation": "wrong_way",
+      "pass": true,
+      "detail": [
+        "geofence",
+        "wrong_way"
+      ]
+    },
+    {
+      "situation": "geofence_outside_hours",
+      "pass": true,
+      "detail": [
+        "geofence"
+      ]
+    },
+    {
+      "situation": "geofence_inside_hours_no_alert",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "situation": "loitering_repeated_passes",
+      "pass": true,
+      "detail": {
+        "fired": true
+      }
+    },
+    {
+      "situation": "convoy_multi_camera",
+      "pass": true,
+      "detail": {
+        "fired": true
+      }
+    },
+    {
+      "situation": "benign_single_pass_no_false_positive",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "situation": "cloned_plate_low_confidence_rejected",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "situation": "feasible_transit_no_clone",
+      "pass": true,
+      "detail": []
+    }
+  ]
+}

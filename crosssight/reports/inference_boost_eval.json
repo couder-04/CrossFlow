@@ -1,0 +1,31 @@
+{
+  "boosts": [
+    "tta",
+    "lookalike_remix",
+    "3digit_template",
+    "bbox_pad"
+  ],
+  "results": [
+    {
+      "tag": "in_crops_tta",
+      "n": 1684,
+      "exact": 0.7399049881235155,
+      "char_acc": 0.9325221238938053,
+      "ms_med": 256.28531305119395
+    },
+    {
+      "tag": "in_synth_tta",
+      "n": 400,
+      "exact": 0.6775,
+      "char_acc": 0.9617021276595744,
+      "ms_med": 265.7645415747538
+    },
+    {
+      "tag": "in_full_tta_pad",
+      "n": 20,
+      "found": 0.95,
+      "exact": 0.7,
+      "char_acc": 0.8324607329842932
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "n_links": 16,
+  "groups": {
+    "NS_TL": [
+      0,
+      1,
+      2,
+      8,
+      9,
+      10
+    ],
+    "NS_R": [
+      3,
+      11
+    ],
+    "EW_TL": [
+      4,
+      5,
+      6,
+      12,
+      13,
+      14
+    ],
+    "EW_R": [
+      7,
+      15
+    ]
+  },
+  "approach_edges": {
+    "N": [
+      "N_in"
+    ],
+    "S": [
+      "S_in"
+    ],
+    "E": [
+      "E_in"
+    ],
+    "W": [
+      "W_in"
+    ]
+  },
+  "downstream_edges": {
+    "NS_TL": [
+      "E_out",
+      "S_out",
+      "W_out",
+      "N_out"
+    ],
+    "NS_R": [
+      "W_out",
+      "E_out"
+    ],
+    "EW_TL": [
+      "S_out",
+      "W_out",
+      "N_out",
+      "E_out"
+    ],
+    "EW_R": [
+      "N_out",
+      "S_out"
+    ]
+  },
+  "turn_lookup": {
+    "E_in|S_out": "left",
+    "E_in|W_out": "through",
+    "E_in|N_out": "right",
+    "N_in|E_out": "left",
+    "N_in|S_out": "through",
+    "N_in|W_out": "right",
+    "S_in|W_out": "left",
+    "S_in|N_out": "through",
+    "S_in|E_out": "right",
+    "W_in|N_out": "left",
+    "W_in|E_out": "through",
+    "W_in|S_out": "right"
+  },
+  "meta": [
+    "4:E_in->S_out:left:E",
+    "5:E_in->W_out:through:E",
+    "6:E_in->W_out:through:E",
+    "7:E_in->N_out:right:E",
+    "8:N_in->E_out:left:N",
+    "9:N_in->S_out:through:N",
+    "10:N_in->S_out:through:N",
+    "11:N_in->W_out:right:N",
+    "0:S_in->W_out:left:S",
+    "1:S_in->N_out:through:S",
+    "2:S_in->N_out:through:S",
+    "3:S_in->E_out:right:S",
+    "12:W_in->N_out:left:W",
+    "13:W_in->E_out:through:W",
+    "14:W_in->E_out:through:W",
+    "15:W_in->S_out:right:W"
+  ],
+  "validation": {
+    "ok": [
+      "NS_TL",
+      "NS_R",
+      "EW_TL",
+      "EW_R"
+    ],
+    "conflicts": [],
+    "empty_groups": []
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "event_id": "ae1fdf15-e77c-47b2-b483-3a3645365a79",
+  "camera_id": "cam-parking-demo",
+  "ts": "2026-09-30T08:56:53.785762Z",
+  "plate_raw": "9MRM624",
+  "plate_norm": "9MRM624",
+  "plate_valid": false,
+  "plate_format": "nonstandard",
+  "confidence": 1.0,
+  "char_conf": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "alternates": [],
+  "lane": 2,
+  "direction": "W",
+  "vehicle_class": "car",
+  "color": null,
+  "make": null,
+  "speed_kmh": null,
+  "crop_key": null,
+  "source": "ocr"
+}
+{
+  "event_id": "a8deec44-9f30-4c5b-a0be-0c04ce8eecab",
+  "camera_id": "cam-parking-demo",
+  "ts": "2026-09-30T08:58:03.715440Z",
+  "plate_raw": "9MRM624",
+  "plate_norm": "9MRM624",
+  "plate_valid": false,
+  "plate_format": "nonstandard",
+  "confidence": 1.0,
+  "char_conf": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "alternates": [],
+  "lane": 2,
+  "direction": "SW",
+  "vehicle_class": "car",
+  "color": null,
+  "make": null,
+  "speed_kmh": null,
+  "crop_key": null,
+  "source": "ocr"
+}
+Emitted 2 plate read(s)

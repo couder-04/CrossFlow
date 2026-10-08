@@ -1,0 +1,16 @@
+# Multi-camera OCR fleet example.
+# Copy to cameras.yaml and point sources at your files or RTSP URLs.
+#
+#   uv run python -m ocr_engine.cli fleet --config services/ocr_engine/config/cameras.example.yaml --dry-run
+#
+cameras:
+  - id: cam-rtsp-demo
+    source: "rtsp://rtsp.rtsplink.com/live/traffic?token=REPLACE_ME"
+    heading_deg: 90
+    lanes: 3
+    enabled: false
+  - id: cam-file-demo
+    source: "vendor/PlateOCR/samples/test_image.png"
+    heading_deg: 0
+    lanes: 2
+    enabled: true

@@ -1,0 +1,311 @@
+{
+  "generated": "2026-09-30",
+  "results": [
+    {
+      "tag": "in_synth_kaggle_india_v1",
+      "ocr_model": "india-v1",
+      "plate_format": "india",
+      "n": 400,
+      "exact": 0.6775,
+      "exact_count": 271,
+      "char_acc": 0.9359198998748436,
+      "ms_med": 31.67108353227377,
+      "ms_p95": 36.1461250577122,
+      "by_state": {
+        "Delhi": {
+          "n": 100,
+          "exact": 0.66
+        },
+        "Gujarat": {
+          "n": 100,
+          "exact": 0.77
+        },
+        "Karnataka": {
+          "n": 100,
+          "exact": 0.71
+        },
+        "Maharashtra": {
+          "n": 100,
+          "exact": 0.57
+        }
+      },
+      "failures_sample": [
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL01FXA1791.png",
+          "gt": "DL01FXA1791",
+          "pred": "DL01FX4179",
+          "conf": 0.8704452497884632
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL03PUO8397.png",
+          "gt": "DL03PUO8397",
+          "pred": "DL03PU0839",
+          "conf": 0.9766260981559753
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL05DQM1997.png",
+          "gt": "DL05DQM1997",
+          "pred": "DL05DQ1199",
+          "conf": 0.8662893516942859
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL06BIM5179.png",
+          "gt": "DL06BIM5179",
+          "pred": "DL06BI6519",
+          "conf": 0.8953546681557782
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL08UKF3597.png",
+          "gt": "DL08UKF3597",
+          "pred": "DL08UK5357",
+          "conf": 0.8668314114212989
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL18DKQ6590.png",
+          "gt": "DL18DKQ6590",
+          "pred": "DL18DK0659",
+          "conf": 0.9356132000684738
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL20SQP9812.png",
+          "gt": "DL20SQP9812",
+          "pred": "DL20SQ2982",
+          "conf": 0.890103431744501
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL21ANS4020.png",
+          "gt": "DL21ANS4020",
+          "pred": "DL21AN5402",
+          "conf": 0.9885959923267365
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL24MUJ3518.png",
+          "gt": "DL24MUJ3518",
+          "pred": "DL24MU1358",
+          "conf": 0.8965636051725596
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL24UUV3194.png",
+          "gt": "DL24UUV3194",
+          "pred": "DL24UU7314",
+          "conf": 0.8946752516552806
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL29PHV8731.png",
+          "gt": "DL29PHV8731",
+          "pred": "DL29PH7871",
+          "conf": 0.8776163243805059
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL29ZDH6517.png",
+          "gt": "DL29ZDH6517",
+          "pred": "DL29ZD1657",
+          "conf": 0.8966582120396197
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL34WEF0637.png",
+          "gt": "DL34WEF0637",
+          "pred": "DL34WE6067",
+          "conf": 0.8667181332362816
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL35FRT1807.png",
+          "gt": "DL35FRT1807",
+          "pred": "DL35FR7187",
+          "conf": 0.8858008326496929
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL43AJZ0828.png",
+          "gt": "DL43AJZ0828",
+          "pred": "DL43AJ2082",
+          "conf": 0.9556523025035858
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL46MFX1309.png",
+          "gt": "DL46MFX1309",
+          "pred": "DL46MF4139",
+          "conf": 0.8946816317737103
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL48FLA7598.png",
+          "gt": "DL48FLA7598",
+          "pred": "DL48FL4758",
+          "conf": 0.9550309896469116
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL49IWI2990.png",
+          "gt": "DL49IWI2990",
+          "pred": "DL49IW1290",
+          "conf": 0.92637520134449
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL56AED1738.png",
+          "gt": "DL56AED1738",
+          "pred": "DL56AE0178",
+          "conf": 0.9277799189090729
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL57HWJ6324.png",
+          "gt": "DL57HWJ6324",
+          "pred": "DL57HW3632",
+          "conf": 0.8448551437584684
+        }
+      ],
+      "failure_count": 129
+    },
+    {
+      "tag": "in_synth_kaggle_global",
+      "ocr_model": "cct-s-v2-global-model",
+      "plate_format": "none",
+      "n": 400,
+      "exact": 0.31,
+      "exact_count": 124,
+      "char_acc": 0.8265331664580726,
+      "ms_med": 22.866353974677622,
+      "ms_p95": 25.796917034313083,
+      "by_state": {
+        "Delhi": {
+          "n": 100,
+          "exact": 0.31
+        },
+        "Gujarat": {
+          "n": 100,
+          "exact": 0.33
+        },
+        "Karnataka": {
+          "n": 100,
+          "exact": 0.31
+        },
+        "Maharashtra": {
+          "n": 100,
+          "exact": 0.29
+        }
+      },
+      "failures_sample": [
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL00GS5366.png",
+          "gt": "DL00GS5366",
+          "pred": "DL00GS536",
+          "conf": 0.9209772169589996
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL01FXA1791.png",
+          "gt": "DL01FXA1791",
+          "pred": "DLOIFXA171",
+          "conf": 0.966203361749649
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL03PUO8397.png",
+          "gt": "DL03PUO8397",
+          "pred": "HHO8377",
+          "conf": 0.6992847099900246
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL05DQM1997.png",
+          "gt": "DL05DQM1997",
+          "pred": "DLO5DQM197",
+          "conf": 0.9480914056301117
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL06BIM5179.png",
+          "gt": "DL06BIM5179",
+          "pred": "DLO6BIM519",
+          "conf": 0.993659621477127
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL07CM1444.png",
+          "gt": "DL07CM1444",
+          "pred": "ULQ744444",
+          "conf": 0.7881329178810119
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL07GP8891.png",
+          "gt": "DL07GP8891",
+          "pred": "DLO7GP8891",
+          "conf": 0.9884649693965912
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL08UKF3597.png",
+          "gt": "DL08UKF3597",
+          "pred": "DLO8UKF357",
+          "conf": 0.9726285934448242
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL11J4422.png",
+          "gt": "DL11J4422",
+          "pred": "DL1IJ442",
+          "conf": 0.7559032201766968
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL18DKQ6590.png",
+          "gt": "DL18DKQ6590",
+          "pred": "DL18DK660",
+          "conf": 0.642976489663124
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL19VY9874.png",
+          "gt": "DL19VY9874",
+          "pred": "DL19VY987",
+          "conf": 0.9992570042610168
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL20J1713.png",
+          "gt": "DL20J1713",
+          "pred": "DL2037733",
+          "conf": 0.611845588684082
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL20SQP9812.png",
+          "gt": "DL20SQP9812",
+          "pred": "DL20SQP982",
+          "conf": 0.9746222734451294
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL21ANS4020.png",
+          "gt": "DL21ANS4020",
+          "pred": "BL31028433",
+          "conf": 0.43352039977908136
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL24MUJ3518.png",
+          "gt": "DL24MUJ3518",
+          "pred": "DL24MUJ358",
+          "conf": 0.9988928854465484
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL24UUV3194.png",
+          "gt": "DL24UUV3194",
+          "pred": "2L44UUV394",
+          "conf": 0.62774877846241
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL29O9777.png",
+          "gt": "DL29O9777",
+          "pred": "DL2909777",
+          "conf": 0.9959238529205322
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL29PHV8731.png",
+          "gt": "DL29PHV8731",
+          "pred": "DL29PH",
+          "conf": 0.7402250230312347
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL29ZDH6517.png",
+          "gt": "DL29ZDH6517",
+          "pred": "DL2926H",
+          "conf": 0.606226110458374
+        },
+        {
+          "file": "data/indian_synth_kaggle/extracted/generated/Delhi/private/DL30T3154.png",
+          "gt": "DL30T3154",
+          "pred": "DL3OT3154",
+          "conf": 0.9537634491920471
+        }
+      ],
+      "failure_count": 276
+    }
+  ],
+  "invalid": true,
+  "invalid_reason": "in_synth_kaggle_* removed: it scored india-v1 on the abtexp synthetic set it was trained on. All 273 plates of <=10 chars were training images (271 read correctly); all 127 plates of 11 chars cannot be emitted by the 10-slot model (0 correct). The number and the per-state table measured the share of 11-char plates per state, not accuracy. in_crops is the valid held-out Indian test set."
+}

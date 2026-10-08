@@ -1,0 +1,30 @@
+[
+  {
+    "scenario": "balanced",
+    "pct_fuel_reduction_vs_fixed": 8.606437261931198,
+    "ci_lo": 8.22501997578311,
+    "ci_hi": 8.997435659549451,
+    "sanity_flag": "OK"
+  },
+  {
+    "scenario": "dynamic",
+    "pct_fuel_reduction_vs_fixed": 16.50048788855564,
+    "ci_lo": 15.72146557801056,
+    "ci_hi": 17.30676814742321,
+    "sanity_flag": "OK"
+  },
+  {
+    "scenario": "low_demand",
+    "pct_fuel_reduction_vs_fixed": 14.458181031777709,
+    "ci_lo": 13.983862977178838,
+    "ci_hi": 14.907851787963828,
+    "sanity_flag": "OK"
+  },
+  {
+    "scenario": "peak_unbalanced",
+    "pct_fuel_reduction_vs_fixed": 21.759596013455283,
+    "ci_lo": 20.048127006637706,
+    "ci_hi": 23.538508826993734,
+    "sanity_flag": "OK"
+  }
+]
