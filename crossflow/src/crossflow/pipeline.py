@@ -29,33 +29,15 @@ from .paths import runs_dir, xtraflow_dir
 BASELINES = ("fixed_tuned", "actuated", "queue_pressure")
 OURS = "XtraFlow"
 SCENARIO = "balanced"  # XtraFlow's demand table is replaced per arm by the measured scales
-# Student t, two-sided 95 %, by degrees of freedom (n - 1). Beyond 30 use the normal value.
-_T95 = {
-    1: 12.706,
-    2: 4.303,
-    3: 3.182,
-    4: 2.776,
-    5: 2.571,
-    6: 2.447,
-    7: 2.365,
-    8: 2.306,
-    9: 2.262,
-    10: 2.228,
-    12: 2.179,
-    15: 2.131,
-    20: 2.086,
-    25: 2.060,
-    30: 2.042,
-}
 
 
 def _t95(df: int) -> float:
+    """Two-sided 95 % Student t critical value for ``df`` degrees of freedom."""
     if df <= 0:
         return float("nan")
-    for k in sorted(_T95):
-        if df <= k:
-            return _T95[k]
-    return 1.96
+    from scipy.stats import t  # imported here: only the full pipeline needs scipy
+
+    return float(t.ppf(0.975, df))
 
 
 # ---------------------------------------------------------------- XtraFlow plumbing
@@ -77,6 +59,18 @@ def ensure_networks(xdir: Path) -> None:
 def _use_xtraflow(xdir: str) -> None:
     if xdir not in sys.path:
         sys.path.insert(0, xdir)
+
+
+def xtraflow_run_settings(xdir: Path) -> dict[str, Any]:
+    """What XtraFlow will actually run with: its demand horizon and how controllers sense."""
+    _use_xtraflow(str(xdir))
+    from sim.util import load_config
+
+    cfg = load_config()
+    return {
+        "horizon_s": int(cfg["simulation"]["demand_horizon_s"]),
+        "info_mode": str(cfg["controller"].get("info_mode", "oracle")),
+    }
 
 
 def generate_routes(
@@ -151,6 +145,16 @@ def _run_job(job: dict[str, Any]) -> dict[str, Any]:
 
 
 # ------------------------------------------------------------------- statistics
+
+
+def _sensing_caveat(info_mode: str) -> str:
+    if info_mode == "oracle":
+        return (
+            "The controllers run with info_mode: oracle: they read SUMO ground truth (vehicle "
+            "positions, speeds, classes, turns), not camera detections. The cameras only set the "
+            "demand scale and vehicle mix, so detector errors are not reflected in these results."
+        )
+    return f"The controllers run with info_mode: {info_mode} (see XtraFlow's config.yaml)."
 
 
 def _mean(xs: list[float]) -> float:
@@ -317,6 +321,7 @@ def run_pipeline(
     from .signals import base_demand
 
     xdir = xtraflow_dir()
+    settings = xtraflow_run_settings(xdir)
     base = base_demand()
     if not base:
         raise RuntimeError(f"could not read demand.balanced from {xdir / 'config.yaml'}")
@@ -408,7 +413,8 @@ def run_pipeline(
         },
         "run": {
             "mode": "quick" if quick else "full",
-            "horizon_s": 3600,
+            "horizon_s": settings["horizon_s"],
+            "info_mode": settings["info_mode"],
             "seeds": list(range(1, n_seeds + 1)),
             "controllers": controllers,
             "scenario_template": SCENARIO,
@@ -427,6 +433,7 @@ def run_pipeline(
                 "Results are a SUMO simulation of one four-arm junction; they are not a field "
                 "measurement."
             ),
+            _sensing_caveat(settings["info_mode"]),
             *(
                 ["Quick mode runs only 2 seeds, so the interval is wide; use --full for evidence."]
                 if quick

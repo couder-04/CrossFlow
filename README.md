@@ -205,7 +205,8 @@ Indian multi-lane night or rain performance above 90% is **not** claimed.
 
 ## Limits you should know
 
-* Signal-control results are **simulation estimates** on an assumed mixed-traffic demand, with an oracle detector unless camera mode is on and proxy emission classes. They are not field results.
+* Signal-control results are **simulation estimates** on an assumed mixed-traffic demand, with proxy emission classes. They are not field results.
+* The controllers run with `info_mode: oracle` (XtraFlow's default): they read SUMO ground truth for vehicle position, speed, class and turn, **not camera detections**. In a pipeline run the cameras only set the demand scale and vehicle mix, so detector errors are not reflected in the signal-control numbers.
 * The large 8-17% fuel figures are against fixed, Webster and actuated control. Against the best pressure baseline the gain is 0.3-1.9% and often not statistically established; the pipeline reports it that way.
 * XtraFlow's parameters were tuned on its assumed demand and mix, not on the measured demand a pipeline run uses.
 * The demo city is CrossSight's synthetic grid. Its scheduler starts about 150 trips a day, so `--streams` (default 2000) superimposes independent scheduler runs to reach junction-scale flow; the factor is recorded in every report.

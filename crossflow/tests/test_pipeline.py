@@ -94,9 +94,17 @@ def test_single_seed_has_no_interval_and_is_json_safe():
 
 
 def test_t_quantile_is_sane():
-    assert pipeline._t95(4) == pytest.approx(2.776)
-    assert pipeline._t95(100) == pytest.approx(1.96)
+    from scipy.stats import t
+
+    assert pipeline._t95(4) == pytest.approx(2.7764, abs=1e-4)
+    assert pipeline._t95(1) == pytest.approx(12.7062, abs=1e-4)
     assert math.isnan(pipeline._t95(0))
+    # The old lookup table skipped from 12 to 15 to 20 and fell back to the normal value (1.96)
+    # beyond 30, understating the interval; the exact quantile is used for every df.
+    for df in (11, 13, 17, 22, 31, 100):
+        assert pipeline._t95(df) == pytest.approx(t.ppf(0.975, df))
+    assert pipeline._t95(100) == pytest.approx(1.984, abs=1e-3)
+    assert pipeline._t95(11) > pipeline._t95(12) > pipeline._t95(13)
 
 
 def test_geh_zero_when_equal():
@@ -292,3 +300,148 @@ def test_jobs_run_on_the_pregenerated_routes(xtraflow_on_path, monkeypatch):
     }
     pipeline._run_job(job)
     assert seen["routes_path"] == Path("/some/where/balanced_seed1.rou.xml")
+
+
+class _FakePool:
+    """Stands in for ProcessPoolExecutor: runs jobs in-process through the patched _run_job."""
+
+    def __init__(self, **_kw):
+        pass
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def map(self, fn, jobs):
+        return [fn(j) for j in jobs]
+
+
+@pytest.fixture
+def fake_pipeline(monkeypatch, tmp_path):
+    from types import SimpleNamespace
+
+    rates = {"N": 480.0, "S": 480.0, "E": 480.0, "W": 480.0}
+    monkeypatch.setattr(
+        pipeline,
+        "simulate_city",
+        lambda **_kw: SimpleNamespace(streams=1, traversals=5, dropped_diagonal=0),
+    )
+    monkeypatch.setattr(pipeline, "choose_demand", lambda *_a, **_kw: ("cam-1", 8, rates, []))
+    monkeypatch.setattr(pipeline, "vehicle_mix", lambda _recs: None)
+    monkeypatch.setattr(pipeline, "ensure_networks", lambda _x: None)
+    monkeypatch.setattr(
+        pipeline, "generate_routes", lambda _x, seeds, *_a: dict.fromkeys(seeds, "r")
+    )
+    monkeypatch.setattr(pipeline, "ProcessPoolExecutor", _FakePool)
+    monkeypatch.setattr(
+        pipeline, "_run_job", lambda j: _row(j["controller"], j["seed"], _GOOD[j["controller"]])
+    )
+    return tmp_path
+
+
+def _run_fake(out_dir, **kw):
+    path = pipeline.run_pipeline(out_dir=out_dir, seeds=2, log=lambda *_a: None, **kw)
+    return json.loads((path / "report.json").read_text()), (path / "report.md").read_text()
+
+
+def test_report_uses_the_horizon_from_xtraflows_config(fake_pipeline, monkeypatch):
+    from sim.util import load_config
+
+    report, md = _run_fake(fake_pipeline)
+    assert report["run"]["horizon_s"] == load_config()["simulation"]["demand_horizon_s"]
+
+    real = pipeline.xtraflow_run_settings
+    monkeypatch.setattr(
+        pipeline, "xtraflow_run_settings", lambda xdir: {**real(xdir), "horizon_s": 1800}
+    )
+    report, md = _run_fake(fake_pipeline)
+    assert report["run"]["horizon_s"] == 1800
+    assert "1800 s horizon" in md
+
+
+def test_report_states_the_controller_uses_oracle_sensing(fake_pipeline):
+    report, md = _run_fake(fake_pipeline)
+    assert report["run"]["info_mode"] == "oracle"
+    assert any("info_mode: oracle" in c and "not camera detections" in c for c in report["caveats"])
+    assert "info_mode: oracle" in md
+
+
+def test_readme_states_oracle_sensing():
+    text = (repo_root() / "README.md").read_text(encoding="utf-8")
+    assert "info_mode: oracle" in text and "not camera detections" in text
+
+
+_CONFIG = """\
+project:
+  name: x
+demand:
+  peak_unbalanced:
+    N: 720
+    S: 720
+    E: 180
+    W: 180
+  balanced:   # arms may come in any order, as floats, with comments
+    W: 400.5   # west
+    E: 4e2
+    S: 380
+    N: 480.0
+  low_demand:
+    N: 150
+    S: 150
+    E: 150
+    W: 150
+emission:
+  primary: HBEFA3
+"""
+
+
+def test_base_demand_is_order_independent_and_accepts_floats():
+    from crossflow.signals import _parse_base_demand
+
+    assert _parse_base_demand(_CONFIG) == {"W": 400.5, "E": 400.0, "S": 380.0, "N": 480.0}
+
+
+def test_base_demand_does_not_leak_into_the_next_scenario():
+    from crossflow.signals import _parse_base_demand
+
+    cfg = _CONFIG.replace("    N: 480.0\n", "")  # balanced now lacks N; low_demand still has it
+    assert _parse_base_demand(cfg) == {}
+
+
+def test_base_demand_ignores_other_scenarios_named_like_balanced():
+    from crossflow.signals import _parse_base_demand
+
+    cfg = "demand:\n  unbalanced:\n    N: 1\n    S: 1\n    E: 1\n    W: 1\n"
+    assert _parse_base_demand(cfg) == {}
+
+
+def test_base_demand_falls_back_to_yaml_for_flow_style(tmp_path, monkeypatch):
+    from crossflow import signals
+
+    (tmp_path / "config.yaml").write_text(
+        "demand:\n  balanced: {N: 100, S: 200, E: 300.5, W: 400}\n", encoding="utf-8"
+    )
+    monkeypatch.setenv("CROSSFLOW_XTRAFLOW_DIR", str(tmp_path))
+    assert signals.base_demand() == {"N": 100.0, "S": 200.0, "E": 300.5, "W": 400.0}
+
+
+def test_base_demand_without_yaml_or_a_readable_layout_is_empty(tmp_path, monkeypatch):
+    import builtins
+
+    from crossflow import signals
+
+    (tmp_path / "config.yaml").write_text(
+        "demand:\n  balanced: {N: 100, S: 200, E: 300, W: 400}\n", encoding="utf-8"
+    )
+    monkeypatch.setenv("CROSSFLOW_XTRAFLOW_DIR", str(tmp_path))
+    real_import = builtins.__import__
+
+    def no_yaml(name, *a, **kw):
+        if name == "yaml":
+            raise ImportError(name)
+        return real_import(name, *a, **kw)
+
+    monkeypatch.setattr(builtins, "__import__", no_yaml)
+    assert signals.base_demand() == {}

@@ -131,18 +131,61 @@ def latest_run() -> dict[str, Any] | None:
     return data if isinstance(data, dict) else None
 
 
-def base_demand() -> dict[str, float]:
-    """XtraFlow's balanced-scenario demand (veh/h per arm), the denominator of calibration."""
+_ARMS = ("N", "S", "E", "W")
+
+
+def _parse_base_demand(text: str) -> dict[str, float]:
+    """Read ``demand: balanced: {N,S,E,W}`` from config text, stdlib only.
+
+    Finds the ``balanced:`` block under the top-level ``demand:`` key and takes the four arm
+    keys in any order, as ints or floats, ignoring comments. Returns {} unless all four are
+    present.
+    """
     import re
 
+    out: dict[str, float] = {}
+    in_demand = False
+    balanced_indent: int | None = None
+    for raw in text.splitlines():
+        line = raw.split("#", 1)[0].rstrip()
+        if not line.strip():
+            continue
+        indent = len(line) - len(line.lstrip(" "))
+        if balanced_indent is not None:
+            if indent <= balanced_indent:
+                break
+            m = re.fullmatch(r"\s*([NSEW])\s*:\s*([-+]?(?:\d+\.?\d*|\.\d+)(?:[eE][-+]?\d+)?)", line)
+            if m:
+                out[m.group(1)] = float(m.group(2))
+        elif in_demand:
+            if indent == 0:
+                in_demand = False
+            elif re.fullmatch(r"\s*balanced\s*:", line):
+                balanced_indent = indent
+        elif indent == 0 and re.fullmatch(r"demand\s*:", line):
+            in_demand = True
+    return out if set(out) == set(_ARMS) else {}
+
+
+def _yaml_base_demand(text: str) -> dict[str, float]:
+    """Fallback for layouts the line parser does not read (e.g. flow style ``{N: 1, ...}``)."""
+    try:
+        import yaml
+    except ImportError:
+        return {}
+    try:
+        block = yaml.safe_load(text)["demand"]["balanced"]
+        out = {a: float(block[a]) for a in _ARMS}
+    except (yaml.YAMLError, KeyError, TypeError, ValueError):
+        return {}
+    return out
+
+
+def base_demand() -> dict[str, float]:
+    """XtraFlow's balanced-scenario demand (veh/h per arm), the denominator of calibration."""
     cfg = xtraflow_dir() / "config.yaml"
     try:
         text = cfg.read_text(encoding="utf-8")
     except OSError:
         return {}
-    m = re.search(
-        r"^demand:\s*\n\s+balanced:\s*\n((?:\s+[NSEW]:\s*\d+\s*\n){4})", text, re.MULTILINE
-    )
-    if not m:
-        return {}
-    return {a: float(v) for a, v in re.findall(r"([NSEW]):\s*(\d+)", m.group(1))}
+    return _parse_base_demand(text) or _yaml_base_demand(text)
