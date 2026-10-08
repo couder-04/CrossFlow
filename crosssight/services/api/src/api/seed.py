@@ -5,7 +5,7 @@ from __future__ import annotations
 import logging
 from uuid import uuid4
 
-from anpr_common.config import Settings
+from anpr_common.config import DEFAULT_SEED_PASSWORDS, Settings
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -25,6 +25,13 @@ async def ensure_seed_users(session: AsyncSession, settings: Settings) -> None:
         result = await session.execute(select(User).where(User.username == username))
         existing = result.scalar_one_or_none()
         if existing is None:
+            if settings.app_env != "dev" and password in DEFAULT_SEED_PASSWORDS:
+                logger.warning(
+                    "Not creating seed user %s: its password is the demo default and APP_ENV=%s",
+                    username,
+                    settings.app_env,
+                )
+                continue
             session.add(
                 User(
                     id=uuid4(),

@@ -6,7 +6,12 @@ import logging
 from contextlib import asynccontextmanager
 
 import uvicorn
-from anpr_common.config import DEFAULT_JWT_SECRET, Settings, get_settings
+from anpr_common.config import (
+    DEFAULT_JWT_SECRET,
+    DEFAULT_SEED_PASSWORDS,
+    Settings,
+    get_settings,
+)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -43,6 +48,10 @@ logger = logging.getLogger(__name__)
 def _validate_settings(settings: Settings) -> None:
     """Refuse default demo secrets outside local development."""
     if settings.app_env == "dev":
+        logger.warning(
+            "APP_ENV=dev: demo secrets and seed passwords are accepted. "
+            "Set APP_ENV=prod (or staging) and rotate secrets before exposing this API."
+        )
         return
     unsafe: list[str] = []
     if settings.jwt_secret == DEFAULT_JWT_SECRET:
@@ -51,6 +60,13 @@ def _validate_settings(settings: Settings) -> None:
         unsafe.append("POSTGRES_PASSWORD")
     if settings.minio_secret_key == "minioadmin":
         unsafe.append("MINIO_SECRET_KEY")
+    for env_name, value in (
+        ("SEED_ADMIN_PASS", settings.seed_admin_pass),
+        ("SEED_OPERATOR_PASS", settings.seed_operator_pass),
+        ("SEED_ANALYST_PASS", settings.seed_analyst_pass),
+    ):
+        if value in DEFAULT_SEED_PASSWORDS:
+            unsafe.append(env_name)
     if unsafe:
         raise RuntimeError(
             "Refusing to boot with default "

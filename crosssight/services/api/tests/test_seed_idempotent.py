@@ -35,7 +35,13 @@ class _Session:
 
 def test_prod_seed_keeps_rotated_password():
     session = _Session()
-    settings = Settings(app_env="prod", jwt_secret="not-the-default-secret-value-here")
+    settings = Settings(  # type: ignore[arg-type]
+        app_env="prod",
+        jwt_secret="not-the-default-secret-value-here",
+        seed_admin_pass="rotated-admin-pass",
+        seed_operator_pass="rotated-operator-pass",
+        seed_analyst_pass="rotated-analyst-pass",
+    )
 
     async def _run() -> None:
         await ensure_seed_users(session, settings)

@@ -7,6 +7,8 @@ from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 DEFAULT_JWT_SECRET = "change-me-demo-jwt-secret-anpr-platform"
+# Demo seed-account passwords; they must never be live outside APP_ENV=dev.
+DEFAULT_SEED_PASSWORDS = frozenset({"admin123", "operator123", "analyst123"})
 
 
 class Settings(BaseSettings):
