@@ -31,7 +31,7 @@ services/simulator/data/cache/
 *.onnx
 *.engine
 
-# Local training dumps and demo decks (CityFlow paper lives in docs/)
+# Local training dumps and demo decks
 /Ultralytics/
 /services/runs/
 /*.pptx

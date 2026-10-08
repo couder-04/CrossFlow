@@ -242,4 +242,4 @@ test suites, the camera-counts-to-SUMO calibration check, and an end-to-end pipe
 Component workflows for CrossSight and XtraFlow run on their own paths.
 
 Third-party material stays under its original terms (for example `crosssight/vendor/PlateOCR` and
-the CityFlow paper PDF in `crosssight/docs/`).
+the [CityFlow](https://arxiv.org/abs/1903.09254) city-scale tracking benchmark).
