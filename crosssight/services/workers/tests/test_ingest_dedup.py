@@ -1,5 +1,6 @@
 """Unit tests for ingest deduplication logic."""
 
+import asyncio
 import time
 from datetime import UTC, datetime
 from unittest.mock import AsyncMock
@@ -72,6 +73,7 @@ async def test_commit_waits_until_flush_succeeds():
     worker._buffer = [{"event_id": "evt-1"}]
     worker._heatmap_buffer = {(1, datetime(2026, 1, 1, tzinfo=UTC)): 1}
     worker._pending_offsets = {("anpr.reads.v1", 0): 11}
+    worker._flush_lock = asyncio.Lock()
     worker._ch = AsyncMock()
     worker._ch.insert_reads_async = AsyncMock(side_effect=RuntimeError("clickhouse down"))
     worker._ch.insert_heatmap_1min_async = AsyncMock()

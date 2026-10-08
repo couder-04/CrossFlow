@@ -24,6 +24,7 @@ from workers.health import HealthServer
 logger = logging.getLogger(__name__)
 
 BATCH_INTERVAL_SEC = 1.0
+BATCH_MAX_BACKOFF_SEC = 30.0
 BATCH_MAX_ROWS = 5000
 CONVOY_ZSET_TTL_SEC = 1800
 CONVOY_ZSET_PREFIX = "convoy:cam"
@@ -76,6 +77,8 @@ class IngestWorker:
         self._heatmap_buffer: dict[tuple[int, datetime], int] = {}
         # Next offset to commit per (topic, partition). Advanced only as reads are buffered.
         self._pending_offsets: dict[tuple[str, int], int] = {}
+        # Serialises flushes: the batch loop and the consume loop must never flush concurrently.
+        self._flush_lock = asyncio.Lock()
         self._cameras: dict[str, Any] = {}
         self._redis: Any | None = None
         self._ch: ClickHouseClient | None = None
@@ -95,21 +98,43 @@ class IngestWorker:
         if current is None or next_offset > current:
             self._pending_offsets[key] = next_offset
 
-    async def _commit_offsets(self) -> None:
-        if self._consumer is None or not self._pending_offsets:
+    def _merge_offsets(self, offsets: dict[tuple[str, int], int]) -> None:
+        """Put uncommitted offsets back, keeping the highest per partition."""
+        for key, next_offset in offsets.items():
+            current = self._pending_offsets.get(key)
+            if current is None or next_offset > current:
+                self._pending_offsets[key] = next_offset
+
+    async def _commit_offsets(self, offsets: dict[tuple[str, int], int] | None = None) -> None:
+        """Commit ``offsets`` (a snapshot taken with the batch), or everything pending."""
+        if offsets is None:
+            offsets, self._pending_offsets = self._pending_offsets, {}
+        if self._consumer is None or not offsets:
             return
-        offsets = {
-            TopicPartition(topic, partition): OffsetAndMetadata(next_offset, "")
-            for (topic, partition), next_offset in self._pending_offsets.items()
-        }
-        await self._consumer.commit(offsets)
-        self._pending_offsets.clear()
+        try:
+            await self._consumer.commit(
+                {
+                    TopicPartition(topic, partition): OffsetAndMetadata(next_offset, "")
+                    for (topic, partition), next_offset in offsets.items()
+                }
+            )
+        except Exception:
+            self._merge_offsets(offsets)
+            raise
 
     async def _flush_buffer(self) -> None:
+        async with self._flush_lock:
+            await self._flush_locked()
+
+    async def _flush_locked(self) -> None:
         if self._ch is None:
             return
         reads_batch: list[dict[str, Any]] | None = None
         heatmap_snapshot: dict[tuple[int, datetime], int] | None = None
+        # Snapshot the buffers and the offsets in one step (no await in between). Reads that the
+        # consume loop buffers while the insert below is in flight belong to the next flush, and
+        # so do their offsets: committing them now would lose those reads if we crashed.
+        offsets_snapshot, self._pending_offsets = self._pending_offsets, {}
         if self._buffer:
             reads_batch = self._buffer
             self._buffer = []
@@ -130,14 +155,15 @@ class IngestWorker:
                     for (h3_cell, minute), count in heatmap_snapshot.items()
                 ]
                 await self._ch.insert_heatmap_1min_async(rows)
-        except Exception:
+        except BaseException:
             if reads_batch:
                 self._buffer = reads_batch + self._buffer
             if heatmap_snapshot:
                 for key, count in heatmap_snapshot.items():
                     self._heatmap_buffer[key] = self._heatmap_buffer.get(key, 0) + count
+            self._merge_offsets(offsets_snapshot)
             raise
-        await self._commit_offsets()
+        await self._commit_offsets(offsets_snapshot)
 
     async def _handle_read(self, read: PlateRead) -> None:
         assert self._dedup is not None
@@ -205,10 +231,19 @@ class IngestWorker:
         await self._redis.expire(zkey, CONVOY_ZSET_TTL_SEC)
 
     async def _batch_loop(self) -> None:
+        backoff = BATCH_INTERVAL_SEC
         while not self._stop.is_set():
-            await asyncio.sleep(BATCH_INTERVAL_SEC)
-            if self._buffer or self._heatmap_buffer:
+            await asyncio.sleep(backoff)
+            if not (self._buffer or self._heatmap_buffer or self._pending_offsets):
+                continue
+            try:
                 await self._flush_buffer()
+            except Exception:
+                # Keep the task alive: the data is back in the buffer and is retried next round.
+                backoff = min(backoff * 2, BATCH_MAX_BACKOFF_SEC)
+                logger.exception("Batch flush failed; retrying in %.0fs", backoff)
+            else:
+                backoff = BATCH_INTERVAL_SEC
 
     async def _consume_loop(self) -> None:
         assert self._consumer is not None
