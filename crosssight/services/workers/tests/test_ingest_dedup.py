@@ -14,7 +14,9 @@ class FakeRedisDedup:
     def __init__(self) -> None:
         self.keys: set[str] = set()
 
-    async def is_duplicate(self, plate_norm: str, camera_id: str) -> bool:
+    async def is_duplicate(
+        self, plate_norm: str, camera_id: str, ts_epoch: float | None = None
+    ) -> bool:
         key = f"{plate_norm}:{camera_id}"
         if key in self.keys:
             return True
