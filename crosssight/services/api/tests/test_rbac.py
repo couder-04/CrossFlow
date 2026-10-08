@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 
+from types import SimpleNamespace
 from unittest.mock import AsyncMock, patch
+from uuid import uuid4
 
 import pytest
 from api.auth import Role, UserContext, create_access_token
+from api.db import get_session
 from api.deps import get_current_user, require_roles
 from api.main import create_app
 from fastapi import Depends, FastAPI
@@ -57,7 +60,19 @@ def test_require_roles_blocks_analyst():
 
 
 def test_trajectory_returns_403_for_analyst_token(app):
-    token = create_access_token("analyst", Role.analyst, extra={"uid": "analyst-id"})
+    user_id = uuid4()
+    token = create_access_token("analyst", Role.analyst, extra={"uid": str(user_id)})
+
+    class _Session:
+        # get_current_user now loads the user row for every request.
+        async def execute(self, _stmt):
+            row = SimpleNamespace(id=user_id, username="analyst", role="analyst")
+            return SimpleNamespace(scalar_one_or_none=lambda: row)
+
+    async def _session():
+        yield _Session()
+
+    app.dependency_overrides[get_session] = _session
     client = TestClient(app, raise_server_exceptions=False)
 
     resp = client.get(

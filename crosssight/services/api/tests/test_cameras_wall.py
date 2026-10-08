@@ -6,8 +6,8 @@ from types import SimpleNamespace
 from unittest.mock import AsyncMock, patch
 
 import pytest
-from api.auth import Role, create_access_token
-from api.deps import get_minio, get_minio_presign, get_session
+from api.auth import Role, UserContext
+from api.deps import get_current_user, get_minio, get_minio_presign, get_session
 from api.main import create_app
 from api.routes.cameras import frame_object_key
 from fastapi.testclient import TestClient
@@ -78,9 +78,11 @@ def wall_client():
         app.dependency_overrides[get_session] = _session
         app.dependency_overrides[get_minio] = lambda: minio
         app.dependency_overrides[get_minio_presign] = lambda: minio  # signs the browser URLs
-        token = create_access_token("admin", Role.admin, extra={"uid": "admin-id"})
+        # The session here serves camera rows, so skip the per-request user lookup.
+        app.dependency_overrides[get_current_user] = lambda: UserContext(
+            id="admin-id", username="admin", role=Role.admin
+        )
         client = TestClient(app)
-        client.headers["Authorization"] = f"Bearer {token}"
         yield client, minio
 
 

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from typing import Annotated, Any
+from uuid import UUID
 
 import clickhouse_connect
 import redis.asyncio as aioredis
@@ -96,13 +97,28 @@ async def get_current_user(
             status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token"
         ) from exc
 
-    if not user.id:
-        result = await session.execute(select(User).where(User.username == user.username))
-        row = result.scalar_one_or_none()
-        if row is None:
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
-        user.id = str(row.id)
-    return user
+    # The token only identifies the account. Look the row up on every request so deleted users
+    # are rejected and role changes apply immediately instead of living on in a stale token.
+    stmt = select(User)
+    if user.id:
+        try:
+            stmt = stmt.where(User.id == UUID(user.id))
+        except ValueError as exc:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token"
+            ) from exc
+    else:
+        stmt = stmt.where(User.username == user.username)
+    row = (await session.execute(stmt)).scalar_one_or_none()
+    if row is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
+    try:
+        role = Role(row.role)
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found"
+        ) from exc
+    return UserContext(id=str(row.id), username=row.username, role=role)
 
 
 def require_roles(*allowed: Role) -> Callable:
