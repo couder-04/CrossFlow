@@ -454,15 +454,12 @@ def main() -> None:
                 row["t_s"] = round(float(row["t_s"]) * scale, 2)
 
     out = build_story(overlays, decisions, Path(args.out))
-    copy = ROOT / "results" / "demo" / "yolo_story.mp4"
-    copy.write_bytes(out.read_bytes())
     summary.setdefault("outputs", {})["story"] = str(out.relative_to(ROOT))
     summary.setdefault("outputs", {})["story_plan"] = str(
         out.with_name("yolo_story_plan.json").relative_to(ROOT)
     )
     summary_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(out)
-    print(copy)
 
 
 if __name__ == "__main__":

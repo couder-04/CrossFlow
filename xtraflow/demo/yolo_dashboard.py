@@ -200,7 +200,7 @@ if view.startswith("Story"):
     )
     story = resolve((summary.get("outputs") or {}).get("story"))
     if story is None:
-        story = resolve("results/demo/yolo/yolo_story.mp4") or resolve("results/demo/yolo_story.mp4")
+        story = resolve("results/demo/yolo/yolo_story.mp4")
     if story is None:
         st.warning("Story video missing. Run: `python -m demo.yolo_story`")
     else:

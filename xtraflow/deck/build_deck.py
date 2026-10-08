@@ -1530,7 +1530,7 @@ def slide_yolo_overlays(prs, data, page, _total):
 
     outputs = yolo.get("outputs") or {}
     mosaic = outputs.get("mosaic") or "results/demo/yolo/yolo_mosaic.mp4"
-    primary = outputs.get("primary_overlay") or "results/demo/yolo_overlay.mp4"
+    primary = outputs.get("primary_overlay") or "results/demo/yolo/overlay_N.mp4"
     overlays = outputs.get("overlays") or [f"results/demo/yolo/overlay_{a}.mp4" for a in order]
     panel_x = L + 2 * (cell_w + gap_x) + 0.2
     panel_w = CONTENT_W - (panel_x - L)

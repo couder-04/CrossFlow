@@ -43,7 +43,7 @@
       "results/demo/yolo/counts_W.json"
     ],
     "mosaic": "results/demo/yolo/yolo_mosaic.mp4",
-    "primary_overlay": "results/demo/yolo_overlay.mp4",
+    "primary_overlay": "results/demo/yolo/overlay_N.mp4",
     "story": "results/demo/yolo/yolo_story.mp4",
     "story_plan": "results/demo/yolo/yolo_story_plan.json"
   },

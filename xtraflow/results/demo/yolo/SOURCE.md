@@ -27,7 +27,7 @@ Outputs:
 - `results/demo/yolo/yolo_story.mp4` — **main story**: detect → fuel pressure → GO / YELLOW / ALL RED / PAUSE
 - `results/demo/yolo/yolo_story_plan.json` — signal plan + timings used for the story
 - `results/demo/yolo/yolo_story.gif` — README-playable loop
-- `results/demo/yolo_overlay.mp4` — primary single-cam overlay
+- `results/demo/yolo/overlay_N.mp4` — primary single-cam overlay
 - `results/demo/yolo/yolo_mosaic.mp4` — plain 2×2 mosaic
 - `results/demo/yolo/overlay_{N,E,S,W}.mp4`
 - `results/demo/yolo/counts_*.json`

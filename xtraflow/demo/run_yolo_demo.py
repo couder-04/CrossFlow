@@ -267,10 +267,6 @@ def main() -> None:
             s.unlink(missing_ok=True)
 
     primary = overlays[0]
-    dest = ROOT / "results" / "demo" / "yolo_overlay.mp4"
-    dest.write_bytes(primary.read_bytes())
-    if mosaic.exists():
-        (ROOT / "results" / "demo" / "yolo_mosaic.mp4").write_bytes(mosaic.read_bytes())
 
     clubbed = {
         "peak_vehicles": sum(s["peak_vehicles"] for s in per_cam_stats.values()),
@@ -299,7 +295,7 @@ def main() -> None:
             "overlays": [str(p.relative_to(ROOT)) for p in overlays],
             "counts": [str(p.relative_to(ROOT)) for p in counts_paths],
             "mosaic": str(mosaic.relative_to(ROOT)) if mosaic.exists() else None,
-            "primary_overlay": str(dest.relative_to(ROOT)),
+            "primary_overlay": str(primary.relative_to(ROOT)),
         },
         "per_camera": per_cam_stats,
         "clubbed": clubbed,
@@ -349,7 +345,7 @@ def main() -> None:
                 "",
                 "Outputs:",
                 "",
-                "- `results/demo/yolo_overlay.mp4` — primary single-cam overlay",
+                "- `results/demo/yolo/overlay_N.mp4` — primary single-cam overlay",
                 "- `results/demo/yolo/yolo_mosaic.mp4` — 2×2 mosaic",
                 "- `results/demo/yolo/overlay_{N,E,S,W}.mp4`",
                 "- `results/demo/yolo/counts_*.json`",

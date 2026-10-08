@@ -2,7 +2,7 @@
 
 Reads a video you supply under data/video/. Does not download anything.
 On-screen label: Input feasibility — not a fuel-saving result.
-Writes results/demo/yolo_overlay.mp4.
+Writes results/demo/yolo/overlay_N.mp4.
 """
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ def main() -> None:
     p.add_argument("--video", default="")
     p.add_argument("--roi", default=str(ROOT / "perception" / "roi.yaml"))
     p.add_argument("--model", default="yolov8n.pt")
-    p.add_argument("--out", default=str(ROOT / "results" / "demo" / "yolo_overlay.mp4"))
+    p.add_argument("--out", default=str(ROOT / "results" / "demo" / "yolo" / "overlay_N.mp4"))
     p.add_argument("--max-frames", type=int, default=0, help="Stop after N processed frames (0 = all)")
     args = p.parse_args()
     video_dir = ROOT / "data" / "video"
