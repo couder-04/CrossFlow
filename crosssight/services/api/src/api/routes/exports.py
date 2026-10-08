@@ -7,7 +7,7 @@ from datetime import UTC, datetime, timedelta
 from typing import Any
 from uuid import UUID
 
-from anpr_common.intelligence.access import export_action
+from anpr_common.intelligence.access import PLATE_EXPORTS, export_action, role_can
 from anpr_common.intelligence.exporters import export_filename
 from fastapi import APIRouter, BackgroundTasks, Form, HTTPException, Query
 from fastapi.responses import Response
@@ -95,19 +95,22 @@ async def retry_export(
 
 @router.get("/exports")
 async def list_exports(
-    session: SessionDep, _user: UserDep, limit: int = Query(50, ge=1, le=200)
+    session: SessionDep, user: UserDep, limit: int = Query(50, ge=1, le=200)
 ) -> list[dict]:
-    result = await session.execute(
-        select(ExportRow).order_by(ExportRow.created_at.desc()).limit(limit)
-    )
+    stmt = select(ExportRow)
+    if not role_can(user.role.value, "export_plates"):
+        # Plate-level exports are gated by export_plates everywhere else; don't list them either.
+        stmt = stmt.where(ExportRow.kind.not_in(sorted(PLATE_EXPORTS)))
+    result = await session.execute(stmt.order_by(ExportRow.created_at.desc()).limit(limit))
     return [_export_out(row) for row in result.scalars()]
 
 
 @router.get("/exports/{export_id}")
-async def get_export(export_id: UUID, session: SessionDep, _user: UserDep) -> dict:
+async def get_export(export_id: UUID, session: SessionDep, user: UserDep) -> dict:
     row = await session.get(ExportRow, export_id)
     if row is None:
         raise HTTPException(status_code=404, detail="Export not found")
+    _forbid(user.role.value, export_action(row.kind))
     return _export_out(row)
 
 
