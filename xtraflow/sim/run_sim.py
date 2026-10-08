@@ -255,13 +255,17 @@ def run_one(
                     fuel_vtype[vid] = traci.vehicle.getTypeID(vid)
             except Exception:
                 pass
-            try:
-                edge = traci.vehicle.getRoadID(vid)
-                for ap, edges in ctrls[0].approach_edges.items():
-                    if edge in edges:
-                        seen_approach[ap].add(vid)
-            except Exception:
-                pass
+            # Demand only: a vehicle counts if it first shows up on an approach during a step
+            # that starts before the demand horizon. Vehicles first seen while draining are not
+            # demand, and how many there are depends on the controller.
+            if step - 1 < horizon:
+                try:
+                    edge = traci.vehicle.getRoadID(vid)
+                    for ap, edges in ctrls[0].approach_edges.items():
+                        if edge in edges:
+                            seen_approach[ap].add(vid)
+                except Exception:
+                    pass
         queue_samples.append(float(halted))
         max_queue = max(max_queue, float(halted))
 
@@ -327,7 +331,9 @@ def run_one(
         status = "ok"
 
     approach_counts = {a: len(seen_approach[a]) for a in seen_approach}
-    hours = max(step, 1) / 3600.0
+    # Per hour of demand, not of simulated time: the drain period after the horizon varies by
+    # controller and would otherwise deflate the rate of whichever controller drains slower.
+    hours = max(horizon, 1) / 3600.0
     approach_veh_h = {a: (approach_counts[a] / hours) for a in approach_counts}
 
     row = {
