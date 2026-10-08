@@ -11,6 +11,7 @@ from fastapi import APIRouter, HTTPException, Query, status
 from geoalchemy2.functions import ST_X, ST_Y
 from sqlalchemy import select
 
+from api.ch import ch_query
 from api.db import AuditLogRow, Camera, CameraPair
 from api.deps import ClickHouseDep, OperatorUserDep, SessionDep, SettingsDep
 from api.schemas import GeoJSONFeatureCollection, TrajectorySummary
@@ -49,13 +50,13 @@ async def get_trajectory(
 
     await _write_audit(session, _user.id, plate_norm, case_id, start, end, fuzzy)
 
-    reads = _fetch_reads(ch, plate_norm, start, end)
+    reads = await _fetch_reads(ch, plate_norm, start, end)
     data_status = "narrow"
     # If still empty, expand to all available history for this plate.
     if not reads and from_ts is None and to_ts is None:
         wide_start = datetime(2000, 1, 1, tzinfo=UTC)
         wide_end = now + timedelta(days=2)
-        reads = _fetch_reads(ch, plate_norm, wide_start, wide_end)
+        reads = await _fetch_reads(ch, plate_norm, wide_start, wide_end)
         data_status = "widened_to_all_history"
         await _write_audit(
             session,
@@ -69,13 +70,13 @@ async def get_trajectory(
             reason="empty_result_fallback",
         )
     if fuzzy:
-        pool = _distinct_plates_in_window(ch, start, end)
+        pool = await _distinct_plates_in_window(ch, start, end)
         fuzzy_plates = [
             p for p, _ in candidates(plate_norm, pool=pool, max_cost=1.0) if p != plate_norm
         ]
         candidate_reads: dict[str, list[Sighting]] = {}
         for fp in fuzzy_plates:
-            candidate_reads[fp] = _fetch_reads(ch, fp, start, end)
+            candidate_reads[fp] = await _fetch_reads(ch, fp, start, end)
         sightings = merge_fuzzy_reads(reads, candidate_reads)
     else:
         sightings = reads
@@ -89,7 +90,7 @@ async def get_trajectory(
         if s.camera_id in coords:
             s.lat, s.lng = coords[s.camera_id]
 
-    travel_times = _fetch_travel_times(ch, start)
+    travel_times = await _fetch_travel_times(ch, start)
     legs = build_trajectory_legs(
         sightings,
         pairs,
@@ -139,7 +140,7 @@ async def _write_audit(
     await session.commit()
 
 
-def _fetch_reads(ch, plate_norm: str, start: datetime, end: datetime) -> list[Sighting]:
+async def _fetch_reads(ch, plate_norm: str, start: datetime, end: datetime) -> list[Sighting]:
     query = """
         SELECT
             camera_id, ts, plate_norm, confidence, vehicle_class, color, direction, crop_key
@@ -149,7 +150,8 @@ def _fetch_reads(ch, plate_norm: str, start: datetime, end: datetime) -> list[Si
           AND ts <= {end:DateTime64(3)}
         ORDER BY ts
     """
-    result = ch.query(
+    result = await ch_query(
+        ch,
         query,
         parameters={
             "plate": plate_norm,
@@ -172,18 +174,18 @@ def _fetch_reads(ch, plate_norm: str, start: datetime, end: datetime) -> list[Si
     ]
 
 
-def _distinct_plates_in_window(ch, start: datetime, end: datetime) -> list[str]:
+async def _distinct_plates_in_window(ch, start: datetime, end: datetime) -> list[str]:
     query = """
         SELECT DISTINCT plate_norm
         FROM anpr_reads
         WHERE ts >= {start:DateTime64(3)} AND ts <= {end:DateTime64(3)}
         LIMIT 50000
     """
-    result = ch.query(query, parameters={"start": start, "end": end})
+    result = await ch_query(ch, query, parameters={"start": start, "end": end})
     return [row[0] for row in result.result_rows]
 
 
-def _fetch_travel_times(ch, at: datetime) -> dict[tuple[str, str], float]:
+async def _fetch_travel_times(ch, at: datetime) -> dict[tuple[str, str], float]:
     hour_start = at.replace(minute=0, second=0, microsecond=0)
     query = """
         SELECT camera_a, camera_b, median_travel_s
@@ -193,7 +195,7 @@ def _fetch_travel_times(ch, at: datetime) -> dict[tuple[str, str], float]:
           AND sample_count > 0
     """
     try:
-        result = ch.query(query, parameters={"start": hour_start})
+        result = await ch_query(ch, query, parameters={"start": hour_start})
     except Exception:  # noqa: BLE001
         return {}
     return {(row[0], row[1]): float(row[2]) for row in result.result_rows}

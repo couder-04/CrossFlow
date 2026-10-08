@@ -29,6 +29,7 @@ from fastapi import HTTPException, UploadFile, status
 from geoalchemy2 import WKTElement
 from shapely.geometry import shape
 from sqlalchemy import select
+from starlette.concurrency import run_in_threadpool
 
 from api.db import (
     AlertRow,
@@ -446,7 +447,12 @@ async def _run_export(export_id: UUID, role: str) -> None:
         await session.commit()
         try:
             headers, records, sections = await _collect(
-                session, get_clickhouse(settings), settings, row.kind, row.filters, role
+                session,
+                await run_in_threadpool(get_clickhouse, settings),
+                settings,
+                row.kind,
+                row.filters,
+                role,
             )
             if row.format == "csv":
                 payload = rows_to_csv(headers, records)
@@ -561,7 +567,7 @@ async def _collect(session, ch, settings, kind: str, filters: dict, role: str):
         if filters.get("camera_id"):
             where += " AND camera_id = {camera:String}"
             params["camera"] = filters["camera_id"]
-        rows = _query(
+        rows = await _query(
             ch,
             f"""
             SELECT camera_id, ts, plate_norm, confidence, vehicle_class

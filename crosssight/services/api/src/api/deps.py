@@ -39,6 +39,9 @@ def get_clickhouse(settings: Settings = Depends(get_settings_dep)):
             username=settings.clickhouse_user,
             password=settings.clickhouse_password or "",
             database=settings.clickhouse_db,
+            # One shared client is used from many worker threads (see api.ch); a ClickHouse
+            # session is single-user and would reject concurrent queries.
+            autogenerate_session_id=False,
         )
     return _clickhouse_client
 

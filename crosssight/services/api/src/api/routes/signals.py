@@ -12,6 +12,7 @@ from typing import Any
 
 from fastapi import APIRouter, HTTPException, Query
 
+from api.ch import ch_query
 from api.deps import ClickHouseDep, UserDep
 
 try:  # the package is mounted/installed alongside the API; the API still boots without it
@@ -99,7 +100,8 @@ async def demand(
     if hours <= 0 or hours > MAX_PERIOD_HOURS:
         raise HTTPException(status_code=422, detail="period must be positive and at most 7 days")
 
-    result = ch.query(
+    result = await ch_query(
+        ch,
         """
         SELECT camera_id,
                sum(counts_car), sum(counts_motorcycle), sum(counts_bus),

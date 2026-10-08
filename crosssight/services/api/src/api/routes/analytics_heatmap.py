@@ -8,6 +8,7 @@ from typing import Any
 from anpr_common.geo import h3_to_str
 from fastapi import APIRouter, HTTPException, Query, status
 
+from api.ch import ch_query
 from api.deps import ClickHouseDep, UserDep
 from api.video_feeds import normalize_source
 
@@ -25,9 +26,10 @@ def _parse_window(window: str) -> timedelta:
     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid window format")
 
 
-def _video_heatmap_cells(ch, start: datetime, end: datetime) -> list[dict[str, Any]]:
+async def _video_heatmap_cells(ch, start: datetime, end: datetime) -> list[dict[str, Any]]:
     """Plate reads that came from the video cameras only."""
-    result = ch.query(
+    result = await ch_query(
+        ch,
         """
         SELECT h3_r8, count() AS total
         FROM anpr_reads
@@ -48,7 +50,7 @@ def _video_heatmap_cells(ch, start: datetime, end: datetime) -> list[dict[str, A
     ]
 
 
-def _heatmap_cells(ch, start: datetime, end: datetime) -> list[dict[str, Any]]:
+async def _heatmap_cells(ch, start: datetime, end: datetime) -> list[dict[str, Any]]:
     """Prefer heatmap_1min; fall back to aggregating anpr_reads."""
     query = """
         SELECT h3_cell, sum(count) AS total
@@ -57,7 +59,8 @@ def _heatmap_cells(ch, start: datetime, end: datetime) -> list[dict[str, Any]]:
         GROUP BY h3_cell
         ORDER BY total DESC
     """
-    result = ch.query(
+    result = await ch_query(
+        ch,
         query,
         parameters={
             "start": start.replace(tzinfo=None) if start.tzinfo else start,
@@ -77,7 +80,8 @@ def _heatmap_cells(ch, start: datetime, end: datetime) -> list[dict[str, Any]]:
         GROUP BY h3_r8
         ORDER BY total DESC
     """
-    result = ch.query(
+    result = await ch_query(
+        ch,
         fallback,
         parameters={
             "start": start.replace(tzinfo=None) if start.tzinfo else start,
@@ -101,7 +105,7 @@ async def heatmap(
     end = datetime.now(UTC).replace(second=0, microsecond=0)
     start = end - delta
     if normalize_source(source) == "video":
-        cells = _video_heatmap_cells(ch, start, end)
+        cells = await _video_heatmap_cells(ch, start, end)
         return {
             "window": window,
             "start": start.isoformat(),
@@ -110,12 +114,12 @@ async def heatmap(
             "stale": False,
             "latest_ts": None,
         }
-    cells = _heatmap_cells(ch, start, end)
+    cells = await _heatmap_cells(ch, start, end)
     stale = False
     latest_ts: str | None = None
     # If wall-clock window is empty (common under 60× sim), use latest data window.
     if not cells:
-        latest = ch.query("SELECT max(ts) FROM anpr_reads")
+        latest = await ch_query(ch, "SELECT max(ts) FROM anpr_reads")
         if latest.result_rows and latest.result_rows[0][0] is not None:
             end_raw = latest.result_rows[0][0]
             if hasattr(end_raw, "tzinfo") and end_raw.tzinfo is None:
@@ -125,7 +129,7 @@ async def heatmap(
                 end_raw.replace(second=0, microsecond=0) if hasattr(end_raw, "replace") else end_raw
             )
             start = end - delta
-            cells = _heatmap_cells(ch, start, end)
+            cells = await _heatmap_cells(ch, start, end)
             stale = True
     return {
         "window": window,

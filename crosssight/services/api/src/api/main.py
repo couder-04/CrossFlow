@@ -14,6 +14,7 @@ from anpr_common.config import (
 )
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.concurrency import run_in_threadpool
 
 from api.clickhouse_retention import apply_clickhouse_retention_from_settings
 from api.db import get_session_factory
@@ -85,7 +86,7 @@ async def lifespan(app: FastAPI):
         await apply_stale_job_recovery(session, stale_minutes=settings.stale_job_minutes)
         await ensure_seed_users(session, settings)
     try:
-        apply_clickhouse_retention_from_settings(settings)
+        await run_in_threadpool(apply_clickhouse_retention_from_settings, settings)
     except Exception:
         logger.warning("ClickHouse retention TTL was not applied", exc_info=True)
     logger.info("API started; seed users ensured")

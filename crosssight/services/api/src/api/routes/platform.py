@@ -17,6 +17,7 @@ from geoalchemy2.functions import ST_X, ST_Y
 from sqlalchemy import select
 
 from api.auditutil import audit_row
+from api.ch import ch_query
 from api.db import AlertRow, Camera
 from api.deps import ClickHouseDep, OperatorUserDep, SessionDep, SettingsDep, UserDep
 from api.video_feeds import normalize_source
@@ -54,9 +55,9 @@ def _resolved(value: Any, fallback: Any) -> Any:
     return value
 
 
-def _query(ch, sql: str, parameters: dict) -> list[tuple]:
+async def _query(ch, sql: str, parameters: dict) -> list[tuple]:
     try:
-        result = ch.query(sql, parameters=parameters)
+        result = await ch_query(ch, sql, parameters)
     except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -149,13 +150,15 @@ def _health_for(
     return output
 
 
-def _read_stats(ch, start: datetime, end: datetime) -> tuple[dict[str, datetime], dict[str, int]]:
-    last_rows = _query(
+async def _read_stats(
+    ch, start: datetime, end: datetime
+) -> tuple[dict[str, datetime], dict[str, int]]:
+    last_rows = await _query(
         ch,
         "SELECT camera_id, max(ts) FROM anpr_reads GROUP BY camera_id",
         {},
     )
-    window_rows = _query(
+    window_rows = await _query(
         ch,
         """
         SELECT camera_id, count()
@@ -186,7 +189,7 @@ async def camera_health(
         raise HTTPException(status_code=403, detail="Not permitted")
     begin, finish = _window(start, end)
     cameras = await _cameras(session)
-    last, counts = _read_stats(ch, begin, finish)
+    last, counts = await _read_stats(ch, begin, finish)
     rows = _health_for(cameras, last, counts, finish, settings)
     summary = {
         state: sum(1 for row in rows if row["state"] == state)
@@ -210,7 +213,7 @@ async def scan_camera_health(
     finish = datetime.now(UTC)
     begin = finish - timedelta(seconds=settings.health_window_s)
     cameras = await _cameras(session)
-    last, counts = _read_stats(ch, begin, finish)
+    last, counts = await _read_stats(ch, begin, finish)
     rows = _health_for(cameras, last, counts, finish, settings)
     created = 0
     for row in rows:
@@ -262,7 +265,7 @@ async def camera_od(
 ) -> dict[str, Any]:
     begin, finish = _window(start, end)
     params = {"start": _naive(begin), "end": _naive(finish), "k": settings.od_k_anon}
-    rows = _query(
+    rows = await _query(
         ch,
         """
         SELECT origin_camera, dest_camera, sum(trip_count) AS trips
@@ -277,7 +280,7 @@ async def camera_od(
     # AggregatingMergeTree uniq column is not safe on a live table. Count
     # plates from raw reads for the same window and join in process.
     if rows:
-        counted = _query(
+        counted = await _query(
             ch,
             """
             SELECT origin, dest, uniqExact(plate_norm) AS vehicles
@@ -305,7 +308,7 @@ async def camera_od(
             if cell is not None:
                 cells.append(cell)
     else:
-        derived = _query(
+        derived = await _query(
             ch,
             """
             SELECT origin, dest, count() AS trips, uniqExact(plate_norm) AS vehicles
@@ -359,7 +362,7 @@ async def travel_times(
     if destination:
         where += " AND camera_b = {destination:String}"
         params["destination"] = destination
-    rows = _query(
+    rows = await _query(
         ch,
         f"""
         SELECT camera_a, camera_b,
@@ -372,7 +375,7 @@ async def travel_times(
         params,
     )
     if not rows:
-        rows = _query(
+        rows = await _query(
             ch,
             f"""
             SELECT camera_a, camera_b,
@@ -424,7 +427,7 @@ async def dwell(
     if camera_id:
         where += " AND camera_id = {camera:String}"
         params["camera"] = camera_id
-    stored = _query(
+    stored = await _query(
         ch,
         f"""
         SELECT plate_norm, camera_id, vehicle_class, entry_ts, exit_ts, dwell_s, classification, confidence
@@ -458,7 +461,7 @@ async def dwell(
     read_where = "ts >= {start:DateTime} AND ts < {end:DateTime}"
     if camera_id:
         read_where += " AND camera_id = {camera:String}"
-    raw = _query(
+    raw = await _query(
         ch,
         f"""
         SELECT plate_norm, camera_id, vehicle_class, ts, confidence
@@ -511,7 +514,7 @@ async def vehicle_classes(
     if camera_id:
         where += " AND camera_id = {camera:String}"
         params["camera"] = camera_id
-    rows = _query(
+    rows = await _query(
         ch,
         f"""
         SELECT vehicle_class, camera_id, count()
@@ -523,7 +526,7 @@ async def vehicle_classes(
     )
     # Rows are already grouped; aggregate the counts instead of expanding one dict per read.
     summary = aggregate_vehicle_class_counts(rows)
-    trend = _query(
+    trend = await _query(
         ch,
         f"""
         SELECT toStartOfHour(ts) AS hour, vehicle_class, count()
@@ -566,7 +569,7 @@ async def recent_reads(
     else:
         where += " AND camera_id NOT LIKE 'vid-%'"
     try:
-        rows = _query(
+        rows = await _query(
             ch,
             f"""
             SELECT camera_id, ts, plate_norm, confidence, vehicle_class, track_id, bbox, crop_key, lane, direction
@@ -579,7 +582,7 @@ async def recent_reads(
         )
         extended = True
     except HTTPException:
-        rows = _query(
+        rows = await _query(
             ch,
             f"""
             SELECT camera_id, ts, plate_norm, confidence, vehicle_class, crop_key, lane, direction
@@ -650,7 +653,7 @@ async def investigation(
     if camera_id:
         where += " AND camera_id = {camera:String}"
         params["camera"] = camera_id
-    rows = _query(
+    rows = await _query(
         ch,
         f"""
         SELECT camera_id, ts, plate_norm, confidence, vehicle_class, crop_key, direction, speed_kmh
@@ -728,11 +731,11 @@ async def overview(
     try:
         finish = datetime.now(UTC)
         begin = finish - timedelta(seconds=settings.health_window_s)
-        last, counts = _read_stats(ch, begin, finish)
+        last, counts = await _read_stats(ch, begin, finish)
         health_rows = _health_for(cameras, last, counts, finish, settings)
         for row in health_rows:
             summary[row["state"]] = summary.get(row["state"], 0) + 1
-        count_rows = _query(
+        count_rows = await _query(
             ch,
             "SELECT count() FROM anpr_reads WHERE ts >= {start:DateTime}",
             {"start": _naive(finish - timedelta(minutes=15))},

@@ -8,6 +8,7 @@ from typing import Any
 from anpr_common.geo import h3_to_str
 from fastapi import APIRouter, HTTPException, Query, status
 
+from api.ch import ch_query
 from api.deps import ClickHouseDep, SettingsDep, UserDep
 
 router = APIRouter(prefix="/analytics", tags=["analytics"])
@@ -34,7 +35,7 @@ async def od_matrix(
         GROUP BY origin_h3, dest_h3
         HAVING trips >= {k:UInt32}
     """
-    result = ch.query(query, parameters={"hour": hour_naive, "k": settings.od_k_anon})
+    result = await ch_query(ch, query, parameters={"hour": hour_naive, "k": settings.od_k_anon})
     cells = [
         {
             "origin_h3": h3_to_str(int(row[0])),
@@ -63,7 +64,8 @@ async def od_matrix(
             HAVING trips >= {k:UInt32}
         """
         end = hour_naive + timedelta(hours=1)
-        result = ch.query(
+        result = await ch_query(
+            ch,
             fallback,
             parameters={"start": hour_naive, "end": end, "k": settings.od_k_anon},
         )
@@ -86,7 +88,8 @@ async def od_matrix(
             GROUP BY origin_h3, dest_h3
             HAVING trips >= {k:UInt32}
         """
-        result = ch.query(
+        result = await ch_query(
+            ch,
             day_q,
             parameters={"start": day_start, "end": day_end, "k": settings.od_k_anon},
         )
@@ -118,7 +121,8 @@ async def od_matrix(
             GROUP BY origin, dest
             HAVING trips >= {k:UInt32}
         """
-        result = ch.query(
+        result = await ch_query(
+            ch,
             day_reads,
             parameters={"start": day_start, "end": day_end, "k": settings.od_k_anon},
         )

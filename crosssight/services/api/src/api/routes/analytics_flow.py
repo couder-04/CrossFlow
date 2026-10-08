@@ -7,6 +7,7 @@ from typing import Any
 
 from fastapi import APIRouter, Query
 
+from api.ch import ch_query
 from api.deps import ClickHouseDep, UserDep
 from api.routes.analytics_heatmap import _parse_window
 
@@ -34,7 +35,8 @@ async def flow(
           AND window_start <= {end:DateTime}
         ORDER BY window_start, lane
     """
-    result = ch.query(
+    result = await ch_query(
+        ch,
         query,
         parameters={"camera_id": camera_id, "start": from_ts, "end": to_ts},
     )
@@ -71,18 +73,18 @@ async def segments(
     at: datetime = Query(...),
 ) -> dict[str, Any]:
     """Congestion index per directed camera pair at the given time."""
-    segments_out = _segment_congestion(ch, at)
+    segments_out = await _segment_congestion(ch, at)
     if not segments_out:
-        latest = ch.query("SELECT max(window_start) FROM segment_speed_5min")
+        latest = await ch_query(ch, "SELECT max(window_start) FROM segment_speed_5min")
         if latest.result_rows and latest.result_rows[0][0] is not None:
             at = latest.result_rows[0][0]
             if hasattr(at, "tzinfo") and at.tzinfo is None:
                 at = at.replace(tzinfo=UTC)
-            segments_out = _segment_congestion(ch, at)
+            segments_out = await _segment_congestion(ch, at)
     return {"at": at.isoformat() if hasattr(at, "isoformat") else str(at), "segments": segments_out}
 
 
-def _segment_congestion(ch, at: datetime) -> list[dict[str, Any]]:
+async def _segment_congestion(ch, at: datetime) -> list[dict[str, Any]]:
     at_hour = at.replace(minute=0, second=0, microsecond=0)
     query = """
         SELECT
@@ -97,7 +99,7 @@ def _segment_congestion(ch, at: datetime) -> list[dict[str, Any]]:
         GROUP BY camera_a, camera_b
         HAVING samples > 0
     """
-    current = ch.query(query, parameters={"start": at_hour})
+    current = await ch_query(ch, query, parameters={"start": at_hour})
     baseline_query = """
         SELECT camera_a, camera_b, quantile(0.85)(median_speed_kmh) AS free_flow
         FROM segment_speed_5min
@@ -105,7 +107,7 @@ def _segment_congestion(ch, at: datetime) -> list[dict[str, Any]]:
         GROUP BY camera_a, camera_b
     """
     try:
-        baseline = ch.query(baseline_query)
+        baseline = await ch_query(ch, baseline_query)
         free_flow = {(r[0], r[1]): float(r[2]) for r in baseline.result_rows if r[2]}
     except Exception:  # noqa: BLE001
         free_flow = {}
@@ -133,15 +135,15 @@ def _segment_congestion(ch, at: datetime) -> list[dict[str, Any]]:
 @router.get("/bottlenecks")
 async def bottlenecks(ch: ClickHouseDep, _user: UserDep) -> dict[str, Any]:
     at = datetime.now(UTC).replace(minute=0, second=0, microsecond=0)
-    seg_data = _segment_congestion(ch, at)
-    flow_baselines = _camera_flow_baselines(ch)
+    seg_data = await _segment_congestion(ch, at)
+    flow_baselines = await _camera_flow_baselines(ch)
     out = []
     for seg in seg_data:
         if seg["congestion_index"] < 0.5:
             continue
         downstream = seg["camera_b"]
         baseline = flow_baselines.get(downstream, 0)
-        current = _current_camera_volume(ch, downstream, at)
+        current = await _current_camera_volume(ch, downstream, at)
         if baseline <= 0:
             continue
         if current >= 0.6 * baseline:
@@ -166,7 +168,8 @@ async def anomalies(ch: ClickHouseDep, _user: UserDep) -> dict[str, Any]:
         WHERE window_start >= {start:DateTime} - INTERVAL 15 MINUTE
         GROUP BY camera_id
     """
-    current = {row[0]: int(row[1]) for row in ch.query(query, parameters={"start": at}).result_rows}
+    current_result = await ch_query(ch, query, parameters={"start": at})
+    current = {row[0]: int(row[1]) for row in current_result.result_rows}
     baseline_query = """
         SELECT
             camera_id,
@@ -180,7 +183,7 @@ async def anomalies(ch: ClickHouseDep, _user: UserDep) -> dict[str, Any]:
     baselines: dict[str, tuple[float, float]] = {}
     dow = at.isoweekday()
     hr = at.hour
-    for row in ch.query(baseline_query).result_rows:
+    for row in (await ch_query(ch, baseline_query)).result_rows:
         if int(row[1]) == dow and int(row[2]) == hr:
             baselines[row[0]] = (float(row[3] or 0), float(row[4] or 1.0))
 
@@ -234,7 +237,7 @@ async def route_density(
         LIMIT 500
     """
     try:
-        result = ch.query(query, parameters={"start": start_n, "end": end_n})
+        result = await ch_query(ch, query, parameters={"start": start_n, "end": end_n})
         corridors = [
             {"camera_a": row[0], "camera_b": row[1], "hop_count": int(row[2])}
             for row in result.result_rows
@@ -249,27 +252,28 @@ async def route_density(
             ORDER BY hops DESC
             LIMIT 500
         """
-        result = ch.query(fallback, parameters={"start": start_n, "end": end_n})
+        result = await ch_query(ch, fallback, parameters={"start": start_n, "end": end_n})
         corridors = [
             {"camera_a": row[0], "camera_b": row[1], "hop_count": int(row[2])}
             for row in result.result_rows
         ]
     if not corridors:
         # Use latest available window when wall-clock is empty (60× sim).
-        latest = ch.query("SELECT max(ts) FROM anpr_reads")
+        latest = await ch_query(ch, "SELECT max(ts) FROM anpr_reads")
         if latest.result_rows and latest.result_rows[0][0] is not None:
             end_n = latest.result_rows[0][0]
             if hasattr(end_n, "tzinfo") and end_n.tzinfo is not None:
                 end_n = end_n.replace(tzinfo=None)
             start_n = end_n - delta
             try:
-                result = ch.query(query, parameters={"start": start_n, "end": end_n})
+                result = await ch_query(ch, query, parameters={"start": start_n, "end": end_n})
                 corridors = [
                     {"camera_a": row[0], "camera_b": row[1], "hop_count": int(row[2])}
                     for row in result.result_rows
                 ]
             except Exception:  # noqa: BLE001
-                result = ch.query(
+                result = await ch_query(
+                    ch,
                     """
                     SELECT camera_a, camera_b, sum(sample_count) AS hops
                     FROM segment_speed_5min
@@ -292,7 +296,7 @@ async def route_density(
     }
 
 
-def _camera_flow_baselines(ch) -> dict[str, float]:
+async def _camera_flow_baselines(ch) -> dict[str, float]:
     query = """
         SELECT camera_id, avg(volume) AS baseline
         FROM flow_5min
@@ -300,18 +304,18 @@ def _camera_flow_baselines(ch) -> dict[str, float]:
         GROUP BY camera_id
     """
     try:
-        return {row[0]: float(row[1]) for row in ch.query(query).result_rows}
+        return {row[0]: float(row[1]) for row in (await ch_query(ch, query)).result_rows}
     except Exception:  # noqa: BLE001
         return {}
 
 
-def _current_camera_volume(ch, camera_id: str, at: datetime) -> int:
+async def _current_camera_volume(ch, camera_id: str, at: datetime) -> int:
     query = """
         SELECT sum(volume) FROM flow_5min
         WHERE camera_id = {cam:String}
           AND window_start >= {start:DateTime} - INTERVAL 15 MINUTE
     """
-    result = ch.query(query, parameters={"cam": camera_id, "start": at})
+    result = await ch_query(ch, query, parameters={"cam": camera_id, "start": at})
     if not result.result_rows:
         return 0
     return int(result.result_rows[0][0] or 0)
