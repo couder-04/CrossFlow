@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+from pathlib import Path
 
 import pytest
 from crossflow.paths import repo_root
@@ -233,3 +234,61 @@ def test_markdown_report_has_a_failures_table_and_the_verdict():
     assert "| XtraFlow | 1 | 0 | 0 |" in md
     assert "| fixed_tuned | 0 | 0 | 0 |" in md
     assert "seed 3 (timeout)" in md
+
+
+@pytest.fixture
+def xtraflow_on_path():
+    pipeline._use_xtraflow(str(repo_root() / "xtraflow"))
+
+
+def test_routes_are_generated_once_per_seed_in_the_parent(xtraflow_on_path, monkeypatch):
+    from sim import gen_demand as gen
+
+    calls = []
+    real = gen.generate
+
+    def spy(scenario, seed, cfg=None, **kw):
+        calls.append((seed, kw["mix_override"], kw["demand_scale"]))
+        return real(scenario, seed, cfg, **kw)
+
+    monkeypatch.setattr(gen, "generate", spy)
+    scales = {"N": 1.1234, "S": 0.9876, "E": 1.0543, "W": 0.8765}
+    mix = {"car": 0.61, "truck": 0.39}
+    routes = {}
+    try:
+        routes = pipeline.generate_routes(repo_root() / "xtraflow", [901, 902], scales, mix)
+        assert sorted(routes) == [901, 902]
+        assert [c[0] for c in calls] == [901, 902]  # once per seed, not per controller
+        assert len(set(routes.values())) == 2
+        for seed, path in routes.items():
+            assert path.endswith(".rou.xml") and "_mix" in path  # the mix is part of the name
+            # Same file run_one would have generated for itself.
+            expected = real("balanced", seed, None, mix_override=mix, demand_scale=scales)
+            assert Path(path) == expected
+    finally:
+        for path in routes.values():
+            Path(path).unlink(missing_ok=True)
+            Path(path).with_suffix(".meta.json").unlink(missing_ok=True)
+
+
+def test_jobs_run_on_the_pregenerated_routes(xtraflow_on_path, monkeypatch):
+    from sim import run_sim
+
+    seen = {}
+
+    def fake_run_one(scenario, controller, seed, **kw):
+        seen.update(kw)
+        return {"status": "ok"}
+
+    monkeypatch.setattr(run_sim, "run_one", fake_run_one)
+    job = {
+        "controller": "XtraFlow",
+        "seed": 1,
+        "scales": {"N": 1.0},
+        "mix": None,
+        "routes": "/some/where/balanced_seed1.rou.xml",
+        "run_id": "t",
+        "horizon_s": None,
+    }
+    pipeline._run_job(job)
+    assert seen["routes_path"] == Path("/some/where/balanced_seed1.rou.xml")

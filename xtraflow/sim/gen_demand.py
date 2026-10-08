@@ -1,12 +1,15 @@
 """Seeded demand generation independent of controller (same seed => identical demand)."""
 from __future__ import annotations
 
+import hashlib
+import json
 import math
+import os
 import random
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
-from sim.util import ROOT, SCENARIOS, ensure_dirs, load_config, save_json
+from sim.util import ROOT, SCENARIOS, ensure_dirs, load_config
 
 APPROACHES = ["N", "S", "E", "W"]
 DEST_FROM_TURN = {
@@ -48,6 +51,25 @@ def _sample_turn(rng: random.Random, ratios: Dict[str, float]) -> str:
     return rng.choices(keys, weights=weights, k=1)[0]
 
 
+def _mix_digest(mix: Dict[str, float]) -> str:
+    """Stable short fingerprint of a mix (same recipe as run_sim). Not builtin hash(), which
+    changes between processes under PYTHONHASHSEED."""
+    key = ",".join(f"{k}={float(mix[k]):.4f}" for k in sorted(mix))
+    return hashlib.md5(key.encode("utf-8")).hexdigest()[:8]
+
+
+def _write_atomic(path: Path, text: str) -> None:
+    """Write via a per-process temp file and rename, so concurrent writers and readers of the
+    same path only ever see a complete file (the content is identical for the same inputs)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(f".tmp.{os.getpid()}")
+    try:
+        tmp.write_text(text, encoding="utf-8")
+        os.replace(tmp, path)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+
 def generate(scenario: str, seed: int, cfg: Dict[str, Any] | None = None,
              demand_mult: float = 1.0, mix_override: Dict[str, float] | None = None,
              demand_scale: Dict[str, float] | None = None) -> Path:
@@ -64,6 +86,10 @@ def generate(scenario: str, seed: int, cfg: Dict[str, Any] | None = None,
         tag = f"_m{demand_mult:.2f}"
         if demand_scale:
             tag += "_s" + "_".join(f"{k}{demand_scale[k]:.2f}" for k in sorted(demand_scale))
+        if mix_override is not None:
+            # Different mixes must not share (and overwrite) one file: controllers run in
+            # parallel and each reads its routes while another may be writing.
+            tag += f"_mix{_mix_digest(mix_override)}"
         out_path = out_dir / f"{scenario}_seed{seed}{tag}.rou.xml"
 
     rng = random.Random(int(seed))  # deterministic
@@ -108,7 +134,7 @@ def generate(scenario: str, seed: int, cfg: Dict[str, Any] | None = None,
     # Sort by depart
     vehicles_sorted = sorted(vehicles, key=lambda line: float(line.split('depart="')[1].split('"')[0]))
     xml = ['<routes>'] + vehicles_sorted + ['</routes>']
-    out_path.write_text("\n".join(xml) + "\n", encoding="utf-8")
+    _write_atomic(out_path, "\n".join(xml) + "\n")
 
     meta = {
         "scenario": scenario,
@@ -119,7 +145,7 @@ def generate(scenario: str, seed: int, cfg: Dict[str, Any] | None = None,
         "path": str(out_path.relative_to(ROOT)),
         "label": "assumed mixed-traffic scenario",
     }
-    save_json(out_path.with_suffix(".meta.json"), meta)
+    _write_atomic(out_path.with_suffix(".meta.json"), json.dumps(meta, indent=2, default=str))
     return out_path
 
 

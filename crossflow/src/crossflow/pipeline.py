@@ -74,11 +74,34 @@ def ensure_networks(xdir: Path) -> None:
             raise RuntimeError(f"{mod} failed:\n{proc.stdout[-800:]}\n{proc.stderr[-800:]}")
 
 
+def _use_xtraflow(xdir: str) -> None:
+    if xdir not in sys.path:
+        sys.path.insert(0, xdir)
+
+
+def generate_routes(
+    xdir: Path, seeds: list[int], scales: dict[str, float], mix: dict[str, float] | None
+) -> dict[int, str]:
+    """Write each seed's routes file once, before any worker starts.
+
+    The controllers of one seed share identical demand; letting every worker regenerate it
+    would have them rewrite the same file while others read it.
+    """
+    _use_xtraflow(str(xdir))
+    from sim.gen_demand import generate
+    from sim.util import load_config
+
+    cfg = load_config()
+    return {
+        s: str(generate(SCENARIO, s, cfg, demand_mult=1.0, mix_override=mix, demand_scale=scales))
+        for s in seeds
+    }
+
+
 def _init_worker(xdir: str) -> None:
     import os
 
-    if xdir not in sys.path:
-        sys.path.insert(0, xdir)
+    _use_xtraflow(xdir)
     if not os.environ.get("SUMO_HOME"):
         try:
             import sumo
@@ -101,6 +124,7 @@ def _run_job(job: dict[str, Any]) -> dict[str, Any]:
             mix_override=job["mix"],
             run_id=job["run_id"],
             horizon_s=job["horizon_s"],
+            routes_path=Path(job["routes"]) if job.get("routes") else None,
         )
     except Exception as exc:  # noqa: BLE001 - reported, not hidden
         return {
@@ -324,16 +348,19 @@ def run_pipeline(
     log("[3/4] xtraflow: SUMO runs")
     ensure_networks(xdir)
     controllers = [*BASELINES, OURS]
+    seed_list = list(range(1, n_seeds + 1))
+    routes = generate_routes(xdir, seed_list, scales, mix)
     jobs = [
         {
             "controller": c,
             "seed": s,
             "scales": scales,
             "mix": mix,
+            "routes": routes[s],
             "run_id": f"cf{run_id}",
             "horizon_s": horizon_s,
         }
-        for s in range(1, n_seeds + 1)
+        for s in seed_list
         for c in controllers
     ]
     rows: list[dict[str, Any]] = []
