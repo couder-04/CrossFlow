@@ -5,3 +5,6 @@ Synced: 2026-09-30 india-v1.1 (PlateOCR commit 80eab8b): README, MODEL_CARD, fin
   infer.py and plate_format.py carry CrossSight-local edits and were NOT overwritten.
 Integrated into services/ocr_engine as OCR_BACKEND=plateocr.
 Default for this platform: PLATEOCR_OCR_MODEL=india-v1.1 + plate_format=india.
+
+TODO: copy LICENSE from upstream when one exists. https://github.com/Ajitesh-07/PlateOCR
+has no LICENSE file on main (commit 80eab8b; GitHub license field is empty).
