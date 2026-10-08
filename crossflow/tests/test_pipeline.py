@@ -138,3 +138,98 @@ def test_latest_run_is_newest_report(tmp_path, monkeypatch):
 
 def test_repo_root_finds_checkout():
     assert (repo_root() / "xtraflow" / "config.yaml").exists()
+
+
+def _report(stats):
+    """Smallest report dict render_markdown accepts."""
+    return {
+        "created": "2026-01-01T00:00:00+00:00",
+        "run": {"mode": "full", "horizon_s": 3600, "seeds": [1, 2, 3, 4, 5]},
+        "source": {"kind": "test", "camera": "cam", "hour": 8, "demand_streams": 1},
+        "demand": {
+            "observed_veh_h": {"N": 480.0},
+            "scale_vs_xtraflow_balanced": {"N": 1.0},
+            "geh_observed_vs_simulated": {},
+            "vehicle_mix_source": "test",
+            "geh_target": 5.0,
+        },
+        "caveats": [],
+        **stats,
+    }
+
+
+_GOOD = {"fixed_tuned": 0.12, "actuated": 0.11, "queue_pressure": 0.10, "XtraFlow": 0.09}
+
+
+def _fail(rows, controller, seed, status):
+    return [
+        {**r, "status": status} if (r["controller"], r["seed"]) == (controller, seed) else r
+        for r in rows
+    ]
+
+
+def test_xtraflow_timeout_is_named_in_the_verdict_and_never_called_a_win():
+    rows = _fail(_rows(_GOOD), "XtraFlow", 3, "timeout")
+    out = pipeline.summarize(rows, CONTROLLERS)
+    comp = out["comparison"]
+    # The clean paired seeds alone would show a clear gain; the verdict must not claim it.
+    assert comp["vs_baseline"]["queue_pressure"]["ci_lo"] > 0
+    assert "seed 3 (timeout)" in comp["verdict"]
+    assert "FAILED" in comp["verdict"] and "queue_pressure" in comp["verdict"]
+    assert "less fuel" not in comp["verdict"] and "excludes zero" not in comp["verdict"]
+    assert comp["xtraflow_failed_seeds"] == [3]
+    assert comp["paired_seeds"] == [1, 2, 4, 5]
+    assert comp["failures"]["XtraFlow"] == {"timeout": 1, "gridlock": 0, "error": 0}
+    for baseline in ("fixed_tuned", "actuated", "queue_pressure"):
+        assert comp["failures"][baseline] == {"timeout": 0, "gridlock": 0, "error": 0}
+
+
+def test_failure_counts_by_kind_and_controller():
+    rows = _rows(_GOOD)
+    rows = _fail(rows, "XtraFlow", 1, "gridlock")
+    rows = _fail(rows, "XtraFlow", 2, "error")
+    rows = _fail(rows, "XtraFlow", 3, "error")
+    rows = _fail(rows, "actuated", 4, "timeout")
+    f = pipeline.summarize(rows, CONTROLLERS)["comparison"]["failures"]
+    assert f["XtraFlow"] == {"timeout": 0, "gridlock": 1, "error": 2}
+    assert f["actuated"] == {"timeout": 1, "gridlock": 0, "error": 0}
+    assert f["fixed_tuned"] == {"timeout": 0, "gridlock": 0, "error": 0}
+
+
+def test_baseline_only_failure_keeps_the_normal_verdict():
+    rows = _fail(_rows(_GOOD), "actuated", 3, "timeout")
+    comp = pipeline.summarize(rows, CONTROLLERS)["comparison"]
+    assert comp["xtraflow_failed_seeds"] == []
+    assert "less fuel" in comp["verdict"]
+    assert comp["failures"]["actuated"]["timeout"] == 1
+
+
+def test_xtraflow_failing_every_seed_is_reported_not_hidden():
+    rows = [
+        _row(c, s, _GOOD[c], "timeout" if c == "XtraFlow" else "ok")
+        for c in CONTROLLERS
+        for s in (1, 2)
+    ]
+    comp = pipeline.summarize(rows, CONTROLLERS)["comparison"]
+    assert comp["verdict"].startswith("no comparison")
+    assert "seed 1 (timeout)" in comp["verdict"] and "seed 2 (timeout)" in comp["verdict"]
+    assert comp["failures"]["XtraFlow"]["timeout"] == 2
+
+
+def test_failure_that_xtraflow_shares_with_the_best_baseline_is_not_its_fault():
+    rows = _fail(_rows(_GOOD), "XtraFlow", 3, "timeout")
+    rows = _fail(rows, "queue_pressure", 3, "timeout")
+    comp = pipeline.summarize(rows, CONTROLLERS)["comparison"]
+    assert comp["xtraflow_failed_seeds"] == []  # the best baseline did not succeed there
+    assert comp["failures"]["XtraFlow"]["timeout"] == 1
+
+
+def test_markdown_report_has_a_failures_table_and_the_verdict():
+    rows = _fail(_rows(_GOOD), "XtraFlow", 3, "timeout")
+    stats = pipeline.summarize(rows, CONTROLLERS)
+    md = pipeline.render_markdown(_report(stats))
+    assert "## Failed runs" in md
+    assert "| Controller | timeout | gridlock | error |" in md
+    assert "| XtraFlow | 1 | 0 | 0 |" in md
+    assert "| fixed_tuned | 0 | 0 | 0 |" in md
+    assert "seed 3 (timeout)" in md

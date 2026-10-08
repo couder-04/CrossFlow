@@ -137,8 +137,46 @@ def _geh(obs: float, sim: float) -> float:
     return math.sqrt(2 * (sim - obs) ** 2 / max(sim + obs, 1e-9))
 
 
+_FAILURE_KINDS = ("timeout", "gridlock", "error")
+
+
+def _failure_counts(by: dict[str, dict[int, dict[str, Any]]]) -> dict[str, dict[str, int]]:
+    """Per controller, how many runs (over all seeds) ended in each non-clean status."""
+    out: dict[str, dict[str, int]] = {}
+    for c, runs in by.items():
+        counts = dict.fromkeys(_FAILURE_KINDS, 0)
+        for r in runs.values():
+            status = r.get("status")
+            if status != "ok":
+                kind = status if status in _FAILURE_KINDS else "error"
+                counts[kind] += 1
+        out[c] = counts
+    return out
+
+
+def _best_baseline_any(
+    by: dict[str, dict[int, dict[str, Any]]], baselines: list[str]
+) -> str | None:
+    """Lowest mean fuel among each baseline's own clean runs (when no seed is clean for all)."""
+    means = {}
+    for c in baselines:
+        fuels = [
+            float(r["fuel_per_vehicle_L"])
+            for r in by[c].values()
+            if r.get("status") == "ok" and r.get("fuel_per_vehicle_L") is not None
+        ]
+        if fuels:
+            means[c] = _mean(fuels)
+    return min(means, key=lambda c: means[c]) if means else None
+
+
 def summarize(rows: list[dict[str, Any]], controllers: list[str]) -> dict[str, Any]:
-    """Paired comparison over seeds that completed cleanly under every controller."""
+    """Paired comparison over seeds that completed cleanly under every controller.
+
+    The pairing drops a seed for everyone when anyone fails it, which would hide XtraFlow's
+    failures. So failures are counted per controller, and a seed XtraFlow failed while the best
+    baseline succeeded is named in the verdict, which then makes no claim of superiority.
+    """
     by = {c: {r["seed"]: r for r in rows if r["controller"] == c} for c in controllers}
     ok = {c: {s for s, r in by[c].items() if r.get("status") == "ok"} for c in controllers}
     seeds = sorted(set.intersection(*ok.values())) if all(ok.values()) else []
@@ -158,10 +196,33 @@ def summarize(rows: list[dict[str, Any]], controllers: list[str]) -> dict[str, A
             "vehicles": _mean([float(r["n_departed"]) for r in sel]),
         }
 
-    comparison: dict[str, Any] = {"paired_seeds": seeds, "dropped_seeds": dropped}
+    comparison: dict[str, Any] = {
+        "paired_seeds": seeds,
+        "dropped_seeds": dropped,
+        "failures": _failure_counts(by),
+    }
     baselines = [c for c in controllers if c != OURS and c in per]
+    best_for_failures = (
+        min(baselines, key=lambda c: per[c]["fuel_per_vehicle_L"])
+        if baselines
+        else _best_baseline_any(by, [c for c in controllers if c != OURS])
+    )
+    xf_failed: dict[int, str] = {}
+    if OURS in by and best_for_failures is not None:
+        for s, r in sorted(by[OURS].items()):
+            if r.get("status") != "ok" and by[best_for_failures].get(s, {}).get("status") == "ok":
+                xf_failed[s] = str(r.get("status") or "error")
+    comparison["xtraflow_failed_seeds"] = sorted(xf_failed)
+    failure_note = ""
+    if xf_failed:
+        detail = ", ".join(f"seed {s} ({kind})" for s, kind in xf_failed.items())
+        failure_note = (
+            f"XtraFlow FAILED on {detail} where the best baseline ({best_for_failures}) succeeded"
+        )
+
     if OURS not in per or not baselines:
-        comparison["verdict"] = "no comparison: too few clean runs"
+        verdict = "no comparison: too few clean runs"
+        comparison["verdict"] = f"{verdict}. {failure_note}" if failure_note else verdict
         return {"per_controller": per, "comparison": comparison}
 
     best = min(baselines, key=lambda c: per[c]["fuel_per_vehicle_L"])
@@ -184,7 +245,15 @@ def summarize(rows: list[dict[str, Any]], controllers: list[str]) -> dict[str, A
     comparison["vs_baseline"] = vs
     comparison["best_baseline"] = best
     bv = vs[best]
-    if bv["ci_lo"] is None:
+    if failure_note:
+        # The paired seeds exclude exactly the runs XtraFlow lost, so any gain there is
+        # survivorship-biased: report the failure first and claim nothing in XtraFlow's favour.
+        if bv["ci_lo"] is not None and bv["ci_hi"] < 0:
+            tail = f"on the clean paired seeds XtraFlow also used MORE fuel than {best}"
+        else:
+            tail = "the fuel comparison covers only the clean paired seeds, so no superiority is claimed"
+        verdict = f"{failure_note}; {tail}"
+    elif bv["ci_lo"] is None:
         verdict = "single seed: no confidence interval, treat as anecdote"
     elif bv["ci_lo"] > 0:
         verdict = f"XtraFlow uses less fuel than the best baseline ({best}); interval excludes zero"
@@ -396,6 +465,15 @@ def render_markdown(rep: dict[str, Any]) -> str:
     for b, v in (c.get("vs_baseline") or {}).items():
         ci = "n/a" if v["ci_lo"] is None else f"{v['ci_lo']:.2f} to {v['ci_hi']:.2f}"
         lines.append(f"| {b} | {v['pct_fuel_reduction']:.2f} | {ci} | {v['n']} |")
+    lines += [
+        "",
+        "## Failed runs (all seeds, including those dropped from the paired comparison)",
+        "",
+        "| Controller | timeout | gridlock | error |",
+        "|---|---|---|---|",
+    ]
+    for name, f in (c.get("failures") or {}).items():
+        lines.append(f"| {name} | {f['timeout']} | {f['gridlock']} | {f['error']} |")
     lines += ["", f"**Verdict:** {c['verdict']}", "", "## Caveats", ""]
     lines += [f"- {x}" for x in rep["caveats"]]
     if c.get("dropped_seeds"):
