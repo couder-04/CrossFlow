@@ -24,6 +24,7 @@ from anpr_common.intelligence.health import (
 )
 from anpr_common.intelligence.journeys import (
     aggregate_od,
+    aggregate_vehicle_class_counts,
     aggregate_vehicle_classes,
     sessionize_dwell,
     travel_statistics,
@@ -42,6 +43,7 @@ __all__ = [
     "ReviewError",
     "advance_dwell",
     "aggregate_od",
+    "aggregate_vehicle_class_counts",
     "aggregate_vehicle_classes",
     "apply_homography",
     "classify_camera_health",

@@ -9,7 +9,7 @@ from uuid import uuid4
 from anpr_common.intelligence.access import role_can
 from anpr_common.intelligence.dwell import DwellThresholds
 from anpr_common.intelligence.health import CameraHealthThresholds, classify_camera_health
-from anpr_common.intelligence.journeys import aggregate_vehicle_classes, sessionize_dwell
+from anpr_common.intelligence.journeys import aggregate_vehicle_class_counts, sessionize_dwell
 from anpr_common.schemas import AlertSeverity, AlertType
 from fastapi import APIRouter, HTTPException, Query, status
 from fastapi.params import Param
@@ -521,29 +521,8 @@ async def vehicle_classes(
         """,
         params,
     )
-    flat = [
-        {"vehicle_class": row[0], "camera_id": row[1], "zone_id": None}
-        for row in rows
-        for _ in range(int(row[2]))
-    ]
-    # Expand only for modest volumes; otherwise aggregate without materializing every read.
-    if sum(int(row[2]) for row in rows) > 20000:
-        counts: dict[str, int] = {}
-        by_camera: dict[str, dict[str, int]] = {}
-        for klass, cam, count in rows:
-            counts[str(klass)] = counts.get(str(klass), 0) + int(count)
-            by_camera.setdefault(str(cam), {})
-            by_camera[str(cam)][str(klass)] = by_camera[str(cam)].get(str(klass), 0) + int(count)
-        total = sum(counts.values())
-        summary = {
-            "total": total,
-            "counts": counts,
-            "shares": {key: value / total if total else 0 for key, value in counts.items()},
-            "by_camera": by_camera,
-            "by_zone": {},
-        }
-    else:
-        summary = aggregate_vehicle_classes(flat)
+    # Rows are already grouped; aggregate the counts instead of expanding one dict per read.
+    summary = aggregate_vehicle_class_counts(rows)
     trend = _query(
         ch,
         f"""

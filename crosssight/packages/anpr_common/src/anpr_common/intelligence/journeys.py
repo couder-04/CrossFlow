@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import statistics
 from collections import defaultdict
+from collections.abc import Iterable
 from datetime import datetime
+from typing import Any
 
 from anpr_common.intelligence.dwell import DwellThresholds, classify_dwell
 
@@ -196,6 +198,35 @@ def dwell_anomaly_safe(actual_s: float, expected_s: float | None) -> dict | None
     return dwell_anomaly(actual_s, expected_s)
 
 
+def aggregate_vehicle_class_counts(rows: Iterable[tuple[Any, Any, int]]) -> dict:
+    """Aggregate pre-grouped ``(vehicle_class, camera_id, count)`` rows; never expands them."""
+    totals: dict[str, int] = defaultdict(int)
+    by_camera: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for klass_raw, cam, count in rows:
+        klass = str(klass_raw or "other")
+        n = int(count)
+        totals[klass] += n
+        if cam:
+            by_camera[str(cam)][klass] += n
+    return _class_summary(totals, by_camera, {})
+
+
+def _class_summary(
+    totals: dict[str, int],
+    by_camera: dict[str, dict[str, int]],
+    by_zone: dict[str, dict[str, int]],
+) -> dict:
+    total = sum(totals.values())
+    shares = {k: (v / total if total else 0.0) for k, v in sorted(totals.items())}
+    return {
+        "total": total,
+        "counts": dict(sorted(totals.items())),
+        "shares": shares,
+        "by_camera": {k: dict(v) for k, v in sorted(by_camera.items())},
+        "by_zone": {k: dict(v) for k, v in sorted(by_zone.items())},
+    }
+
+
 def aggregate_vehicle_classes(rows: list[dict]) -> dict:
     """Count vehicle classes that the detector actually emits."""
     totals: dict[str, int] = defaultdict(int)
@@ -210,12 +241,4 @@ def aggregate_vehicle_classes(rows: list[dict]) -> dict:
         zone = row.get("zone_id")
         if zone:
             by_zone[str(zone)][klass] += 1
-    total = sum(totals.values())
-    shares = {k: (v / total if total else 0.0) for k, v in sorted(totals.items())}
-    return {
-        "total": total,
-        "counts": dict(sorted(totals.items())),
-        "shares": shares,
-        "by_camera": {k: dict(v) for k, v in sorted(by_camera.items())},
-        "by_zone": {k: dict(v) for k, v in sorted(by_zone.items())},
-    }
+    return _class_summary(totals, by_camera, by_zone)
