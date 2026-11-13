@@ -811,10 +811,13 @@ def make_controller(name: str, cfg=None, scenario: str = "balanced",
         ctrl = OursCountController(**common)
     elif name == "XtraFlow":
         ctrl = OursFuelController(**common)
-    elif name in ("XtraFlow_space", "XtraFlow_space3"):
+    elif name in ("XtraFlow_space", "XtraFlow_space3", "XtraFlow_space_tuned"):
         # *_space3: sensitivity with the truck footprint forced to 3.0 (the "about 3x" figure).
+        # *_tuned: detection distance / alpha / hysteresis re-tuned on VALIDATION seeds for this variant.
         ov = {"truck": 3.0} if name.endswith("3") else None
         common_sp = dict(common)
+        if name.endswith("_tuned"):
+            common_sp["params"] = load_json(ROOT / "results" / "space_tuned_params.json")
         common_sp["weights"] = space_aware_weights(weights, cfg, ov)
         ctrl = OursSpaceFuelController(**common_sp)
     elif name in ("ours_footprint", "ours_footprint3"):
