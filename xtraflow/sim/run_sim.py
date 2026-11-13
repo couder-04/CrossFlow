@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from sim.controllers import PerceptionNoise, make_controller
+from sim.controllers import PerceptionNoise, make_controller, space_footprints
 from sim.gen_demand import generate
 from sim.metrics import conflicts_per_1000, fuel_per_departed, parse_ssm_conflicts, parse_tripinfo
 from sim.util import ROOT, ensure_dirs, load_config, load_json, locate_sumo, mg_to_litres, save_json, tool_cmd
@@ -221,6 +221,8 @@ def run_one(
 
     idle_vehicle_seconds = 0.0
     queue_samples: List[float] = []
+    queue_area_samples: List[float] = []
+    _fp = space_footprints(cfg)
     max_queue = 0.0
     departed_ids: set = set()
     ts_rows = []
@@ -245,11 +247,13 @@ def run_one(
             veh_ids = []
 
         halted = 0
+        halted_ids: List[str] = []
         for vid in veh_ids:
             try:
                 if traci.vehicle.getSpeed(vid) < 0.1:
                     idle_vehicle_seconds += 1.0
                     halted += 1
+                    halted_ids.append(vid)
                 fuel_mg[vid] = fuel_mg.get(vid, 0.0) + float(traci.vehicle.getFuelConsumption(vid))
                 if vid not in fuel_vtype:
                     fuel_vtype[vid] = traci.vehicle.getTypeID(vid)
@@ -267,6 +271,7 @@ def run_one(
                 except Exception:
                     pass
         queue_samples.append(float(halted))
+        queue_area_samples.append(sum(_fp.get(fuel_vtype.get(v, "car"), 1.0) for v in halted_ids))
         max_queue = max(max_queue, float(halted))
 
         lead = ctrls[0]
@@ -359,6 +364,8 @@ def run_one(
         "idle_vehicle_seconds": idle_vehicle_seconds,
         "mean_queue_veh": float(sum(queue_samples) / max(len(queue_samples), 1)),
         "max_queue_veh": max_queue,
+        "mean_queue_area_ceq": float(sum(queue_area_samples) / max(len(queue_area_samples), 1)),
+        "max_queue_area_ceq": float(max(queue_area_samples)) if queue_area_samples else 0.0,
         "fuel_L_by_type": json.dumps(metrics["fuel_L_by_type"]),
         "ssm_conflicts": ssm_conflicts,
         "conflicts_per_1000_veh": conflicts_per_1000(ssm_conflicts, n_departed),
