@@ -646,6 +646,48 @@ class OursFuelCoordController(OursFuelController):
         )
 
 
+def space_footprints(cfg: Optional[Dict[str, Any]] = None, overrides: Optional[Dict[str, float]] = None) -> Dict[str, float]:
+    """Road-space footprint per vehicle type, relative to a car (car = 1.0).
+
+    Footprint = length x width from ``vehicle_params`` (SUMO sublane model: a vehicle
+    blocks lane length AND lateral width). Nothing here is a new assumption; it reuses the
+    same dimensions SUMO already simulates. ``overrides`` replaces individual types
+    (used only for sensitivity runs).
+    """
+    cfg = cfg or load_config()
+    vp = cfg["vehicle_params"]
+    area = {k: float(v["length"]) * float(v["width"]) for k, v in vp.items()}
+    ref = area["car"]
+    fp = {k: a / ref for k, a in area.items()}
+    if overrides:
+        fp.update({k: float(v) for k, v in overrides.items()})
+    return fp
+
+
+def space_aware_weights(fuel_weights: Dict[str, float], cfg: Optional[Dict[str, Any]] = None,
+                        overrides: Optional[Dict[str, float]] = None) -> Dict[str, float]:
+    """Fuel burn per unit of road space: w_type / footprint_type.
+
+    A queue discharges at a rate limited by space, so a vehicle that takes s times the space
+    of a car also takes about s times the green to clear. Its extra idle fuel (w) is only
+    worth w / s per unit of green spent on it.
+    """
+    fp = space_footprints(cfg, overrides)
+    return {k: float(w) / max(fp.get(k, 1.0), 1e-9) for k, w in fuel_weights.items()}
+
+
+class OursSpaceFuelController(OursFuelController):
+    """XtraFlow with fuel weight divided by road-space footprint (dot -> footprint)."""
+
+    name = "XtraFlow_space"
+
+
+class OursFootprintController(OursFuelController):
+    """Ablation: queue weighted by road-space footprint only (no fuel term)."""
+
+    name = "ours_footprint"
+
+
 class RLPPOController(BaseController):
     name = "rl_ppo"
     OBS_DIM = 17
@@ -769,6 +811,17 @@ def make_controller(name: str, cfg=None, scenario: str = "balanced",
         ctrl = OursCountController(**common)
     elif name == "XtraFlow":
         ctrl = OursFuelController(**common)
+    elif name in ("XtraFlow_space", "XtraFlow_space3"):
+        # *_space3: sensitivity with the truck footprint forced to 3.0 (the "about 3x" figure).
+        ov = {"truck": 3.0} if name.endswith("3") else None
+        common_sp = dict(common)
+        common_sp["weights"] = space_aware_weights(weights, cfg, ov)
+        ctrl = OursSpaceFuelController(**common_sp)
+    elif name in ("ours_footprint", "ours_footprint3"):
+        ov = {"truck": 3.0} if name.endswith("3") else None
+        common_fp = dict(common)
+        common_fp["weights"] = space_footprints(cfg, ov)
+        ctrl = OursFootprintController(**common_fp)
     elif name == "XtraFlow_coord":
         ctrl = OursFuelCoordController(tls_id, neighbor_ids or [], **common)
     elif name == "rl_ppo":
