@@ -188,6 +188,25 @@ XtraFlow used 11.8% less fuel than tuned fixed and 9.3% less than actuated, and 
 pressure with a 95% interval of -0.44 to 1.95, which is **not an established difference**. The full
 run is in [`docs/SAMPLE_RUN.md`](docs/SAMPLE_RUN.md).
 
+### Latest results: space-aware controllers
+
+[`xtraflow/results/SPACE_AWARE.md`](xtraflow/results/SPACE_AWARE.md) re-runs the locked TEST
+benchmark (four scenarios, seeds 1-5; 200 runs in `space_aware_raw_runs.csv`) with controllers that
+weight by vehicle road space. Its bottom line is that accounting for road space did **not** improve
+fuel. Fuel per vehicle, % change, mean ± paired 95% interval over 20 scenario-seed pairs:
+
+| Comparison | Change | Reading |
+| --- | ---: | --- |
+| `XtraFlow_space` vs `XtraFlow` | +2.11 ±0.81 | More fuel; interval excludes 0 |
+| `XtraFlow_space` vs best baseline | +1.62 ±0.55 | More fuel; interval excludes 0 |
+| `XtraFlow` vs best baseline | -0.46 ±0.70 | Within noise; interval includes 0 |
+| `ours_footprint` vs `XtraFlow` | -0.28 ±0.54 | Within noise; interval includes 0 |
+
+The weights shifted green toward small vehicles and away from trucks and buses. Trucks burn the most
+fuel, so total fuel rose. Parameters were tuned for `XtraFlow` and not re-tuned for the space-aware
+variants, and n=5 per scenario, so the per-scenario intervals are wide. Open problems with this work
+are in [`xtraflow/KNOWN_ISSUES.md`](xtraflow/KNOWN_ISSUES.md).
+
 ### OCR (measured 2026-09-30)
 
 | Claim | Model | Dataset | Exact | Char | n |
