@@ -214,6 +214,27 @@ Indian multi-lane night or rain performance above 90% is **not** claimed.
 
 ---
 
+## Project history and credits
+
+CrossFlow merges two earlier projects: **CrossSight** (ANPR sensing, [`crosssight/`](crosssight/README.md))
+and **XtraFlow** (SUMO / TraCI fuel-weighted signal control, [`xtraflow/`](xtraflow/README.md)). Both
+were built before this fork. In the commit history they were written by the upstream author,
+[couder-04](https://github.com/couder-04), and this repository is a fork of
+[couder-04/CrossFlow](https://github.com/couder-04/CrossFlow).
+
+Contribution by [Pranjal-Kukreja](https://github.com/Pranjal-Kukreja):
+[PR #1](https://github.com/couder-04/CrossFlow/pull/1) (merged 2026-11-13), which added space-aware
+controllers to `xtraflow/sim/controllers.py`:
+
+* `space_footprints`, `space_aware_weights`, `OursSpaceFuelController` and `OursFootprintController`.
+* New `make_controller` names `XtraFlow_space`, `XtraFlow_space3`, `ours_footprint` and
+  `ours_footprint3`. The PR also added `XtraFlow_space_tuned`, which cannot run yet (see
+  [`xtraflow/KNOWN_ISSUES.md`](xtraflow/KNOWN_ISSUES.md)).
+* The benchmark result files (`xtraflow/results/space_aware_*.csv`) and the write-up
+  [`xtraflow/results/SPACE_AWARE.md`](xtraflow/results/SPACE_AWARE.md).
+
+---
+
 ## Repository layout
 
 ```text
