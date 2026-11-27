@@ -188,6 +188,25 @@ XtraFlow used 11.8% less fuel than tuned fixed and 9.3% less than actuated, and 
 pressure with a 95% interval of -0.44 to 1.95, which is **not an established difference**. The full
 run is in [`docs/SAMPLE_RUN.md`](docs/SAMPLE_RUN.md).
 
+### Latest results: space-aware controllers
+
+[`xtraflow/results/SPACE_AWARE.md`](xtraflow/results/SPACE_AWARE.md) re-runs the locked TEST
+benchmark (four scenarios, seeds 1-5; 200 runs in `space_aware_raw_runs.csv`) with controllers that
+weight by vehicle road space. Its bottom line is that accounting for road space did **not** improve
+fuel. Fuel per vehicle, % change, mean ± paired 95% interval over 20 scenario-seed pairs:
+
+| Comparison | Change | Reading |
+| --- | ---: | --- |
+| `XtraFlow_space` vs `XtraFlow` | +2.11 ±0.81 | More fuel; interval excludes 0 |
+| `XtraFlow_space` vs best baseline | +1.62 ±0.55 | More fuel; interval excludes 0 |
+| `XtraFlow` vs best baseline | -0.46 ±0.70 | Within noise; interval includes 0 |
+| `ours_footprint` vs `XtraFlow` | -0.28 ±0.54 | Within noise; interval includes 0 |
+
+The weights shifted green toward small vehicles and away from trucks and buses. Trucks burn the most
+fuel, so total fuel rose. Parameters were tuned for `XtraFlow` and not re-tuned for the space-aware
+variants, and n=5 per scenario, so the per-scenario intervals are wide. Open problems with this work
+are in [`xtraflow/KNOWN_ISSUES.md`](xtraflow/KNOWN_ISSUES.md).
+
 ### OCR (measured 2026-09-30)
 
 | Claim | Model | Dataset | Exact | Char | n |
@@ -207,10 +226,32 @@ Indian multi-lane night or rain performance above 90% is **not** claimed.
 
 * Signal-control results are **simulation estimates** on an assumed mixed-traffic demand, with proxy emission classes. They are not field results.
 * The controllers run with `info_mode: oracle` (XtraFlow's default): they read SUMO ground truth for vehicle position, speed, class and turn, **not camera detections**. In a pipeline run the cameras only set the demand scale and vehicle mix, so detector errors are not reflected in the signal-control numbers.
+* Sensing in the reported results is simulated, not live camera input, and the vehicle mix in the locked study was assumed.
 * The large 8-17% fuel figures are against fixed, Webster and actuated control. Against the best pressure baseline the gain is 0.3-1.9% and often not statistically established; the pipeline reports it that way.
 * XtraFlow's parameters were tuned on its assumed demand and mix, not on the measured demand a pipeline run uses.
 * The demo city is CrossSight's synthetic grid. Its scheduler starts about 150 trips a day, so `--streams` (default 2000) superimposes independent scheduler runs to reach junction-scale flow; the factor is recorded in every report.
 * In the published runs `maxpressure` is bit-identical to `queue_pressure`; treat them as one baseline until re-run. Details: [`xtraflow/STATE.md`](xtraflow/STATE.md).
+
+---
+
+## Project history and credits
+
+CrossFlow merges two earlier projects: **CrossSight** (ANPR sensing, [`crosssight/`](crosssight/README.md))
+and **XtraFlow** (SUMO / TraCI fuel-weighted signal control, [`xtraflow/`](xtraflow/README.md)). Both
+were built before this fork. In the commit history they were written by the upstream author,
+[couder-04](https://github.com/couder-04), and this repository is a fork of
+[couder-04/CrossFlow](https://github.com/couder-04/CrossFlow).
+
+Contribution by [Pranjal-Kukreja](https://github.com/Pranjal-Kukreja):
+[PR #1](https://github.com/couder-04/CrossFlow/pull/1) (merged 2026-11-13), which added space-aware
+controllers to `xtraflow/sim/controllers.py`:
+
+* `space_footprints`, `space_aware_weights`, `OursSpaceFuelController` and `OursFootprintController`.
+* New `make_controller` names `XtraFlow_space`, `XtraFlow_space3`, `ours_footprint` and
+  `ours_footprint3`. The PR also added `XtraFlow_space_tuned`, which cannot run yet (see
+  [`xtraflow/KNOWN_ISSUES.md`](xtraflow/KNOWN_ISSUES.md)).
+* The benchmark result files (`xtraflow/results/space_aware_*.csv`) and the write-up
+  [`xtraflow/results/SPACE_AWARE.md`](xtraflow/results/SPACE_AWARE.md).
 
 ---
 

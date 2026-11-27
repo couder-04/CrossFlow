@@ -1,3 +1,5 @@
+> Latest results (space-aware re-run, 2026-11-13): see [`results/SPACE_AWARE.md`](results/SPACE_AWARE.md). The rest of this file is from 2026-10-07 and has not been updated.
+
 # STATE.md — XtraFlow
 
 Last updated: 2026-10-07
